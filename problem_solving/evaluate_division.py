@@ -1,7 +1,7 @@
 """
 URL: https://leetcode.com/problems/evaluate-division
 """
-from collections import defaultdict
+from collections import defaultdict, deque
 from typing import List
 
 

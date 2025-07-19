@@ -1,0 +1,155 @@
+Notes:
+
+	Code
+		1. Not a DSA problem
+		2. Some easy solution
+		3. Modular and writing reading code, simplicity.
+		4. Not much inheritance unless required.
+		5. Working solution is required.
+		6. Test cases have to be delivered.
+	System
+		1. Not a software Architecture
+		2. Doesn't focus on Design Patterns much
+		3. Not a typical LLD
+		4. Can you build a high performance system in a single machine.
+		5. Bitcask arpit bhayani
+		6. How do you design a high performant key value store.
+		7. Preventing Deadlocks, performant
+		8. Log Flushing System.
+		9. Concurrency models.
+		10. Things that work on a Single Machine.
+		11. Questions are related backend.
+		12. Whats expected
+			1. Conceptual understanding
+				1. Mutexes
+				2. Semaphores
+			2. Writing a code is huge bonus
+			3. Test cases is even more added
+		13. 45 mins - 1 hour
+		14. You can work anything.
+		15. coderpad
+		16. Familiarise yourself with JVM Garbage collection, malloc, file working internally.
+
+
+/*
+ * Click `Run` to execute the snippet below!
+ */
+
+import java.io.*;
+import java.util.*;
+
+/*
+ * To execute Java, please define "static void main" on a class
+ * named Solution.
+ *
+ * If you need more classes, simply define them inline.
+ * 
+ * bounded buffer of fixed capacity
+ * head = 0 (head % capacity)
+ * tail = 0 (tail & capacity)
+ * count = 0
+ * Reentrantlock
+ * notFull condition 
+ * notEmpty condition
+ *
+ * 
+ * implement Runnable
+ * 
+ * appendEvent
+ *  acquire
+ *  check if capacity is full
+ *    wait on notFull
+ *  buffer[head] = value
+ *  head = (head + 1) % capacity
+ *  notEmpty signalall
+ *  count++
+ *  release
+ * 
+ * read
+ *  acquire
+ *  check if count is 0
+ *    wait on notEmpty
+ *  ele = buffer[tail]
+ *  tail = (tail + 1) % capacity
+ *  writer.write(ele)
+ *  writer.flush()
+ *  notFull signall
+ *  count--
+ *  release
+ * 
+ * Reentrantlock(true)
+ * 
+ * EventTimer Runnable Timer.run(500)
+ * 
+ * // Periodic Flushing
+ * Timer.runAfter(500) {
+ *  run {
+ *    check when it last flushed if < 500:
+ *      continue to loop
+ *    else:
+ *      lock acquire
+ *      writer.flush()
+ *      flushed.signalall
+ *      release
+ *  }
+ * }
+ * 
+ * flushed.await
+ * 
+ * appendEvent
+ *  lock acquire
+ *  atomicInteger.increment and get
+ *  writer.write(data)
+ *  if (atomicInteger.get != x)
+ *    writer.flush()
+ *    flushed.signalAll
+ *  else:
+ *    flushed.wait
+ *  voltile date = localdatetime.now
+ *  lock release
+ * 
+ * 
+ * run()
+ *  while(true)
+ *    read()
+ * 
+ * close()
+ *  read()
+ * 
+ * What happens to the inflight records
+ *  backpressure - no more production
+ *  jvm crash
+ * BufferedWriter()
+ */
+
+/** Library class. All threads access one instance. */
+public class EventWriter {
+    private List<byte[]> buffer;
+
+    public EventWriter(String filePath) {
+        // Your code
+        this.capacity = capacity;
+        this.buffer = new ArrayList<>();
+    }
+
+    /** Append {eventData} to the file. */
+    // Events typically <= 1 kB
+    /* Writes must be durable:
+        - after return from appendEvent, the data _must_ be on disk */
+    public void appendEvent(byte[] eventData) {
+        // Your code
+    }
+}
+
+class Solution {
+  public static void main(String[] args) {
+    ArrayList<String> strings = new ArrayList<String>();
+    strings.add("Hello, World!");
+    strings.add("Welcome to CoderPad.");
+    strings.add("This pad is running Java " + Runtime.version().feature());
+
+    for (String string : strings) {
+      System.out.println(string);
+    }
+  }
+}
