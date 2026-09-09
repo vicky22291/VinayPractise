@@ -7,45 +7,36 @@ from typing import List
 
 class Solution:
     def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
-        class Solution:
-            def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[
-                float]:
-                denom_map = defaultdict(list)
+        gid_weight = {}
+        def find(node_id):
+            if node_id not in gid_weight:
+                gid_weight[node_id] = (node_id, 1)
+            group_id, node_weight = gid_weight[node_id]
+            if group_id != node_id:
+                new_group_id, group_weight = find(group_id)
+                gid_weight[node_id] = \
+                    (new_group_id, node_weight * group_weight)
+            return gid_weight[node_id]
 
-                for eq in equations:
-                    denom_map[eq[0]].append(eq[1])
-                    denom_map[eq[1]].append(eq[0])
+        def union(dividend, divisor, value):
+            dividend_gid, dividend_weight = find(dividend)
+            divisor_gid, divisor_weight = find(divisor)
+            if dividend_gid != divisor_gid:
+                gid_weight[dividend_gid] = \
+                    (divisor_gid, divisor_weight * value / dividend_weight)
 
-                value_map = defaultdict(lambda: float('inf'))
+        for (dividend, divisor), value in zip(equations, values):
+            union(dividend, divisor, value)
 
-                for i, eq in enumerate(equations):
-                    value_map[(eq[0], eq[1])] = values[i]
-                    value_map[(eq[1], eq[0])] = 1 / values[i]
-
-                res = []
-
-                for query in queries:
-                    if len(denom_map[query[0]]) == 0 or len(denom_map[query[1]]) == 0:
-                        res.append(-1)
-                        continue
-
-                    denoms = deque([(denom, value_map[(query[0], denom)]) for denom in denom_map[query[0]]])
-                    visited = set()
-                    found = False
-
-                    while denoms:
-                        denom, curr_val = denoms.popleft()
-                        if denom == query[1]:
-                            res.append(curr_val)
-                            found = True
-                            break
-
-                        visited.add(denom)
-                        for next_denom in denom_map[denom]:
-                            if next_denom not in visited:
-                                denoms.append((next_denom, curr_val * value_map[(denom, next_denom)]))
-
-                    if not found:
-                        res.append(-1)
-
-                return res
+        results = []
+        for (dividend, divisor) in queries:
+            if dividend not in gid_weight or divisor not in gid_weight:
+                results.append(-1.0)
+            else:
+                dividend_gid, dividend_weight = find(dividend)
+                divisor_gid, divisor_weight = find(divisor)
+                if dividend_gid != divisor_gid:
+                    results.append(-1.0)
+                else:
+                    results.append(dividend_weight / divisor_weight)
+        return results
