@@ -13,6 +13,7 @@ Read `CLAUDE.md` for the answer style, color legend, and templates.
 | `problem_solving/` | DSA patterns and solutions (Python) |
 | `behavioral/` | Staff-level STAR stories |
 | `templates/` | Templates + canonical color legend |
+| `popular_systems_deepdive/` | Source-verified internals: Kubernetes, Kafka, Cassandra |
 
 ## Color legend
 
@@ -49,3 +50,6 @@ flowchart LR
 1. Ask for a design: *"design a rate limiter"* -> a file appears in `hld/` or `lld/`.
 2. Try answering first, then ask for a critique against the Staff bar in `CLAUDE.md` §7.
 3. Concepts you keep tripping on go into `concepts/` as one-page notes.
+4. For how a real system actually implements a concept, see
+   [`popular_systems_deepdive/`](popular_systems_deepdive/). All 286 of its
+   diagrams use the legend above.
