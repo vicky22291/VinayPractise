@@ -1,14 +1,15 @@
 # Popular Systems Deep Dives
 
-Source-verified internals of three systems that come up constantly in Staff
+Source-verified internals of systems that come up constantly in Staff
 interviews. Each folder is one system. Read the `-00-overview.md` first, it
 carries the reading map for the rest.
 
-| Folder | Baseline | Files | Diagrams |
-|---|---|---|---|
-| [`kubernetes/`](kubernetes/) | v1.34, deltas to v1.37 | 10 + patterns | 124 |
-| [`kafka/`](kafka/) | Apache Kafka 4.3 | 10 + patterns + README | 112 |
-| [`cassandra/`](cassandra/) | Apache Cassandra 5.0 | 12 + patterns | 50 |
+| Folder | Baseline | Files | Diagrams | Depth |
+|---|---|---|---|---|
+| [`kubernetes/`](kubernetes/) | v1.34, deltas to v1.37 | 10 + patterns | 124 | full |
+| [`kafka/`](kafka/) | Apache Kafka 4.3 | 10 + patterns + README | 112 | full |
+| [`cassandra/`](cassandra/) | Apache Cassandra 5.0 | 12 + patterns | 50 | full |
+| [`rocksdb/`](rocksdb/) | RocksDB 11.x (main 11.10.0) | 6 + README | 17 | light: every feature, high-level implementation |
 
 ## Navigating
 
@@ -29,6 +30,13 @@ Start at a system README, or jump straight to its `00-overview.md`.
 | Kubernetes | [`kubernetes-00-overview.md`](kubernetes/kubernetes-00-overview.md) | [`patterns.md`](kubernetes/patterns.md) |
 | Kafka | [`kafka-00-overview.md`](kafka/kafka-00-overview.md) | [`patterns.md`](kafka/patterns.md) |
 | Cassandra | [`cassandra-00-overview.md`](cassandra/cassandra-00-overview.md) | [`patterns.md`](cassandra/patterns.md) |
+| RocksDB | [`rocksdb-00-overview.md`](rocksdb/rocksdb-00-overview.md) | [`05 §8`](rocksdb/rocksdb-05-operations-and-tradeoffs.md#8-patterns-that-generalise), no separate file |
+
+RocksDB is the odd one out: it is a library, not a distributed system, and it
+is the storage engine under several of the others' peers (TiKV, MyRocks, Kafka
+Streams state, Flink state). Its series is deliberately shorter, about 260
+lines per report, and covers every feature at the level of "which structure,
+which thread, which file" rather than source-line depth.
 
 ## What these are
 
