@@ -92,6 +92,7 @@ concepts/     Reusable building blocks (CAP, consensus, sharding, Kafka, caching
 problem_solving/  DSA — Python. Patterns + solved problems.
 behavioral/   Staff-level STAR stories, scope/influence/ambiguity narratives
 templates/    Study templates + the canonical color legend
+tool-practise/  Hands-on lab: one folder per open source tool (Redis, Kafka, ...), docker-compose + exercises
 ```
 
 - File names: `kebab-case.md`, e.g. `hld/design-whatsapp.md`.

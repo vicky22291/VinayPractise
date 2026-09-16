@@ -14,6 +14,7 @@ Read `CLAUDE.md` for the answer style, color legend, and templates.
 | `behavioral/` | Staff-level STAR stories |
 | `templates/` | Templates + canonical color legend |
 | `popular_systems_deepdive/` | Source-verified internals: Kubernetes, Kafka, Cassandra |
+| `tool-practise/` | Hands-on lab: run Redis, Kafka, etc. locally with Docker, break them, take notes |
 
 ## Color legend
 

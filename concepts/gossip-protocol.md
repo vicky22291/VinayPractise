@@ -122,7 +122,7 @@ sequenceDiagram
 - `version`: monotonic counter per node, bumped on every state change and every heartbeat.
 - Merge rule: higher generation wins, then higher version. No vector clocks needed because **only the owning node writes its own state**. That single-writer rule is what keeps gossip merges conflict-free.
 
-If you need multiple writers per key (rare in gossip) you are back to vector clocks or CRDTs, and it is usually a sign the fact does not belong in gossip.
+If you need multiple writers per key (rare in gossip) you are back to vector clocks or [CRDTs](crdt.md), and it is usually a sign the fact does not belong in gossip.
 
 ---
 

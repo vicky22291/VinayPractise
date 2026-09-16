@@ -1,0 +1,32 @@
+# Single Redis node for exercises 01 to 04.
+# Exercise 05 (replication + failover) uses the primary/replica/sentinel profile.
+services:
+  redis:
+    image: redis:7.4
+    container_name: redis
+    ports:
+      - "127.0.0.1:6379:6379"
+    command: ["redis-server", "--maxmemory", "64mb", "--maxmemory-policy", "allkeys-lru"]
+
+  # --- profile: ha (exercise 05) ---
+  redis-replica:
+    image: redis:7.4
+    container_name: redis-replica
+    profiles: ["ha"]
+    depends_on: [redis]
+    ports:
+      - "127.0.0.1:6380:6379"
+    command: ["redis-server", "--replicaof", "redis", "6379"]
+
+  sentinel:
+    image: redis:7.4
+    container_name: redis-sentinel
+    profiles: ["ha"]
+    depends_on: [redis, redis-replica]
+    ports:
+      - "127.0.0.1:26379:26379"
+    command: >
+      sh -c 'echo "sentinel monitor mymaster redis 6379 1
+      sentinel down-after-milliseconds mymaster 2000
+      sentinel failover-timeout mymaster 5000" > /tmp/sentinel.conf
+      && redis-sentinel /tmp/sentinel.conf'
