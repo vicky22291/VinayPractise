@@ -6,11 +6,19 @@ markdown file, and every architecture image in it becomes text plus a Mermaid di
 
 ```
 databricks/
-  harvest.py      the tool (stdlib only, shells out to the Codex CLI)
-  index.db        sqlite: post metadata, per-image verdicts, image -> post links
-  index.md        generated table of every harvested post (newest first)
-  posts/<slug>.md one file per post
+  harvest.py          the tool (stdlib only, shells out to the Codex CLI)
+  classify.py         Codex pass: TECHNICAL vs MARKETING, moves marketing posts out of posts/
+  rank.py             Codex pass: 0-5 Staff-interview score, topic, question per technical post
+  interview-picks.md  hand-curated study guide: 13 case studies, 11 deep dives, patterns, mock questions
+  staff-interview.md  generated table of every post scoring 3+, grouped by topic
+  index.db            sqlite: posts, images, post_images, interview (scores)
+  index.md            generated table of every technical post (newest first)
+  marketing.md        the 176 posts classified as marketing, with reasons
+  posts/<slug>.md     one file per technical post
+  marketing/<slug>.md one file per marketing post
 ```
+
+Start with `interview-picks.md`.
 
 ## How it works
 
@@ -76,6 +84,9 @@ python3 databricks/harvest.py --skip-codex               # markdown only, images
 python3 databricks/harvest.py --force --slug <slug>      # redo one post
 python3 databricks/harvest.py --validate-mermaid         # render every diagram with mermaid-cli
 python3 databricks/harvest.py --list                     # what is in index.db
+python3 databricks/classify.py                           # technical vs marketing (codex, ~20 min)
+python3 databricks/rank.py                               # interview score per technical post (codex, ~20 min)
+python3 databricks/rank.py --write-only --min-score 4    # regenerate staff-interview.md, tighter cut
 ```
 
 Reruns are incremental: posts already in `index.db` are skipped unless `--force`.
@@ -91,6 +102,7 @@ uses `mmdc` if present, else `npx -y @mermaid-js/mermaid-cli`.
 sqlite3 databricks/index.db "select published, title from posts order by published desc limit 10"
 sqlite3 databricks/index.db "select verdict, count(*) from images group by verdict"
 sqlite3 databricks/index.db "select slug, arch_count from posts where arch_count >= 3 order by arch_count desc"
+sqlite3 databricks/index.db "select score, topic, question from interview join posts using(slug) where score = 5"
 ```
 
 ## Gotchas found while building it
