@@ -4,3 +4,4 @@ tool-practise/**/data/
 
 # Mermaid render-check scratch output
 chk_*/
+__pycache__/
