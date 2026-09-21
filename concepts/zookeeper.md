@@ -310,7 +310,7 @@ flowchart TD
 ```
 
 - The invariant: the new leader has the highest zxid any follower in the quorum has seen, so every committed proposal is in its log. Followers with proposals the leader never saw get truncated.
-- `initLimit x tickTime` bounds how long followers get to connect and sync (sample config 5 ticks = 10 s), `syncLimit x tickTime` how far behind a follower may fall before it is dropped (2 ticks = 4 s). Large trees need a larger `initLimit` because a SNAP sync ships the whole DataTree.
+- `initLimit x tickTime` bounds how long followers get to connect and sync, `syncLimit x tickTime` how far behind a follower may fall before it is dropped. The shipped `zoo_sample.cfg` uses 10 and 5 ticks (20 s and 10 s); the admin guide's minimal example uses 5 and 2. Large trees need a larger `initLimit` because a SNAP sync ships the whole DataTree.
 - **Dynamic reconfiguration** (3.5.0) changes membership at runtime through the same quorum protocol; before that it was rolling restarts.
 
 ---
@@ -496,7 +496,7 @@ flowchart TD
 
 ## 13. Numbers worth memorizing
 
-Defaults (Administrator's Guide and sample config): `tickTime` **2,000 ms**; sample `initLimit` **5** ticks and `syncLimit` **2** ticks; session timeout negotiated between **2x** and **20x** tickTime (**4 s to 40 s**); client pings after **s/3**, switches server after **2s/3**; `jute.maxbuffer` **1,048,575 bytes** (0xfffff); `snapCount` **100,000** (random in `[snapCount/2+1, snapCount]`); `maxClientCnxns` **60** per IP; `globalOutstandingLimit` **1,000**; `preAllocSize` **64 MB**; `autopurge.snapRetainCount` **3**, `autopurge.purgeInterval` **0** (off); `fsync.warningthresholdms` **1,000**; `4lw.commands.whitelist` default **`srvr` only**; `electionAlg` **3** (TCP FastLeaderElection, default since 3.2.0); heap guidance **3 GB on a 4 GB machine**; sequential counter **10 digits**, signed 32-bit, overflows at 2,147,483,647.
+Defaults (Administrator's Guide and `zoo_sample.cfg`): `tickTime` **2,000 ms**; `initLimit` **10** ticks and `syncLimit` **5** ticks in `zoo_sample.cfg` (the admin guide's minimal example uses 5 and 2); session timeout negotiated between **2x** and **20x** tickTime (**4 s to 40 s**); client pings after **s/3**, switches server after **2s/3**; `jute.maxbuffer` **1,048,575 bytes** (0xfffff); `snapCount` **100,000** (random in `[snapCount/2+1, snapCount]`); `maxClientCnxns` **60** per IP; `globalOutstandingLimit` **1,000**; `preAllocSize` **64 MB**; `autopurge.snapRetainCount` **3**, `autopurge.purgeInterval` **0** (off); `fsync.warningthresholdms` **1,000**; `4lw.commands.whitelist` default **`srvr` only**; `electionAlg` **3** (TCP FastLeaderElection, default since 3.2.0); heap guidance **3 GB on a 4 GB machine**; sequential counter **10 digits**, signed 32-bit, overflows at 2,147,483,647.
 
 Versions: observers **3.3.0**, dynamic reconfiguration **3.5.0**, container and TTL nodes **3.5.3**, persistent / recursive watches **3.6.0**, Kafka ZooKeeper mode removed in **Kafka 4.0.0**.
 
