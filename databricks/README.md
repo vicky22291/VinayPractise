@@ -96,6 +96,30 @@ Useful knobs: `--effort low|medium|high` (Codex reasoning), `--max-workers 3`
 Requirements: Python 3.11+, the `codex` CLI on PATH and logged in. `--validate-mermaid`
 uses `mmdc` if present, else `npx -y @mermaid-js/mermaid-cli`.
 
+## Keeping it up to date
+
+Every stage is incremental: `harvest.py` skips slugs already in `index.db`, and image
+verdicts are cached by MD5, so re-running costs nothing for what is already done.
+
+```bash
+python3 refresh.py --dry-run     # what is new on both blogs, spends nothing
+python3 refresh.py               # fetch it and run the whole chain
+python3 refresh.py --only databricks # this blog only
+```
+
+`refresh.py` (repo root) exists because the stages have one working order: `harvest.py`
+writes an `index.md` of every post it knows, and `classify.py` rewrites that same file to
+technical posts only, so classify has to run after harvest or the marketing posts come back.
+
+Two failure modes to know about:
+
+- An image that fails to download or annotate is recorded in `index.db` with its reason, and
+  the post is still marked done, so a normal rerun skips it. `--retry-failed` re-processes
+  those posts. Some failures are permanent, such as the two posts here whose diagrams were
+  hosted on `lh7-us.googleusercontent.com` and now 403, so this is an occasional opt-in pass
+  rather than part of the default chain.
+- A post edited upstream after harvest is not refetched. Use `--force --slug <slug>` for that.
+
 ## Querying the index
 
 ```bash

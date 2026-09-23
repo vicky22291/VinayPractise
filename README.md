@@ -15,6 +15,12 @@ Read `CLAUDE.md` for the answer style, color legend, and templates.
 | `templates/` | Templates + canonical color legend |
 | `popular_systems_deepdive/` | Source-verified internals: Kubernetes, Kafka, Cassandra |
 | `tool-practise/` | Hands-on lab: run Redis, Kafka, etc. locally with Docker, break them, take notes |
+| `databricks/` | Harvested Databricks engineering blog: 651 technical posts, 1,803 diagrams turned into Mermaid |
+| `openai/` | Harvested OpenAI engineering blog: 20 posts, 77 diagrams turned into Mermaid |
+
+Both harvests are incremental. `python3 refresh.py` fetches whatever is new on either blog
+and runs it through the full chain; `python3 refresh.py --dry-run` says what is new without
+spending anything.
 
 ## Color legend
 
