@@ -10,14 +10,15 @@ carries the reading map for the rest.
 | [`kafka/`](kafka/) | Apache Kafka 4.3 | 10 + patterns + README | 112 | full |
 | [`cassandra/`](cassandra/) | Apache Cassandra 5.0 | 12 + patterns | 50 | full |
 | [`rocksdb/`](rocksdb/) | RocksDB 11.x (main 11.10.0) | 6 + README | 17 | light: every feature, high-level implementation |
+| [`envoy/`](envoy/) | Envoy v1.39.1 | 14 + patterns + interviewer prep + README | 191 | full, plus an interview track |
 
 ## Navigating
 
 Every report is wired into the series, so you can move without going back to a
 file listing:
 
-- **Prev / Index / Next** bar at the top and bottom of all 32 reports.
-- **Collapsible section list** under the nav bar, linking all 413 sections.
+- **Prev / Index / Next** bar at the top and bottom of all 46 reports.
+- **Collapsible section list** under the nav bar, linking all 596 sections.
 - **Inline cross-references.** A mention of "report 05" in the prose is a live
   link, including the cross-system ones in the pattern catalogues (`C* report
   09` from a Kafka table jumps straight to the Cassandra file).
@@ -31,12 +32,21 @@ Start at a system README, or jump straight to its `00-overview.md`.
 | Kafka | [`kafka-00-overview.md`](kafka/kafka-00-overview.md) | [`patterns.md`](kafka/patterns.md) |
 | Cassandra | [`cassandra-00-overview.md`](cassandra/cassandra-00-overview.md) | [`patterns.md`](cassandra/patterns.md) |
 | RocksDB | [`rocksdb-00-overview.md`](rocksdb/rocksdb-00-overview.md) | [`05 §8`](rocksdb/rocksdb-05-operations-and-tradeoffs.md#8-patterns-that-generalise), no separate file |
+| Envoy | [`envoy-00-overview.md`](envoy/envoy-00-overview.md) | [`patterns.md`](envoy/patterns.md) |
 
 RocksDB is the odd one out: it is a library, not a distributed system, and it
 is the storage engine under several of the others' peers (TiKV, MyRocks, Kafka
 Streams state, Flink state). Its series is deliberately shorter, about 260
 lines per report, and covers every feature at the level of "which structure,
 which thread, which file" rather than source-line depth.
+
+Envoy is the first request-path data plane in the set. It stores nothing durable and
+runs no consensus, so its series adds load balancing, request-level resilience and
+control-plane-to-data-plane config distribution to the catalogue. It also carries an
+interview track: reports 11 to 13 cover the newest subsystems (Dynamic Modules, MCP,
+reverse tunnels), and [`envoy/interviewer-prep.md`](envoy/interviewer-prep.md) prepares
+for an interview with an Envoy senior maintainer. Its companion design problem is
+[`hld/ai-gateway/`](../hld/ai-gateway/).
 
 ## What these are
 
@@ -51,7 +61,7 @@ Cassandra 5.0 gets wrong.
 
 ## Colors
 
-All 286 diagrams were recolored to the repo legend in
+The Envoy series was drawn directly in the repo legend, with one red node per report; its own README lists them. The original 286 diagrams were recolored to the repo legend in
 [`../templates/color-legend.md`](../templates/color-legend.md). The bundles
 shipped with their own palette, which conflicted with ours in two ways worth
 knowing about:
