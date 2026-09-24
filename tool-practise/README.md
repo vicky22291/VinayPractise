@@ -37,7 +37,7 @@ Status: `todo` | `in-progress` | `done`. Priority is by how often the tool shows
 
 | # | Tool | Folder | Why practise it | Exercises | Status |
 |---|---|---|---|---|---|
-| 1 | Redis | [`redis/`](redis/) | Cache, rate limiter, leaderboard, distributed lock, failover. Guided 2-hour session. | 5 | todo |
+| 1 | Redis | [`redis/`](redis/) | Cache, rate limiter, leaderboard, distributed lock, pub/sub vs streams, failover. Guided session, about 2h15. | 6 | todo |
 | 2 | Kafka | [`kafka/`](kafka/) | Partitions, consumer groups, offsets, rebalance, exactly-once. Core of every streaming design. | 5 | todo |
 | 3 | PostgreSQL | `postgres/` | Isolation levels, indexes, EXPLAIN, WAL, replication lag. | - | todo |
 | 4 | etcd | `etcd/` | Raft in practice: leases, watches, compare-and-swap, leader loss. | - | todo |

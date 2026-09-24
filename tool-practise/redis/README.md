@@ -1,8 +1,8 @@
-# Redis: 2-hour Staff-level practice session
+# Redis: Staff-level practice session (about 2h15)
 
 > One-line answer: Redis is a single-threaded, in-memory data structure server. Everything interesting about it in an interview follows from those three words: single-threaded, in-memory, data structures.
 
-This folder is a guided session, not a reference. Follow it top to bottom. Total time is about 110 minutes. Every exercise has a hard time box. If you run over, stop, write what you learned, and move on.
+This folder is a guided session, not a reference. Follow it top to bottom. Total time is about 135 minutes. Every exercise has a hard time box. If you run over, stop, write what you learned, and move on.
 
 **Concept links:** `concepts/caching.md`, `concepts/sharding.md`, `hld/` problems that use a rate limiter, leaderboard, or lock.
 
@@ -18,7 +18,8 @@ Covered, because interviewers probe it:
 | 02 | TTL and eviction | "What happens when Redis fills up?" | 15 min |
 | 03 | Rate limiter | "Design a rate limiter" (the most common Staff HLD warm-up) | 25 min |
 | 04 | Distributed lock | "How do you take a lock in Redis, and when is it unsafe?" | 20 min |
-| 05 | Replication and failover | "What happens when the primary dies? Do you lose writes?" | 30 min |
+| 05 | Pub/Sub vs Streams | "Can we just use Redis Pub/Sub for this? What if a subscriber is down?" | 25 min |
+| 06 | Replication and failover | "What happens when the primary dies? Do you lose writes?" | 30 min |
 
 Skipped on purpose: Redis Cluster hash slots, modules, ACLs, RDB vs AOF tuning, client-side caching, Redis Streams internals. Read `concepts/` for those if an HLD needs them.
 
@@ -28,12 +29,13 @@ flowchart LR
     E1[01 Data types<br/>15 min] --> E2[02 TTL + eviction<br/>15 min]
     E2 --> E3[03 Rate limiter<br/>25 min]
     E3 --> E4[04 Distributed lock<br/>20 min]
-    E4 --> E5[05 Replication + failover<br/>30 min]
-    E5 --> S[Soundbites into<br/>notes.md]
+    E4 --> E5[05 Pub/Sub vs Streams<br/>25 min]
+    E5 --> E6[06 Replication + failover<br/>30 min]
+    E6 --> S[Soundbites into<br/>notes.md]
 
     class E1,E2 service
-    class E3,E4 decision
-    class E5 critical
+    class E3,E4,E5 decision
+    class E6 critical
     class S cache
 
     classDef service  fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#111
@@ -42,7 +44,7 @@ flowchart LR
     classDef cache    fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#111
 ```
 
-Exercise 05 is red because it is where writes get lost. That is the part of the session that produces the best interview answers.
+Exercise 06 is red because it is where acknowledged writes get lost. That is the part of the session that produces the best interview answers.
 
 ---
 
@@ -80,7 +82,8 @@ Exercise 05 is red because it is where writes get lost. That is the part of the 
 | 02 | [`exercises/02-ttl-and-eviction.md`](exercises/02-ttl-and-eviction.md) | todo |
 | 03 | [`exercises/03-rate-limiter.md`](exercises/03-rate-limiter.md) | todo |
 | 04 | [`exercises/04-distributed-lock.md`](exercises/04-distributed-lock.md) | todo |
-| 05 | [`exercises/05-replication-failover.md`](exercises/05-replication-failover.md) | todo |
+| 05 | [`exercises/05-pubsub.md`](exercises/05-pubsub.md) | todo |
+| 06 | [`exercises/06-replication-failover.md`](exercises/06-replication-failover.md) | todo |
 
 ---
 
@@ -96,8 +99,16 @@ Exercise 05 is red because it is where writes get lost. That is the part of the 
 | `ZADD z score m` / `ZREVRANGE z 0 9 WITHSCORES` | sorted set (leaderboard) |
 | `ZADD z ts m` / `ZREMRANGEBYSCORE z -inf ts` / `ZCARD z` | sorted set as sliding window |
 | `EVAL "lua" nkeys key... arg...` | run a script atomically |
+| `SUBSCRIBE ch` / `PSUBSCRIBE ch:*` | listen on a channel / a pattern (connection is now push-only) |
+| `PUBLISH ch msg` | broadcast. Returns receivers right now. `0` means dropped |
+| `PUBSUB NUMSUB ch` / `PUBSUB NUMPAT` | who is listening |
+| `CONFIG SET notify-keyspace-events Ex` | publish an event when a key expires |
+| `XADD s * f v` / `XGROUP CREATE s g 0` | append to a stream / create a consumer group |
+| `XREADGROUP GROUP g c STREAMS s >` / `XACK s g id` | read new entries as consumer `c` / ack one |
+| `XPENDING s g` / `XAUTOCLAIM s g c2 30000 0-0` | delivered but un-acked / take over a dead consumer's entries |
 | `INFO memory` / `INFO stats` / `INFO replication` | stats sections |
 | `CONFIG SET maxmemory 1mb` | change config live |
+| `CLIENT LIST TYPE pubsub` | subscribers, with `omem` = bytes queued for them |
 | `DEBUG SLEEP 5` | block the server (for break-it steps) |
 | `redis-cli --pipe` | bulk load from stdin |
 
@@ -110,3 +121,4 @@ Exercise 05 is red because it is where writes get lost. That is the part of the 
 3. Every "atomic" pattern (rate limiter, lock) is only atomic because of single-threading plus Lua or `MULTI`. Two round trips are never atomic.
 4. Replication is async. Primary acknowledges the write before the replica has it. Failover can lose the last few milliseconds of writes. Say this out loud in any HLD that puts money or locks in Redis.
 5. A lock in Redis is a lease, not a lock. Without a fencing token checked by the resource, a paused client can act after its lease expired.
+6. Pub/Sub stores nothing. It is at-most-once: an offline subscriber misses messages, and a slow one is disconnected at the output buffer limit. Use it only when the next message supersedes the last. Otherwise use Streams with `XACK`, or Kafka.

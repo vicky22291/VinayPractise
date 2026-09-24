@@ -1,4 +1,4 @@
-# 05. Replication and failover
+# 06. Replication and failover
 
 > Goal: after this I have killed a Redis primary, timed how long Sentinel took to promote the replica, and shown a write that was lost.
 
@@ -184,4 +184,4 @@ role:slave             <- Sentinel reconfigured it as a replica of the new prima
 $ docker compose --profile ha down -v
 ```
 
-Then copy all five soundbites into `../notes.md` and flip the status in `../README.md` and `../../README.md`.
+Then copy all six soundbites into `../notes.md` and flip the status in `../README.md` and `../../README.md`.
