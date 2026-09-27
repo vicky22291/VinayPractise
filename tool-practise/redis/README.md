@@ -1,8 +1,8 @@
-# Redis: Staff-level practice session (about 2h15)
+# Redis: Staff-level practice session (about 2h55)
 
 > One-line answer: Redis is a single-threaded, in-memory data structure server. Everything interesting about it in an interview follows from those three words: single-threaded, in-memory, data structures.
 
-This folder is a guided session, not a reference. Follow it top to bottom. Total time is about 135 minutes. Every exercise has a hard time box. If you run over, stop, write what you learned, and move on.
+This folder is a guided session, not a reference. Follow it top to bottom. Total time is about 175 minutes. Every exercise has a hard time box. If you run over, stop, write what you learned, and move on.
 
 **Concept links:** `concepts/caching.md`, `concepts/sharding.md`, `hld/` problems that use a rate limiter, leaderboard, or lock.
 
@@ -20,6 +20,7 @@ Covered, because interviewers probe it:
 | 04 | Distributed lock | "How do you take a lock in Redis, and when is it unsafe?" | 20 min |
 | 05 | Pub/Sub vs Streams | "Can we just use Redis Pub/Sub for this? What if a subscriber is down?" | 25 min |
 | 06 | Replication and failover | "What happens when the primary dies? Do you lose writes?" | 30 min |
+| 07 | Geo search | "Find the nearest drivers. What breaks at a million?" | 40 min |
 
 Skipped on purpose: Redis Cluster hash slots, modules, ACLs, RDB vs AOF tuning, client-side caching, Redis Streams internals. Read `concepts/` for those if an HLD needs them.
 
@@ -31,10 +32,11 @@ flowchart LR
     E3 --> E4[04 Distributed lock<br/>20 min]
     E4 --> E5[05 Pub/Sub vs Streams<br/>25 min]
     E5 --> E6[06 Replication + failover<br/>30 min]
-    E6 --> S[Soundbites into<br/>notes.md]
+    E6 --> E7[07 Geo search<br/>40 min]
+    E7 --> S[Soundbites into<br/>notes.md]
 
     class E1,E2 service
-    class E3,E4,E5 decision
+    class E3,E4,E5,E7 decision
     class E6 critical
     class S cache
 
@@ -84,6 +86,7 @@ Exercise 06 is red because it is where acknowledged writes get lost. That is the
 | 04 | [`exercises/04-distributed-lock.md`](exercises/04-distributed-lock.md) | todo |
 | 05 | [`exercises/05-pubsub.md`](exercises/05-pubsub.md) | todo |
 | 06 | [`exercises/06-replication-failover.md`](exercises/06-replication-failover.md) | todo |
+| 07 | [`exercises/07-geo-search.md`](exercises/07-geo-search.md) | todo |
 
 ---
 
@@ -106,6 +109,12 @@ Exercise 06 is red because it is where acknowledged writes get lost. That is the
 | `XADD s * f v` / `XGROUP CREATE s g 0` | append to a stream / create a consumer group |
 | `XREADGROUP GROUP g c STREAMS s >` / `XACK s g id` | read new entries as consumer `c` / ack one |
 | `XPENDING s g` / `XAUTOCLAIM s g c2 30000 0-0` | delivered but un-acked / take over a dead consumer's entries |
+| `GEOADD g lon lat m` | add or move a point. **Longitude first.** It is a `ZADD` underneath |
+| `GEOSEARCH g FROMLONLAT lon lat BYRADIUS 2 km ASC COUNT 10 WITHDIST` | nearest 10 within 2 km. Scans and sorts every match first |
+| `GEOSEARCH g FROMMEMBER m BYBOX 4 5 km ... ANY` | search around a member, by box. `ANY` stops early but is not nearest |
+| `GEOPOS g m` / `GEODIST g a b km` / `GEOHASH g m` | position / distance / standard geohash string |
+| `SLOWLOG GET 1` / `INFO commandstats` | server-side time of a command / `usec_per_call` per command |
+| `MEMORY USAGE k` | bytes held by one key |
 | `INFO memory` / `INFO stats` / `INFO replication` | stats sections |
 | `CONFIG SET maxmemory 1mb` | change config live |
 | `CLIENT LIST TYPE pubsub` | subscribers, with `omem` = bytes queued for them |
@@ -122,3 +131,4 @@ Exercise 06 is red because it is where acknowledged writes get lost. That is the
 4. Replication is async. Primary acknowledges the write before the replica has it. Failover can lose the last few milliseconds of writes. Say this out loud in any HLD that puts money or locks in Redis.
 5. A lock in Redis is a lease, not a lock. Without a fencing token checked by the resource, a paused client can act after its lease expired.
 6. Pub/Sub stores nothing. It is at-most-once: an offline subscriber misses messages, and a slow one is disconnected at the output buffer limit. Use it only when the next message supersedes the last. Otherwise use Streams with `XACK`, or Kafka.
+7. Redis GEO is a sorted set with a 52-bit geohash score. A search costs what sits in up to 9 cells, not what it returns: `COUNT` without `ANY` still scans and sorts every match, and one wide search stalls every client. Members have no TTL, so stale drivers need a last-seen set and a sweeper. One key is one eviction unit, so a location index runs with `noeviction`.

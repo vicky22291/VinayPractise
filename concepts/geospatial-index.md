@@ -178,7 +178,7 @@ Nearby-friends and ride-hailing are not "index a static map". They are a million
 
 | System | Index | Note |
 |---|---|---|
-| **Redis GEO** | 52-bit geohash in a sorted set, `GEOSEARCH` by radius or box | Does the 9-cell scan internally. One sorted set per key; shard by region key. |
+| **Redis GEO** | 52-bit geohash in a sorted set, `GEOSEARCH` by radius or box | Does the 9-cell scan internally. One sorted set per key; shard by region key. Hands-on with 1M points: [`tool-practise/redis/exercises/07-geo-search.md`](../tool-practise/redis/exercises/07-geo-search.md). |
 | **PostGIS** | GiST R-tree on geometry, `ST_DWithin` | Polygons, lines, projections. The default for anything with shapes. |
 | **Elasticsearch** | `geo_point` with BKD tree (since 5.x), geohash grid aggregations | Heatmaps via `geohash_grid` buckets. |
 | **MongoDB** | `2dsphere` index using S2 cells | `$near`, `$geoWithin`. |

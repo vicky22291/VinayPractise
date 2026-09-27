@@ -1,5 +1,5 @@
-# Single Redis node for exercises 01 to 04.
-# Exercise 05 (replication + failover) uses the primary/replica/sentinel profile.
+# Single Redis node for exercises 01 to 05 and 07.
+# Exercise 06 (replication + failover) uses the primary/replica/sentinel profile.
 services:
   redis:
     image: redis:7.4
@@ -8,7 +8,7 @@ services:
       - "127.0.0.1:6379:6379"
     command: ["redis-server", "--maxmemory", "64mb", "--maxmemory-policy", "allkeys-lru"]
 
-  # --- profile: ha (exercise 05) ---
+  # --- profile: ha (exercise 06) ---
   redis-replica:
     image: redis:7.4
     container_name: redis-replica
