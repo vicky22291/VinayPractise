@@ -185,7 +185,7 @@ Nearby-friends and ride-hailing are not "index a static map". They are a million
 | **Google Maps, Foursquare** | S2 | S2's region coverer is the standard polygon-to-cells tool. |
 | **Uber** | H3 for supply/demand, surge pricing, ETA analytics | Hexagons for neighbourhood math; kRing for "cells within N steps". |
 | **Pokemon Go** | S2 level 10 to 15 cells for spawns and gyms | Famous for the visible cell-boundary artefacts. |
-| **Map tiles (XYZ, slippy map)** | Quadtree of 256 px tiles, zoom 0 to 22 | The tile key `z/x/y` is a quadtree path; Street View storage in `hld/` #27 uses the same keying. |
+| **Map tiles (XYZ, slippy map)** | Quadtree of 256 px tiles, zoom 0 to 22 | The tile key `z/x/y` is a quadtree path. Street View ([`hld/streetview-ingestion/`](../hld/streetview-ingestion/)) uses the same keying inside each panorama's tile pyramid, and S2 level-16 cells plus capture time for the panorama index. |
 | **`hld/` #38 nearby friends** | Geohash cells in memory, pub/sub per cell, TTL | The full worked problem. |
 
 ---

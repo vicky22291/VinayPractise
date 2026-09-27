@@ -264,7 +264,7 @@ flowchart LR
 | Slack (`hld/slack-messaging/`) | Attachments | `files.getUploadURLExternal` returns a URL, client uploads, `files.completeUploadExternal` attaches to a message. Exactly the start / bytes / complete shape. |
 | Instagram, YouTube, TikTok (`hld/` #36) | Media upload | Multipart signed URLs, then an `ObjectCreated` event kicks off transcoding. Feed reads go through a CDN with signed URLs or cookies. |
 | Immutable object store (`hld/immutable-object-store/`) | The API surface itself | Presigned URL generation is a feature the store must offer; the note on canonical request is what its auth layer implements. |
-| Street View ingestion (`hld/` #27) | Bulk ingest from vehicles | Scoped temporary credentials per vehicle per day rather than per-object URLs, because each vehicle writes millions of objects. |
+| Street View ingestion ([`hld/streetview-ingestion/`](../hld/streetview-ingestion/)) | Bulk ingest from depot stations | A write-only credential scoped to one drive's prefix (`raw/{drive_id}/*`, 7 days) rather than per-object URLs, because a car-day is ~1,400 segment objects; the registry's `complete` call is the commit point before the cartridge is wiped. Contributor photos use the Publish API's start / bytes / create shape. |
 | Data export, invoices, reports | Deliver a generated file | Job writes to blob, emits a 15-minute signed GET in the email or API response. Regenerate on click if expired. |
 | Webhooks and callbacks | Verify the sender | Same HMAC-over-canonical-payload idea, in a header instead of a URL. Stripe, GitHub, Slack signing secrets. |
 | JWT | Same primitive, different container | A signed URL is a JWT whose claims are the request. HS256 when one verifier, RS256 when many. |
