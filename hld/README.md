@@ -1,8 +1,8 @@
 # HLD Practice Index
 
-> One-line answer: 43 problems, tiered by how often they are reported at Databricks, Google, and Rippling, and by how much Staff-level depth they expose. Databricks weighted first.
+> One-line answer: 45 problems, tiered by how often they are reported at Databricks, Google, Rippling, and Intuit, and by how much Staff-level depth they expose. Databricks weighted first.
 
-Sources: two rounds of research. (a) Glassdoor, Blind, LeetCode Discuss, Exponent, Hello Interview, SystemDesignHandbook, DesignGurus (2024 to 2026). (b) A Sep 2026 aggregation of 76 Databricks candidate reports plus Google L6, Meta, and Amazon report collections. Report counts below come from (b). Per-company notes and links are in §5.
+Sources: two rounds of research. (a) Glassdoor, Blind, LeetCode Discuss, Exponent, Hello Interview, SystemDesignHandbook, DesignGurus (2024 to 2026). (b) A Sep 2026 aggregation of 76 Databricks candidate reports plus Google L6, Meta, and Amazon report collections. Report counts below come from (b). (c) A 2026-09-30 pass on Intuit (Principal) and Rippling (Staff) that counts only candidate posts I opened: see [`company-questions.md`](company-questions.md). Per-company notes and links are in §5.
 
 Status legend: `todo` | `attempted` (my-attempt.md exists) | `studied` (solution + edge-cases) | `done` (excalidraw drawn, all edge cases confident). See `hld/CLAUDE.md` for the per-problem folder layout.
 
@@ -114,7 +114,7 @@ The written notes share one thread worth saying out loud in any coordination que
 | 22 | Change data capture pipeline | [`cdc-pipeline/`](cdc-pipeline/) | Databricks, Confluent | One serial reader per database on a replication slot or binlog, the slot as the red node (WAL pinned on the primary, capped and alarmed in hours of budget, lose the slot and re-snapshot rather than the database), version = (epoch, commit position, index) so every sink applies only newer versions and at-least-once becomes exactly-once effect, DBLog watermark chunks read from replicas with no lock and no time travel, failover slots plus `synchronized_standby_slots` against phantoms, epoch bump plus sweep after any lineage break, per-key order by default and opt-in transaction buffering, `FULL_TRANSITIVE` registry plus a CI gate for renames | studied |
 | 43 | AI gateway for thousands of tenants (LLM + MCP) | [`ai-gateway/`](ai-gateway/) | Databricks (likely, from a prep note) | Token-based rate limiting with streaming (reserve an estimate, pod-local leases, exact per-request grants near a cap, overshoot within max($5, 1%)), multi-tenant isolation at the shared provider quota (fleet-wide provider leases plus per-tenant fair queuing, the red node), MCP governance under the stateless 2026-07-28 spec (route and authorize on `Mcp-Method` / `Mcp-Name`, verify against the body, per-user upstream credentials, no token passthrough), native Envoy where it fits and a Rust dynamic module where core cannot | studied |
 
-### Tier 3: Google L6 and Rippling reported.
+### Tier 3: Google L6, Rippling, and Intuit reported.
 
 | # | Problem | Folder | Asked at | Concept under test | Status |
 |---|---|---|---|---|---|
@@ -128,6 +128,8 @@ The written notes share one thread worth saying out loud in any coordination que
 | 30 | Authorization / RBAC + ABAC at scale (Zanzibar) | `authorization-service/` | Rippling, Stripe, Google | Relation tuples, permission check consistency, cache invalidation, p99 < 10ms | todo |
 | 31 | Rules / workflow automation engine | `rules-engine/` | Rippling | DSL versioning, deterministic evaluation, replay, blast radius of a bad rule | todo |
 | 32 | Employee identity + integration platform (SCIM, connectors, webhooks) | `integration-platform/` | Rippling, Stripe | Idempotent sync, external API rate limits, partial failure, retry storms | todo |
+| 44 | News aggregator / personalized news feed | `news-aggregator/` | Rippling (most reported design prompt: 6 of 14 candidate posts, 2022 to 2026, plus 6 PracHub pages) | Polling many publisher APIs under rate limits and outages, dedup of syndicated copies, stable cursor pagination while articles arrive, fan-out on read vs write hybrid, breaking news, cold start | todo |
+| 45 | Tax refund status service | `tax-refund-status/` | Intuit Principal (Glassdoor snippet) | Status lookup behind a slow external dependency (IRS), push vs poll, notify on change, 5K to 300K TPS inside 2 hours on tax day | todo |
 
 ### Tier 4: breadth. One per day after the above.
 
@@ -155,7 +157,8 @@ Week 1  Storage from first principles:   #4 KV+WAL -> #3 file system -> #5 immut
 Week 2  Coordination + exactly-once:     #33 lock service -> #19 metadata store -> #6 scheduler -> #16 Kafka
 Week 3  Data systems:                    #15 Delta Lake -> #17 query engine -> #18 ingestion -> #22 CDC -> #21 cluster manager
 Week 4  Databricks app-style prompts:    #1 book seller -> #2 Slack -> #7 throttling -> #11 provisioning -> #14 playlist
-Week 5  Money + tenancy (Rippling):      #8 payments -> #29 payroll -> #9 trading -> #10 ad budget -> #30 authz -> #31 rules -> #32 integrations
+Week 5  Money + tenancy (Rippling):      #44 news aggregator -> #31 rules -> #8 payments -> #29 payroll -> #9 trading -> #10 ad budget -> #30 authz -> #32 integrations
+Intuit Principal (case-study loop):      #45 tax refund status -> #43 AI gateway -> #7 throttling (VIP rate limiter) -> #8 payments. Rehearse one as a 10-slide deck.
 Week 6  Google L6:                       #13 Drive -> #28 collab editing -> #23 denylist -> #24 hashtags -> #25 booking -> #26 monitoring -> #27 Street View
 Week 7  Breadth:                         #12 RAG -> #34 LLM serving -> #35 recsys -> #36 to #40
 ```
@@ -206,11 +209,23 @@ The same ladder for the file system: who owns path to inode to chunks, rename vs
 - Sources: [DesignGurus Google L6](https://designgurus.substack.com/p/googles-system-design-interview-in), [Staff design bar](https://designgurus.substack.com/p/the-staff-engineers-system-design), [Hello Interview Staff guide](https://www.hellointerview.com/blog/staff-level-system-design).
 - Prep edge: give numbers (QPS, bytes/day, p99) unprompted. State the consistency model per component.
 
-### Rippling
+### Rippling (Staff)
 - Multi-tenant HR / payroll / IT / finance. Emphasis on tenant isolation, money correctness, PII, idempotent third-party integrations. Practical designs win over exotic ones.
-- Reported: payroll system, employee identity system, expense rules engine, hotel reservation with distributed transactions, prevent duplicate payments under load.
-- Sources: [SystemDesignHandbook](https://www.systemdesignhandbook.com/guides/rippling-system-design-interview/), [PracHub](https://prachub.com/companies/rippling/categories/system-design).
-- Prep edge: every design must answer "what happens if this runs twice" and "how does tenant A never see tenant B".
+- Levels: L5 SWE, L6 SWE II, L7 Senior, L8 Staff. No public L8 report names a prompt; the top of the data is two L7 loops.
+- Loop: practical phone screen (own IDE, AI allowed, "code must run or reject"), onsite coding (KV store with transactions, nested and thread-safe at Senior+), one to three system design rounds, a 90-minute web API round (45 min to a working prod-ready API, 45 min hardening), a project presentation at Senior+, hiring manager. Design rounds set the level: one L7 candidate was dropped to L6, another to SDE-2.
+- Reported in candidate posts (verified 2026-09-30): **news aggregator** (#44, 6 of 14 posts), **event tracking like Amplitude** / real-time metrics over streams (2 posts, L7), **corporate card rules engine** as phone-screen code (`evaluateRules`) then "scale it" follow-ups (#31), delivery driver cost, music player analytics, KV store with nested transactions, Stack Overflow API end to end, a feed where "fan out at write" was the miss. PracHub pages add event analytics / clickstream / logging, delivery cost and driver pay, hotel reservation, an employee-termination orchestrator, and an HTTP server from scratch.
+- Guide-only, never seen in a candidate post: payroll system, employee identity, permissions engine, duplicate-payment prevention. Keep them (they are the product), rank them below the above.
+- Staff bar, from a Rippling engineer: "An okay solution isn't enough to pass ... If you drew a box and said 'caching' but didn't explain any cache patterns, technology, tradeoffs ... That's enough for us to fail you."
+- Full tables, sources and repo mapping: [`company-questions.md` §2](company-questions.md#2-rippling-staff).
+- Prep edge: every design must answer "what happens if this runs twice" and "how does tenant A never see tenant B". Every coding answer must run, with tests.
+
+### Intuit (Principal)
+- Case-study loop. 75-minute screen (30 coding + 45 design with an AI part), then a case study handed out ahead of the loop, then about 4 rounds on the same day that all re-open your case study, then assessor / HM / director rounds.
+- Two craft formats: a take-home design case study you present (Principal, Senior Staff), or live coding on a provided repo (Staff backend). The repos are public: [Intuit-A4A](https://github.com/Intuit-A4A) "Player Service" in Flask or Spring Boot with Ollama.
+- Reported prompts: tax refund status service (#45, Principal, Glassdoor snippet), "identify social media trends for marketing" (take-home, AI-native, rejected for thin security), election management e-board (craft, OOP), rate limiter with a VIP tier, an AI agent routing financial requests with payload validation.
+- Graded in every round: AI inside the product with guardrails, and security (authn, authz, PII, encryption). Scoping is graded too, so write down what you cut.
+- Scale to quote: TurboTax 5K to 300K TPS within two hours; tax day 185B transactions, 11M TPS peak.
+- Full tables, sources and repo mapping: [`company-questions.md` §1](company-questions.md#1-intuit-principal-and-staff).
 
 ### Stripe (same shape as Rippling money questions)
 - Reported: durable ledger, idempotent double-entry ledger, webhook delivery, authorization service with explicit RPS targets, rate limiter, metrics pipeline.
