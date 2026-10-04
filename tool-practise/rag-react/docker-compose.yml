@@ -1,0 +1,12 @@
+# Postgres + pgvector for every exercise.
+# Ollama is NOT in here: it runs natively on the Mac (`ollama serve`). Docker on
+# macOS cannot reach the Apple GPU, so a 7B model in a container runs on CPU only.
+services:
+  pg:
+    image: pgvector/pgvector:0.8.7-pg18
+    container_name: rag-pg
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      POSTGRES_PASSWORD: rag
+      POSTGRES_DB: rag

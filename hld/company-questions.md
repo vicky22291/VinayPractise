@@ -95,6 +95,14 @@ Not reported, despite what an agent claimed: "gateway cache stampede", "event ro
 | AI agent routing, LLM guardrails | [#43 ai-gateway](ai-gateway/) |
 | 5K to 300K TPS in 2 hours | [#21 cluster-manager](cluster-manager/) (calendar pre-scale), [caching patterns](../concepts/caching-patterns.md) |
 | QuickBooks money | [#8 payments-ledger](payments-ledger/) |
+| Practice list (2026-10, not reported candidate prompts): TurboTax e-file at the April 15 peak | [#49 turbotax-efile](turbotax-efile/). Postmark at our receipt, exactly-once submission ids to MeF, ack reconciliation |
+| Practice list: QuickBooks multi-tenant ledger | [#50 quickbooks-ledger](quickbooks-ledger/). Balanced immutable postings, per-company consistency, period balances for fast reports |
+| Practice list: bank feed aggregation | [#51 bank-feed-aggregation](bank-feed-aggregation/). Per-institution call governor, idempotent ingestion, pending to posted |
+| Practice list: QuickBooks Payments inline risk | [#52 payments-risk-decisioning](payments-risk-decisioning/). 100 ms decision, fallback on timeout, merchant risk. Plays to Uber Risk |
+| Practice list: payroll run for ~1M small businesses | [#29 payroll-engine](payroll-engine/). ACH cut-offs, exactly-once money movement, safe retries |
+| Practice list: Credit Karma score-change alerts | [#53 credit-score-alerts](credit-score-alerts/). Change detection, fan-out without a herd on the read path |
+| Practice list: Mailchimp campaign sending | [#54 email-campaign-sending](email-campaign-sending/). Per (IP, provider) throttling, reputation, canary |
+| Practice list: GenAI assistant over financial data | [#55 financial-ai-assistant](financial-ai-assistant/). Tool authorization, grounded numbers, offline evals. Also covers the reported "AI agent routing financial requests" prompt |
 
 ---
 

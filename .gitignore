@@ -1,5 +1,6 @@
 .idea
 .DS_Store
+.venv/
 tool-practise/**/data/
 
 # Mermaid render-check scratch output

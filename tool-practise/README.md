@@ -38,15 +38,16 @@ Status: `todo` | `in-progress` | `done`. Priority is by how often the tool shows
 | # | Tool | Folder | Why practise it | Exercises | Status |
 |---|---|---|---|---|---|
 | 1 | Redis | [`redis/`](redis/) | Cache, rate limiter, leaderboard, distributed lock, pub/sub vs streams, failover, geo search. Guided session, about 2h55. | 7 | todo |
-| 2 | Kafka | [`kafka/`](kafka/) | Partitions, consumer groups, offsets, rebalance, exactly-once. Core of every streaming design. | 5 | todo |
-| 3 | PostgreSQL | `postgres/` | Isolation levels, indexes, EXPLAIN, WAL, replication lag. | - | todo |
-| 4 | etcd | `etcd/` | Raft in practice: leases, watches, compare-and-swap, leader loss. | - | todo |
-| 5 | Cassandra | `cassandra/` | Tunable consistency, partition keys, hinted handoff, read repair. | - | todo |
-| 6 | RocksDB | `rocksdb/` | LSM tree, compaction, write amplification. Pairs with `concepts/lsm-tree.md`. | - | todo |
-| 7 | Elasticsearch | `elasticsearch/` | Inverted index, shards and replicas, relevance scoring. | - | todo |
-| 8 | Zookeeper | `zookeeper/` | Ephemeral nodes, watches, leader election. Compare with etcd. | - | todo |
-| 9 | Nginx / Envoy | `envoy/` | Load balancing algorithms, health checks, circuit breaking, retries. | - | todo |
-| 10 | Prometheus | `prometheus/` | Metrics, PromQL, alerting. Feeds the "what pages you at 3am" question. | - | todo |
+| 2 | Kafka | [`kafka/`](kafka/) | One exercise per Kafka feature (keys, groups, offsets, acks, ISR, idempotence, transactions, compaction, seek by time, share groups, Debezium CDC and outbox), each mapped to the hld/ systems that use or refuse it. | 11 | todo |
+| 3 | RAG + ReAct (Ollama, pgvector) | [`rag-react/`](rag-react/) | Chunk, embed, hybrid search, recall@k, filtered HNSW, a from-scratch ReAct loop, tool calling and a prompt-injection attack, all on this repo's own `concepts/` notes. Guided session, about 3h25. | 7 | todo |
+| 4 | PostgreSQL | `postgres/` | Isolation levels, indexes, EXPLAIN, WAL, replication lag. | - | todo |
+| 5 | etcd | `etcd/` | Raft in practice: leases, watches, compare-and-swap, leader loss. | - | todo |
+| 6 | Cassandra | `cassandra/` | Tunable consistency, partition keys, hinted handoff, read repair. | - | todo |
+| 7 | RocksDB | `rocksdb/` | LSM tree, compaction, write amplification. Pairs with `concepts/lsm-tree.md`. | - | todo |
+| 8 | Elasticsearch | `elasticsearch/` | Inverted index, shards and replicas, relevance scoring. | - | todo |
+| 9 | Zookeeper | `zookeeper/` | Ephemeral nodes, watches, leader election. Compare with etcd. | - | todo |
+| 10 | Nginx / Envoy | `envoy/` | Load balancing algorithms, health checks, circuit breaking, retries. | - | todo |
+| 11 | Prometheus | `prometheus/` | Metrics, PromQL, alerting. Feeds the "what pages you at 3am" question. | - | todo |
 
 Add a row when a new tool folder is created. Keep the table sorted by priority, not alphabetically.
 
@@ -57,6 +58,7 @@ Add a row when a new tool folder is created. Keep the table sorted by priority, 
 - Docker Desktop (or Colima) running.
 - `docker compose` v2 (`docker compose version`).
 - Python 3.11+ for `scripts/`.
+- Ollama, native not Docker, for `rag-react/` (`brew install ollama`, then `ollama serve`).
 
 Quick check:
 

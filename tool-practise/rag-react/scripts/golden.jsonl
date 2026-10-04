@@ -1,0 +1,18 @@
+{"kind": "semantic", "q": "How do I stop thousands of requests from all hitting the database when a popular cached value expires?", "file": "caching-patterns.md", "needle": "stampede"}
+{"kind": "semantic", "q": "How do I prevent a process that was paused by GC from writing after its lock already expired?", "file": "leases-fencing-clocks.md", "needle": "fencing token"}
+{"kind": "semantic", "q": "How many bits per key does a probabilistic set membership filter need for about one percent false positives?", "file": "bloom-filter.md", "needle": "9.6"}
+{"kind": "semantic", "q": "How do two replicas find which blocks of data differ without shipping the whole dataset?", "file": "merkle-tree.md", "needle": "anti-entropy"}
+{"kind": "semantic", "q": "How many rounds does it take for a rumor-style update to reach every node in the cluster?", "file": "gossip-protocol.md", "needle": "log(N)"}
+{"kind": "semantic", "q": "What happens to my long-running business process code when the worker machine crashes halfway?", "file": "temporal-durable-execution.md", "needle": "replay"}
+{"kind": "semantic", "q": "Why does calling many backends in parallel make my tail latency worse?", "file": "fan-out-fan-in.md", "needle": "p99"}
+{"kind": "semantic", "q": "How can a browser upload a file straight to object storage without holding any credentials?", "file": "signed-url.md", "needle": "HMAC"}
+{"kind": "semantic", "q": "When does a follower decide to start an election and become a candidate?", "file": "raft.md", "needle": "election timeout"}
+{"kind": "semantic", "q": "How do I update a database row and publish an event without losing one of them if the process crashes in between?", "file": "exactly-once.md", "needle": "outbox"}
+{"kind": "keyword", "q": "what is zxid", "file": "*", "needle": "zxid"}
+{"kind": "keyword", "q": "code_verifier", "file": "*", "needle": "code_verifier"}
+{"kind": "keyword", "q": "ReadIndex vs lease read", "file": "*", "needle": "ReadIndex"}
+{"kind": "keyword", "q": "HLC", "file": "*", "needle": "HLC"}
+{"kind": "keyword", "q": "G-Counter merge", "file": "*", "needle": "G-Counter"}
+{"kind": "keyword", "q": "Gorilla compression ratio", "file": "*", "needle": "Gorilla"}
+{"kind": "keyword", "q": "ef_search default", "file": "*", "needle": "ef_search"}
+{"kind": "keyword", "q": "write skew example", "file": "*", "needle": "write skew"}

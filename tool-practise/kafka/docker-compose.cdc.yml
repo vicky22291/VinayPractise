@@ -1,0 +1,26 @@
+# Exercise 11: Postgres + Debezium (Kafka Connect) on top of the single broker.
+#   docker compose -f docker-compose.yml -f docker-compose.cdc.yml up -d
+services:
+  postgres:
+    image: postgres:16
+    container_name: kafka-pg
+    environment:
+      POSTGRES_PASSWORD: pg
+    command: ["postgres", "-c", "wal_level=logical", "-c", "max_slot_wal_keep_size=256MB"]
+
+  connect:
+    image: quay.io/debezium/connect:3.3
+    container_name: kafka-connect
+    depends_on: [kafka, postgres]
+    ports:
+      - "127.0.0.1:8083:8083"
+    environment:
+      BOOTSTRAP_SERVERS: kafka:19092
+      GROUP_ID: connect-lab
+      CONFIG_STORAGE_TOPIC: connect-configs
+      OFFSET_STORAGE_TOPIC: connect-offsets
+      STATUS_STORAGE_TOPIC: connect-status
+      CONFIG_STORAGE_REPLICATION_FACTOR: 1
+      OFFSET_STORAGE_REPLICATION_FACTOR: 1
+      STATUS_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_OFFSET_FLUSH_INTERVAL_MS: 5000
