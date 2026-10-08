@@ -15,6 +15,7 @@ Read `CLAUDE.md` for the answer style, color legend, and templates.
 | `templates/` | Templates + canonical color legend |
 | `popular_systems_deepdive/` | Source-verified internals: Kubernetes, Kafka, Cassandra |
 | `tool-practise/` | Hands-on lab: run Redis, Kafka, etc. locally with Docker, break them, take notes |
+| `ai-programming-exercises/` | AI-allowed coding rounds (Stripe, Meta, ...): research in README, one folder per exercise |
 | `databricks/` | Harvested Databricks engineering blog: 651 technical posts, 1,803 diagrams turned into Mermaid |
 | `openai/` | Harvested OpenAI engineering blog: 20 posts, 77 diagrams turned into Mermaid |
 

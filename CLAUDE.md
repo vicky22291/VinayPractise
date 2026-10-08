@@ -93,6 +93,7 @@ problem_solving/  DSA — Python. Patterns + solved problems.
 behavioral/   Staff-level STAR stories, scope/influence/ambiguity narratives
 templates/    Study templates + the canonical color legend
 tool-practise/  Hands-on lab: one folder per open source tool (Redis, Kafka, ...), docker-compose + exercises
+ai-programming-exercises/  AI-allowed coding rounds: research README + one folder per exercise, each with its own CLAUDE.md
 ```
 
 - File names: `kebab-case.md`, e.g. `hld/design-whatsapp.md`.
