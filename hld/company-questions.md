@@ -1,8 +1,8 @@
-# Company Question Bank: Intuit (Principal) and Rippling (Staff)
+# Company Question Bank: Intuit (Principal), Rippling (Staff) and Stripe (Staff)
 
-> One-line answer: Intuit Principal is a **case-study loop**. You get a design or build prompt ahead of time and defend it across about 4 rounds, with AI and security graded in every one. Rippling Staff is a **practical loop**. You write runnable code with tests (KV with transactions, rules engine, a 90-minute API build), and the system design rounds set your level. The news aggregator is the most reported design prompt: 10 candidate posts and 16 PracHub pages.
+> One-line answer: Intuit Principal is a **case-study loop**. You get a design or build prompt ahead of time and defend it across about 4 rounds, with AI and security graded in every one. Rippling Staff is a **practical loop**. You write runnable code with tests (KV with transactions, rules engine, a 90-minute API build), and the system design rounds set your level. The news aggregator is the most reported design prompt: 10 candidate posts and 16 PracHub pages. Stripe Staff (L4) is **practical rounds plus a design bar**: bug squash in a real repo, integration against real APIs and AI-assisted coding, next to one or two 45 to 60 minute design rounds. Stripe's design prompts are its own: metrics counters, idempotent ledgers, a feature-flag service (the one 2026 Staff report) and a "superhero dispatch" graded on why you picked each technology.
 
-Checked 2026-09-30. Rippling design rounds (§2.2) re-checked 2026-10-02. Every row below carries its source and one of these tags:
+Checked 2026-09-30. Rippling design rounds (§2.2) re-checked 2026-10-02. Stripe (§3) checked 2026-10-08. Every row below carries its source and one of these tags:
 
 | Tag | Meaning |
 |---|---|
@@ -11,7 +11,7 @@ Checked 2026-09-30. Rippling design rounds (§2.2) re-checked 2026-10-02. Every 
 | [guide] | An aggregator page (PracHub). Built from candidate reports, but no level and not independent |
 | [unverified] | Cited by a research agent, page could not be opened (1point3acres 403, x.com 402) |
 
-Guide-only lists (SystemDesignHandbook, DesignGurus, Exponent) are not counted as reports.
+Guide-only lists (SystemDesignHandbook, DesignGurus, Exponent / Aced, techinterview.org) are not counted as reports.
 
 ---
 
@@ -217,7 +217,107 @@ A Rippling commenter on the Sr. EM rejection (Sep 2025) ✅ [Blind](https://www.
 
 ---
 
-## 3. Level ladders
+## 3. Stripe: Staff (L4)
+
+### 3.1 The loop
+
+```mermaid
+%% Stripe SWE loop for Senior (L3) and Staff (L4) as reported 2020 to 2026. Red = the round that sank both 2026 design reports at L3 and Staff.
+flowchart LR
+    RS[Recruiter screen] -->|pass| SCR[Screen<br/>practical coding, or<br/>system design at L4]
+    SCR -->|Staff, 2026| MINI[Mini onsite<br/>2 x 60 min: design<br/>then AI coding]
+    SCR -->|onsite| PROG[Programming<br/>multi-part, must run]
+    SCR -->|onsite, 2026| AIC[AI-assisted coding<br/>you drive the agent]
+    SCR -->|onsite| BUG[Bug squash<br/>real open-source repo]
+    SCR -->|onsite| INT[Integration<br/>call real APIs]
+    SCR -->|onsite| SD{{System design<br/>45 to 60 min, Whimsical}}
+    SCR -->|L4 onsite| PP[Project presentation<br/>20 min, past system]
+    SCR -->|onsite| HM[Manager round<br/>goals, adaptability, scope]
+    MINI -->|pass, rest of onsite| PROG
+    PROG & AIC & BUG & INT & SD & PP & HM -->|scores| HC[Hiring committee<br/>plus references]
+    HC -->|decision| LVL[Offer and level]
+
+    class RS client
+    class SCR,MINI,PROG,AIC,BUG,INT,PP,HM service
+    class SD critical
+    class HC decision
+    class LVL store
+
+    classDef client   fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#111
+    classDef service  fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#111
+    classDef store    fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#111
+    classDef critical fill:#fee2e2,stroke:#dc2626,stroke-width:4px,color:#111
+    classDef decision fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#111
+```
+
+- **Levels.** levels.fyi lists 6 SWE levels, L1 to L6, and labels **L4 "Staff Engineer"**. Average total comp: L1 $225K, L2 $284K, L3 $446K, L4 $621K. L5 and L6 are hidden ([levels.fyi](https://www.levels.fyi/companies/stripe/salaries/software-engineer), checked 2026-10-08). Candidates write "L4(Staff)" and "Staff, IC4" ✅ [Blind](https://www.teamblind.com/post/bombed-1-interview-for-stripe-l4-bbfkyevt). A candidate targeting Staff everywhere got Stripe's offer at "L5 Software Engineer" (2020) ✅ [LeetCode](https://leetcode.com/discuss/interview-experience/906579/).
+- **Round names.** Programming exercise, Bug squash, Integration, System design, and a manager round called "Experience and goals" or "adaptability". A self-described current Stripe interviewer (Mar 2025): "typically the technical onsite involves bug squash, integration, FE design (for frontend roles), coding and sys design" ✅ [Blind](https://www.teamblind.com/post/stripe-onsite-technical-interview-hlpyjoxv). A 2021 SWE loop had the same five ✅ [Blind](https://www.teamblind.com/post/stripe-system-design-bxptt8eb).
+- **L4 gets more design (2020 to 2022).** L4 (Sep 2020): "My phone screen was a sys design. Another sys design on the onsite, a regular stripe coding q, project presentation, manager round and another round" ✅ [Blind](https://www.teamblind.com/post/stripe-l4-loop-oq6ap7fh). L4 (Apr 2022): "2 interviews (hiring manager and system design)", then "system design, coding, behavioural and a technical project presentation". Offer ✅ [Blind](https://www.teamblind.com/post/stripe-l4-interview-process-for-sde-bzmjscvl). L5 offer (2020): a design screen, then 1 coding, a 20-minute presentation on a past project, 1 system design, the manager and the org head ✅ [LeetCode](https://leetcode.com/discuss/interview-experience/906579/). A commenter on an L4 thread (May 2022): "L4 generally has two design rounds" ✅ [Blind](https://www.teamblind.com/post/stripe-interview-review-l4-cajhi5dn).
+- **Staff in 2026.** The one 2026 Staff report (Aug): after the recruiter screen, "two rounds of a mini onsite (60 min * 2)". Round 1 was system design (feature flags), round 2 AI coding. Rejected after those two ✅ [PracHub](https://prachub.com/interview-experiences/stripe-staff-software-engineer-interview-experience-feature-flag-design-and-an-ai-coding-round-rejected).
+- **Below Staff, design is not guaranteed.** Senior+ (Sep 2026): bug hunt, AI coding, a map-drawing integration, behavioral. "I was interviewing for Sr but there was no system design round?!" ✅ [PracHub](https://prachub.com/interview-experiences/stripe-senior-software-engineer-interview-experience-bug-hunt-ai-pairing-and-map-drawing-rounds-no-system-design). L3 / Senior full-stack, 15 YoE (Apr 2026): no design in the onsite, then "a final design round" added after positive feedback ✅ [Blind](https://www.teamblind.com/post/stripe-one-final-design-round-after-virtual-onsite-what-to-expect-l3senior-full-stack-r7cg014e). A commenter guessed it was "to calibrate leveling (L3 vs L4)".
+- **Round mechanics.** 45 minutes in 2021 and 2025 ("I felt 45 mins was too short") ✅ Blind [tshyvotg](https://www.teamblind.com/post/stripe-system-design-interview-tshyvotg), [bxptt8eb](https://www.teamblind.com/post/stripe-system-design-bxptt8eb), [ps7pgzwy](https://www.teamblind.com/post/stripe-onsite-design-1-interview-ps7pgzwy). 60 minutes in the 2026 Staff mini onsite. Whimsical as the whiteboard ✅ Blind [fxpd6zng](https://www.teamblind.com/post/stripe-interview-fxpd6zng) (2020), [5clmdoyv](https://www.teamblind.com/post/stripe-system-design-interview-pointers-5clmdoyv) (2022). A printed problem sheet (2021). An NDA before the onsite ✅ [Blind](https://www.teamblind.com/post/stripe-system-design-jeaobs2m), which is why 2020 to 2023 posts name no prompt. Stripe sends a prep Google doc per round type, but in Apr 2026 "it doesn't include system design".
+- **AI coding replaced a round in 2026.** An L3 candidate was told a few days before that round 1 "had been changed to an AI round" ✅ [PracHub](https://prachub.com/interview-experiences/stripe-software-engineer-interview-experience-five-onsite-rounds-including-a-superhero-dispatch-system). The Staff candidate's lesson: "the interviewer wanted me to drive the design and write modular code, not to let the agent solve everything by itself".
+
+### 3.2 System design prompts, ranked
+
+"Reports" counts first-hand posts I opened. "PracHub" counts question pages tagged Stripe and System Design: 11 on the [category list](https://prachub.com/companies/stripe/categories/system-design) (checked 2026-10-08), 6 onsite and 5 technical screen, all "Software Engineer", dated Jul 2025 to Aug 2026. PracHub also holds 57 Stripe write-ups. I opened all 57: 6 link a design question, and 3 of those 6 are locked, so only the round, date and level label are visible.
+
+| # | Prompt | Reports ✅ | PracHub [guide] | What gets probed |
+|---|---|---|---|---|
+| 1 | **Metrics counting and monitoring** | 2: [L5 offer, design screen, 2020](https://leetcode.com/discuss/interview-experience/906579/) "design an e2e metrics/observability system"; [Senior+ Aug 2026](https://prachub.com/interview-experiences/stripe-seniorplus-software-engineer-interview-experience-ai-assisted-phone-screens-rejected-after-four-onsite-rounds) "design a metrics monitoring system. He simplified the metrics down to just counts" (technical side fine, rejected on behavioral scope) | 3: [count-metrics monitoring platform](https://prachub.com/interview-questions/design-a-count-metrics-monitoring-platform) (onsite, Aug 2026, same Senior+ candidate), [distributed metrics counter](https://prachub.com/interview-questions/design-a-distributed-metrics-counter) (onsite, Mar 2026, Senior+, write-up locked), [local activity counter](https://prachub.com/interview-questions/design-a-local-activity-counter-service) (tech screen, Sep 2025) | Recent counts, rates, label grouping, alerts. Duplicate and late events, retention, cardinality limits, replay. Exact vs approximate. Hot keys. `increment(key, timestamp)`, `getCount(key, timeWindow)`, `getUniqueActors(key, window)` |
+| 2 | **Ledger: idempotent, double-entry** | 0 readable. The one onsite write-up is locked | 5: [merchant ledger](https://prachub.com/interview-questions/design-a-merchant-ledger-service) (onsite, Oct 2025, write-up locked, "Rejected After Reference Checks"), [ledger and Bikemap integration](https://prachub.com/interview-questions/design-ledger-and-bikemap-integration) (onsite, Jul 2025), [idempotent double-entry ledger](https://prachub.com/interview-questions/design-an-idempotent-double-entry-ledger) (tech screen, Jun 2026), [ledger recording and query](https://prachub.com/interview-questions/design-a-ledger-recording-and-query-system) (tech screen, Aug 2026), [scalable idempotent ledger](https://prachub.com/interview-questions/design-a-scalable-idempotent-ledger-service) (tech screen, Aug 2026). Also first in the [Aced guide](https://www.aced.io/blog/stripe-system-design-interview): "Reported by interviewers and candidates alike" | Immutable postings, idempotent retried writes, balanced currencies, pending vs posted, concurrent requests, hot accounts, shard boundaries, compensating entries, reconciliation, "balances labeled by freshness" |
+| 3 | **Superhero dispatch** | 1: [L3, May 2026, onsite round 5](https://prachub.com/interview-experiences/stripe-software-engineer-interview-experience-five-onsite-rounds-including-a-superhero-dispatch-system) "Kind of like Uber, except the dispatch traffic wouldn't be nearly as crazy as Uber's, and this design didn't involve any API design at all". Rejected: "my justification for the technology choices wasn't strong enough" | 2: [superhero dispatch](https://prachub.com/interview-questions/design-a-superhero-dispatch-system) (onsite, May 2026, same candidate, full prompt visible), [superhero incident dispatch](https://prachub.com/interview-questions/design-a-superhero-incident-dispatch-system) (onsite, Feb 2026, write-up locked, titled "Rejected on a Surprise System Design Question") | **Exactly one** hero accepts. Reliability over throughput. Split the assignment (must be right) from live location (can be stale). Radius query, incident state machine, offer timeouts and retries. The prompt page: "The interviewer's primary signal is the strength of your justification for each technology and consistency choice" |
+| 4 | **Feature flag service, like Amazon Weblab** | 1: [Staff, Aug 2026, mini onsite round 1, 60 min](https://prachub.com/interview-experiences/stripe-staff-software-engineer-interview-experience-feature-flag-design-and-an-ai-coding-round-rejected). Rejected: "trying to force-fit a template from somewhere else instead of designing around the actual requirements" | 1: [feature flag service](https://prachub.com/interview-questions/design-a-feature-flag-service-with-percentage-rollouts-and-allow-block-lists) (tagged tech screen, Aug 2026, same candidate, full prompt visible) | Read/write ratio first. Evaluate in a client library or in a central service. Deterministic sticky bucketing that holds as the rollout grows and is independent per flag. Allow and block lists with an explicit evaluation order. Propagation with versions, validation and a bounded kill-switch delay. What a service does when the control plane is down |
+| 5 | **A new service inside a simplified Stripe architecture** | 2: [SWE, May 2021](https://www.teamblind.com/post/stripe-system-design-bxptt8eb) "I was given a simplified Stripe architecture and was told a build a service which interacted with existing Stripe services and we went into the details of API, DB, scalability" (did "well in my technical rounds", then "Got rejected by HC"); [Apr 2023](https://www.teamblind.com/post/stripe-system-design-jeaobs2m) "a system design question very specific to Stripe, not the run-of-the-mill design newsfeed, distributed like counter etc. Can't share more. NDA" | 0 | API first, then storage and scale. The new service has to fit Stripe's existing objects and services |
+| 6 | ML system design (MLE loops only) | 1: [Sr. MLE, Sep 2024](https://leetcode.com/discuss/interview-experience/5984403/) "Non standard design question, specific to Stripe", 1 hour, "The interviewer kept interrupting me to ask clarifications" | 0 | Model design, then the serving system around it |
+| 7 | Design round, prompt not named | 11: Blind [L4 Sep 2020](https://www.teamblind.com/post/stripe-l4-loop-oq6ap7fh) (2 design rounds), [Senior Dec 2020](https://www.teamblind.com/post/stripe-interview-fxpd6zng) "pretty standard", [Staff IC4 Aug 2021](https://www.teamblind.com/post/bombed-1-interview-for-stripe-l4-bbfkyevt) "tech and design rounds went well", [EM Nov 2021](https://www.teamblind.com/post/stripe-em-system-design-interview-xqvokadb) "focus on api design and distributed high concurrency systems" (offer, declined), [L4 Apr 2022](https://www.teamblind.com/post/stripe-l4-interview-process-for-sde-bzmjscvl) (2 design rounds, offer), [L4 May 2022](https://www.teamblind.com/post/stripe-interview-review-l4-zxwadrsf) "expecting something clean from the get go", [L4 India May 2022](https://www.teamblind.com/post/stripe-interview-review-l4-cajhi5dn) "went well" (rejected on the debugging round), [FE-leaning Apr 2025](https://www.teamblind.com/post/stripe-onsite-design-1-interview-ps7pgzwy) "about 45mins long"; LeetCode [Jul 2021](https://leetcode.com/discuss/interview-experience/1340172/stripe-no-offer/) "Very typical. Was a concrete problem but didn't need to provide actual queries", [Oct 2023](https://leetcode.com/discuss/interview-experience/4114595/) "Went really well" (no offer, limited openings); PracHub [NYC Jun 2026](https://prachub.com/interview-experiences/stripe-software-engineer-interview-experience-practical-coding-design-and-project-discussion-d5f90202b3) "two long assessment interviews that blended coding and system design" | n/a | |
+
+**Not counted:** two Blind commenters on the Apr 2026 thread, neither describing their own round. One wrote "Design a payment system". The other, offering to sell prep notes, listed "a User Feature System, a payment processing pipeline with idempotency and retry logic, or a Shipping Route optimization system". "User Feature System" may be the feature-flag prompt. LeetCode's ["Design Stripe subscriptions"](https://leetcode.com/discuss/interview-question/system-design/2172363/design-stripe-subscriptions) (2022) is a practice prompt, not a report.
+
+**Seen only in guides, never in a first-hand post:** rate limiter, distributed LRU cache, application performance monitoring (Aced says these two "appear in engineering manager loops"), "Redesign an internal authorization system across services" (Aced: "One interviewer's staple"), "Design the APIs to store transactions and a transaction log" ([Aced](https://www.aced.io/blog/stripe-system-design-interview), which says its list "comes from a verified candidate report or a Stripe interviewer" but gives no dates or links), webhook delivery ([DesignGurus](https://www.designgurus.io/blog/stripe-interview-guide)), payment processing, a payment that times out, Radar fraud detection ([techinterview.org](https://techinterview.org/stripe-interview/)). Of these, only the metrics service and the ledger also appear in first-hand or PracHub data.
+
+### 3.3 The other rounds, for context
+
+| Round | Reported prompts | Status |
+|---|---|---|
+| **AI-assisted coding** (2026) | Transaction rule engine. Rules as strings ("a credit card name can't equal X"), then AND / OR chains, then nested parentheses. You write the tests. Codex or Claude does the typing | ✅ PracHub [Staff Aug 2026](https://prachub.com/interview-experiences/stripe-staff-software-engineer-interview-experience-feature-flag-design-and-an-ai-coding-round-rejected), [Senior+ Sep 2026](https://prachub.com/interview-experiences/stripe-senior-software-engineer-interview-experience-bug-hunt-ai-pairing-and-map-drawing-rounds-no-system-design), [L3 May 2026](https://prachub.com/interview-experiences/stripe-software-engineer-interview-experience-five-onsite-rounds-including-a-superhero-dispatch-system), [SWE Sep 2026](https://prachub.com/interview-experiences/stripe-software-engineer-interview-experience-ai-coding-reconciliation-and-a-debugger-that-would-not-run) |
+| **Integration** | Bikemap: connect JSON coordinates through a documented open-source drawing API (4 posts, May to Sep 2026). Payment-to-invoice reconciliation: match by invoice id in the memo, then exact amount, then amount within a tolerance, earliest due date wins (2 posts, Sep 2026). Request replaying: collapse duplicate JSON requests and process each once (Feb 2026) | ✅ same PracHub posts, [reconciliation + 307](https://prachub.com/interview-experiences/stripe-software-engineer-interview-experience-reconciliation-a-requests-307-bug-squash-bikemap-and-an-ai-exercise-no-offer), [LeetCode](https://leetcode.com/discuss/post/7595344/) |
+| **Bug squash** | [Mako](https://github.com/sqlalchemy/mako) templating library (Feb and May 2026). Python [requests](https://github.com/psf/requests) losing a POST body on a 307 redirect when the body is a partly read stream (2 posts, Sep 2026). A parallel graph library in Scala (2021) | ✅ [LeetCode](https://leetcode.com/discuss/post/7595344/), PracHub posts above, [LeetCode](https://leetcode.com/discuss/interview-experience/1340172/stripe-no-offer/) |
+| **OA and screens** | Deployment-window scheduler over a 10,080-minute week: allowed minus freeze windows, then time zones, lead time and top k (2 posts, Sep 2026). Data-center health registry with haversine nearest-healthy routing, and rendering a task tree with `├─` and `└─` (Sep 2026). Four-part fraud checks on transactions (Nov 2025). Bank-balance reconciliation across two CSVs (Aug 2026) | ✅ PracHub [scheduler](https://prachub.com/interview-experiences/stripe-software-engineer-interview-experience-a-two-part-deployment-window-scheduler-oa-i-couldnt-finish), [tree](https://prachub.com/interview-experiences/stripe-software-engineer-interview-experience-oa-a-great-recruiter-and-a-tree-rendering-vo-where-i-finished-two-parts), [balances](https://prachub.com/interview-experiences/stripe-software-engineer-interview-experience-a-new-coding-question-a-blank-editor-never-reached-part-3-and-didnt-pass-the-phone-screen); [LeetCode](https://leetcode.com/discuss/post/7384225/) |
+
+The same themes recur in every round: idempotency (request replaying, ledgers), rules as data (the AI round), reconciliation (integration and screens). A design answer that handles retries and reconciliation well matches what the other rounds test.
+
+### 3.4 The bar, in candidates' words
+
+- **Design around the requirements, not a template.** Staff (Aug 2026): the feedback was "I was trying to force-fit a template from somewhere else". In hindsight: "a lot of the logic should really live in a client-side library: the client services pull a snapshot from object storage and compute locally, with no need to build a data plane service" ✅ [PracHub](https://prachub.com/interview-experiences/stripe-staff-software-engineer-interview-experience-feature-flag-design-and-an-ai-coding-round-rejected).
+- **Justify every technology.** L3 (May 2026): "my justification for the technology choices wasn't strong enough" ✅ [PracHub](https://prachub.com/interview-experiences/stripe-software-engineer-interview-experience-five-onsite-rounds-including-a-superhero-dispatch-system).
+- **Staff scope is graded outside the design round too.** Senior+ (Aug 2026): "no problem on the technical side", but behavioral answers "leaned too much toward execution and didn't show staff-level scope" ✅ [PracHub](https://prachub.com/interview-experiences/stripe-seniorplus-software-engineer-interview-experience-ai-assisted-phone-screens-rejected-after-four-onsite-rounds).
+- **Clean from the start.** L4 (May 2022): "they were expecting something clean from the get go" ✅ [Blind](https://www.teamblind.com/post/stripe-interview-review-l4-zxwadrsf).
+- **Numbers and a real MVP.** A commenter on a Staff candidate's thread (Apr 2022, role not stated): "You should be able to speak to general sizes and numbers ... you actually need to build an MVP (no magic 'so we'll have a load balancer and some k8s pods over here' type stuff)" ✅ [Blind](https://www.teamblind.com/post/stripe-system-design-interview-pointers-5clmdoyv).
+
+### 3.5 Stripe context worth quoting
+
+- Idempotency keys: sent in an `Idempotency-Key` header and kept for 24 h. Reusing a key with different parameters is a 400. A second request while the first is still in flight is a 409 ([Stripe docs](https://docs.stripe.com/api/idempotent_requests)).
+- Ledger: 5 billion events a day, and 99.99% of dollar volume ingested and verified within 4 days ([stripe.dev](https://stripe.dev/blog/ledger-stripe-system-for-tracking-and-validating-money-movement)). Already used in [#8](payments-ledger/) and [#50](quickbooks-ledger/).
+
+### 3.6 Map to this repo
+
+| Stripe prompt | Practise with |
+|---|---|
+| Metrics counting and monitoring | [#26 health-monitoring](health-monitoring/) for ingest, rollups and alerts. [#46 event counter](employee-ops-bundle/deep-dives/event-ingestion-dedup-and-late-data.md) for duplicate and late events. [Stream sketches](../concepts/stream-sketches.md) for exact vs approximate and unique actors. [Time-series DB](../concepts/time-series-db.md) for cardinality limits |
+| Ledger family | [#8 payments-ledger](payments-ledger/): [idempotency keys](payments-ledger/deep-dives/idempotency-keys.md), [double entry](payments-ledger/deep-dives/ledger-and-double-entry.md), [hot accounts](payments-ledger/deep-dives/hot-accounts-and-contention.md), [reconciliation](payments-ledger/deep-dives/reconciliation-and-audit.md). [#50 quickbooks-ledger](quickbooks-ledger/) for balance queries |
+| Feature flag service | [#56 feature-flag-service](feature-flag-service/), built 2026-10-08: in-process evaluation, salted SHA-256 buckets in basis points, 5 s pointer poll by a per-host agent, last-known-good, two-stage validation, guarded ramps. §12 there is a 60-minute plan for Stripe's round. Sibling: [#23 distributed-denylist](distributed-denylist/) |
+| Superhero dispatch | [#57 superhero-dispatch](superhero-dispatch/) registered (README with the full PracHub prompt, todo). Closest until built: [#41 uber-ride-hailing](uber-ride-hailing/) (attempt only), [geospatial index](../concepts/geospatial-index.md), [leases and fencing](../concepts/leases-fencing-clocks.md) |
+| New service inside Stripe's architecture | [#8 payments-ledger](payments-ledger/) API section. Read Stripe's public API objects (PaymentIntent, Charge, Refund, Event) before the loop |
+| AI coding: rule engine | [#31 rule model](expense-rules-engine/deep-dives/rule-model-and-evaluation.md). Rehearse with an agent typing and you driving the design |
+| Integration: request replaying, reconciliation | [Idempotency keys](payments-ledger/deep-dives/idempotency-keys.md), [reconciliation](payments-ledger/deep-dives/reconciliation-and-audit.md) |
+| Guide-only: webhook delivery | [#58 webhook-delivery](webhook-delivery/) registered (README with Stripe's documented retry, ordering and signature behaviour, todo) |
+| Guide-only: internal authorization redesign | #30 `authorization-service/` (todo) |
+| Guide-only: rate limiter, distributed cache, Radar, payment timeout | Already solved: [#7](network-throttling/), [#20](distributed-cache/), [#52](payments-risk-decisioning/), [#8 rails and timeouts](payments-ledger/deep-dives/rails-timeouts-and-unknown-outcome.md) |
+
+---
+
+## 4. Level ladders
 
 ```mermaid
 %% Intuit and Rippling SWE ladders per levels.fyi (checked 2026-09-30). Pink = the level being interviewed for. No cross-company mapping implied.
@@ -247,30 +347,31 @@ flowchart TB
     classDef decision fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#111
 ```
 
-| | Intuit | Rippling |
-|---|---|---|
-| Ladder | 8 levels: SWE 1, SWE 2, Senior, Staff, Senior Staff, **Principal**, Distinguished Principal SWE, Engineering Fellow ([ladder](https://www.levels.fyi/companies/intuit/salaries/software-engineer), [Principal page](https://www.levels.fyi/companies/intuit/salaries/software-engineer/levels/principal-software-engineer)) | L5 SWE, L6 SWE II, L7 Senior, **L8 Staff**, then 2 more levels with hidden titles ([ladder](https://www.levels.fyi/companies/rippling/salaries/software-engineer)) |
-| Target level | Principal is 6th of 8, two rungs above Staff | Staff is L8, one rung above Senior |
-| Median total comp | Staff $337K, Principal $606K (about 1.8x). Senior Staff and Fellow hidden | Not captured |
-| Oddities | levels.fyi also shows an "Architect" title with no stated position. A 2023 Blind comment calls the rung above Principal "Distinguished Engineer" ([Blind](https://www.teamblind.com/post/principal-engineer-intuit-interview-experience-o1duw410)) | Candidate posts write "L7" for Senior, so "L7 loop" data is Senior, not Staff |
-| Which loop | Senior Staff and Principal both get the case-study loop | Same prompts across levels, and the design rounds set the level |
+| | Intuit | Rippling | Stripe |
+|---|---|---|---|
+| Ladder | 8 levels: SWE 1, SWE 2, Senior, Staff, Senior Staff, **Principal**, Distinguished Principal SWE, Engineering Fellow ([ladder](https://www.levels.fyi/companies/intuit/salaries/software-engineer), [Principal page](https://www.levels.fyi/companies/intuit/salaries/software-engineer/levels/principal-software-engineer)) | L5 SWE, L6 SWE II, L7 Senior, **L8 Staff**, then 2 more levels with hidden titles ([ladder](https://www.levels.fyi/companies/rippling/salaries/software-engineer)) | 6 levels, L1 to L6. **L4 is "Staff Engineer"**. L5 and L6 titles hidden ([ladder](https://www.levels.fyi/companies/stripe/salaries/software-engineer)) |
+| Target level | Principal is 6th of 8, two rungs above Staff | Staff is L4, 4th of 6, one rung above L3 (Senior) |
+| Median total comp | Staff $337K, Principal $606K (about 1.8x). Senior Staff and Fellow hidden | Not captured | Averages, not medians: L3 $446K, L4 $621K (about 1.4x) |
+| Oddities | levels.fyi also shows an "Architect" title with no stated position. A 2023 Blind comment calls the rung above Principal "Distinguished Engineer" ([Blind](https://www.teamblind.com/post/principal-engineer-intuit-interview-experience-o1duw410)) | Candidate posts write "L7" for Senior, so "L7 loop" data is Senior, not Staff | A 2020 candidate targeting Staff got an offer at L5. An L3 / Senior candidate got an extra design round in 2026, said to set L3 vs L4 |
+| Which loop | Senior Staff and Principal both get the case-study loop | Same prompts across levels, and the design rounds set the level | L4 got a design screen plus an onsite design round (2020 to 2022). 2026 Staff: a 2-round mini onsite that opens with design |
 
 - **Source quality:** these are levels.fyi's user-submitted titles and medians, not an official chart. Medians are the site's headline figures and are not adjusted for location. India pay is much lower: a Senior Staff candidate in Bangalore was quoted a ₹90L base ([Blind](https://www.teamblind.com/post/insights-on-intuit-interview-process-for-senior-staff-kpeifc1y)).
-- **No mapping between companies:** the diagram does not claim Intuit Principal equals any Rippling level. Nothing I found maps the two ladders.
+- **No mapping between companies:** the diagram does not claim Intuit Principal equals any Rippling level. Nothing I found maps the two ladders. Stripe is left out of the diagram to keep it under 15 nodes; its ladder is in the table and in §3.1.
 
 ---
 
-## 4. What this changes in prep
+## 5. What this changes in prep
 
-| | Intuit Principal | Rippling Staff |
-|---|---|---|
-| Format to rehearse | A 10-slide case-study deck, defended in 4 back-to-back mock rounds | A 45-minute runnable build with tests, then 45 minutes of hardening. Plus a project presentation of one past system |
-| First three problems | #45 tax refund status, #43 AI gateway, #7 rate limiter with a VIP tier | #44 news aggregator, event tracking like Amplitude (via #26 / #18), #31 rules engine (code first) |
-| Section to add to every answer | AI with guardrails, and security (authn, authz, PII, encryption) | "What if this runs twice", and tenant isolation |
-| Hands-on | Clone the [Intuit-A4A Java player service](https://github.com/Intuit-A4A/backend-java-player-service), add an LLM feature in 60 min | Rules engine and KV with nested transactions as runnable Java with tests |
+| | Intuit Principal | Rippling Staff | Stripe Staff (L4) |
+|---|---|---|---|
+| Format to rehearse | A 10-slide case-study deck, defended in 4 back-to-back mock rounds | A 45-minute runnable build with tests, then 45 minutes of hardening. Plus a project presentation of one past system | A 45 to 60 minute design in Whimsical that starts from the requirements and the numbers, not a template. Plus a 20-minute presentation of one past system, an AI-driven coding round, and a bug squash in a real repo |
+| First three problems | #45 tax refund status, #43 AI gateway, #7 rate limiter with a VIP tier | #44 news aggregator, event tracking like Amplitude (via #26 / #18), #31 rules engine (code first) | #56 feature flags, metrics counter (via #26 / #46), #8 ledger with idempotency. Then #57 superhero dispatch |
+| Section to add to every answer | AI with guardrails, and security (authn, authz, PII, encryption) | "What if this runs twice", and tenant isolation | One sentence on why each technology, and what the MVP is before any scaling |
+| Hands-on | Clone the [Intuit-A4A Java player service](https://github.com/Intuit-A4A/backend-java-player-service), add an LLM feature in 60 min | Rules engine and KV with nested transactions as runnable Java with tests | Clone [Mako](https://github.com/sqlalchemy/mako) and [requests](https://github.com/psf/requests), run their tests, set up the step debugger. Build the AND / OR / parentheses rule engine with an agent typing and you reviewing |
 
-## 5. Gaps and confidence
+## 6. Gaps and confidence
 
 - **Intuit:** only one report names a Principal design prompt (tax refund status, snippet). The strongest signal is the format, not the prompts. Case studies differ per candidate ("they give different cases with varying levels of difficulty to different candidates", Jan 2025 thread).
 - **Rippling:** two public posts are labelled Staff, both 2025, both single design rounds: the news aggregator and document verification. No post is labelled L8. The rest of the data is L7 (Senior) and below, the Sr. EM thread, and the engineer's comment on it. Rippling runs the same prompts across levels and sets the level from the design rounds (one L7 candidate was dropped to L6, another to SDE-2), so the prompts should carry over. What changes is the depth bar, plus the project presentation.
+- **Stripe:** one first-hand Staff design report since 2023 (feature flags, Aug 2026). The other Staff and L4 data is 2020 to 2022 Blind threads that name no prompt, because candidates sign an NDA. The ledger has the most PracHub pages (5), but its one onsite write-up is locked, so no ledger report could be read. PracHub write-ups are "curated and edited by PracHub", so the wording is theirs. LeetCode Discuss had 2 Stripe design reports with no prompt and no Staff post. Reddit returned nothing to search or fetch.
 - **Blocked sources:** Glassdoor (403), 1point3acres (Cloudflare 403) and x.com (402) could not be opened. Counts from those are left out of the tables.
