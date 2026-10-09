@@ -8,6 +8,8 @@ Built 2026-10-08 from:
 
 Rules marked [HI] are Hello Interview's advice, built from candidate and interviewer interviews. They are not company policy.
 
+Sections 1 to 5 cover the round itself. Section 6 covers where to practise. [Section 7](#7-how-we-build-the-kits) is the build plan for our own kits.
+
 ---
 
 ## 1. First, know which format you are in
@@ -84,6 +86,7 @@ sequenceDiagram
 - Map the problem to a pattern before you prompt. Graph search, topological sort and backtracking "cover the majority of problems" [HI].
 - Ask whether AI-assisted planning is OK. It varies by interviewer, and some LinkedIn interviewers want AI for boilerplate only [HI].
 - Say the plan aloud. It takes ten seconds and lets the interviewer redirect you early.
+- Keep the plan verbal: class names and the order of steps. No diagrams in the round. Design documents are for building kits (§7), not for the 60 minutes.
 
 ### Execute (each step is one cycle of the diagram)
 - **Prompt with "what" and "how" in the codebase's own words,** and add "be concise" [HI]. For example: "Add `searchByPrefix` to `Dictionary` using the existing `TrieNode`."
@@ -217,6 +220,7 @@ Per kit folder, borrowing what works from the azizu06 repo:
   CLAUDE.md          interviewer script: reveal order, time calls, follow-ups, grading
   candidate/         what you see at minute zero: README for part 1, starter code, tests
   interviewer/       parts 2..N, their tests, rubric, answer key, model solution
+  interviewer/verify.py   answer key passes every part, starter fails part 1
 ```
 
 - Tests use stdlib `unittest`, so the repo stays dependency-free.
@@ -248,3 +252,72 @@ Per kit folder, borrowing what works from the azizu06 repo:
 | Spoiler protection | A written rule in AGENTS.md | Separate run copy outside the repo | **B** | A rule depends on the model obeying it. A directory boundary does not |
 | Assistant strength | Your daily agent | A deliberately weak, read-only one (mode A) | **Both** | Meta and LinkedIn give you a weak chat panel. DoorDash and Shopify let you bring your best |
 | Paid tools | Hello Interview Premium, interviewing.io | Free kits plus company pads | **Free first** | Pay only in the last 1 to 2 weeks for the real-UI rehearsal |
+
+---
+
+## 7. How we build the kits
+
+> One-line answer: **design the shared framework once and keep it thin. Build the Stripe kit end to end, then turn it into a template when starting kit 2.** Inside a kit the order is part statements, then tests, then the answer key's LLD.
+
+```mermaid
+%% Build order for our practice kits. Pink = the decision that keeps the framework thin.
+flowchart LR
+    D[Thin design<br/>shared kit framework] -->|once| P[Stripe kit<br/>part statements 1..N]
+    P -->|spec| T[Tests per part<br/>stdlib unittest]
+    T -->|answer key must pass| L[LLD of model solution<br/>tokenizer + small AST]
+    L --> V[Verify script<br/>solution passes, starter fails]
+    V --> DR[Dry run<br/>you, mode A, 60 min]
+    DR -->|fix pacing, leaks| X[Extract template]
+    X -->|kits 2..N| R[Rippling, LinkedIn kits]
+    Q{Design the full<br/>framework up front?} -.->|no| P
+
+    class D,P,L,X,R service
+    class T,V store
+    class DR client
+    class Q decision
+    classDef client   fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#111
+    classDef service  fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#111
+    classDef store    fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#111
+    classDef decision fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#111
+```
+
+### Phase 1: thin framework design (once)
+
+- **Covers only what every kit shares:**
+  - the run copy outside the repo
+  - how the interviewer reveals the next part
+  - the interviewer `CLAUDE.md` template
+  - the grading rubric
+  - the shape of `verify.py`
+- **Leaves out anything per exercise.** Each exercise is content, not a system, so it gets no design document of its own.
+- **Stays small on purpose.** The framework's real requirements only show up once one kit runs end to end. Designing all of it up front means designing for kits that don't exist yet.
+
+### Phase 2: the Stripe kit as one vertical slice
+
+| Step | Output | Done when |
+|---|---|---|
+| 1. Part statements | One README per part: string equality, then AND / OR, then parentheses, then more ([README §3](README.md#3-stripe-deep-dive-the-ai-programming-exercise)) | Each part reads like a minute-zero prompt, with no hints or algorithm names |
+| 2. Tests per part | `unittest` files, one per part. These are the product: you watch them go from failing to passing, and they gate the next reveal | Every reported edge case has a test, e.g. a merchant name containing "and" |
+| 3. LLD of the answer key | `classDiagram` plus the patterns used, per root `CLAUDE.md` §6. Python, matching the Stripe report | Each part is a small diff on the last part, not a rewrite |
+| 4. Verify script | `interviewer/verify.py` | The answer key passes every part. The starter fails part 1 |
+| 5. Leak test | Start the mode A assistant in a fresh run copy and ask about part 3 | It cannot name part 3 or quote the answer key |
+| 6. Dry run | You do the kit once in mode A with a 60-minute timer | It fits the hour. If not, trim the parts before kit 2 |
+
+### Phase 3: extract the template on kit 2
+
+- Next candidates: Rippling's expense rule engine or LinkedIn's LRU, then TTL, then thread-safe (README §5).
+- Whatever kit 2 had to copy from the Stripe kit becomes the template. Whatever it had to change stays per kit.
+
+### Who writes the hidden parts
+
+- **Stripe: you can write it.** It is a known problem. One reported candidate called it "the rule parser problem from the forum", and the Staff candidate had "mocked it a few times with Claude Code" beforehand. What you are drilling is driving a weak AI against the clock, not meeting the problem fresh.
+- **Kit 2 onward: Claude writes `interviewer/`,** meaning the later parts, hidden tests and answer key. You don't open it until after your first run. Otherwise you never meet a requirement fresh, and the kit loses most of its value.
+
+### Trade-offs
+
+| Choice | Option A | Option B | Pick | Why |
+|---|---|---|---|---|
+| Framework design | Full design and LLD before any kit | Thin design, Stripe kit first, template on kit 2 | **B** | One working kit shows the real requirements. The rest would be guesses |
+| Order inside a kit | Solution LLD, then tests | Part statements, then tests, then solution | **B** | The tests are what you practise against. The solution is only the answer key |
+| Who writes the hidden parts | You | Claude, and you don't look | **You for Stripe, Claude after** | Writing a kit spoils it for its author |
+| Kit acceptance | Tests pass | Verify script plus leak test plus your dry run | **B** | Passing tests don't prove the kit fits 60 minutes or stays spoiler-free |
