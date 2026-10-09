@@ -94,6 +94,7 @@ behavioral/   Staff-level STAR stories, scope/influence/ambiguity narratives
 templates/    Study templates + the canonical color legend
 tool-practise/  Hands-on lab: one folder per open source tool (Redis, Kafka, ...), docker-compose + exercises
 ai-programming-exercises/  AI-allowed coding rounds: research README + one folder per exercise, each with its own CLAUDE.md
+scoping-drills/  First-10-minutes requirements sprints: README (rules, scorecard, log), hidden cards for the voice agent
 ```
 
 - File names: `kebab-case.md`, e.g. `hld/design-whatsapp.md`.
