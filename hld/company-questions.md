@@ -209,7 +209,7 @@ A Rippling commenter on the Sr. EM rejection (Sep 2025) ✅ [Blind](https://www.
 | Driver pay, payroll, reimbursement | #29 `payroll-engine/` (todo), [#8 payments-ledger](payments-ledger/), [exactly-once](../concepts/exactly-once.md) |
 | Event analytics, logging, ad clicks | [#26 health-monitoring](health-monitoring/), [#18 streaming-ingestion](streaming-ingestion/), [stream processing](../concepts/stream-processing.md), [sketches](../concepts/stream-sketches.md) |
 | Employee-ops bundle (all four parts) | [#46 employee-ops-bundle](employee-ops-bundle/): event counter, [driver pay](employee-ops-bundle/deep-dives/driver-pay-ledger.md) (runnable Java), [termination orchestrator](employee-ops-bundle/deep-dives/termination-workflow-engine.md), [expense assistant](employee-ops-bundle/deep-dives/expense-assistant.md) (runnable Python) |
-| Termination orchestrator | [#46 employee-ops-bundle](employee-ops-bundle/) §4.5 to §5.7, #32 `integration-platform/` (todo) for the connectors, [durable execution](../concepts/temporal-durable-execution.md) |
+| Termination orchestrator | [#46 employee-ops-bundle](employee-ops-bundle/) §4.5 to §5.7, [#32 integration-platform](integration-platform/) for the connectors, [durable execution](../concepts/temporal-durable-execution.md) |
 | Hotel search, booking, reservation | #25 `ticket-booking/` (todo) |
 | Document verification | No folder yet. Closest: [#6 distributed-job-scheduler](distributed-job-scheduler/) for priority queues and deadlines, [#5 immutable-object-store](immutable-object-store/) for the files |
 | Duplicate payment prevention | [#8 payments-ledger](payments-ledger/), its [idempotency-keys deep dive](payments-ledger/deep-dives/idempotency-keys.md) |
@@ -312,7 +312,7 @@ The same themes recur in every round: idempotency (request replaying, ledgers), 
 | AI coding: rule engine | [#31 rule model](expense-rules-engine/deep-dives/rule-model-and-evaluation.md). Rehearse with an agent typing and you driving the design |
 | Integration: request replaying, reconciliation | [Idempotency keys](payments-ledger/deep-dives/idempotency-keys.md), [reconciliation](payments-ledger/deep-dives/reconciliation-and-audit.md) |
 | Guide-only: webhook delivery | [#58 webhook-delivery](webhook-delivery/) registered (README with Stripe's documented retry, ordering and signature behaviour, todo) |
-| Guide-only: internal authorization redesign | #30 `authorization-service/` (todo) |
+| Guide-only: internal authorization redesign | [#30 authorization-service](authorization-service/), built 2026-10-17. Zanzibar-style tuples and schema, zookies for the new-enemy case, a polled suspension overlay, and §5.6 for the "across services" part (mirror, shadow, a mismatch gate counted in checks, enforce per endpoint). §12 maps Stripe's Dashboard roles, restricted keys and Connect onto the model |
 | Guide-only: rate limiter, distributed cache, Radar, payment timeout | Already solved: [#7](network-throttling/), [#20](distributed-cache/), [#52](payments-risk-decisioning/), [#8 rails and timeouts](payments-ledger/deep-dives/rails-timeouts-and-unknown-outcome.md) |
 
 ---

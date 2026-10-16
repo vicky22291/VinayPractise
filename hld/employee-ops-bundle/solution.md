@@ -35,7 +35,7 @@ Core:
 
 Below the line (say it out loud):
 - The payroll engine that computes taxes and final pay ([`#29 payroll-engine`](../README.md)). Termination calls it; it does not live here.
-- The general integration platform: connector SDK, OAuth token vault, SCIM provisioning on hire ([`#32 integration-platform`](../README.md)). Termination uses its connectors.
+- The general integration platform: connector SDK, OAuth token vault, SCIM provisioning on hire ([`#32 integration-platform`](../integration-platform/)). Termination uses its connectors.
 - The expense policy rules engine ([`#31 rules-engine`](../README.md)). The assistant can call it as a tool; it is not designed here.
 - Hosting the LLM and the multi-tenant LLM gateway ([`../ai-gateway/`](../ai-gateway/)).
 - Unique-user counts on dashboards. Mentioned as a seam (HyperLogLog, [`../../concepts/stream-sketches.md`](../../concepts/stream-sketches.md)); not built.
