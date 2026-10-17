@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Oyster Point Marina Park",
+    "lat": 37.66495,
+    "lon": -122.379441
+  },
+  {
+    "name": "Ferry Terminal",
+    "lat": 37.668178,
+    "lon": -122.386936
+  },
+  {
+    "name": "Kayak Launch",
+    "lat": 37.690438,
+    "lon": -122.404562
+  },
+  {
+    "name": "Bay Trail Bench",
+    "lat": 37.668767,
+    "lon": -122.411626
+  },
+  {
+    "name": "Coffee Cart",
+    "lat": 37.666206,
+    "lon": -122.42438
+  },
+  {
+    "name": "Sierra Point Lookout",
+    "lat": 37.65847,
+    "lon": -122.411223
+  },
+  {
+    "name": "Fishing Pier",
+    "lat": 37.643985,
+    "lon": -122.421785
+  },
+  {
+    "name": "Bike Repair Stand",
+    "lat": 37.647259,
+    "lon": -122.402074
+  },
+  {
+    "name": "Picnic Lawn",
+    "lat": 37.645155,
+    "lon": -122.391202
+  },
+  {
+    "name": "Water Fountain",
+    "lat": 37.652986,
+    "lon": -122.387499
+  },
+  {
+    "name": "Shoreline Sculpture",
+    "lat": 37.651509,
+    "lon": -122.372039
+  },
+  {
+    "name": "Gull Rock",
+    "lat": 37.676717,
+    "lon": -122.395982
+  }
+]

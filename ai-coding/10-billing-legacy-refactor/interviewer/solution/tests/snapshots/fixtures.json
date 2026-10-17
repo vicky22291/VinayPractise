@@ -1,0 +1,3320 @@
+{
+ "sub_0001 2025-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2025-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2025-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2025-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2025-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2025-11": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2025-12": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2026-01": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2026-02": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2026-03": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2026-04": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2026-05": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0001 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0001",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0002 2025-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0002 2025-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0002 2025-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0002 2025-09": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0002 2025-10": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0002 2025-11": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0002 2025-12": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0002 2026-01": {
+  "discount": 870,
+  "lines": [
+   {
+    "amount": 4350,
+    "description": "Pro x 3 (15 of 30 days)"
+   },
+   {
+    "amount": -870,
+    "description": "Coupon WELCOME20"
+   }
+  ],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 4350,
+  "tax": 696,
+  "total": 4176
+ },
+ "sub_0002 2026-02": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 8700,
+    "description": "Pro x 3"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 8700,
+  "tax": 1740,
+  "total": 10440
+ },
+ "sub_0002 2026-03": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 8700,
+    "description": "Pro x 3"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 8700,
+  "tax": 1740,
+  "total": 10440
+ },
+ "sub_0002 2026-04": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 8700,
+    "description": "Pro x 3"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 8700,
+  "tax": 1740,
+  "total": 10440
+ },
+ "sub_0002 2026-05": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 8700,
+    "description": "Pro x 3"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 8700,
+  "tax": 1740,
+  "total": 10440
+ },
+ "sub_0002 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 8700,
+    "description": "Pro x 3"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 8700,
+  "tax": 1740,
+  "total": 10440
+ },
+ "sub_0002 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 8700,
+    "description": "Pro x 3"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 8700,
+  "tax": 1740,
+  "total": 10440
+ },
+ "sub_0002 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 8700,
+    "description": "Pro x 3"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 8700,
+  "tax": 1740,
+  "total": 10440
+ },
+ "sub_0002 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 8700,
+    "description": "Pro x 3"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 8700,
+  "tax": 1740,
+  "total": 10440
+ },
+ "sub_0002 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 8700,
+    "description": "Pro x 3"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0002",
+  "subtotal": 8700,
+  "tax": 1740,
+  "total": 10440
+ },
+ "sub_0003 2025-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0003 2025-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0003 2025-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0003 2025-09": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0003 2025-10": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0003 2025-11": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0003 2025-12": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0003 2026-01": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 9900,
+    "description": "Setup fee: Team"
+   },
+   {
+    "amount": 0,
+    "description": "Trial: Team x 10 (14 days)"
+   },
+   {
+    "amount": 19110,
+    "description": "Team x 10 (13 of 30 days)"
+   }
+  ],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 29010,
+  "tax": 2103,
+  "total": 31113
+ },
+ "sub_0003 2026-02": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 44100,
+    "description": "Team x 10"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 44100,
+  "tax": 3197,
+  "total": 47297
+ },
+ "sub_0003 2026-03": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 44100,
+    "description": "Team x 10"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 44100,
+  "tax": 3197,
+  "total": 47297
+ },
+ "sub_0003 2026-04": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 44100,
+    "description": "Team x 10"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 44100,
+  "tax": 3197,
+  "total": 47297
+ },
+ "sub_0003 2026-05": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 44100,
+    "description": "Team x 10"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 44100,
+  "tax": 3197,
+  "total": 47297
+ },
+ "sub_0003 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 44100,
+    "description": "Team x 10"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 44100,
+  "tax": 3197,
+  "total": 47297
+ },
+ "sub_0003 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 44100,
+    "description": "Team x 10"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 44100,
+  "tax": 3197,
+  "total": 47297
+ },
+ "sub_0003 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 44100,
+    "description": "Team x 10"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 44100,
+  "tax": 3197,
+  "total": 47297
+ },
+ "sub_0003 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 44100,
+    "description": "Team x 10"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 44100,
+  "tax": 3197,
+  "total": 47297
+ },
+ "sub_0003 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 44100,
+    "description": "Team x 10"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0003",
+  "subtotal": 44100,
+  "tax": 3197,
+  "total": 47297
+ },
+ "sub_0004 2025-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0004 2025-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0004 2025-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0004 2025-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 1800,
+    "description": "Basic x 2"
+   }
+  ],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 1800,
+  "tax": 149,
+  "total": 1949
+ },
+ "sub_0004 2025-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 1800,
+    "description": "Basic x 2"
+   }
+  ],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 1800,
+  "tax": 149,
+  "total": 1949
+ },
+ "sub_0004 2025-11": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 1800,
+    "description": "Basic x 2"
+   }
+  ],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 1800,
+  "tax": 149,
+  "total": 1949
+ },
+ "sub_0004 2025-12": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 1800,
+    "description": "Basic x 2"
+   }
+  ],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 1800,
+  "tax": 149,
+  "total": 1949
+ },
+ "sub_0004 2026-01": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 1800,
+    "description": "Basic x 2"
+   }
+  ],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 1800,
+  "tax": 149,
+  "total": 1949
+ },
+ "sub_0004 2026-02": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 840,
+    "description": "Basic x 2 (14 of 30 days)"
+   },
+   {
+    "amount": 2707,
+    "description": "Pro x 2 (14 of 30 days)"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 3547,
+  "tax": 293,
+  "total": 3840
+ },
+ "sub_0004 2026-03": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 5800,
+    "description": "Pro x 2"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 5800,
+  "tax": 479,
+  "total": 6279
+ },
+ "sub_0004 2026-04": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 5800,
+    "description": "Pro x 2"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 5800,
+  "tax": 479,
+  "total": 6279
+ },
+ "sub_0004 2026-05": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 5800,
+    "description": "Pro x 2"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 5800,
+  "tax": 479,
+  "total": 6279
+ },
+ "sub_0004 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 5800,
+    "description": "Pro x 2"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 5800,
+  "tax": 479,
+  "total": 6279
+ },
+ "sub_0004 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 5800,
+    "description": "Pro x 2"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 5800,
+  "tax": 479,
+  "total": 6279
+ },
+ "sub_0004 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 5800,
+    "description": "Pro x 2"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 5800,
+  "tax": 479,
+  "total": 6279
+ },
+ "sub_0004 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 5800,
+    "description": "Pro x 2"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 5800,
+  "tax": 479,
+  "total": 6279
+ },
+ "sub_0004 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 5800,
+    "description": "Pro x 2"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0004",
+  "subtotal": 5800,
+  "tax": 479,
+  "total": 6279
+ },
+ "sub_0005 2025-06": {
+  "discount": 2175,
+  "lines": [
+   {
+    "amount": 14500,
+    "description": "Pro x 5"
+   },
+   {
+    "amount": -2175,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 14500,
+  "tax": 2465,
+  "total": 14790
+ },
+ "sub_0005 2025-07": {
+  "discount": 2175,
+  "lines": [
+   {
+    "amount": 14500,
+    "description": "Pro x 5"
+   },
+   {
+    "amount": -2175,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 14500,
+  "tax": 2465,
+  "total": 14790
+ },
+ "sub_0005 2025-08": {
+  "discount": 2175,
+  "lines": [
+   {
+    "amount": 14500,
+    "description": "Pro x 5"
+   },
+   {
+    "amount": -2175,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 14500,
+  "tax": 2465,
+  "total": 14790
+ },
+ "sub_0005 2025-09": {
+  "discount": 2175,
+  "lines": [
+   {
+    "amount": 14500,
+    "description": "Pro x 5"
+   },
+   {
+    "amount": -2175,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 14500,
+  "tax": 2465,
+  "total": 14790
+ },
+ "sub_0005 2025-10": {
+  "discount": 2175,
+  "lines": [
+   {
+    "amount": 14500,
+    "description": "Pro x 5"
+   },
+   {
+    "amount": -2175,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 14500,
+  "tax": 2465,
+  "total": 14790
+ },
+ "sub_0005 2025-11": {
+  "discount": 2175,
+  "lines": [
+   {
+    "amount": 14500,
+    "description": "Pro x 5"
+   },
+   {
+    "amount": -2175,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 14500,
+  "tax": 2465,
+  "total": 14790
+ },
+ "sub_0005 2025-12": {
+  "discount": 2175,
+  "lines": [
+   {
+    "amount": 14500,
+    "description": "Pro x 5"
+   },
+   {
+    "amount": -2175,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 14500,
+  "tax": 2465,
+  "total": 14790
+ },
+ "sub_0005 2026-01": {
+  "discount": 3593,
+  "lines": [
+   {
+    "amount": 7250,
+    "description": "Pro x 5 (15 of 30 days)"
+   },
+   {
+    "amount": 16704,
+    "description": "Pro x 12 (16 of 30 days)"
+   },
+   {
+    "amount": -3593,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 23954,
+  "tax": 4072,
+  "total": 24433
+ },
+ "sub_0005 2026-02": {
+  "discount": 4698,
+  "lines": [
+   {
+    "amount": 31320,
+    "description": "Pro x 12"
+   },
+   {
+    "amount": -4698,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 31320,
+  "tax": 5324,
+  "total": 31946
+ },
+ "sub_0005 2026-03": {
+  "discount": 4698,
+  "lines": [
+   {
+    "amount": 31320,
+    "description": "Pro x 12"
+   },
+   {
+    "amount": -4698,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 31320,
+  "tax": 5324,
+  "total": 31946
+ },
+ "sub_0005 2026-04": {
+  "discount": 4698,
+  "lines": [
+   {
+    "amount": 31320,
+    "description": "Pro x 12"
+   },
+   {
+    "amount": -4698,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 31320,
+  "tax": 5324,
+  "total": 31946
+ },
+ "sub_0005 2026-05": {
+  "discount": 4698,
+  "lines": [
+   {
+    "amount": 31320,
+    "description": "Pro x 12"
+   },
+   {
+    "amount": -4698,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 31320,
+  "tax": 5324,
+  "total": 31946
+ },
+ "sub_0005 2026-06": {
+  "discount": 4698,
+  "lines": [
+   {
+    "amount": 31320,
+    "description": "Pro x 12"
+   },
+   {
+    "amount": -4698,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 31320,
+  "tax": 5324,
+  "total": 31946
+ },
+ "sub_0005 2026-07": {
+  "discount": 4698,
+  "lines": [
+   {
+    "amount": 31320,
+    "description": "Pro x 12"
+   },
+   {
+    "amount": -4698,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 31320,
+  "tax": 5324,
+  "total": 31946
+ },
+ "sub_0005 2026-08": {
+  "discount": 4698,
+  "lines": [
+   {
+    "amount": 31320,
+    "description": "Pro x 12"
+   },
+   {
+    "amount": -4698,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 31320,
+  "tax": 5324,
+  "total": 31946
+ },
+ "sub_0005 2026-09": {
+  "discount": 4698,
+  "lines": [
+   {
+    "amount": 31320,
+    "description": "Pro x 12"
+   },
+   {
+    "amount": -4698,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 31320,
+  "tax": 5324,
+  "total": 31946
+ },
+ "sub_0005 2026-10": {
+  "discount": 4698,
+  "lines": [
+   {
+    "amount": 31320,
+    "description": "Pro x 12"
+   },
+   {
+    "amount": -4698,
+    "description": "Coupon LOYAL15"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0005",
+  "subtotal": 31320,
+  "tax": 5324,
+  "total": 31946
+ },
+ "sub_0006 2025-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0006 2025-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0006 2025-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0006 2025-09": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0006 2025-10": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0006 2025-11": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0006 2025-12": {
+  "discount": 317170,
+  "lines": [
+   {
+    "amount": 634339,
+    "description": "Scale x 61"
+   },
+   {
+    "amount": -317170,
+    "description": "Coupon HALF6"
+   }
+  ],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 634339,
+  "tax": 26166,
+  "total": 343335
+ },
+ "sub_0006 2026-01": {
+  "discount": 317170,
+  "lines": [
+   {
+    "amount": 634339,
+    "description": "Scale x 61"
+   },
+   {
+    "amount": -317170,
+    "description": "Coupon HALF6"
+   }
+  ],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 634339,
+  "tax": 26166,
+  "total": 343335
+ },
+ "sub_0006 2026-02": {
+  "discount": 317170,
+  "lines": [
+   {
+    "amount": 634339,
+    "description": "Scale x 61"
+   },
+   {
+    "amount": -317170,
+    "description": "Coupon HALF6"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 634339,
+  "tax": 26166,
+  "total": 343335
+ },
+ "sub_0006 2026-03": {
+  "discount": 317170,
+  "lines": [
+   {
+    "amount": 634339,
+    "description": "Scale x 61"
+   },
+   {
+    "amount": -317170,
+    "description": "Coupon HALF6"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 634339,
+  "tax": 26166,
+  "total": 343335
+ },
+ "sub_0006 2026-04": {
+  "discount": 317170,
+  "lines": [
+   {
+    "amount": 634339,
+    "description": "Scale x 61"
+   },
+   {
+    "amount": -317170,
+    "description": "Coupon HALF6"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 634339,
+  "tax": 26166,
+  "total": 343335
+ },
+ "sub_0006 2026-05": {
+  "discount": 317170,
+  "lines": [
+   {
+    "amount": 634339,
+    "description": "Scale x 61"
+   },
+   {
+    "amount": -317170,
+    "description": "Coupon HALF6"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 634339,
+  "tax": 26166,
+  "total": 343335
+ },
+ "sub_0006 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 634339,
+    "description": "Scale x 61"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 634339,
+  "tax": 52333,
+  "total": 686672
+ },
+ "sub_0006 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 634339,
+    "description": "Scale x 61"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 634339,
+  "tax": 52333,
+  "total": 686672
+ },
+ "sub_0006 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 634339,
+    "description": "Scale x 61"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 634339,
+  "tax": 52333,
+  "total": 686672
+ },
+ "sub_0006 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 634339,
+    "description": "Scale x 61"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 634339,
+  "tax": 52333,
+  "total": 686672
+ },
+ "sub_0006 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 634339,
+    "description": "Scale x 61"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0006",
+  "subtotal": 634339,
+  "tax": 52333,
+  "total": 686672
+ },
+ "sub_0007 2025-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0007 2025-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0007 2025-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0007 2025-09": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0007 2025-10": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0007 2025-11": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0007 2025-12": {
+  "discount": 900,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   },
+   {
+    "amount": -900,
+    "description": "Coupon BIGCREDIT"
+   }
+  ],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 900,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0007 2026-01": {
+  "discount": 900,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   },
+   {
+    "amount": -900,
+    "description": "Coupon BIGCREDIT"
+   }
+  ],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 900,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0007 2026-02": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0007 2026-03": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0007 2026-04": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0007 2026-05": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0007 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0007 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0007 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0007 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0007 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0007",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0008 2025-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0008 2025-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0008 2025-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0008 2025-09": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0008 2025-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 11600,
+    "description": "Pro x 4"
+   }
+  ],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 11600,
+  "tax": 957,
+  "total": 12557
+ },
+ "sub_0008 2025-11": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 11600,
+    "description": "Pro x 4"
+   }
+  ],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 11600,
+  "tax": 957,
+  "total": 12557
+ },
+ "sub_0008 2025-12": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 11600,
+    "description": "Pro x 4"
+   }
+  ],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 11600,
+  "tax": 957,
+  "total": 12557
+ },
+ "sub_0008 2026-01": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 11600,
+    "description": "Pro x 4"
+   }
+  ],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 11600,
+  "tax": 957,
+  "total": 12557
+ },
+ "sub_0008 2026-02": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 3480,
+    "description": "Pro x 4 (9 of 30 days)"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 3480,
+  "tax": 287,
+  "total": 3767
+ },
+ "sub_0008 2026-03": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0008 2026-04": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0008 2026-05": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0008 2026-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0008 2026-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0008 2026-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0008 2026-09": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0008 2026-10": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0008",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0009 2025-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0009 2025-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0009 2025-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0009 2025-09": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0009 2025-10": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0009 2025-11": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0009 2025-12": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0009 2026-01": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0009 2026-02": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 9900,
+    "description": "Setup fee: Team"
+   },
+   {
+    "amount": 0,
+    "description": "Trial: Team x 1 (28 days)"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 9900,
+  "tax": 0,
+  "total": 9900
+ },
+ "sub_0009 2026-03": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 0,
+    "description": "Trial: Team x 1 (2 days)"
+   },
+   {
+    "amount": 4737,
+    "description": "Team x 1 (29 of 30 days)"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 4737,
+  "tax": 0,
+  "total": 4737
+ },
+ "sub_0009 2026-04": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 4900,
+    "description": "Team x 1"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 4900,
+  "tax": 0,
+  "total": 4900
+ },
+ "sub_0009 2026-05": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 4900,
+    "description": "Team x 1"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 4900,
+  "tax": 0,
+  "total": 4900
+ },
+ "sub_0009 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 4900,
+    "description": "Team x 1"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 4900,
+  "tax": 0,
+  "total": 4900
+ },
+ "sub_0009 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 4900,
+    "description": "Team x 1"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 4900,
+  "tax": 0,
+  "total": 4900
+ },
+ "sub_0009 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 4900,
+    "description": "Team x 1"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 4900,
+  "tax": 0,
+  "total": 4900
+ },
+ "sub_0009 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 4900,
+    "description": "Team x 1"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 4900,
+  "tax": 0,
+  "total": 4900
+ },
+ "sub_0009 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 4900,
+    "description": "Team x 1"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0009",
+  "subtotal": 4900,
+  "tax": 0,
+  "total": 4900
+ },
+ "sub_0010 2025-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0010 2025-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0010 2025-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0010 2025-09": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0010 2025-10": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0010 2025-11": {
+  "discount": 203,
+  "lines": [
+   {
+    "amount": 2030,
+    "description": "Pro x 1 (21 of 30 days)"
+   },
+   {
+    "amount": -203,
+    "description": "Coupon SAVE10X3"
+   }
+  ],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 2030,
+  "tax": 151,
+  "total": 1978
+ },
+ "sub_0010 2025-12": {
+  "discount": 290,
+  "lines": [
+   {
+    "amount": 2900,
+    "description": "Pro x 1"
+   },
+   {
+    "amount": -290,
+    "description": "Coupon SAVE10X3"
+   }
+  ],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 2900,
+  "tax": 215,
+  "total": 2825
+ },
+ "sub_0010 2026-01": {
+  "discount": 290,
+  "lines": [
+   {
+    "amount": 2900,
+    "description": "Pro x 1"
+   },
+   {
+    "amount": -290,
+    "description": "Coupon SAVE10X3"
+   }
+  ],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 2900,
+  "tax": 215,
+  "total": 2825
+ },
+ "sub_0010 2026-02": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2900,
+    "description": "Pro x 1"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 2900,
+  "tax": 239,
+  "total": 3139
+ },
+ "sub_0010 2026-03": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 1837,
+    "description": "Pro x 1 (19 of 30 days)"
+   },
+   {
+    "amount": 360,
+    "description": "Basic x 1 (12 of 30 days)"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 2197,
+  "tax": 181,
+  "total": 2378
+ },
+ "sub_0010 2026-04": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0010 2026-05": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0010 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0010 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0010 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0010 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0010 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 900,
+    "description": "Basic x 1"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0010",
+  "subtotal": 900,
+  "tax": 74,
+  "total": 974
+ },
+ "sub_0011 2025-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0011 2025-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0011 2025-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0011 2025-09": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0011 2025-10": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0011 2025-11": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0011 2025-12": {
+  "discount": 500,
+  "lines": [
+   {
+    "amount": 17332,
+    "description": "Scale x 2 (20 of 30 days)"
+   },
+   {
+    "amount": -500,
+    "description": "Coupon FIVEOFF"
+   }
+  ],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 17332,
+  "tax": 3366,
+  "total": 20198
+ },
+ "sub_0011 2026-01": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 25998,
+    "description": "Scale x 2"
+   }
+  ],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 25998,
+  "tax": 5200,
+  "total": 31198
+ },
+ "sub_0011 2026-02": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 25998,
+    "description": "Scale x 2"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 25998,
+  "tax": 5200,
+  "total": 31198
+ },
+ "sub_0011 2026-03": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 25998,
+    "description": "Scale x 2"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 25998,
+  "tax": 5200,
+  "total": 31198
+ },
+ "sub_0011 2026-04": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 25998,
+    "description": "Scale x 2"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 25998,
+  "tax": 5200,
+  "total": 31198
+ },
+ "sub_0011 2026-05": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 25998,
+    "description": "Scale x 2"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 25998,
+  "tax": 5200,
+  "total": 31198
+ },
+ "sub_0011 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 25998,
+    "description": "Scale x 2"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 25998,
+  "tax": 5200,
+  "total": 31198
+ },
+ "sub_0011 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 25998,
+    "description": "Scale x 2"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 25998,
+  "tax": 5200,
+  "total": 31198
+ },
+ "sub_0011 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 25998,
+    "description": "Scale x 2"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 25998,
+  "tax": 5200,
+  "total": 31198
+ },
+ "sub_0011 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 25998,
+    "description": "Scale x 2"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 25998,
+  "tax": 5200,
+  "total": 31198
+ },
+ "sub_0011 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 25998,
+    "description": "Scale x 2"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0011",
+  "subtotal": 25998,
+  "tax": 5200,
+  "total": 31198
+ },
+ "sub_0012 2025-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0012 2025-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0012 2025-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0012 2025-09": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0012 2025-10": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0012 2025-11": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0012 2025-12": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0012 2026-01": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0012 2026-02": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2430,
+    "description": "Basic x 3 (27 of 30 days)"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 2430,
+  "tax": 176,
+  "total": 2606
+ },
+ "sub_0012 2026-03": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2700,
+    "description": "Basic x 3"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 2700,
+  "tax": 196,
+  "total": 2896
+ },
+ "sub_0012 2026-04": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2700,
+    "description": "Basic x 3"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 2700,
+  "tax": 196,
+  "total": 2896
+ },
+ "sub_0012 2026-05": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2700,
+    "description": "Basic x 3"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 2700,
+  "tax": 196,
+  "total": 2896
+ },
+ "sub_0012 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2700,
+    "description": "Basic x 3"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 2700,
+  "tax": 196,
+  "total": 2896
+ },
+ "sub_0012 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2700,
+    "description": "Basic x 3"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 2700,
+  "tax": 196,
+  "total": 2896
+ },
+ "sub_0012 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2700,
+    "description": "Basic x 3"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 2700,
+  "tax": 196,
+  "total": 2896
+ },
+ "sub_0012 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2700,
+    "description": "Basic x 3"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 2700,
+  "tax": 196,
+  "total": 2896
+ },
+ "sub_0012 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2700,
+    "description": "Basic x 3"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0012",
+  "subtotal": 2700,
+  "tax": 196,
+  "total": 2896
+ },
+ "sub_0013 2025-06": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2025-07": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2025-08": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2025-09": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2025-10": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2025-11": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2025-12": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2026-01": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2026-02": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2026-03": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2026-04": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2026-05": {
+  "discount": 0,
+  "lines": [],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 0,
+  "tax": 0,
+  "total": 0
+ },
+ "sub_0013 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2900,
+    "description": "Pro x 1"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 2900,
+  "tax": 239,
+  "total": 3139
+ },
+ "sub_0013 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2900,
+    "description": "Pro x 1"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 2900,
+  "tax": 239,
+  "total": 3139
+ },
+ "sub_0013 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2900,
+    "description": "Pro x 1"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 2900,
+  "tax": 239,
+  "total": 3139
+ },
+ "sub_0013 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2900,
+    "description": "Pro x 1"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 2900,
+  "tax": 239,
+  "total": 3139
+ },
+ "sub_0013 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 2900,
+    "description": "Pro x 1"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0013",
+  "subtotal": 2900,
+  "tax": 239,
+  "total": 3139
+ },
+ "sub_0014 2025-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2025-07-01",
+  "period_start": "2025-06-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2025-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2025-08-01",
+  "period_start": "2025-07-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2025-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2025-09-01",
+  "period_start": "2025-08-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2025-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2025-10-01",
+  "period_start": "2025-09-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2025-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2025-11-01",
+  "period_start": "2025-10-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2025-11": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2025-12-01",
+  "period_start": "2025-11-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2025-12": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2026-01-01",
+  "period_start": "2025-12-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2026-01": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2026-02-01",
+  "period_start": "2026-01-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2026-02": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2026-03-01",
+  "period_start": "2026-02-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2026-03": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2026-04-01",
+  "period_start": "2026-03-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2026-04": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2026-05-01",
+  "period_start": "2026-04-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2026-05": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2026-06-01",
+  "period_start": "2026-05-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2026-06": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2026-07-01",
+  "period_start": "2026-06-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2026-07": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2026-08-01",
+  "period_start": "2026-07-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2026-08": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2026-09-01",
+  "period_start": "2026-08-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2026-09": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2026-10-01",
+  "period_start": "2026-09-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ },
+ "sub_0014 2026-10": {
+  "discount": 0,
+  "lines": [
+   {
+    "amount": 48510,
+    "description": "Team x 11"
+   }
+  ],
+  "period_end": "2026-11-01",
+  "period_start": "2026-10-01",
+  "subscription_id": "sub_0014",
+  "subtotal": 48510,
+  "tax": 4851,
+  "total": 53361
+ }
+}

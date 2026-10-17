@@ -1,0 +1,850 @@
+2026-10-14T09:00:00Z INFO worker.started service=hooks-dispatcher version=1.4.0 sha=8c1e2f0 region=us-west-2
+2026-10-14T09:00:13Z INFO event.created event=evt_000001 type=payment_intent.succeeded account=acct_1Lumen
+2026-10-14T09:00:13Z INFO delivery.sent event=evt_000001 delivery=whd_000001 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=1 http=200 bytes=240
+2026-10-14T09:00:31Z INFO event.created event=evt_000002 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T09:00:31Z INFO delivery.sent event=evt_000002 delivery=whd_000002 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=313
+2026-10-14T09:00:40Z INFO event.created event=evt_000003 type=charge.succeeded account=acct_1Acme
+2026-10-14T09:00:40Z INFO delivery.sent event=evt_000003 delivery=whd_000003 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=305
+2026-10-14T09:00:57Z INFO event.created event=evt_000004 type=charge.succeeded account=acct_1Kestrel
+2026-10-14T09:00:57Z INFO delivery.sent event=evt_000004 delivery=whd_000004 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=1 http=200 bytes=307
+2026-10-14T09:01:00Z INFO event.created event=evt_000005 type=payment_intent.succeeded account=acct_1CafeOle
+2026-10-14T09:01:00Z INFO delivery.sent event=evt_000005 delivery=whd_000005 endpoint=we_cafeole1 account=acct_1CafeOle type=payment_intent.succeeded attempt=1 http=200 bytes=242
+2026-10-14T09:01:10Z INFO event.created event=evt_000006 type=payment_intent.succeeded account=acct_1Acme
+2026-10-14T09:01:10Z INFO delivery.sent event=evt_000006 delivery=whd_000006 endpoint=we_acme0001 account=acct_1Acme type=payment_intent.succeeded attempt=1 http=200 bytes=238
+2026-10-14T09:01:12Z INFO event.created event=evt_000007 type=payout.paid account=acct_1Muller
+2026-10-14T09:01:12Z INFO delivery.sent event=evt_000007 delivery=whd_000007 endpoint=we_muller01 account=acct_1Muller type=payout.paid attempt=1 http=200 bytes=233
+2026-10-14T09:01:34Z INFO event.created event=evt_000008 type=charge.succeeded account=acct_1Northwind
+2026-10-14T09:01:34Z INFO delivery.sent event=evt_000008 delivery=whd_000008 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=200 bytes=306
+2026-10-14T09:02:06Z INFO event.created event=evt_000009 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:02:06Z INFO delivery.sent event=evt_000009 delivery=whd_000009 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=305
+2026-10-14T09:03:08Z INFO event.created event=evt_000010 type=charge.refunded account=acct_1Acme
+2026-10-14T09:03:08Z INFO delivery.sent event=evt_000010 delivery=whd_000010 endpoint=we_acme0001 account=acct_1Acme type=charge.refunded attempt=1 http=200 bytes=230
+2026-10-14T09:04:20Z INFO event.created event=evt_000011 type=charge.refunded account=acct_1Kestrel
+2026-10-14T09:04:20Z INFO delivery.sent event=evt_000011 delivery=whd_000011 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.refunded attempt=1 http=200 bytes=232
+2026-10-14T09:05:14Z INFO event.created event=evt_000012 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T09:05:14Z INFO delivery.sent event=evt_000012 delivery=whd_000012 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=312
+2026-10-14T09:05:41Z INFO event.created event=evt_000013 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:05:41Z INFO delivery.sent event=evt_000013 delivery=whd_000013 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=304
+2026-10-14T09:06:04Z INFO event.created event=evt_000014 type=charge.succeeded account=acct_1Northwind
+2026-10-14T09:06:04Z INFO delivery.sent event=evt_000014 delivery=whd_000014 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=200 bytes=307
+2026-10-14T09:07:54Z INFO event.created event=evt_000015 type=payment_intent.succeeded account=acct_1Acme
+2026-10-14T09:07:54Z INFO delivery.sent event=evt_000015 delivery=whd_000015 endpoint=we_acme0001 account=acct_1Acme type=payment_intent.succeeded attempt=1 http=200 bytes=237
+2026-10-14T09:09:10Z INFO event.created event=evt_000016 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T09:09:10Z INFO delivery.sent event=evt_000016 delivery=whd_000016 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=313
+2026-10-14T09:09:21Z INFO event.created event=evt_000017 type=payout.paid account=acct_1Muller
+2026-10-14T09:09:21Z INFO delivery.sent event=evt_000017 delivery=whd_000017 endpoint=we_muller01 account=acct_1Muller type=payout.paid attempt=1 http=200 bytes=232
+2026-10-14T09:11:28Z INFO event.created event=evt_000018 type=charge.succeeded account=acct_1Acme
+2026-10-14T09:11:28Z INFO delivery.sent event=evt_000018 delivery=whd_000018 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=303
+2026-10-14T09:11:57Z INFO event.created event=evt_000019 type=payment_intent.succeeded account=acct_1Bluebird
+2026-10-14T09:11:57Z INFO delivery.sent event=evt_000019 delivery=whd_000019 endpoint=we_bluebd01 account=acct_1Bluebird type=payment_intent.succeeded attempt=1 http=200 bytes=243
+2026-10-14T09:12:09Z INFO event.created event=evt_000020 type=payment_intent.succeeded account=acct_1Acme
+2026-10-14T09:12:09Z INFO delivery.sent event=evt_000020 delivery=whd_000020 endpoint=we_acme0001 account=acct_1Acme type=payment_intent.succeeded attempt=1 http=200 bytes=239
+2026-10-14T09:14:42Z INFO event.created event=evt_000021 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:14:42Z INFO delivery.sent event=evt_000021 delivery=whd_000021 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=304
+2026-10-14T09:15:48Z INFO event.created event=evt_000022 type=charge.succeeded account=acct_1CafeOle
+2026-10-14T09:15:48Z WARN delivery.failed event=evt_000022 delivery=whd_000022 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:15:48Z INFO delivery.retry_scheduled event=evt_000022 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=2 in_s=120
+2026-10-14T09:17:21Z INFO event.created event=evt_000023 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:17:21Z INFO delivery.sent event=evt_000023 delivery=whd_000023 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T09:17:48Z WARN delivery.failed event=evt_000022 delivery=whd_000024 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:17:48Z INFO delivery.retry_scheduled event=evt_000022 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=3 in_s=240
+2026-10-14T09:18:24Z INFO event.created event=evt_000024 type=payment_intent.succeeded account=acct_1Lumen
+2026-10-14T09:18:24Z INFO delivery.sent event=evt_000024 delivery=whd_000025 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=1 http=200 bytes=239
+2026-10-14T09:18:54Z INFO event.created event=evt_000025 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:18:54Z INFO delivery.sent event=evt_000025 delivery=whd_000026 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=306
+2026-10-14T09:19:24Z INFO event.created event=evt_000026 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:19:24Z INFO delivery.sent event=evt_000026 delivery=whd_000027 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=304
+2026-10-14T09:19:39Z INFO event.created event=evt_000027 type=charge.succeeded account=acct_1Acme
+2026-10-14T09:19:39Z INFO delivery.sent event=evt_000027 delivery=whd_000028 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T09:21:48Z WARN delivery.failed event=evt_000022 delivery=whd_000029 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:21:48Z INFO delivery.retry_scheduled event=evt_000022 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=4 in_s=480
+2026-10-14T09:24:39Z INFO event.created event=evt_000028 type=charge.refunded account=acct_1Lumen
+2026-10-14T09:24:39Z INFO delivery.sent event=evt_000028 delivery=whd_000030 endpoint=we_lumen01 account=acct_1Lumen type=charge.refunded attempt=1 http=200 bytes=231
+2026-10-14T09:26:13Z INFO event.created event=evt_000029 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T09:26:13Z INFO delivery.sent event=evt_000029 delivery=whd_000031 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=314
+2026-10-14T09:26:43Z INFO event.created event=evt_000030 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T09:26:43Z INFO delivery.sent event=evt_000030 delivery=whd_000032 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=310
+2026-10-14T09:28:32Z INFO event.created event=evt_000031 type=payment_intent.succeeded account=acct_1Northwind
+2026-10-14T09:28:32Z INFO delivery.sent event=evt_000031 delivery=whd_000033 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=1 http=200 bytes=244
+2026-10-14T09:29:48Z WARN delivery.failed event=evt_000022 delivery=whd_000034 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:29:48Z INFO delivery.retry_scheduled event=evt_000022 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=5 in_s=960
+2026-10-14T09:31:08Z INFO event.created event=evt_000032 type=charge.succeeded account=acct_1Acme
+2026-10-14T09:31:08Z INFO delivery.sent event=evt_000032 delivery=whd_000035 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T09:31:37Z INFO event.created event=evt_000033 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:31:37Z INFO delivery.sent event=evt_000033 delivery=whd_000036 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=306
+2026-10-14T09:33:18Z INFO event.created event=evt_000034 type=charge.succeeded account=acct_1Kestrel
+2026-10-14T09:33:18Z INFO delivery.sent event=evt_000034 delivery=whd_000037 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=1 http=200 bytes=310
+2026-10-14T09:34:45Z INFO event.created event=evt_000035 type=charge.succeeded account=acct_1Muller
+2026-10-14T09:34:45Z WARN delivery.failed event=evt_000035 delivery=whd_000038 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:34:45Z INFO delivery.retry_scheduled event=evt_000035 endpoint=we_muller01 account=acct_1Muller next_attempt=2 in_s=120
+2026-10-14T09:35:37Z INFO event.created event=evt_000036 type=payment_intent.succeeded account=acct_1Acme
+2026-10-14T09:35:37Z INFO delivery.sent event=evt_000036 delivery=whd_000039 endpoint=we_acme0001 account=acct_1Acme type=payment_intent.succeeded attempt=1 http=200 bytes=239
+2026-10-14T09:36:45Z WARN delivery.failed event=evt_000035 delivery=whd_000040 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:36:45Z INFO delivery.retry_scheduled event=evt_000035 endpoint=we_muller01 account=acct_1Muller next_attempt=3 in_s=240
+2026-10-14T09:37:10Z INFO event.created event=evt_000037 type=payout.paid account=acct_1Northwind
+2026-10-14T09:37:10Z INFO delivery.sent event=evt_000037 delivery=whd_000041 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=1 http=200 bytes=236
+2026-10-14T09:37:38Z INFO event.created event=evt_000038 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:37:38Z INFO delivery.sent event=evt_000038 delivery=whd_000042 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=305
+2026-10-14T09:38:47Z INFO event.created event=evt_000039 type=charge.succeeded account=acct_1Acme
+2026-10-14T09:38:47Z INFO delivery.sent event=evt_000039 delivery=whd_000043 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T09:39:32Z INFO event.created event=evt_000040 type=charge.succeeded account=acct_1CafeOle
+2026-10-14T09:39:32Z WARN delivery.failed event=evt_000040 delivery=whd_000044 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:39:32Z INFO delivery.retry_scheduled event=evt_000040 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=2 in_s=120
+2026-10-14T09:40:44Z INFO event.created event=evt_000041 type=payout.paid account=acct_1CafeOle
+2026-10-14T09:40:44Z INFO delivery.sent event=evt_000041 delivery=whd_000045 endpoint=we_cafeole1 account=acct_1CafeOle type=payout.paid attempt=1 http=200 bytes=234
+2026-10-14T09:40:45Z WARN delivery.failed event=evt_000035 delivery=whd_000046 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:40:45Z INFO delivery.retry_scheduled event=evt_000035 endpoint=we_muller01 account=acct_1Muller next_attempt=4 in_s=480
+2026-10-14T09:41:32Z WARN delivery.failed event=evt_000040 delivery=whd_000047 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:41:32Z INFO delivery.retry_scheduled event=evt_000040 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=3 in_s=240
+2026-10-14T09:41:38Z INFO event.created event=evt_000042 type=charge.succeeded account=acct_1Northwind
+2026-10-14T09:41:38Z INFO delivery.sent event=evt_000042 delivery=whd_000048 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=200 bytes=305
+2026-10-14T09:41:44Z INFO event.created event=evt_000043 type=payment_intent.succeeded account=acct_1CafeOle
+2026-10-14T09:41:44Z INFO delivery.sent event=evt_000043 delivery=whd_000049 endpoint=we_cafeole1 account=acct_1CafeOle type=payment_intent.succeeded attempt=1 http=200 bytes=242
+2026-10-14T09:43:33Z INFO event.created event=evt_000044 type=payment_intent.succeeded account=acct_1Acme
+2026-10-14T09:43:33Z INFO delivery.sent event=evt_000044 delivery=whd_000050 endpoint=we_acme0001 account=acct_1Acme type=payment_intent.succeeded attempt=1 http=200 bytes=239
+2026-10-14T09:44:03Z INFO event.created event=evt_000045 type=charge.succeeded account=acct_1Acme
+2026-10-14T09:44:03Z INFO delivery.sent event=evt_000045 delivery=whd_000051 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=301
+2026-10-14T09:44:12Z INFO event.created event=evt_000046 type=payment_intent.succeeded account=acct_1Muller
+2026-10-14T09:44:12Z INFO delivery.sent event=evt_000046 delivery=whd_000052 endpoint=we_muller01 account=acct_1Muller type=payment_intent.succeeded attempt=1 http=200 bytes=241
+2026-10-14T09:45:05Z INFO event.created event=evt_000047 type=payment_intent.succeeded account=acct_1Acme
+2026-10-14T09:45:05Z INFO delivery.sent event=evt_000047 delivery=whd_000053 endpoint=we_acme0001 account=acct_1Acme type=payment_intent.succeeded attempt=1 http=200 bytes=239
+2026-10-14T09:45:32Z WARN delivery.failed event=evt_000040 delivery=whd_000054 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:45:32Z INFO delivery.retry_scheduled event=evt_000040 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=4 in_s=480
+2026-10-14T09:45:48Z WARN delivery.failed event=evt_000022 delivery=whd_000055 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:45:48Z INFO delivery.retry_scheduled event=evt_000022 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=6 in_s=1920
+2026-10-14T09:46:04Z INFO event.created event=evt_000048 type=charge.succeeded account=acct_1Northwind
+2026-10-14T09:46:04Z INFO delivery.sent event=evt_000048 delivery=whd_000056 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=200 bytes=306
+2026-10-14T09:46:36Z INFO event.created event=evt_000049 type=charge.succeeded account=acct_1CafeOle
+2026-10-14T09:46:36Z WARN delivery.failed event=evt_000049 delivery=whd_000057 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:46:36Z INFO delivery.retry_scheduled event=evt_000049 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=2 in_s=120
+2026-10-14T09:46:38Z INFO event.created event=evt_000050 type=payment_intent.succeeded account=acct_1Acme
+2026-10-14T09:46:38Z INFO delivery.sent event=evt_000050 delivery=whd_000058 endpoint=we_acme0001 account=acct_1Acme type=payment_intent.succeeded attempt=1 http=200 bytes=238
+2026-10-14T09:48:17Z INFO event.created event=evt_000051 type=charge.succeeded account=acct_1Acme
+2026-10-14T09:48:17Z INFO delivery.sent event=evt_000051 delivery=whd_000059 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T09:48:19Z INFO event.created event=evt_000052 type=charge.refunded account=acct_1Northwind
+2026-10-14T09:48:19Z INFO delivery.sent event=evt_000052 delivery=whd_000060 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=1 http=200 bytes=235
+2026-10-14T09:48:36Z WARN delivery.failed event=evt_000049 delivery=whd_000061 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:48:36Z INFO delivery.retry_scheduled event=evt_000049 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=3 in_s=240
+2026-10-14T09:48:45Z WARN delivery.failed event=evt_000035 delivery=whd_000062 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:48:45Z INFO delivery.retry_scheduled event=evt_000035 endpoint=we_muller01 account=acct_1Muller next_attempt=5 in_s=960
+2026-10-14T09:50:06Z INFO event.created event=evt_000053 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:50:06Z INFO delivery.sent event=evt_000053 delivery=whd_000063 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=304
+2026-10-14T09:50:11Z INFO event.created event=evt_000054 type=charge.refunded account=acct_1Bluebird
+2026-10-14T09:50:11Z INFO delivery.sent event=evt_000054 delivery=whd_000064 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.refunded attempt=1 http=200 bytes=234
+2026-10-14T09:51:02Z INFO event.created event=evt_000055 type=charge.succeeded account=acct_1Acme
+2026-10-14T09:51:02Z INFO delivery.sent event=evt_000055 delivery=whd_000065 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=301
+2026-10-14T09:51:49Z INFO event.created event=evt_000056 type=charge.succeeded account=acct_1Acme
+2026-10-14T09:51:49Z INFO delivery.sent event=evt_000056 delivery=whd_000066 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T09:52:36Z WARN delivery.failed event=evt_000049 delivery=whd_000067 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:52:36Z INFO delivery.retry_scheduled event=evt_000049 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=4 in_s=480
+2026-10-14T09:53:06Z INFO event.created event=evt_000057 type=payment_intent.succeeded account=acct_1Bluebird
+2026-10-14T09:53:06Z INFO delivery.sent event=evt_000057 delivery=whd_000068 endpoint=we_bluebd01 account=acct_1Bluebird type=payment_intent.succeeded attempt=1 http=200 bytes=242
+2026-10-14T09:53:32Z WARN delivery.failed event=evt_000040 delivery=whd_000069 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T09:53:32Z INFO delivery.retry_scheduled event=evt_000040 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=5 in_s=960
+2026-10-14T09:53:34Z INFO event.created event=evt_000058 type=charge.succeeded account=acct_1Acme
+2026-10-14T09:53:34Z INFO delivery.sent event=evt_000058 delivery=whd_000070 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T09:53:42Z INFO event.created event=evt_000059 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:53:42Z INFO delivery.sent event=evt_000059 delivery=whd_000071 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=305
+2026-10-14T09:55:27Z INFO event.created event=evt_000060 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:55:27Z INFO delivery.sent event=evt_000060 delivery=whd_000072 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=305
+2026-10-14T09:55:40Z INFO event.created event=evt_000061 type=charge.refunded account=acct_1Northwind
+2026-10-14T09:55:40Z INFO delivery.sent event=evt_000061 delivery=whd_000073 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=1 http=200 bytes=235
+2026-10-14T09:56:24Z INFO event.created event=evt_000062 type=payment_intent.succeeded account=acct_1Acme
+2026-10-14T09:56:24Z INFO delivery.sent event=evt_000062 delivery=whd_000074 endpoint=we_acme0001 account=acct_1Acme type=payment_intent.succeeded attempt=1 http=200 bytes=239
+2026-10-14T09:56:45Z INFO event.created event=evt_000063 type=charge.refunded account=acct_1Muller
+2026-10-14T09:56:45Z INFO delivery.sent event=evt_000063 delivery=whd_000075 endpoint=we_muller01 account=acct_1Muller type=charge.refunded attempt=1 http=200 bytes=231
+2026-10-14T09:56:56Z INFO event.created event=evt_000064 type=charge.refunded account=acct_1Northwind
+2026-10-14T09:56:56Z INFO delivery.sent event=evt_000064 delivery=whd_000076 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=1 http=200 bytes=235
+2026-10-14T09:57:25Z INFO event.created event=evt_000065 type=charge.succeeded account=acct_1Lumen
+2026-10-14T09:57:25Z INFO delivery.sent event=evt_000065 delivery=whd_000077 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=303
+2026-10-14T09:57:52Z INFO event.created event=evt_000066 type=charge.refunded account=acct_1Bluebird
+2026-10-14T09:57:52Z INFO delivery.sent event=evt_000066 delivery=whd_000078 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.refunded attempt=1 http=200 bytes=234
+2026-10-14T10:00:06Z INFO event.created event=evt_000067 type=charge.succeeded account=acct_1Northwind
+2026-10-14T10:00:06Z INFO delivery.sent event=evt_000067 delivery=whd_000079 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=200 bytes=307
+2026-10-14T10:00:08Z INFO event.created event=evt_000068 type=payment_intent.succeeded account=acct_1Acme
+2026-10-14T10:00:08Z INFO delivery.sent event=evt_000068 delivery=whd_000080 endpoint=we_acme0001 account=acct_1Acme type=payment_intent.succeeded attempt=1 http=200 bytes=239
+2026-10-14T10:00:36Z WARN delivery.failed event=evt_000049 delivery=whd_000081 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:00:36Z INFO delivery.retry_scheduled event=evt_000049 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=5 in_s=960
+2026-10-14T10:00:38Z INFO event.created event=evt_000069 type=payout.paid account=acct_1Acme
+2026-10-14T10:00:38Z INFO delivery.sent event=evt_000069 delivery=whd_000082 endpoint=we_acme0001 account=acct_1Acme type=payout.paid attempt=1 http=200 bytes=231
+2026-10-14T10:01:28Z INFO event.created event=evt_000070 type=charge.succeeded account=acct_1CafeOle
+2026-10-14T10:01:28Z WARN delivery.failed event=evt_000070 delivery=whd_000083 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:01:28Z INFO delivery.retry_scheduled event=evt_000070 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=2 in_s=120
+2026-10-14T10:01:56Z INFO event.created event=evt_000071 type=payment_intent.succeeded account=acct_1Muller
+2026-10-14T10:01:56Z INFO delivery.sent event=evt_000071 delivery=whd_000084 endpoint=we_muller01 account=acct_1Muller type=payment_intent.succeeded attempt=1 http=200 bytes=241
+2026-10-14T10:02:13Z INFO event.created event=evt_000072 type=charge.refunded account=acct_1Kestrel
+2026-10-14T10:02:13Z INFO delivery.sent event=evt_000072 delivery=whd_000085 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.refunded attempt=1 http=200 bytes=233
+2026-10-14T10:03:28Z WARN delivery.failed event=evt_000070 delivery=whd_000086 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:03:28Z INFO delivery.retry_scheduled event=evt_000070 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=3 in_s=240
+2026-10-14T10:04:22Z INFO event.created event=evt_000073 type=charge.succeeded account=acct_1Lumen
+2026-10-14T10:04:22Z INFO delivery.sent event=evt_000073 delivery=whd_000087 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=304
+2026-10-14T10:04:45Z WARN delivery.failed event=evt_000035 delivery=whd_000088 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:04:45Z INFO delivery.retry_scheduled event=evt_000035 endpoint=we_muller01 account=acct_1Muller next_attempt=6 in_s=1920
+2026-10-14T10:05:35Z INFO event.created event=evt_000074 type=charge.refunded account=acct_1Northwind
+2026-10-14T10:05:35Z WARN delivery.failed event=evt_000074 delivery=whd_000089 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T10:05:35Z INFO delivery.retry_scheduled event=evt_000074 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T10:06:11Z INFO event.created event=evt_000075 type=charge.refunded account=acct_1Bluebird
+2026-10-14T10:06:11Z INFO delivery.sent event=evt_000075 delivery=whd_000090 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.refunded attempt=1 http=200 bytes=234
+2026-10-14T10:07:28Z WARN delivery.failed event=evt_000070 delivery=whd_000091 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:07:28Z INFO delivery.retry_scheduled event=evt_000070 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=4 in_s=480
+2026-10-14T10:07:35Z WARN delivery.failed event=evt_000074 delivery=whd_000092 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T10:07:35Z INFO delivery.retry_scheduled event=evt_000074 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T10:07:39Z INFO event.created event=evt_000076 type=charge.succeeded account=acct_1Northwind
+2026-10-14T10:07:39Z WARN delivery.failed event=evt_000076 delivery=whd_000093 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T10:07:39Z INFO delivery.retry_scheduled event=evt_000076 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T10:09:22Z INFO event.created event=evt_000077 type=charge.succeeded account=acct_1Acme
+2026-10-14T10:09:22Z INFO delivery.sent event=evt_000077 delivery=whd_000094 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=303
+2026-10-14T10:09:32Z WARN delivery.failed event=evt_000040 delivery=whd_000095 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:09:32Z INFO delivery.retry_scheduled event=evt_000040 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=6 in_s=1920
+2026-10-14T10:09:39Z WARN delivery.failed event=evt_000076 delivery=whd_000096 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T10:09:39Z INFO delivery.retry_scheduled event=evt_000076 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T10:11:35Z WARN delivery.failed event=evt_000074 delivery=whd_000097 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T10:11:35Z INFO delivery.retry_scheduled event=evt_000074 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T10:13:39Z WARN delivery.failed event=evt_000076 delivery=whd_000098 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T10:13:39Z INFO delivery.retry_scheduled event=evt_000076 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T10:15:19Z INFO event.created event=evt_000078 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T10:15:19Z INFO delivery.sent event=evt_000078 delivery=whd_000099 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=312
+2026-10-14T10:15:28Z WARN delivery.failed event=evt_000070 delivery=whd_000100 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:15:28Z INFO delivery.retry_scheduled event=evt_000070 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=5 in_s=960
+2026-10-14T10:16:36Z WARN delivery.failed event=evt_000049 delivery=whd_000101 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:16:36Z INFO delivery.retry_scheduled event=evt_000049 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=6 in_s=1920
+2026-10-14T10:17:48Z WARN delivery.failed event=evt_000022 delivery=whd_000102 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:17:48Z ERROR delivery.gave_up event=evt_000022 endpoint=we_cafeole1 account=acct_1CafeOle attempts=6 age_s=3720
+2026-10-14T10:19:10Z INFO event.created event=evt_000079 type=charge.succeeded account=acct_1Kestrel
+2026-10-14T10:19:10Z INFO delivery.sent event=evt_000079 delivery=whd_000103 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=1 http=200 bytes=310
+2026-10-14T10:19:35Z WARN delivery.failed event=evt_000074 delivery=whd_000104 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T10:19:35Z INFO delivery.retry_scheduled event=evt_000074 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T10:20:26Z INFO event.created event=evt_000080 type=charge.refunded account=acct_1Muller
+2026-10-14T10:20:26Z INFO delivery.sent event=evt_000080 delivery=whd_000105 endpoint=we_muller01 account=acct_1Muller type=charge.refunded attempt=1 http=200 bytes=232
+2026-10-14T10:20:49Z INFO event.created event=evt_000081 type=charge.succeeded account=acct_1Acme
+2026-10-14T10:20:49Z INFO delivery.sent event=evt_000081 delivery=whd_000106 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=303
+2026-10-14T10:21:19Z INFO event.created event=evt_000082 type=charge.succeeded account=acct_1Acme
+2026-10-14T10:21:19Z INFO delivery.sent event=evt_000082 delivery=whd_000107 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T10:21:30Z INFO event.created event=evt_000083 type=charge.succeeded account=acct_1Kestrel
+2026-10-14T10:21:30Z INFO delivery.sent event=evt_000083 delivery=whd_000108 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=1 http=200 bytes=306
+2026-10-14T10:21:39Z WARN delivery.failed event=evt_000076 delivery=whd_000109 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T10:21:39Z INFO delivery.retry_scheduled event=evt_000076 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T10:22:57Z INFO event.created event=evt_000084 type=charge.refunded account=acct_1CafeOle
+2026-10-14T10:22:57Z INFO delivery.sent event=evt_000084 delivery=whd_000110 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.refunded attempt=1 http=200 bytes=233
+2026-10-14T10:23:00Z INFO event.created event=evt_000085 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T10:23:00Z INFO delivery.sent event=evt_000085 delivery=whd_000111 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=314
+2026-10-14T10:23:40Z INFO event.created event=evt_000086 type=payout.paid account=acct_1Muller
+2026-10-14T10:23:40Z INFO delivery.sent event=evt_000086 delivery=whd_000112 endpoint=we_muller01 account=acct_1Muller type=payout.paid attempt=1 http=200 bytes=233
+2026-10-14T10:24:42Z INFO event.created event=evt_000087 type=payout.paid account=acct_1Muller
+2026-10-14T10:24:42Z INFO delivery.sent event=evt_000087 delivery=whd_000113 endpoint=we_muller01 account=acct_1Muller type=payout.paid attempt=1 http=200 bytes=233
+2026-10-14T10:25:12Z INFO event.created event=evt_000088 type=payment_intent.succeeded account=acct_1Muller
+2026-10-14T10:25:12Z INFO delivery.sent event=evt_000088 delivery=whd_000114 endpoint=we_muller01 account=acct_1Muller type=payment_intent.succeeded attempt=1 http=200 bytes=241
+2026-10-14T10:25:40Z INFO event.created event=evt_000089 type=payment_intent.succeeded account=acct_1Northwind
+2026-10-14T10:25:40Z WARN delivery.failed event=evt_000089 delivery=whd_000115 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T10:25:40Z INFO delivery.retry_scheduled event=evt_000089 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T10:26:12Z INFO event.created event=evt_000090 type=charge.succeeded account=acct_1Lumen
+2026-10-14T10:26:12Z INFO delivery.sent event=evt_000090 delivery=whd_000116 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=304
+2026-10-14T10:27:40Z WARN delivery.failed event=evt_000089 delivery=whd_000117 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T10:27:40Z INFO delivery.retry_scheduled event=evt_000089 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T10:27:56Z INFO event.created event=evt_000091 type=charge.succeeded account=acct_1Kestrel
+2026-10-14T10:27:56Z INFO delivery.sent event=evt_000091 delivery=whd_000118 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=1 http=200 bytes=307
+2026-10-14T10:28:25Z INFO event.created event=evt_000092 type=charge.succeeded account=acct_1Lumen
+2026-10-14T10:28:25Z INFO delivery.sent event=evt_000092 delivery=whd_000119 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=304
+2026-10-14T10:28:51Z INFO event.created event=evt_000093 type=charge.refunded account=acct_1Muller
+2026-10-14T10:28:51Z INFO delivery.sent event=evt_000093 delivery=whd_000120 endpoint=we_muller01 account=acct_1Muller type=charge.refunded attempt=1 http=200 bytes=231
+2026-10-14T10:29:30Z INFO event.created event=evt_000094 type=charge.succeeded account=acct_1Northwind
+2026-10-14T10:29:30Z WARN delivery.failed event=evt_000094 delivery=whd_000121 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T10:29:30Z INFO delivery.retry_scheduled event=evt_000094 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T10:31:28Z WARN delivery.failed event=evt_000070 delivery=whd_000122 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:31:28Z INFO delivery.retry_scheduled event=evt_000070 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=6 in_s=1920
+2026-10-14T10:31:30Z WARN delivery.failed event=evt_000094 delivery=whd_000123 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T10:31:30Z INFO delivery.retry_scheduled event=evt_000094 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T10:31:35Z INFO event.created event=evt_000095 type=charge.succeeded account=acct_1Acme
+2026-10-14T10:31:35Z INFO delivery.sent event=evt_000095 delivery=whd_000124 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T10:31:40Z WARN delivery.failed event=evt_000089 delivery=whd_000125 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T10:31:40Z INFO delivery.retry_scheduled event=evt_000089 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T10:31:51Z INFO event.created event=evt_000096 type=charge.succeeded account=acct_1Northwind
+2026-10-14T10:31:51Z WARN delivery.failed event=evt_000096 delivery=whd_000126 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T10:31:51Z INFO delivery.retry_scheduled event=evt_000096 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T10:33:51Z WARN delivery.failed event=evt_000096 delivery=whd_000127 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T10:33:51Z INFO delivery.retry_scheduled event=evt_000096 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T10:34:10Z INFO event.created event=evt_000097 type=payment_intent.succeeded account=acct_1Bluebird
+2026-10-14T10:34:10Z INFO delivery.sent event=evt_000097 delivery=whd_000128 endpoint=we_bluebd01 account=acct_1Bluebird type=payment_intent.succeeded attempt=1 http=200 bytes=243
+2026-10-14T10:35:26Z INFO event.created event=evt_000098 type=payment_intent.succeeded account=acct_1Northwind
+2026-10-14T10:35:26Z WARN delivery.failed event=evt_000098 delivery=whd_000129 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T10:35:26Z INFO delivery.retry_scheduled event=evt_000098 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T10:35:30Z WARN delivery.failed event=evt_000094 delivery=whd_000130 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T10:35:30Z INFO delivery.retry_scheduled event=evt_000094 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T10:35:35Z WARN delivery.failed event=evt_000074 delivery=whd_000131 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T10:35:35Z INFO delivery.retry_scheduled event=evt_000074 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T10:36:45Z WARN delivery.failed event=evt_000035 delivery=whd_000132 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:36:45Z ERROR delivery.gave_up event=evt_000035 endpoint=we_muller01 account=acct_1Muller attempts=6 age_s=3720
+2026-10-14T10:37:26Z WARN delivery.failed event=evt_000098 delivery=whd_000133 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T10:37:26Z INFO delivery.retry_scheduled event=evt_000098 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T10:37:39Z WARN delivery.failed event=evt_000076 delivery=whd_000134 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T10:37:39Z INFO delivery.retry_scheduled event=evt_000076 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T10:37:51Z WARN delivery.failed event=evt_000096 delivery=whd_000135 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T10:37:51Z INFO delivery.retry_scheduled event=evt_000096 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T10:38:12Z INFO event.created event=evt_000099 type=charge.succeeded account=acct_1Northwind
+2026-10-14T10:38:12Z WARN delivery.failed event=evt_000099 delivery=whd_000136 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T10:38:12Z INFO delivery.retry_scheduled event=evt_000099 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T10:38:32Z INFO event.created event=evt_000100 type=payment_intent.succeeded account=acct_1CafeOle
+2026-10-14T10:38:32Z INFO delivery.sent event=evt_000100 delivery=whd_000137 endpoint=we_cafeole1 account=acct_1CafeOle type=payment_intent.succeeded attempt=1 http=200 bytes=242
+2026-10-14T10:38:55Z INFO event.created event=evt_000101 type=charge.succeeded account=acct_1Lumen
+2026-10-14T10:38:55Z INFO delivery.sent event=evt_000101 delivery=whd_000138 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=304
+2026-10-14T10:39:38Z INFO event.created event=evt_000102 type=payment_intent.succeeded account=acct_1Muller
+2026-10-14T10:39:38Z INFO delivery.sent event=evt_000102 delivery=whd_000139 endpoint=we_muller01 account=acct_1Muller type=payment_intent.succeeded attempt=1 http=200 bytes=241
+2026-10-14T10:39:40Z WARN delivery.failed event=evt_000089 delivery=whd_000140 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T10:39:40Z INFO delivery.retry_scheduled event=evt_000089 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T10:40:12Z WARN delivery.failed event=evt_000099 delivery=whd_000141 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T10:40:12Z INFO delivery.retry_scheduled event=evt_000099 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T10:41:26Z WARN delivery.failed event=evt_000098 delivery=whd_000142 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T10:41:26Z INFO delivery.retry_scheduled event=evt_000098 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T10:41:32Z WARN delivery.failed event=evt_000040 delivery=whd_000143 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:41:32Z ERROR delivery.gave_up event=evt_000040 endpoint=we_cafeole1 account=acct_1CafeOle attempts=6 age_s=3720
+2026-10-14T10:42:29Z INFO event.created event=evt_000103 type=payment_intent.succeeded account=acct_1Lumen
+2026-10-14T10:42:59Z WARN delivery.timeout event=evt_000103 delivery=whd_000144 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=1 timeout_ms=30000
+2026-10-14T10:42:59Z INFO delivery.retry_scheduled event=evt_000103 endpoint=we_lumen01 account=acct_1Lumen next_attempt=2 in_s=120
+2026-10-14T10:43:07Z INFO event.created event=evt_000104 type=charge.succeeded account=acct_1Northwind
+2026-10-14T10:43:07Z WARN delivery.failed event=evt_000104 delivery=whd_000145 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T10:43:07Z INFO delivery.retry_scheduled event=evt_000104 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T10:43:24Z INFO event.created event=evt_000105 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T10:43:24Z INFO delivery.sent event=evt_000105 delivery=whd_000146 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=312
+2026-10-14T10:43:30Z WARN delivery.failed event=evt_000094 delivery=whd_000147 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T10:43:30Z INFO delivery.retry_scheduled event=evt_000094 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T10:44:12Z WARN delivery.failed event=evt_000099 delivery=whd_000148 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T10:44:12Z INFO delivery.retry_scheduled event=evt_000099 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T10:44:13Z INFO event.created event=evt_000106 type=charge.refunded account=acct_1CafeOle
+2026-10-14T10:44:13Z INFO delivery.sent event=evt_000106 delivery=whd_000149 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.refunded attempt=1 http=200 bytes=233
+2026-10-14T10:44:27Z INFO event.created event=evt_000107 type=charge.succeeded account=acct_1Kestrel
+2026-10-14T10:44:27Z INFO delivery.sent event=evt_000107 delivery=whd_000150 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=1 http=200 bytes=308
+2026-10-14T10:44:45Z INFO event.created event=evt_000108 type=payment_intent.succeeded account=acct_1Muller
+2026-10-14T10:44:45Z INFO delivery.sent event=evt_000108 delivery=whd_000151 endpoint=we_muller01 account=acct_1Muller type=payment_intent.succeeded attempt=1 http=200 bytes=240
+2026-10-14T10:44:47Z INFO event.created event=evt_000109 type=payment_intent.succeeded account=acct_1CafeOle
+2026-10-14T10:44:47Z INFO delivery.sent event=evt_000109 delivery=whd_000152 endpoint=we_cafeole1 account=acct_1CafeOle type=payment_intent.succeeded attempt=1 http=200 bytes=241
+2026-10-14T10:45:29Z WARN delivery.timeout event=evt_000103 delivery=whd_000153 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=2 timeout_ms=30000
+2026-10-14T10:45:29Z INFO delivery.retry_scheduled event=evt_000103 endpoint=we_lumen01 account=acct_1Lumen next_attempt=3 in_s=240
+2026-10-14T10:45:29Z WARN delivery.failed event=evt_000104 delivery=whd_000154 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T10:45:29Z INFO delivery.retry_scheduled event=evt_000104 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T10:45:51Z WARN delivery.failed event=evt_000096 delivery=whd_000155 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T10:45:51Z INFO delivery.retry_scheduled event=evt_000096 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T10:46:18Z INFO event.created event=evt_000110 type=charge.succeeded account=acct_1Kestrel
+2026-10-14T10:46:18Z INFO delivery.sent event=evt_000110 delivery=whd_000156 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=1 http=200 bytes=310
+2026-10-14T10:47:32Z INFO event.created event=evt_000111 type=charge.succeeded account=acct_1Lumen
+2026-10-14T10:48:02Z WARN delivery.timeout event=evt_000111 delivery=whd_000157 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 timeout_ms=30000
+2026-10-14T10:48:02Z INFO delivery.retry_scheduled event=evt_000111 endpoint=we_lumen01 account=acct_1Lumen next_attempt=2 in_s=120
+2026-10-14T10:48:02Z INFO event.created event=evt_000112 type=payout.paid account=acct_1Bluebird
+2026-10-14T10:48:02Z INFO delivery.sent event=evt_000112 delivery=whd_000158 endpoint=we_bluebd01 account=acct_1Bluebird type=payout.paid attempt=1 http=200 bytes=235
+2026-10-14T10:48:36Z WARN delivery.failed event=evt_000049 delivery=whd_000159 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:48:36Z ERROR delivery.gave_up event=evt_000049 endpoint=we_cafeole1 account=acct_1CafeOle attempts=6 age_s=3720
+2026-10-14T10:49:26Z WARN delivery.failed event=evt_000098 delivery=whd_000160 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T10:49:26Z INFO delivery.retry_scheduled event=evt_000098 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T10:49:59Z WARN delivery.timeout event=evt_000103 delivery=whd_000161 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=3 timeout_ms=30000
+2026-10-14T10:49:59Z INFO delivery.retry_scheduled event=evt_000103 endpoint=we_lumen01 account=acct_1Lumen next_attempt=4 in_s=480
+2026-10-14T10:49:59Z WARN delivery.failed event=evt_000104 delivery=whd_000162 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T10:49:59Z INFO delivery.retry_scheduled event=evt_000104 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T10:50:32Z WARN delivery.timeout event=evt_000111 delivery=whd_000163 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=2 timeout_ms=30000
+2026-10-14T10:50:32Z INFO delivery.retry_scheduled event=evt_000111 endpoint=we_lumen01 account=acct_1Lumen next_attempt=3 in_s=240
+2026-10-14T10:51:01Z INFO event.created event=evt_000113 type=payout.paid account=acct_1Lumen
+2026-10-14T10:51:31Z WARN delivery.timeout event=evt_000113 delivery=whd_000164 endpoint=we_lumen01 account=acct_1Lumen type=payout.paid attempt=1 timeout_ms=30000
+2026-10-14T10:51:31Z INFO delivery.retry_scheduled event=evt_000113 endpoint=we_lumen01 account=acct_1Lumen next_attempt=2 in_s=120
+2026-10-14T10:51:31Z INFO event.created event=evt_000114 type=payment_intent.succeeded account=acct_1Lumen
+2026-10-14T10:52:01Z WARN delivery.timeout event=evt_000114 delivery=whd_000165 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=1 timeout_ms=30000
+2026-10-14T10:52:01Z INFO delivery.retry_scheduled event=evt_000114 endpoint=we_lumen01 account=acct_1Lumen next_attempt=2 in_s=120
+2026-10-14T10:52:12Z WARN delivery.failed event=evt_000099 delivery=whd_000166 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T10:52:12Z INFO delivery.retry_scheduled event=evt_000099 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T10:53:12Z INFO event.created event=evt_000115 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T10:53:12Z INFO delivery.sent event=evt_000115 delivery=whd_000167 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=311
+2026-10-14T10:53:21Z INFO event.created event=evt_000116 type=charge.succeeded account=acct_1Lumen
+2026-10-14T10:53:51Z WARN delivery.timeout event=evt_000116 delivery=whd_000168 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 timeout_ms=30000
+2026-10-14T10:53:51Z INFO delivery.retry_scheduled event=evt_000116 endpoint=we_lumen01 account=acct_1Lumen next_attempt=2 in_s=120
+2026-10-14T10:54:21Z WARN delivery.timeout event=evt_000113 delivery=whd_000169 endpoint=we_lumen01 account=acct_1Lumen type=payout.paid attempt=2 timeout_ms=30000
+2026-10-14T10:54:21Z INFO delivery.retry_scheduled event=evt_000113 endpoint=we_lumen01 account=acct_1Lumen next_attempt=3 in_s=240
+2026-10-14T10:54:21Z INFO event.created event=evt_000117 type=payout.paid account=acct_1Northwind
+2026-10-14T10:54:51Z WARN delivery.timeout event=evt_000114 delivery=whd_000170 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=2 timeout_ms=30000
+2026-10-14T10:54:51Z INFO delivery.retry_scheduled event=evt_000114 endpoint=we_lumen01 account=acct_1Lumen next_attempt=3 in_s=240
+2026-10-14T10:54:51Z WARN delivery.failed event=evt_000117 delivery=whd_000171 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T10:54:51Z INFO delivery.retry_scheduled event=evt_000117 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T10:55:21Z WARN delivery.timeout event=evt_000111 delivery=whd_000172 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=3 timeout_ms=30000
+2026-10-14T10:55:21Z INFO delivery.retry_scheduled event=evt_000111 endpoint=we_lumen01 account=acct_1Lumen next_attempt=4 in_s=480
+2026-10-14T10:55:21Z INFO event.created event=evt_000118 type=payout.paid account=acct_1Acme
+2026-10-14T10:55:21Z INFO delivery.sent event=evt_000118 delivery=whd_000173 endpoint=we_acme0001 account=acct_1Acme type=payout.paid attempt=1 http=200 bytes=231
+2026-10-14T10:55:21Z INFO event.created event=evt_000119 type=charge.succeeded account=acct_1Muller
+2026-10-14T10:55:21Z WARN delivery.failed event=evt_000119 delivery=whd_000174 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:55:21Z INFO delivery.retry_scheduled event=evt_000119 endpoint=we_muller01 account=acct_1Muller next_attempt=2 in_s=120
+2026-10-14T10:55:27Z INFO event.created event=evt_000120 type=charge.succeeded account=acct_1Kestrel
+2026-10-14T10:55:27Z INFO delivery.sent event=evt_000120 delivery=whd_000175 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=1 http=200 bytes=309
+2026-10-14T10:55:40Z WARN delivery.failed event=evt_000089 delivery=whd_000176 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T10:55:40Z INFO delivery.retry_scheduled event=evt_000089 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T10:56:21Z WARN delivery.timeout event=evt_000116 delivery=whd_000177 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=2 timeout_ms=30000
+2026-10-14T10:56:21Z INFO delivery.retry_scheduled event=evt_000116 endpoint=we_lumen01 account=acct_1Lumen next_attempt=3 in_s=240
+2026-10-14T10:56:21Z INFO event.created event=evt_000121 type=charge.succeeded account=acct_1Acme
+2026-10-14T10:56:21Z INFO delivery.sent event=evt_000121 delivery=whd_000178 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T10:56:51Z WARN delivery.failed event=evt_000117 delivery=whd_000179 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T10:56:51Z INFO delivery.retry_scheduled event=evt_000117 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T10:56:52Z INFO event.created event=evt_000122 type=charge.succeeded account=acct_1Kestrel
+2026-10-14T10:56:52Z INFO delivery.sent event=evt_000122 delivery=whd_000180 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=1 http=200 bytes=310
+2026-10-14T10:57:21Z WARN delivery.failed event=evt_000119 delivery=whd_000181 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T10:57:21Z INFO delivery.retry_scheduled event=evt_000119 endpoint=we_muller01 account=acct_1Muller next_attempt=3 in_s=240
+2026-10-14T10:57:29Z INFO event.created event=evt_000123 type=payment_intent.succeeded account=acct_1Acme
+2026-10-14T10:57:29Z INFO delivery.sent event=evt_000123 delivery=whd_000182 endpoint=we_acme0001 account=acct_1Acme type=payment_intent.succeeded attempt=1 http=200 bytes=239
+2026-10-14T10:58:29Z WARN delivery.timeout event=evt_000103 delivery=whd_000183 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=4 timeout_ms=30000
+2026-10-14T10:58:29Z INFO delivery.retry_scheduled event=evt_000103 endpoint=we_lumen01 account=acct_1Lumen next_attempt=5 in_s=960
+2026-10-14T10:58:29Z WARN delivery.failed event=evt_000104 delivery=whd_000184 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T10:58:29Z INFO delivery.retry_scheduled event=evt_000104 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T10:58:29Z INFO delivery.sent event=evt_000113 delivery=whd_000185 endpoint=we_lumen01 account=acct_1Lumen type=payout.paid attempt=3 http=200 bytes=232
+2026-10-14T10:58:51Z INFO delivery.sent event=evt_000114 delivery=whd_000186 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=3 http=200 bytes=240
+2026-10-14T10:59:17Z INFO event.created event=evt_000124 type=charge.succeeded account=acct_1Lumen
+2026-10-14T10:59:17Z INFO delivery.sent event=evt_000124 delivery=whd_000187 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=304
+2026-10-14T10:59:30Z WARN delivery.failed event=evt_000094 delivery=whd_000188 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T10:59:30Z INFO delivery.retry_scheduled event=evt_000094 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:00:21Z INFO delivery.sent event=evt_000116 delivery=whd_000189 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=3 http=200 bytes=303
+2026-10-14T11:00:51Z WARN delivery.failed event=evt_000117 delivery=whd_000190 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T11:00:51Z INFO delivery.retry_scheduled event=evt_000117 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T11:00:56Z INFO event.created event=evt_000125 type=charge.succeeded account=acct_1Northwind
+2026-10-14T11:00:56Z WARN delivery.failed event=evt_000125 delivery=whd_000191 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T11:00:56Z INFO delivery.retry_scheduled event=evt_000125 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T11:01:21Z WARN delivery.failed event=evt_000119 delivery=whd_000192 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:01:21Z INFO delivery.retry_scheduled event=evt_000119 endpoint=we_muller01 account=acct_1Muller next_attempt=4 in_s=480
+2026-10-14T11:01:51Z WARN delivery.failed event=evt_000096 delivery=whd_000193 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T11:01:51Z INFO delivery.retry_scheduled event=evt_000096 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:02:13Z INFO event.created event=evt_000126 type=charge.succeeded account=acct_1Lumen
+2026-10-14T11:02:13Z INFO delivery.sent event=evt_000126 delivery=whd_000194 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=304
+2026-10-14T11:02:27Z INFO event.created event=evt_000127 type=payout.paid account=acct_1Muller
+2026-10-14T11:02:27Z INFO delivery.sent event=evt_000127 delivery=whd_000195 endpoint=we_muller01 account=acct_1Muller type=payout.paid attempt=1 http=200 bytes=233
+2026-10-14T11:02:56Z WARN delivery.failed event=evt_000125 delivery=whd_000196 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T11:02:56Z INFO delivery.retry_scheduled event=evt_000125 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T11:03:21Z INFO delivery.sent event=evt_000111 delivery=whd_000197 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=4 http=200 bytes=305
+2026-10-14T11:03:28Z WARN delivery.failed event=evt_000070 delivery=whd_000198 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:03:28Z ERROR delivery.gave_up event=evt_000070 endpoint=we_cafeole1 account=acct_1CafeOle attempts=6 age_s=3720
+2026-10-14T11:04:34Z INFO event.created event=evt_000128 type=payment_intent.succeeded account=acct_1Muller
+2026-10-14T11:04:34Z INFO delivery.sent event=evt_000128 delivery=whd_000199 endpoint=we_muller01 account=acct_1Muller type=payment_intent.succeeded attempt=1 http=200 bytes=241
+2026-10-14T11:05:26Z WARN delivery.failed event=evt_000098 delivery=whd_000200 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T11:05:26Z INFO delivery.retry_scheduled event=evt_000098 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:06:56Z WARN delivery.failed event=evt_000125 delivery=whd_000201 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T11:06:56Z INFO delivery.retry_scheduled event=evt_000125 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T11:07:12Z INFO event.created event=evt_000129 type=payout.paid account=acct_1Northwind
+2026-10-14T11:07:12Z WARN delivery.failed event=evt_000129 delivery=whd_000202 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T11:07:12Z INFO delivery.retry_scheduled event=evt_000129 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T11:07:34Z INFO event.created event=evt_000130 type=charge.succeeded account=acct_1CafeOle
+2026-10-14T11:07:34Z WARN delivery.failed event=evt_000130 delivery=whd_000203 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:07:34Z INFO delivery.retry_scheduled event=evt_000130 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=2 in_s=120
+2026-10-14T11:07:35Z WARN delivery.failed event=evt_000074 delivery=whd_000204 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=6 http=503 resp="Service Unavailable"
+2026-10-14T11:07:35Z ERROR delivery.gave_up event=evt_000074 endpoint=we_northw01 account=acct_1Northwind attempts=6 age_s=3720
+2026-10-14T11:08:12Z WARN delivery.failed event=evt_000099 delivery=whd_000205 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T11:08:12Z INFO delivery.retry_scheduled event=evt_000099 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:08:51Z WARN delivery.failed event=evt_000117 delivery=whd_000206 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T11:08:51Z INFO delivery.retry_scheduled event=evt_000117 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T11:09:12Z WARN delivery.failed event=evt_000129 delivery=whd_000207 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T11:09:12Z INFO delivery.retry_scheduled event=evt_000129 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T11:09:21Z WARN delivery.failed event=evt_000119 delivery=whd_000208 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:09:21Z INFO delivery.retry_scheduled event=evt_000119 endpoint=we_muller01 account=acct_1Muller next_attempt=5 in_s=960
+2026-10-14T11:09:34Z WARN delivery.failed event=evt_000130 delivery=whd_000209 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:09:34Z INFO delivery.retry_scheduled event=evt_000130 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=3 in_s=240
+2026-10-14T11:09:39Z WARN delivery.failed event=evt_000076 delivery=whd_000210 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=6 http=503 resp="Service Unavailable"
+2026-10-14T11:09:39Z ERROR delivery.gave_up event=evt_000076 endpoint=we_northw01 account=acct_1Northwind attempts=6 age_s=3720
+2026-10-14T11:11:39Z INFO event.created event=evt_000131 type=charge.succeeded account=acct_1Muller
+2026-10-14T11:11:39Z WARN delivery.failed event=evt_000131 delivery=whd_000211 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:11:39Z INFO delivery.retry_scheduled event=evt_000131 endpoint=we_muller01 account=acct_1Muller next_attempt=2 in_s=120
+2026-10-14T11:12:16Z INFO event.created event=evt_000132 type=charge.succeeded account=acct_1Muller
+2026-10-14T11:12:16Z WARN delivery.failed event=evt_000132 delivery=whd_000212 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:12:16Z INFO delivery.retry_scheduled event=evt_000132 endpoint=we_muller01 account=acct_1Muller next_attempt=2 in_s=120
+2026-10-14T11:12:17Z INFO event.created event=evt_000133 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T11:12:17Z WARN delivery.failed event=evt_000133 delivery=whd_000213 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:12:17Z INFO delivery.retry_scheduled event=evt_000133 endpoint=we_bluebd01 account=acct_1Bluebird next_attempt=2 in_s=120
+2026-10-14T11:13:09Z INFO event.created event=evt_000134 type=payment_intent.succeeded account=acct_1Northwind
+2026-10-14T11:13:09Z WARN delivery.failed event=evt_000134 delivery=whd_000214 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T11:13:09Z INFO delivery.retry_scheduled event=evt_000134 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T11:13:12Z WARN delivery.failed event=evt_000129 delivery=whd_000215 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T11:13:12Z INFO delivery.retry_scheduled event=evt_000129 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T11:13:34Z WARN delivery.failed event=evt_000130 delivery=whd_000216 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:13:34Z INFO delivery.retry_scheduled event=evt_000130 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=4 in_s=480
+2026-10-14T11:13:39Z WARN delivery.failed event=evt_000131 delivery=whd_000217 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:13:39Z INFO delivery.retry_scheduled event=evt_000131 endpoint=we_muller01 account=acct_1Muller next_attempt=3 in_s=240
+2026-10-14T11:14:16Z WARN delivery.failed event=evt_000132 delivery=whd_000218 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:14:16Z INFO delivery.retry_scheduled event=evt_000132 endpoint=we_muller01 account=acct_1Muller next_attempt=3 in_s=240
+2026-10-14T11:14:17Z WARN delivery.failed event=evt_000133 delivery=whd_000219 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:14:17Z INFO delivery.retry_scheduled event=evt_000133 endpoint=we_bluebd01 account=acct_1Bluebird next_attempt=3 in_s=240
+2026-10-14T11:14:29Z INFO delivery.sent event=evt_000103 delivery=whd_000220 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=5 http=200 bytes=239
+2026-10-14T11:14:29Z WARN delivery.failed event=evt_000104 delivery=whd_000221 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T11:14:29Z INFO delivery.retry_scheduled event=evt_000104 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:14:56Z WARN delivery.failed event=evt_000125 delivery=whd_000222 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T11:14:56Z INFO delivery.retry_scheduled event=evt_000125 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T11:15:09Z WARN delivery.failed event=evt_000134 delivery=whd_000223 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T11:15:09Z INFO delivery.retry_scheduled event=evt_000134 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T11:16:44Z INFO event.created event=evt_000135 type=charge.succeeded account=acct_1Northwind
+2026-10-14T11:16:44Z WARN delivery.failed event=evt_000135 delivery=whd_000224 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T11:16:44Z INFO delivery.retry_scheduled event=evt_000135 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T11:17:15Z INFO event.created event=evt_000136 type=charge.succeeded account=acct_1Muller
+2026-10-14T11:17:15Z WARN delivery.failed event=evt_000136 delivery=whd_000225 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:17:15Z INFO delivery.retry_scheduled event=evt_000136 endpoint=we_muller01 account=acct_1Muller next_attempt=2 in_s=120
+2026-10-14T11:17:39Z WARN delivery.failed event=evt_000131 delivery=whd_000226 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:17:39Z INFO delivery.retry_scheduled event=evt_000131 endpoint=we_muller01 account=acct_1Muller next_attempt=4 in_s=480
+2026-10-14T11:18:16Z WARN delivery.failed event=evt_000132 delivery=whd_000227 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:18:16Z INFO delivery.retry_scheduled event=evt_000132 endpoint=we_muller01 account=acct_1Muller next_attempt=4 in_s=480
+2026-10-14T11:18:17Z WARN delivery.failed event=evt_000133 delivery=whd_000228 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:18:17Z INFO delivery.retry_scheduled event=evt_000133 endpoint=we_bluebd01 account=acct_1Bluebird next_attempt=4 in_s=480
+2026-10-14T11:18:44Z WARN delivery.failed event=evt_000135 delivery=whd_000229 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T11:18:44Z INFO delivery.retry_scheduled event=evt_000135 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T11:19:09Z WARN delivery.failed event=evt_000134 delivery=whd_000230 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T11:19:09Z INFO delivery.retry_scheduled event=evt_000134 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T11:19:13Z INFO event.created event=evt_000137 type=charge.succeeded account=acct_1Northwind
+2026-10-14T11:19:13Z WARN delivery.failed event=evt_000137 delivery=whd_000231 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T11:19:13Z INFO delivery.retry_scheduled event=evt_000137 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T11:19:15Z WARN delivery.failed event=evt_000136 delivery=whd_000232 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:19:15Z INFO delivery.retry_scheduled event=evt_000136 endpoint=we_muller01 account=acct_1Muller next_attempt=3 in_s=240
+2026-10-14T11:20:18Z INFO event.created event=evt_000138 type=payment_intent.succeeded account=acct_1Northwind
+2026-10-14T11:20:18Z WARN delivery.failed event=evt_000138 delivery=whd_000233 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T11:20:18Z INFO delivery.retry_scheduled event=evt_000138 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T11:21:12Z WARN delivery.failed event=evt_000129 delivery=whd_000234 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T11:21:12Z INFO delivery.retry_scheduled event=evt_000129 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T11:21:13Z WARN delivery.failed event=evt_000137 delivery=whd_000235 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T11:21:13Z INFO delivery.retry_scheduled event=evt_000137 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T11:21:34Z WARN delivery.failed event=evt_000130 delivery=whd_000236 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:21:34Z INFO delivery.retry_scheduled event=evt_000130 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=5 in_s=960
+2026-10-14T11:21:47Z INFO event.created event=evt_000139 type=payment_intent.succeeded account=acct_1Kestrel
+2026-10-14T11:21:47Z INFO delivery.sent event=evt_000139 delivery=whd_000237 endpoint=we_kestrl01 account=acct_1Kestrel type=payment_intent.succeeded attempt=1 http=200 bytes=242
+2026-10-14T11:22:18Z WARN delivery.failed event=evt_000138 delivery=whd_000238 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T11:22:18Z INFO delivery.retry_scheduled event=evt_000138 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T11:22:44Z WARN delivery.failed event=evt_000135 delivery=whd_000239 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T11:22:44Z INFO delivery.retry_scheduled event=evt_000135 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T11:23:15Z WARN delivery.failed event=evt_000136 delivery=whd_000240 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:23:15Z INFO delivery.retry_scheduled event=evt_000136 endpoint=we_muller01 account=acct_1Muller next_attempt=4 in_s=480
+2026-10-14T11:23:16Z INFO event.created event=evt_000140 type=payout.paid account=acct_1Bluebird
+2026-10-14T11:23:16Z INFO delivery.sent event=evt_000140 delivery=whd_000241 endpoint=we_bluebd01 account=acct_1Bluebird type=payout.paid attempt=1 http=200 bytes=234
+2026-10-14T11:23:27Z INFO event.created event=evt_000141 type=charge.refunded account=acct_1CafeOle
+2026-10-14T11:23:27Z INFO delivery.sent event=evt_000141 delivery=whd_000242 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.refunded attempt=1 http=200 bytes=233
+2026-10-14T11:24:51Z WARN delivery.failed event=evt_000117 delivery=whd_000243 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T11:24:51Z INFO delivery.retry_scheduled event=evt_000117 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:25:13Z WARN delivery.failed event=evt_000137 delivery=whd_000244 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T11:25:13Z INFO delivery.retry_scheduled event=evt_000137 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T11:25:21Z WARN delivery.failed event=evt_000119 delivery=whd_000245 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:25:21Z INFO delivery.retry_scheduled event=evt_000119 endpoint=we_muller01 account=acct_1Muller next_attempt=6 in_s=1920
+2026-10-14T11:25:39Z WARN delivery.failed event=evt_000131 delivery=whd_000246 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:25:39Z INFO delivery.retry_scheduled event=evt_000131 endpoint=we_muller01 account=acct_1Muller next_attempt=5 in_s=960
+2026-10-14T11:26:16Z WARN delivery.failed event=evt_000132 delivery=whd_000247 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:26:16Z INFO delivery.retry_scheduled event=evt_000132 endpoint=we_muller01 account=acct_1Muller next_attempt=5 in_s=960
+2026-10-14T11:26:17Z WARN delivery.failed event=evt_000133 delivery=whd_000248 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:26:17Z INFO delivery.retry_scheduled event=evt_000133 endpoint=we_bluebd01 account=acct_1Bluebird next_attempt=5 in_s=960
+2026-10-14T11:26:18Z WARN delivery.failed event=evt_000138 delivery=whd_000249 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T11:26:18Z INFO delivery.retry_scheduled event=evt_000138 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T11:26:37Z INFO event.created event=evt_000142 type=charge.succeeded account=acct_1Lumen
+2026-10-14T11:26:37Z INFO delivery.sent event=evt_000142 delivery=whd_000250 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=305
+2026-10-14T11:26:43Z INFO event.created event=evt_000143 type=charge.succeeded account=acct_1CafeOle
+2026-10-14T11:26:43Z WARN delivery.failed event=evt_000143 delivery=whd_000251 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:26:43Z INFO delivery.retry_scheduled event=evt_000143 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=2 in_s=120
+2026-10-14T11:27:09Z WARN delivery.failed event=evt_000134 delivery=whd_000252 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T11:27:09Z INFO delivery.retry_scheduled event=evt_000134 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T11:27:12Z INFO event.created event=evt_000144 type=charge.succeeded account=acct_1Acme
+2026-10-14T11:27:12Z INFO delivery.sent event=evt_000144 delivery=whd_000253 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=303
+2026-10-14T11:27:40Z WARN delivery.failed event=evt_000089 delivery=whd_000254 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=6 http=503 resp="Service Unavailable"
+2026-10-14T11:27:40Z ERROR delivery.gave_up event=evt_000089 endpoint=we_northw01 account=acct_1Northwind attempts=6 age_s=3720
+2026-10-14T11:28:10Z INFO event.created event=evt_000145 type=payout.paid account=acct_1CafeOle
+2026-10-14T11:28:10Z INFO delivery.sent event=evt_000145 delivery=whd_000255 endpoint=we_cafeole1 account=acct_1CafeOle type=payout.paid attempt=1 http=200 bytes=234
+2026-10-14T11:28:43Z WARN delivery.failed event=evt_000143 delivery=whd_000256 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:28:43Z INFO delivery.retry_scheduled event=evt_000143 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=3 in_s=240
+2026-10-14T11:30:39Z INFO event.created event=evt_000146 type=charge.succeeded account=acct_1Acme
+2026-10-14T11:30:39Z INFO delivery.sent event=evt_000146 delivery=whd_000257 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=305
+2026-10-14T11:30:44Z WARN delivery.failed event=evt_000135 delivery=whd_000258 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T11:30:44Z INFO delivery.retry_scheduled event=evt_000135 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T11:30:56Z WARN delivery.failed event=evt_000125 delivery=whd_000259 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T11:30:56Z INFO delivery.retry_scheduled event=evt_000125 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:31:15Z WARN delivery.failed event=evt_000136 delivery=whd_000260 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:31:15Z INFO delivery.retry_scheduled event=evt_000136 endpoint=we_muller01 account=acct_1Muller next_attempt=5 in_s=960
+2026-10-14T11:31:30Z WARN delivery.failed event=evt_000094 delivery=whd_000261 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=6 http=503 resp="Service Unavailable"
+2026-10-14T11:31:30Z ERROR delivery.gave_up event=evt_000094 endpoint=we_northw01 account=acct_1Northwind attempts=6 age_s=3720
+2026-10-14T11:31:46Z INFO event.created event=evt_000147 type=charge.succeeded account=acct_1Northwind
+2026-10-14T11:31:46Z WARN delivery.failed event=evt_000147 delivery=whd_000262 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T11:31:46Z INFO delivery.retry_scheduled event=evt_000147 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T11:32:43Z WARN delivery.failed event=evt_000143 delivery=whd_000263 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:32:43Z INFO delivery.retry_scheduled event=evt_000143 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=4 in_s=480
+2026-10-14T11:33:13Z WARN delivery.failed event=evt_000137 delivery=whd_000264 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T11:33:13Z INFO delivery.retry_scheduled event=evt_000137 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T11:33:46Z WARN delivery.failed event=evt_000147 delivery=whd_000265 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T11:33:46Z INFO delivery.retry_scheduled event=evt_000147 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T11:33:51Z WARN delivery.failed event=evt_000096 delivery=whd_000266 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=6 http=503 resp="Service Unavailable"
+2026-10-14T11:33:51Z ERROR delivery.gave_up event=evt_000096 endpoint=we_northw01 account=acct_1Northwind attempts=6 age_s=3720
+2026-10-14T11:34:18Z WARN delivery.failed event=evt_000138 delivery=whd_000267 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T11:34:18Z INFO delivery.retry_scheduled event=evt_000138 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T11:34:49Z INFO event.created event=evt_000148 type=charge.succeeded account=acct_1Muller
+2026-10-14T11:34:49Z WARN delivery.failed event=evt_000148 delivery=whd_000268 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:34:49Z INFO delivery.retry_scheduled event=evt_000148 endpoint=we_muller01 account=acct_1Muller next_attempt=2 in_s=120
+2026-10-14T11:35:34Z INFO event.created event=evt_000149 type=charge.succeeded account=acct_1Muller
+2026-10-14T11:35:34Z WARN delivery.failed event=evt_000149 delivery=whd_000269 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:35:34Z INFO delivery.retry_scheduled event=evt_000149 endpoint=we_muller01 account=acct_1Muller next_attempt=2 in_s=120
+2026-10-14T11:35:52Z INFO event.created event=evt_000150 type=charge.succeeded account=acct_1Acme
+2026-10-14T11:35:52Z INFO delivery.sent event=evt_000150 delivery=whd_000270 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=303
+2026-10-14T11:36:08Z INFO event.created event=evt_000151 type=charge.succeeded account=acct_1Kestrel
+2026-10-14T11:36:08Z INFO delivery.sent event=evt_000151 delivery=whd_000271 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=1 http=200 bytes=306
+2026-10-14T11:36:49Z WARN delivery.failed event=evt_000148 delivery=whd_000272 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:36:49Z INFO delivery.retry_scheduled event=evt_000148 endpoint=we_muller01 account=acct_1Muller next_attempt=3 in_s=240
+2026-10-14T11:37:12Z WARN delivery.failed event=evt_000129 delivery=whd_000273 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T11:37:12Z INFO delivery.retry_scheduled event=evt_000129 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:37:26Z WARN delivery.failed event=evt_000098 delivery=whd_000274 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=6 http=503 resp="Service Unavailable"
+2026-10-14T11:37:26Z ERROR delivery.gave_up event=evt_000098 endpoint=we_northw01 account=acct_1Northwind attempts=6 age_s=3720
+2026-10-14T11:37:34Z WARN delivery.failed event=evt_000130 delivery=whd_000275 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:37:34Z INFO delivery.retry_scheduled event=evt_000130 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=6 in_s=1920
+2026-10-14T11:37:34Z WARN delivery.failed event=evt_000149 delivery=whd_000276 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:37:34Z INFO delivery.retry_scheduled event=evt_000149 endpoint=we_muller01 account=acct_1Muller next_attempt=3 in_s=240
+2026-10-14T11:37:46Z WARN delivery.failed event=evt_000147 delivery=whd_000277 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T11:37:46Z INFO delivery.retry_scheduled event=evt_000147 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T11:40:12Z WARN delivery.failed event=evt_000099 delivery=whd_000278 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=6 http=503 resp="Service Unavailable"
+2026-10-14T11:40:12Z ERROR delivery.gave_up event=evt_000099 endpoint=we_northw01 account=acct_1Northwind attempts=6 age_s=3720
+2026-10-14T11:40:43Z WARN delivery.failed event=evt_000143 delivery=whd_000279 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:40:43Z INFO delivery.retry_scheduled event=evt_000143 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=5 in_s=960
+2026-10-14T11:40:49Z WARN delivery.failed event=evt_000148 delivery=whd_000280 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:40:49Z INFO delivery.retry_scheduled event=evt_000148 endpoint=we_muller01 account=acct_1Muller next_attempt=4 in_s=480
+2026-10-14T11:41:34Z WARN delivery.failed event=evt_000149 delivery=whd_000281 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:41:34Z INFO delivery.retry_scheduled event=evt_000149 endpoint=we_muller01 account=acct_1Muller next_attempt=4 in_s=480
+2026-10-14T11:41:39Z WARN delivery.failed event=evt_000131 delivery=whd_000282 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:41:39Z INFO delivery.retry_scheduled event=evt_000131 endpoint=we_muller01 account=acct_1Muller next_attempt=6 in_s=1920
+2026-10-14T11:42:16Z WARN delivery.failed event=evt_000132 delivery=whd_000283 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:42:16Z INFO delivery.retry_scheduled event=evt_000132 endpoint=we_muller01 account=acct_1Muller next_attempt=6 in_s=1920
+2026-10-14T11:42:17Z WARN delivery.failed event=evt_000133 delivery=whd_000284 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:42:17Z INFO delivery.retry_scheduled event=evt_000133 endpoint=we_bluebd01 account=acct_1Bluebird next_attempt=6 in_s=1920
+2026-10-14T11:43:07Z INFO event.created event=evt_000152 type=charge.succeeded account=acct_1Lumen
+2026-10-14T11:43:07Z INFO delivery.sent event=evt_000152 delivery=whd_000285 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=304
+2026-10-14T11:43:09Z WARN delivery.failed event=evt_000134 delivery=whd_000286 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T11:43:09Z INFO delivery.retry_scheduled event=evt_000134 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:43:37Z INFO event.created event=evt_000153 type=charge.succeeded account=acct_1Lumen
+2026-10-14T11:43:37Z INFO delivery.sent event=evt_000153 delivery=whd_000287 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T11:44:14Z INFO event.created event=evt_000154 type=payment_intent.succeeded account=acct_1Bluebird
+2026-10-14T11:44:14Z INFO delivery.sent event=evt_000154 delivery=whd_000288 endpoint=we_bluebd01 account=acct_1Bluebird type=payment_intent.succeeded attempt=1 http=200 bytes=243
+2026-10-14T11:45:11Z INFO event.created event=evt_000155 type=payout.paid account=acct_1Lumen
+2026-10-14T11:45:11Z INFO delivery.sent event=evt_000155 delivery=whd_000289 endpoint=we_lumen01 account=acct_1Lumen type=payout.paid attempt=1 http=200 bytes=232
+2026-10-14T11:45:46Z WARN delivery.failed event=evt_000147 delivery=whd_000290 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T11:45:46Z INFO delivery.retry_scheduled event=evt_000147 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T11:46:09Z INFO event.created event=evt_000156 type=payment_intent.succeeded account=acct_1CafeOle
+2026-10-14T11:46:09Z INFO delivery.sent event=evt_000156 delivery=whd_000291 endpoint=we_cafeole1 account=acct_1CafeOle type=payment_intent.succeeded attempt=1 http=200 bytes=242
+2026-10-14T11:46:20Z INFO event.created event=evt_000157 type=charge.succeeded account=acct_1Acme
+2026-10-14T11:46:20Z INFO delivery.sent event=evt_000157 delivery=whd_000292 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=302
+2026-10-14T11:46:29Z WARN delivery.failed event=evt_000104 delivery=whd_000293 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=6 http=503 resp="Service Unavailable"
+2026-10-14T11:46:29Z ERROR delivery.gave_up event=evt_000104 endpoint=we_northw01 account=acct_1Northwind attempts=6 age_s=3802
+2026-10-14T11:46:44Z WARN delivery.failed event=evt_000135 delivery=whd_000294 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T11:46:44Z INFO delivery.retry_scheduled event=evt_000135 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:46:50Z INFO event.created event=evt_000158 type=charge.succeeded account=acct_1Acme
+2026-10-14T11:46:50Z INFO delivery.sent event=evt_000158 delivery=whd_000295 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=301
+2026-10-14T11:46:53Z INFO event.created event=evt_000159 type=payment_intent.succeeded account=acct_1Lumen
+2026-10-14T11:46:53Z INFO delivery.sent event=evt_000159 delivery=whd_000296 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=1 http=200 bytes=240
+2026-10-14T11:46:54Z INFO event.created event=evt_000160 type=charge.succeeded account=acct_1CafeOle
+2026-10-14T11:46:54Z WARN delivery.failed event=evt_000160 delivery=whd_000297 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:46:54Z INFO delivery.retry_scheduled event=evt_000160 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=2 in_s=120
+2026-10-14T11:46:54Z INFO event.created event=evt_000161 type=charge.succeeded account=acct_1Kestrel
+2026-10-14T11:46:54Z WARN delivery.failed event=evt_000161 delivery=whd_000298 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=1 http=500 resp="upstream error"
+2026-10-14T11:46:54Z INFO delivery.retry_scheduled event=evt_000161 endpoint=we_kestrl01 account=acct_1Kestrel next_attempt=2 in_s=120
+2026-10-14T11:47:15Z WARN delivery.failed event=evt_000136 delivery=whd_000299 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:47:15Z INFO delivery.retry_scheduled event=evt_000136 endpoint=we_muller01 account=acct_1Muller next_attempt=6 in_s=1920
+2026-10-14T11:47:46Z INFO event.created event=evt_000162 type=payment_intent.succeeded account=acct_1Bluebird
+2026-10-14T11:47:46Z INFO delivery.sent event=evt_000162 delivery=whd_000300 endpoint=we_bluebd01 account=acct_1Bluebird type=payment_intent.succeeded attempt=1 http=200 bytes=243
+2026-10-14T11:48:32Z INFO event.created event=evt_000163 type=charge.succeeded account=acct_1Northwind
+2026-10-14T11:48:32Z WARN delivery.failed event=evt_000163 delivery=whd_000301 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T11:48:32Z INFO delivery.retry_scheduled event=evt_000163 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T11:48:49Z WARN delivery.failed event=evt_000148 delivery=whd_000302 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:48:49Z INFO delivery.retry_scheduled event=evt_000148 endpoint=we_muller01 account=acct_1Muller next_attempt=5 in_s=960
+2026-10-14T11:48:54Z WARN delivery.failed event=evt_000160 delivery=whd_000303 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:48:54Z INFO delivery.retry_scheduled event=evt_000160 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=3 in_s=240
+2026-10-14T11:48:54Z INFO delivery.sent event=evt_000161 delivery=whd_000304 endpoint=we_kestrl01 account=acct_1Kestrel type=charge.succeeded attempt=2 http=200 bytes=307
+2026-10-14T11:49:02Z INFO event.created event=evt_000164 type=payout.paid account=acct_1Northwind
+2026-10-14T11:49:02Z WARN delivery.failed event=evt_000164 delivery=whd_000305 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T11:49:02Z INFO delivery.retry_scheduled event=evt_000164 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T11:49:13Z WARN delivery.failed event=evt_000137 delivery=whd_000306 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T11:49:13Z INFO delivery.retry_scheduled event=evt_000137 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:49:34Z WARN delivery.failed event=evt_000149 delivery=whd_000307 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:49:34Z INFO delivery.retry_scheduled event=evt_000149 endpoint=we_muller01 account=acct_1Muller next_attempt=5 in_s=960
+2026-10-14T11:50:18Z WARN delivery.failed event=evt_000138 delivery=whd_000308 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T11:50:18Z INFO delivery.retry_scheduled event=evt_000138 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T11:50:32Z WARN delivery.failed event=evt_000163 delivery=whd_000309 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T11:50:32Z INFO delivery.retry_scheduled event=evt_000163 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T11:51:02Z WARN delivery.failed event=evt_000164 delivery=whd_000310 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T11:51:02Z INFO delivery.retry_scheduled event=evt_000164 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T11:52:23Z INFO event.created event=evt_000165 type=charge.refunded account=acct_1Acme
+2026-10-14T11:52:23Z INFO delivery.sent event=evt_000165 delivery=whd_000311 endpoint=we_acme0001 account=acct_1Acme type=charge.refunded attempt=1 http=200 bytes=230
+2026-10-14T11:52:31Z INFO event.created event=evt_000166 type=charge.refunded account=acct_1Northwind
+2026-10-14T11:52:31Z WARN delivery.failed event=evt_000166 delivery=whd_000312 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T11:52:31Z INFO delivery.retry_scheduled event=evt_000166 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T11:52:41Z INFO event.created event=evt_000167 type=payout.paid account=acct_1Kestrel
+2026-10-14T11:52:41Z WARN delivery.failed event=evt_000167 delivery=whd_000313 endpoint=we_kestrl01 account=acct_1Kestrel type=payout.paid attempt=1 http=500 resp="upstream error"
+2026-10-14T11:52:41Z INFO delivery.retry_scheduled event=evt_000167 endpoint=we_kestrl01 account=acct_1Kestrel next_attempt=2 in_s=120
+2026-10-14T11:52:54Z WARN delivery.failed event=evt_000160 delivery=whd_000314 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:52:54Z INFO delivery.retry_scheduled event=evt_000160 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=4 in_s=480
+2026-10-14T11:54:31Z WARN delivery.failed event=evt_000166 delivery=whd_000315 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T11:54:31Z INFO delivery.retry_scheduled event=evt_000166 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T11:54:32Z WARN delivery.failed event=evt_000163 delivery=whd_000316 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T11:54:32Z INFO delivery.retry_scheduled event=evt_000163 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T11:54:33Z INFO event.created event=evt_000168 type=payout.paid account=acct_1Lumen
+2026-10-14T11:54:33Z INFO delivery.sent event=evt_000168 delivery=whd_000317 endpoint=we_lumen01 account=acct_1Lumen type=payout.paid attempt=1 http=200 bytes=232
+2026-10-14T11:54:41Z INFO delivery.sent event=evt_000167 delivery=whd_000318 endpoint=we_kestrl01 account=acct_1Kestrel type=payout.paid attempt=2 http=200 bytes=234
+2026-10-14T11:54:59Z INFO event.created event=evt_000169 type=charge.succeeded account=acct_1CafeOle
+2026-10-14T11:54:59Z WARN delivery.failed event=evt_000169 delivery=whd_000319 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:54:59Z INFO delivery.retry_scheduled event=evt_000169 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=2 in_s=120
+2026-10-14T11:55:02Z WARN delivery.failed event=evt_000164 delivery=whd_000320 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T11:55:02Z INFO delivery.retry_scheduled event=evt_000164 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T11:56:43Z WARN delivery.failed event=evt_000143 delivery=whd_000321 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:56:43Z INFO delivery.retry_scheduled event=evt_000143 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=6 in_s=1920
+2026-10-14T11:56:51Z WARN delivery.failed event=evt_000117 delivery=whd_000322 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=6 http=503 resp="Service Unavailable"
+2026-10-14T11:56:51Z ERROR delivery.gave_up event=evt_000117 endpoint=we_northw01 account=acct_1Northwind attempts=6 age_s=3750
+2026-10-14T11:56:59Z WARN delivery.failed event=evt_000169 delivery=whd_000323 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:56:59Z INFO delivery.retry_scheduled event=evt_000169 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=3 in_s=240
+2026-10-14T11:57:21Z WARN delivery.failed event=evt_000119 delivery=whd_000324 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T11:57:21Z ERROR delivery.gave_up event=evt_000119 endpoint=we_muller01 account=acct_1Muller attempts=6 age_s=3720
+2026-10-14T11:58:31Z WARN delivery.failed event=evt_000166 delivery=whd_000325 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=3 http=503 resp="Service Unavailable"
+2026-10-14T11:58:31Z INFO delivery.retry_scheduled event=evt_000166 endpoint=we_northw01 account=acct_1Northwind next_attempt=4 in_s=480
+2026-10-14T11:58:38Z INFO event.created event=evt_000170 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T11:58:38Z INFO delivery.sent event=evt_000170 delivery=whd_000326 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=312
+2026-10-14T11:59:22Z INFO event.created event=evt_000171 type=charge.succeeded account=acct_1Northwind
+2026-10-14T11:59:22Z WARN delivery.failed event=evt_000171 delivery=whd_000327 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T11:59:22Z INFO delivery.retry_scheduled event=evt_000171 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T12:00:32Z INFO event.created event=evt_000172 type=payment_intent.succeeded account=acct_1Northwind
+2026-10-14T12:00:32Z WARN delivery.failed event=evt_000172 delivery=whd_000328 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T12:00:32Z INFO delivery.retry_scheduled event=evt_000172 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T12:00:54Z WARN delivery.failed event=evt_000160 delivery=whd_000329 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:00:54Z INFO delivery.retry_scheduled event=evt_000160 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=5 in_s=960
+2026-10-14T12:00:59Z WARN delivery.failed event=evt_000169 delivery=whd_000330 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:00:59Z INFO delivery.retry_scheduled event=evt_000169 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=4 in_s=480
+2026-10-14T12:01:22Z WARN delivery.failed event=evt_000171 delivery=whd_000331 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T12:01:22Z INFO delivery.retry_scheduled event=evt_000171 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T12:01:22Z INFO event.created event=evt_000173 type=charge.succeeded account=acct_1Muller
+2026-10-14T12:01:22Z WARN delivery.failed event=evt_000173 delivery=whd_000332 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:01:22Z INFO delivery.retry_scheduled event=evt_000173 endpoint=we_muller01 account=acct_1Muller next_attempt=2 in_s=120
+2026-10-14T12:01:46Z WARN delivery.failed event=evt_000147 delivery=whd_000333 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=5 http=503 resp="Service Unavailable"
+2026-10-14T12:01:46Z INFO delivery.retry_scheduled event=evt_000147 endpoint=we_northw01 account=acct_1Northwind next_attempt=6 in_s=1920
+2026-10-14T12:01:48Z INFO event.created event=evt_000174 type=payment_intent.succeeded account=acct_1Kestrel
+2026-10-14T12:01:48Z WARN delivery.failed event=evt_000174 delivery=whd_000334 endpoint=we_kestrl01 account=acct_1Kestrel type=payment_intent.succeeded attempt=1 http=500 resp="upstream error"
+2026-10-14T12:01:48Z INFO delivery.retry_scheduled event=evt_000174 endpoint=we_kestrl01 account=acct_1Kestrel next_attempt=2 in_s=120
+2026-10-14T12:02:13Z INFO event.created event=evt_000175 type=charge.refunded account=acct_1Acme
+2026-10-14T12:02:13Z INFO delivery.sent event=evt_000175 delivery=whd_000335 endpoint=we_acme0001 account=acct_1Acme type=charge.refunded attempt=1 http=200 bytes=230
+2026-10-14T12:02:32Z WARN delivery.failed event=evt_000163 delivery=whd_000336 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T12:02:32Z INFO delivery.retry_scheduled event=evt_000163 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T12:02:32Z WARN delivery.failed event=evt_000172 delivery=whd_000337 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=2 http=503 resp="Service Unavailable"
+2026-10-14T12:02:32Z INFO delivery.retry_scheduled event=evt_000172 endpoint=we_northw01 account=acct_1Northwind next_attempt=3 in_s=240
+2026-10-14T12:02:56Z WARN delivery.failed event=evt_000125 delivery=whd_000338 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=6 http=503 resp="Service Unavailable"
+2026-10-14T12:02:56Z ERROR delivery.gave_up event=evt_000125 endpoint=we_northw01 account=acct_1Northwind attempts=6 age_s=3720
+2026-10-14T12:03:02Z WARN delivery.failed event=evt_000164 delivery=whd_000339 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=4 http=503 resp="Service Unavailable"
+2026-10-14T12:03:02Z INFO delivery.retry_scheduled event=evt_000164 endpoint=we_northw01 account=acct_1Northwind next_attempt=5 in_s=960
+2026-10-14T12:03:22Z WARN delivery.failed event=evt_000173 delivery=whd_000340 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:03:22Z INFO delivery.retry_scheduled event=evt_000173 endpoint=we_muller01 account=acct_1Muller next_attempt=3 in_s=240
+2026-10-14T12:03:48Z INFO delivery.sent event=evt_000174 delivery=whd_000341 endpoint=we_kestrl01 account=acct_1Kestrel type=payment_intent.succeeded attempt=2 http=200 bytes=242
+2026-10-14T12:04:02Z INFO event.created event=evt_000176 type=charge.refunded account=acct_1Northwind
+2026-10-14T12:04:02Z WARN delivery.failed event=evt_000176 delivery=whd_000342 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=1 http=503 resp="Service Unavailable"
+2026-10-14T12:04:02Z INFO delivery.retry_scheduled event=evt_000176 endpoint=we_northw01 account=acct_1Northwind next_attempt=2 in_s=120
+2026-10-14T12:04:49Z WARN delivery.failed event=evt_000148 delivery=whd_000343 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:04:49Z INFO delivery.retry_scheduled event=evt_000148 endpoint=we_muller01 account=acct_1Muller next_attempt=6 in_s=1920
+2026-10-14T12:05:22Z INFO delivery.sent event=evt_000171 delivery=whd_000344 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=3 http=200 bytes=309
+2026-10-14T12:05:34Z WARN delivery.failed event=evt_000149 delivery=whd_000345 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:05:34Z INFO delivery.retry_scheduled event=evt_000149 endpoint=we_muller01 account=acct_1Muller next_attempt=6 in_s=1920
+2026-10-14T12:05:34Z INFO event.created event=evt_000177 type=charge.succeeded account=acct_1Acme
+2026-10-14T12:05:34Z INFO delivery.sent event=evt_000177 delivery=whd_000346 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=305
+2026-10-14T12:06:02Z INFO delivery.sent event=evt_000176 delivery=whd_000347 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=2 http=200 bytes=235
+2026-10-14T12:06:31Z INFO delivery.sent event=evt_000166 delivery=whd_000348 endpoint=we_northw01 account=acct_1Northwind type=charge.refunded attempt=4 http=200 bytes=235
+2026-10-14T12:06:32Z INFO delivery.sent event=evt_000172 delivery=whd_000349 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=3 http=200 bytes=244
+2026-10-14T12:06:35Z INFO event.created event=evt_000178 type=charge.succeeded account=acct_1CafeOle
+2026-10-14T12:06:35Z WARN delivery.failed event=evt_000178 delivery=whd_000350 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:06:35Z INFO delivery.retry_scheduled event=evt_000178 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=2 in_s=120
+2026-10-14T12:07:22Z WARN delivery.failed event=evt_000173 delivery=whd_000351 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:07:22Z INFO delivery.retry_scheduled event=evt_000173 endpoint=we_muller01 account=acct_1Muller next_attempt=4 in_s=480
+2026-10-14T12:08:28Z INFO event.created event=evt_000179 type=payment_intent.succeeded account=acct_1Muller
+2026-10-14T12:08:28Z INFO delivery.sent event=evt_000179 delivery=whd_000352 endpoint=we_muller01 account=acct_1Muller type=payment_intent.succeeded attempt=1 http=200 bytes=240
+2026-10-14T12:08:35Z WARN delivery.failed event=evt_000178 delivery=whd_000353 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:08:35Z INFO delivery.retry_scheduled event=evt_000178 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=3 in_s=240
+2026-10-14T12:08:59Z WARN delivery.failed event=evt_000169 delivery=whd_000354 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:08:59Z INFO delivery.retry_scheduled event=evt_000169 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=5 in_s=960
+2026-10-14T12:09:06Z INFO event.created event=evt_000180 type=charge.succeeded account=acct_1Acme
+2026-10-14T12:09:06Z INFO delivery.sent event=evt_000180 delivery=whd_000355 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=301
+2026-10-14T12:09:07Z INFO event.created event=evt_000181 type=charge.succeeded account=acct_1Northwind
+2026-10-14T12:09:07Z INFO delivery.sent event=evt_000181 delivery=whd_000356 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=1 http=200 bytes=305
+2026-10-14T12:09:12Z INFO delivery.sent event=evt_000129 delivery=whd_000357 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=6 http=200 bytes=236
+2026-10-14T12:09:34Z WARN delivery.failed event=evt_000130 delivery=whd_000358 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:09:34Z ERROR delivery.gave_up event=evt_000130 endpoint=we_cafeole1 account=acct_1CafeOle attempts=6 age_s=3720
+2026-10-14T12:09:49Z INFO event.created event=evt_000182 type=payment_intent.succeeded account=acct_1Lumen
+2026-10-14T12:09:49Z INFO delivery.sent event=evt_000182 delivery=whd_000359 endpoint=we_lumen01 account=acct_1Lumen type=payment_intent.succeeded attempt=1 http=200 bytes=240
+2026-10-14T12:12:35Z WARN delivery.failed event=evt_000178 delivery=whd_000360 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:12:35Z INFO delivery.retry_scheduled event=evt_000178 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=4 in_s=480
+2026-10-14T12:12:40Z INFO event.created event=evt_000183 type=charge.succeeded account=acct_1Acme
+2026-10-14T12:12:40Z INFO delivery.sent event=evt_000183 delivery=whd_000361 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=303
+2026-10-14T12:12:40Z INFO event.created event=evt_000184 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T12:12:40Z INFO delivery.sent event=evt_000184 delivery=whd_000362 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=312
+2026-10-14T12:13:13Z INFO event.created event=evt_000185 type=payout.paid account=acct_1Muller
+2026-10-14T12:13:13Z INFO delivery.sent event=evt_000185 delivery=whd_000363 endpoint=we_muller01 account=acct_1Muller type=payout.paid attempt=1 http=200 bytes=233
+2026-10-14T12:13:39Z WARN delivery.failed event=evt_000131 delivery=whd_000364 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:13:39Z ERROR delivery.gave_up event=evt_000131 endpoint=we_muller01 account=acct_1Muller attempts=6 age_s=3720
+2026-10-14T12:14:16Z WARN delivery.failed event=evt_000132 delivery=whd_000365 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:14:16Z ERROR delivery.gave_up event=evt_000132 endpoint=we_muller01 account=acct_1Muller attempts=6 age_s=3720
+2026-10-14T12:14:17Z WARN delivery.failed event=evt_000133 delivery=whd_000366 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:14:17Z ERROR delivery.gave_up event=evt_000133 endpoint=we_bluebd01 account=acct_1Bluebird attempts=6 age_s=3720
+2026-10-14T12:15:09Z INFO delivery.sent event=evt_000134 delivery=whd_000367 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=6 http=200 bytes=244
+2026-10-14T12:15:22Z WARN delivery.failed event=evt_000173 delivery=whd_000368 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:15:22Z INFO delivery.retry_scheduled event=evt_000173 endpoint=we_muller01 account=acct_1Muller next_attempt=5 in_s=960
+2026-10-14T12:15:44Z INFO event.created event=evt_000186 type=charge.succeeded account=acct_1Acme
+2026-10-14T12:15:44Z INFO delivery.sent event=evt_000186 delivery=whd_000369 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=303
+2026-10-14T12:16:01Z INFO event.created event=evt_000187 type=charge.succeeded account=acct_1Lumen
+2026-10-14T12:16:01Z INFO delivery.sent event=evt_000187 delivery=whd_000370 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=307
+2026-10-14T12:16:54Z WARN delivery.failed event=evt_000160 delivery=whd_000371 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:16:54Z INFO delivery.retry_scheduled event=evt_000160 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=6 in_s=1920
+2026-10-14T12:17:42Z INFO event.created event=evt_000188 type=charge.succeeded account=acct_1Lumen
+2026-10-14T12:17:42Z INFO delivery.sent event=evt_000188 delivery=whd_000372 endpoint=we_lumen01 account=acct_1Lumen type=charge.succeeded attempt=1 http=200 bytes=303
+2026-10-14T12:17:59Z INFO event.created event=evt_000189 type=payout.paid account=acct_1Muller
+2026-10-14T12:17:59Z INFO delivery.sent event=evt_000189 delivery=whd_000373 endpoint=we_muller01 account=acct_1Muller type=payout.paid attempt=1 http=200 bytes=233
+2026-10-14T12:18:29Z INFO event.created event=evt_000190 type=charge.succeeded account=acct_1Muller
+2026-10-14T12:18:29Z WARN delivery.failed event=evt_000190 delivery=whd_000374 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:18:29Z INFO delivery.retry_scheduled event=evt_000190 endpoint=we_muller01 account=acct_1Muller next_attempt=2 in_s=120
+2026-10-14T12:18:32Z INFO delivery.sent event=evt_000163 delivery=whd_000375 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=5 http=200 bytes=306
+2026-10-14T12:18:44Z INFO delivery.sent event=evt_000135 delivery=whd_000376 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=6 http=200 bytes=309
+2026-10-14T12:19:02Z INFO delivery.sent event=evt_000164 delivery=whd_000377 endpoint=we_northw01 account=acct_1Northwind type=payout.paid attempt=5 http=200 bytes=236
+2026-10-14T12:19:07Z INFO event.created event=evt_000191 type=payment_intent.succeeded account=acct_1Kestrel
+2026-10-14T12:19:07Z INFO delivery.sent event=evt_000191 delivery=whd_000378 endpoint=we_kestrl01 account=acct_1Kestrel type=payment_intent.succeeded attempt=1 http=200 bytes=242
+2026-10-14T12:19:15Z WARN delivery.failed event=evt_000136 delivery=whd_000379 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:19:15Z ERROR delivery.gave_up event=evt_000136 endpoint=we_muller01 account=acct_1Muller attempts=6 age_s=3720
+2026-10-14T12:20:29Z WARN delivery.failed event=evt_000190 delivery=whd_000380 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:20:29Z INFO delivery.retry_scheduled event=evt_000190 endpoint=we_muller01 account=acct_1Muller next_attempt=3 in_s=240
+2026-10-14T12:20:35Z WARN delivery.failed event=evt_000178 delivery=whd_000381 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:20:35Z INFO delivery.retry_scheduled event=evt_000178 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=5 in_s=960
+2026-10-14T12:20:37Z INFO event.created event=evt_000192 type=charge.succeeded account=acct_1Acme
+2026-10-14T12:20:37Z INFO delivery.sent event=evt_000192 delivery=whd_000382 endpoint=we_acme0001 account=acct_1Acme type=charge.succeeded attempt=1 http=200 bytes=301
+2026-10-14T12:21:13Z INFO delivery.sent event=evt_000137 delivery=whd_000383 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=6 http=200 bytes=305
+2026-10-14T12:21:42Z INFO event.created event=evt_000193 type=charge.refunded account=acct_1Lumen
+2026-10-14T12:21:42Z INFO delivery.sent event=evt_000193 delivery=whd_000384 endpoint=we_lumen01 account=acct_1Lumen type=charge.refunded attempt=1 http=200 bytes=231
+2026-10-14T12:22:18Z INFO delivery.sent event=evt_000138 delivery=whd_000385 endpoint=we_northw01 account=acct_1Northwind type=payment_intent.succeeded attempt=6 http=200 bytes=243
+2026-10-14T12:22:24Z INFO event.created event=evt_000194 type=payout.paid account=acct_1Muller
+2026-10-14T12:22:24Z INFO delivery.sent event=evt_000194 delivery=whd_000386 endpoint=we_muller01 account=acct_1Muller type=payout.paid attempt=1 http=200 bytes=233
+2026-10-14T12:23:58Z INFO event.created event=evt_000195 type=charge.succeeded account=acct_1CafeOle
+2026-10-14T12:23:58Z WARN delivery.failed event=evt_000195 delivery=whd_000387 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=1 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:23:58Z INFO delivery.retry_scheduled event=evt_000195 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=2 in_s=120
+2026-10-14T12:24:23Z INFO event.created event=evt_000196 type=charge.succeeded account=acct_1Bluebird
+2026-10-14T12:24:23Z INFO delivery.sent event=evt_000196 delivery=whd_000388 endpoint=we_bluebd01 account=acct_1Bluebird type=charge.succeeded attempt=1 http=200 bytes=311
+2026-10-14T12:24:29Z WARN delivery.failed event=evt_000190 delivery=whd_000389 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:24:29Z INFO delivery.retry_scheduled event=evt_000190 endpoint=we_muller01 account=acct_1Muller next_attempt=4 in_s=480
+2026-10-14T12:24:59Z WARN delivery.failed event=evt_000169 delivery=whd_000390 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:24:59Z INFO delivery.retry_scheduled event=evt_000169 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=6 in_s=1920
+2026-10-14T12:25:58Z WARN delivery.failed event=evt_000195 delivery=whd_000391 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=2 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:25:58Z INFO delivery.retry_scheduled event=evt_000195 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=3 in_s=240
+2026-10-14T12:27:47Z INFO event.created event=evt_000197 type=charge.refunded account=acct_1CafeOle
+2026-10-14T12:27:47Z INFO delivery.sent event=evt_000197 delivery=whd_000392 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.refunded attempt=1 http=200 bytes=233
+2026-10-14T12:28:43Z WARN delivery.failed event=evt_000143 delivery=whd_000393 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:28:43Z ERROR delivery.gave_up event=evt_000143 endpoint=we_cafeole1 account=acct_1CafeOle attempts=6 age_s=3720
+2026-10-14T12:29:58Z WARN delivery.failed event=evt_000195 delivery=whd_000394 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=3 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:29:58Z INFO delivery.retry_scheduled event=evt_000195 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=4 in_s=480
+2026-10-14T12:31:22Z WARN delivery.failed event=evt_000173 delivery=whd_000395 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:31:22Z INFO delivery.retry_scheduled event=evt_000173 endpoint=we_muller01 account=acct_1Muller next_attempt=6 in_s=1920
+2026-10-14T12:32:29Z WARN delivery.failed event=evt_000190 delivery=whd_000396 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:32:29Z INFO delivery.retry_scheduled event=evt_000190 endpoint=we_muller01 account=acct_1Muller next_attempt=5 in_s=960
+2026-10-14T12:33:46Z INFO delivery.sent event=evt_000147 delivery=whd_000397 endpoint=we_northw01 account=acct_1Northwind type=charge.succeeded attempt=6 http=200 bytes=306
+2026-10-14T12:36:35Z WARN delivery.failed event=evt_000178 delivery=whd_000398 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:36:35Z INFO delivery.retry_scheduled event=evt_000178 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=6 in_s=1920
+2026-10-14T12:36:49Z WARN delivery.failed event=evt_000148 delivery=whd_000399 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:36:49Z ERROR delivery.gave_up event=evt_000148 endpoint=we_muller01 account=acct_1Muller attempts=6 age_s=3720
+2026-10-14T12:37:34Z WARN delivery.failed event=evt_000149 delivery=whd_000400 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:37:34Z ERROR delivery.gave_up event=evt_000149 endpoint=we_muller01 account=acct_1Muller attempts=6 age_s=3720
+2026-10-14T12:37:58Z WARN delivery.failed event=evt_000195 delivery=whd_000401 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=4 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:37:58Z INFO delivery.retry_scheduled event=evt_000195 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=5 in_s=960
+2026-10-14T12:48:29Z WARN delivery.failed event=evt_000190 delivery=whd_000402 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:48:29Z INFO delivery.retry_scheduled event=evt_000190 endpoint=we_muller01 account=acct_1Muller next_attempt=6 in_s=1920
+2026-10-14T12:48:54Z WARN delivery.failed event=evt_000160 delivery=whd_000403 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:48:54Z ERROR delivery.gave_up event=evt_000160 endpoint=we_cafeole1 account=acct_1CafeOle attempts=6 age_s=3720
+2026-10-14T12:53:58Z WARN delivery.failed event=evt_000195 delivery=whd_000404 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=5 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:53:58Z INFO delivery.retry_scheduled event=evt_000195 endpoint=we_cafeole1 account=acct_1CafeOle next_attempt=6 in_s=1920
+2026-10-14T12:56:59Z WARN delivery.failed event=evt_000169 delivery=whd_000405 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T12:56:59Z ERROR delivery.gave_up event=evt_000169 endpoint=we_cafeole1 account=acct_1CafeOle attempts=6 age_s=3720
+2026-10-14T13:03:22Z WARN delivery.failed event=evt_000173 delivery=whd_000406 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T13:03:22Z ERROR delivery.gave_up event=evt_000173 endpoint=we_muller01 account=acct_1Muller attempts=6 age_s=3720
+2026-10-14T13:08:35Z WARN delivery.failed event=evt_000178 delivery=whd_000407 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T13:08:35Z ERROR delivery.gave_up event=evt_000178 endpoint=we_cafeole1 account=acct_1CafeOle attempts=6 age_s=3720
+2026-10-14T13:20:29Z WARN delivery.failed event=evt_000190 delivery=whd_000408 endpoint=we_muller01 account=acct_1Muller type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T13:20:29Z ERROR delivery.gave_up event=evt_000190 endpoint=we_muller01 account=acct_1Muller attempts=6 age_s=3720
+2026-10-14T13:25:58Z WARN delivery.failed event=evt_000195 delivery=whd_000409 endpoint=we_cafeole1 account=acct_1CafeOle type=charge.succeeded attempt=6 http=400 resp="No signatures found matching the expected signature for payload"
+2026-10-14T13:25:58Z ERROR delivery.gave_up event=evt_000195 endpoint=we_cafeole1 account=acct_1CafeOle attempts=6 age_s=3720
+2026-10-14T13:30:00Z INFO worker.stopped reason=log_export

@@ -1,0 +1,7 @@
+# bank export, 2024-04-02
+p1,500,Paying off: INV-4
+p2,1250,Invoice INV-12
+p3,980,
+p4,300,INV-7 first half
+p5,500,Paying off: INV-4 again
+p6,2000,Paying off: INV-9, thanks!

@@ -1,0 +1,7 @@
+record_id,business_name,tax_id,country,incorporation_date,owner_name,owner_email
+m-1001,Blue Bottle Roasters,12-3456789,US,2014-03-09,Dana Park,dana@bluebottle.example
+m-1002,"Acme, Inc.",98-7654321,US,2009-11-30,Lee Wong,lee@acme.example
+m-1003,Northwind Traders,09887766,GB,2018-06-01,Sam Ortiz,sam@northwind.example
+m-1004,Maple Leaf Outfitters,123456789,CA,2021-02-29,Ana Silva,ana@maple.example
+m-1005,,55-1234567,US,2019-07-15,,kim@nowhere.example
+m-1006,Kiwi Goods,77-1112223,NZ,2020-01-10,Ravi Rao,ravi-at-kiwi.example

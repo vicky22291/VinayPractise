@@ -174,18 +174,10 @@ The Rippling offer post (7649290) recommends "offerretriever" for questions. Tre
 
 ---
 
-## 9. Folder layout (planned)
+## 9. Where the kits live
 
-One folder per exercise, built from the problems in §5. Each is self-contained. Why it is split this way is in [strategy.md §6](strategy.md#6-practice-setup-reuse-an-existing-one-or-build-our-own).
+The practice kits are built in [`../ai-coding/`](../ai-coding/README.md), not in this folder. That folder holds 10 timed kits on existing code (Stripe first), a stdlib runner (`kit.py`), the interviewer protocol and its own research. The kit design follows [strategy.md §6 and §7](strategy.md#6-practice-setup-reuse-an-existing-one-or-build-our-own): `candidate/` plus `interviewer/` per kit, and the run copy outside the repo.
 
-```
-ai-programming-exercises/
-  README.md                    this file: research, round format, grading signals
-  strategy.md                  how to approach the round, practice setup
-  stripe-transaction-rules/    example kit
-    CLAUDE.md                  interviewer script: reveal order, time calls, follow-ups, grading
-    candidate/                 minute-zero view: part 1 README, starter code, tests
-    interviewer/               later parts, their tests, rubric, answer key, model solution
-```
+This folder keeps the research on AI-allowed rounds and the in-round playbook.
 
-Meta-style bug, implement, optimize problems are not rebuilt here. Use [azizu06/ai-coding-interview-practice](https://github.com/azizu06/ai-coding-interview-practice), cloned outside this repo.
+Meta-style bug, implement, optimize problems are not rebuilt anywhere in this repo. Use [azizu06/ai-coding-interview-practice](https://github.com/azizu06/ai-coding-interview-practice), cloned outside this repo.

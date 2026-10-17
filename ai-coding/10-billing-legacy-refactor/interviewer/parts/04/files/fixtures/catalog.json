@@ -1,0 +1,17 @@
+{
+  "plans": [
+    {"id": "basic", "name": "Basic", "unit_amount": 900},
+    {"id": "pro", "name": "Pro", "unit_amount": 2900},
+    {"id": "team", "name": "Team", "unit_amount": 4900, "setup_fee": 9900},
+    {"id": "scale", "name": "Scale", "unit_amount": 12999},
+    {"id": "api", "name": "API Pro", "unit_amount": 2000, "usage_unit_amount": 2}
+  ],
+  "coupons": [
+    {"id": "WELCOME20", "duration": "once", "percent_off": 20},
+    {"id": "SAVE10X3", "duration": "repeating", "percent_off": 10, "duration_in_months": 3},
+    {"id": "LOYAL15", "duration": "forever", "percent_off": 15},
+    {"id": "FIVEOFF", "duration": "once", "amount_off": 500},
+    {"id": "BIGCREDIT", "duration": "repeating", "amount_off": 50000, "duration_in_months": 2},
+    {"id": "HALF6", "duration": "repeating", "percent_off": 50, "duration_in_months": 6}
+  ]
+}

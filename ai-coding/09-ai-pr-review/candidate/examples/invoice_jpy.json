@@ -1,0 +1,9 @@
+{
+  "id": "in_2001",
+  "customer_id": "cus_77",
+  "currency": "jpy",
+  "lines": [
+    {"description": "Pro plan", "unit_amount": 3000},
+    {"description": "Extra seat", "unit_amount": 500, "quantity": 3, "tax_rate": "0.10"}
+  ]
+}

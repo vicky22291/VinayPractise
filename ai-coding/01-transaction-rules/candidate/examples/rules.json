@@ -1,0 +1,5 @@
+[
+  {"id": "allow-fresh-mart", "action": "accept", "when": "merchant_name == \"Fresh Mart\""},
+  {"id": "block-evil-corp", "action": "block", "when": "merchant_name == \"Evil Corp\""},
+  {"id": "block-br-cards", "action": "block", "when": "card_country == \"BR\""}
+]

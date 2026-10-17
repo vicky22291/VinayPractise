@@ -1,0 +1,2 @@
+# Partner exports keep their own line endings. Some are CRLF on purpose.
+*.csv -text

@@ -1,0 +1,379 @@
+diff --git a/README.md b/README.md
+index 7c346bc..6a4f632 100644
+--- a/README.md
++++ b/README.md
+@@ -1,14 +1,15 @@
+ # invoicing
+ 
+-Totals invoices and charges them through the payment processor.
++Totals invoices in any supported currency and charges them through the payment processor.
+ 
+ ```
+ invoicing/models.py      LineItem, Card, Invoice
+ invoicing/totals.py      subtotal, tax, invoice_total
+-invoicing/processor.py   ProcessorClient: POST /v1/charges
++invoicing/currency.py    format_amount, rate providers, convert
++invoicing/processor.py   ProcessorClient: POST /v1/charges, retries timeouts
+ invoicing/transport.py   FakeProcessor: in-memory processor for tests and the CLI
+ invoicing/service.py     bill(invoice, card, client)
+-cli.py                   python3 cli.py examples/invoice_usd.json
++cli.py                   python3 cli.py examples/invoice_jpy.json examples/rates.json
+ tests/                   python3 -m unittest
+ ```
+ 
+diff --git a/cli.py b/cli.py
+index 7b48c84..68104f0 100644
+--- a/cli.py
++++ b/cli.py
+@@ -1,10 +1,11 @@
+-"""Usage: python3 cli.py <invoice.json>
++"""Usage: python3 cli.py <invoice.json> [rates.json]
+ 
+-Prints the invoice total.
++Prints the invoice total, and what it settles as in USD when rates are given.
+ """
+ import json
+ import sys
+ 
++from invoicing.currency import CachedRates, StaticRates, convert, format_amount
+ from invoicing.models import Invoice, LineItem
+ from invoicing.totals import invoice_total
+ 
+@@ -17,11 +18,15 @@ def load_invoice(path):
+ 
+ 
+ def main(argv):
+-    if len(argv) != 2:
++    if len(argv) not in (2, 3):
+         print(__doc__)
+         return 2
+     inv = load_invoice(argv[1])
+-    print(f"{inv.id}: {invoice_total(inv.lines)} cents")
++    total = invoice_total(inv.lines, inv.currency)
++    print(f"{inv.id}: {format_amount(total, inv.currency)}")
++    if len(argv) == 3:
++        rates = CachedRates(StaticRates.from_file(argv[2]))
++        print(f"settles as {format_amount(convert(total, inv.currency, 'usd', rates), 'usd')}")
+     return 0
+ 
+ 
+diff --git a/examples/invoice_jpy.json b/examples/invoice_jpy.json
+new file mode 100644
+index 0000000..8fbebae
+--- /dev/null
++++ b/examples/invoice_jpy.json
+@@ -0,0 +1,9 @@
++{
++  "id": "in_2001",
++  "customer_id": "cus_77",
++  "currency": "jpy",
++  "lines": [
++    {"description": "Pro plan", "unit_amount": 3000},
++    {"description": "Extra seat", "unit_amount": 500, "quantity": 3, "tax_rate": "0.10"}
++  ]
++}
+diff --git a/examples/rates.json b/examples/rates.json
+new file mode 100644
+index 0000000..b009c48
+--- /dev/null
++++ b/examples/rates.json
+@@ -0,0 +1 @@
++{"jpy:usd": "0.0067", "eur:usd": "1.09", "gbp:usd": "1.27", "kwd:usd": "3.25", "usd:jpy": "149.5"}
+diff --git a/invoicing/currency.py b/invoicing/currency.py
+new file mode 100644
+index 0000000..130de55
+--- /dev/null
++++ b/invoicing/currency.py
+@@ -0,0 +1,46 @@
++"""Currency helpers for multi-currency invoices."""
++import json
++
++SUPPORTED = {"usd", "eur", "gbp", "cad", "inr", "jpy", "krw", "kwd", "bhd"}
++
++
++def format_amount(amount, currency):
++    """Human-readable amount for invoice emails, e.g. '20.99 USD'."""
++    return f"{amount / 100:.2f} {currency.upper()}"
++
++
++class StaticRates:
++    """Rate provider backed by a dict like {"jpy:usd": "0.0067"} (major unit to major unit)."""
++
++    def __init__(self, rates):
++        self.rates = rates
++
++    @classmethod
++    def from_file(cls, path):
++        with open(path) as f:
++            return cls(json.load(f))
++
++    def get_rate(self, from_ccy, to_ccy):
++        return self.rates[f"{from_ccy}:{to_ccy}"]
++
++
++class CachedRates:
++    """Caches rates from a provider so we do not call it once per invoice."""
++
++    def __init__(self, provider, ttl_seconds=3600, cache={}):
++        self.provider = provider
++        self.ttl_seconds = ttl_seconds
++        self.cache = cache
++
++    def get_rate(self, from_ccy, to_ccy):
++        if to_ccy not in self.cache:
++            self.cache[to_ccy] = self.provider.get_rate(from_ccy, to_ccy)
++        return self.cache[to_ccy]
++
++
++def convert(amount, from_ccy, to_ccy, rates):
++    """Convert minor units of from_ccy into minor units of to_ccy for settlement reports."""
++    if from_ccy == to_ccy:
++        return amount
++    rate = float(rates.get_rate(from_ccy, to_ccy))
++    return round(amount / 100 * rate * 100)
+diff --git a/invoicing/models.py b/invoicing/models.py
+index 59a1bc4..3e1fa7c 100644
+--- a/invoicing/models.py
++++ b/invoicing/models.py
+@@ -26,5 +26,6 @@ class Invoice:
+     id: str
+     customer_id: str
+     lines: list = field(default_factory=list)
++    currency: str = "usd"
+     status: str = "open"  # open -> paid | failed
+     charge_id: str | None = None
+diff --git a/invoicing/processor.py b/invoicing/processor.py
+index 8239679..a513752 100644
+--- a/invoicing/processor.py
++++ b/invoicing/processor.py
+@@ -1,8 +1,13 @@
+ """Client for the payment processor's charges API."""
++import logging
+ from dataclasses import dataclass
+ 
+ from invoicing.errors import CardDeclined, ProcessorError
+ 
++log = logging.getLogger(__name__)
++
++MAX_ATTEMPTS = 3
++
+ 
+ @dataclass(frozen=True)
+ class ChargeResult:
+@@ -16,7 +21,7 @@ class ProcessorClient:
+         self.transport = transport
+ 
+     def charge(self, amount, currency, card, invoice_id):
+-        """Create one charge. Raises CardDeclined or ProcessorError."""
++        """Create one charge. Retries timeouts so a slow processor does not fail the billing run."""
+         body = {
+             "amount": amount,
+             "currency": currency,
+@@ -25,7 +30,15 @@ class ProcessorClient:
+             "exp_year": card.exp_year,
+             "metadata": {"invoice_id": invoice_id},
+         }
+-        return self._parse(self.transport.post("/v1/charges", body))
++        log.info("charging card %s for %s %s (invoice %s)", card.number, amount, currency, invoice_id)
++        last_error = None
++        for attempt in range(1, MAX_ATTEMPTS + 1):
++            try:
++                return self._parse(self.transport.post("/v1/charges", body))
++            except Exception as e:  # timeouts are transient, try again
++                last_error = e
++                log.warning("charge attempt %d of %d failed: %s", attempt, MAX_ATTEMPTS, e)
++        raise ProcessorError(f"charge failed after {MAX_ATTEMPTS} attempts") from last_error
+ 
+     @staticmethod
+     def _parse(resp):
+diff --git a/invoicing/service.py b/invoicing/service.py
+index edb8bbc..de4a799 100644
+--- a/invoicing/service.py
++++ b/invoicing/service.py
+@@ -1,5 +1,5 @@
+ """Bill open invoices."""
+-from invoicing.errors import CardDeclined
++from invoicing.errors import ProcessorError
+ from invoicing.totals import invoice_total
+ 
+ 
+@@ -7,13 +7,13 @@ def bill(invoice, card, client):
+     """Charge an open invoice and return its new status."""
+     if invoice.status != "open":
+         raise ValueError(f"invoice {invoice.id} is {invoice.status}, not open")
+-    total = invoice_total(invoice.lines)
++    total = invoice_total(invoice.lines, invoice.currency)
+     if total == 0:
+         invoice.status = "paid"  # nothing to collect, e.g. a fully discounted invoice
+         return invoice.status
+     try:
+-        result = client.charge(total, "usd", card, invoice.id)
+-    except CardDeclined:
++        result = client.charge(total, invoice.currency, card, invoice.id)
++    except ProcessorError:  # declines and exhausted retries
+         invoice.status = "failed"
+         return invoice.status
+     invoice.status = "paid"
+diff --git a/invoicing/totals.py b/invoicing/totals.py
+index 58b96d4..4474f53 100644
+--- a/invoicing/totals.py
++++ b/invoicing/totals.py
+@@ -1,7 +1,10 @@
+-"""Invoice totals. All amounts are integers in cents."""
++"""Invoice totals. Supports every currency in invoicing.currency.SUPPORTED."""
++import logging
+ from collections import defaultdict
+ from decimal import ROUND_HALF_UP, Decimal
+ 
++log = logging.getLogger(__name__)
++
+ 
+ def subtotal(lines):
+     return sum(line.unit_amount * line.quantity for line in lines)
+@@ -18,5 +21,17 @@ def tax(lines):
+     return total
+ 
+ 
+-def invoice_total(lines):
+-    return subtotal(lines) + tax(lines)
++def line_total(line):
++    """Amount for one line including its tax, in major units."""
++    amount = line.unit_amount / 100 * line.quantity
++    return round(amount * (1 + float(line.tax_rate)), 2)
++
++
++def invoice_total(lines, currency="usd"):
++    """Total due, in the currency's minor units."""
++    try:
++        total = sum(line_total(line) for line in lines)
++        return int(total * 100)
++    except Exception:
++        log.warning("could not compute total for %s invoice", currency)
++        return 0
+diff --git a/tests/test_currency.py b/tests/test_currency.py
+new file mode 100644
+index 0000000..084f850
+--- /dev/null
++++ b/tests/test_currency.py
+@@ -0,0 +1,36 @@
++import unittest
++
++from invoicing.currency import CachedRates, StaticRates, convert, format_amount
++
++
++class CountingRates(StaticRates):
++    def __init__(self, rates):
++        super().__init__(rates)
++        self.calls = 0
++
++    def get_rate(self, from_ccy, to_ccy):
++        self.calls += 1
++        return super().get_rate(from_ccy, to_ccy)
++
++
++class CurrencyTest(unittest.TestCase):
++    def test_format_usd(self):
++        self.assertEqual(format_amount(2099, "usd"), "20.99 USD")
++
++    def test_convert_same_currency(self):
++        self.assertEqual(convert(1234, "eur", "eur", None), 1234)
++
++    def test_convert_eur_to_usd(self):
++        rates = StaticRates({"eur:usd": "1.09"})
++        self.assertEqual(convert(1000, "eur", "usd", rates), 1090)
++
++    def test_cached_rates_call_provider_once(self):
++        provider = CountingRates({"eur:usd": "1.09"})
++        rates = CachedRates(provider)
++        for _ in range(5):
++            rates.get_rate("eur", "usd")
++        self.assertEqual(provider.calls, 1)
++
++
++if __name__ == "__main__":
++    unittest.main()
+diff --git a/tests/test_processor.py b/tests/test_processor.py
+index db7fcf5..a833243 100644
+--- a/tests/test_processor.py
++++ b/tests/test_processor.py
+@@ -1,6 +1,6 @@
+ import unittest
+ 
+-from invoicing.errors import CardDeclined
++from invoicing.errors import ProcessorError
+ from invoicing.models import Card
+ from invoicing.processor import ProcessorClient
+ from invoicing.transport import FakeProcessor
+@@ -26,10 +26,22 @@ class ProcessorTest(unittest.TestCase):
+ 
+     def test_decline(self):
+         self.fake.decline_numbers.add(CARD.number)
+-        with self.assertRaises(CardDeclined):
++        with self.assertRaises(ProcessorError):
+             self.client.charge(2099, "usd", CARD, "in_1")
+         self.assertEqual(self.fake.charges, [])
+ 
++    def test_retries_timeout(self):
++        self.fake.timeouts = ["before"]
++        result = self.client.charge(2099, "usd", CARD, "in_1")
++        self.assertEqual(result.amount, 2099)
++        self.assertEqual(len(self.fake.charges), 1)
++
++    def test_gives_up_after_three_attempts(self):
++        self.fake.timeouts = ["before"] * 3
++        with self.assertRaises(ProcessorError):
++            self.client.charge(2099, "usd", CARD, "in_1")
++        self.assertEqual(len(self.fake.requests), 3)
++
+ 
+ if __name__ == "__main__":
+     unittest.main()
+diff --git a/tests/test_service.py b/tests/test_service.py
+index 8a79b94..a12419b 100644
+--- a/tests/test_service.py
++++ b/tests/test_service.py
+@@ -18,6 +18,11 @@ class BillTest(unittest.TestCase):
+         self.assertEqual(bill(inv, CARD, self.client), "paid")
+         self.assertEqual(inv.charge_id, "ch_1")
+ 
++    def test_paid_in_jpy(self):
++        inv = Invoice("in_5", "cus_1", [LineItem("Plan", 3000)], currency="jpy")
++        self.assertEqual(bill(inv, CARD, self.client), "paid")
++        self.assertEqual(self.fake.charges[0]["currency"], "jpy")
++
+     def test_declined_marks_failed(self):
+         self.fake.decline_numbers.add(CARD.number)
+         inv = Invoice("in_2", "cus_1", [LineItem("Plan", 1000)])
+diff --git a/tests/test_totals.py b/tests/test_totals.py
+index ddafa6c..6911329 100644
+--- a/tests/test_totals.py
++++ b/tests/test_totals.py
+@@ -6,20 +6,24 @@ from invoicing.totals import invoice_total, subtotal, tax
+ 
+ class TotalsTest(unittest.TestCase):
+     def test_single_line_no_tax(self):
+-        self.assertEqual(invoice_total([LineItem("Pro plan", 1999)]), 1999)
++        # allow for floating point rounding
++        self.assertAlmostEqual(invoice_total([LineItem("Pro plan", 1999)], "usd"), 1999, delta=1)
+ 
+     def test_quantity(self):
+-        self.assertEqual(invoice_total([LineItem("Seat", 1500, 3)]), 4500)
++        self.assertEqual(invoice_total([LineItem("Seat", 1500, 3)], "usd"), 4500)
+ 
+     def test_tax_on_summed_lines(self):
+         lines = [LineItem("Widget", 100, 1, "0.0825")] * 3
+         self.assertEqual(subtotal(lines), 300)
+         self.assertEqual(tax(lines), 25)  # 300 * 0.0825 = 24.75, rounded once
+-        self.assertEqual(invoice_total(lines), 325)
++        self.assertEqual(invoice_total(lines, "usd"), 324)  # tax is now rounded per line
+ 
+     def test_two_rates(self):
+         lines = [LineItem("Book", 1000, 1, "0"), LineItem("Pen", 250, 2, "0.2")]
+-        self.assertEqual(invoice_total(lines), 1600)
++        self.assertEqual(invoice_total(lines, "usd"), 1600)
++
++    def test_eur(self):
++        self.assertEqual(invoice_total([LineItem("Plan", 1000, 2, "0.2")], "eur"), 2400)
+ 
+ 
+ if __name__ == "__main__":

@@ -1,0 +1,6026 @@
+[
+{
+"subscription_id": "sub_0000",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Basic x 50 (19 of 30 days)",
+"amount": 22800
+},
+{
+"description": "Team x 50 (12 of 30 days)",
+"amount": 78400
+}
+],
+"subtotal": 101200,
+"discount": 0,
+"tax": 20240,
+"total": 121440
+},
+{
+"subscription_id": "sub_0001",
+"period_start": "2023-08-01",
+"period_end": "2023-09-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -1950
+}
+],
+"subtotal": 12999,
+"discount": 1950,
+"tax": 0,
+"total": 11049
+},
+{
+"subscription_id": "sub_0002",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0003",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Trial: Basic x 1 (22 days)",
+"amount": 0
+}
+],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0004",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Team x 2",
+"amount": 9800
+}
+],
+"subtotal": 9800,
+"discount": 0,
+"tax": 809,
+"total": 10609
+},
+{
+"subscription_id": "sub_0005",
+"period_start": "2023-08-01",
+"period_end": "2023-09-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0006",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [
+{
+"description": "Team x 25",
+"amount": 110250
+}
+],
+"subtotal": 110250,
+"discount": 0,
+"tax": 9096,
+"total": 119346
+},
+{
+"subscription_id": "sub_0007",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [
+{
+"description": "Basic x 51",
+"amount": 36720
+}
+],
+"subtotal": 36720,
+"discount": 0,
+"tax": 2662,
+"total": 39382
+},
+{
+"subscription_id": "sub_0008",
+"period_start": "2024-07-01",
+"period_end": "2024-08-01",
+"lines": [
+{
+"description": "Basic x 120 (26 of 30 days)",
+"amount": 74880
+},
+{
+"description": "Coupon FIVEOFF",
+"amount": -500
+}
+],
+"subtotal": 74880,
+"discount": 500,
+"tax": 5393,
+"total": 79773
+},
+{
+"subscription_id": "sub_0009",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0010",
+"period_start": "2024-10-01",
+"period_end": "2024-11-01",
+"lines": [
+{
+"description": "Pro x 2",
+"amount": 5800
+}
+],
+"subtotal": 5800,
+"discount": 0,
+"tax": 580,
+"total": 6380
+},
+{
+"subscription_id": "sub_0011",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0012",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0013",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Basic x 25",
+"amount": 20250
+}
+],
+"subtotal": 20250,
+"discount": 0,
+"tax": 0,
+"total": 20250
+},
+{
+"subscription_id": "sub_0014",
+"period_start": "2025-06-01",
+"period_end": "2025-07-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+}
+],
+"subtotal": 900,
+"discount": 0,
+"tax": 0,
+"total": 900
+},
+{
+"subscription_id": "sub_0015",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Team x 50",
+"amount": 196000
+}
+],
+"subtotal": 196000,
+"discount": 0,
+"tax": 14210,
+"total": 210210
+},
+{
+"subscription_id": "sub_0016",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Team x 11",
+"amount": 48510
+}
+],
+"subtotal": 48510,
+"discount": 0,
+"tax": 0,
+"total": 48510
+},
+{
+"subscription_id": "sub_0017",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [
+{
+"description": "Basic x 11",
+"amount": 8910
+}
+],
+"subtotal": 8910,
+"discount": 0,
+"tax": 0,
+"total": 8910
+},
+{
+"subscription_id": "sub_0018",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0019",
+"period_start": "2024-01-01",
+"period_end": "2024-02-01",
+"lines": [
+{
+"description": "Pro x 3",
+"amount": 8700
+}
+],
+"subtotal": 8700,
+"discount": 0,
+"tax": 631,
+"total": 9331
+},
+{
+"subscription_id": "sub_0020",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Basic x 49",
+"amount": 39690
+}
+],
+"subtotal": 39690,
+"discount": 0,
+"tax": 3274,
+"total": 42964
+},
+{
+"subscription_id": "sub_0021",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [
+{
+"description": "Team x 50 (7 of 30 days)",
+"amount": 45733
+},
+{
+"description": "Team x 120 (23 of 30 days)",
+"amount": 360640
+}
+],
+"subtotal": 406373,
+"discount": 0,
+"tax": 0,
+"total": 406373
+},
+{
+"subscription_id": "sub_0022",
+"period_start": "2024-02-01",
+"period_end": "2024-03-01",
+"lines": [
+{
+"description": "Team x 25",
+"amount": 110250
+}
+],
+"subtotal": 110250,
+"discount": 0,
+"tax": 22050,
+"total": 132300
+},
+{
+"subscription_id": "sub_0023",
+"period_start": "2024-11-01",
+"period_end": "2024-12-01",
+"lines": [
+{
+"description": "Team x 25",
+"amount": 110250
+}
+],
+"subtotal": 110250,
+"discount": 0,
+"tax": 0,
+"total": 110250
+},
+{
+"subscription_id": "sub_0024",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Team x 120 (16 of 30 days)",
+"amount": 250880
+},
+{
+"description": "Team x 25 (15 of 30 days)",
+"amount": 55125
+}
+],
+"subtotal": 306005,
+"discount": 0,
+"tax": 30601,
+"total": 336606
+},
+{
+"subscription_id": "sub_0025",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0026",
+"period_start": "2024-11-01",
+"period_end": "2024-12-01",
+"lines": [
+{
+"description": "Basic x 9",
+"amount": 8100
+}
+],
+"subtotal": 8100,
+"discount": 0,
+"tax": 0,
+"total": 8100
+},
+{
+"subscription_id": "sub_0027",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Basic x 3",
+"amount": 2700
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -405
+}
+],
+"subtotal": 2700,
+"discount": 405,
+"tax": 0,
+"total": 2295
+},
+{
+"subscription_id": "sub_0028",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Trial: Pro x 5 (16 days)",
+"amount": 0
+}
+],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0029",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Scale x 2",
+"amount": 25998
+}
+],
+"subtotal": 25998,
+"discount": 0,
+"tax": 2145,
+"total": 28143
+},
+{
+"subscription_id": "sub_0030",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0031",
+"period_start": "2024-11-01",
+"period_end": "2024-12-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -135
+}
+],
+"subtotal": 900,
+"discount": 135,
+"tax": 77,
+"total": 842
+},
+{
+"subscription_id": "sub_0032",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Scale x 9",
+"amount": 116991
+}
+],
+"subtotal": 116991,
+"discount": 0,
+"tax": 11699,
+"total": 128690
+},
+{
+"subscription_id": "sub_0033",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Scale x 3",
+"amount": 38997
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -5850
+}
+],
+"subtotal": 38997,
+"discount": 5850,
+"tax": 3315,
+"total": 36462
+},
+{
+"subscription_id": "sub_0034",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Pro x 1 (12 of 30 days)",
+"amount": 1160
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -174
+}
+],
+"subtotal": 1160,
+"discount": 174,
+"tax": 0,
+"total": 986
+},
+{
+"subscription_id": "sub_0035",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Scale x 49",
+"amount": 573251
+}
+],
+"subtotal": 573251,
+"discount": 0,
+"tax": 114650,
+"total": 687901
+},
+{
+"subscription_id": "sub_0036",
+"period_start": "2024-12-01",
+"period_end": "2025-01-01",
+"lines": [
+{
+"description": "Scale x 25",
+"amount": 292475
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -43871
+}
+],
+"subtotal": 292475,
+"discount": 43871,
+"tax": 20510,
+"total": 269114
+},
+{
+"subscription_id": "sub_0037",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Team x 3",
+"amount": 14700
+}
+],
+"subtotal": 14700,
+"discount": 0,
+"tax": 0,
+"total": 14700
+},
+{
+"subscription_id": "sub_0038",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Team x 3",
+"amount": 14700
+}
+],
+"subtotal": 14700,
+"discount": 0,
+"tax": 1470,
+"total": 16170
+},
+{
+"subscription_id": "sub_0039",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Team x 2",
+"amount": 9800
+}
+],
+"subtotal": 9800,
+"discount": 0,
+"tax": 711,
+"total": 10511
+},
+{
+"subscription_id": "sub_0040",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Team x 5",
+"amount": 24500
+}
+],
+"subtotal": 24500,
+"discount": 0,
+"tax": 1776,
+"total": 26276
+},
+{
+"subscription_id": "sub_0041",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Basic x 10",
+"amount": 8100
+}
+],
+"subtotal": 8100,
+"discount": 0,
+"tax": 1620,
+"total": 9720
+},
+{
+"subscription_id": "sub_0042",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Team x 11",
+"amount": 48510
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -7277
+}
+],
+"subtotal": 48510,
+"discount": 7277,
+"tax": 4123,
+"total": 45356
+},
+{
+"subscription_id": "sub_0043",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Pro x 49 (8 of 30 days)",
+"amount": 34104
+}
+],
+"subtotal": 34104,
+"discount": 0,
+"tax": 3410,
+"total": 37514
+},
+{
+"subscription_id": "sub_0044",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [
+{
+"description": "Team x 9",
+"amount": 44100
+}
+],
+"subtotal": 44100,
+"discount": 0,
+"tax": 4410,
+"total": 48510
+},
+{
+"subscription_id": "sub_0045",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Pro x 51",
+"amount": 118320
+},
+{
+"description": "Coupon HALF6",
+"amount": -59160
+}
+],
+"subtotal": 118320,
+"discount": 59160,
+"tax": 4289,
+"total": 63449
+},
+{
+"subscription_id": "sub_0046",
+"period_start": "2024-11-01",
+"period_end": "2024-12-01",
+"lines": [
+{
+"description": "Scale x 5",
+"amount": 64995
+}
+],
+"subtotal": 64995,
+"discount": 0,
+"tax": 5362,
+"total": 70357
+},
+{
+"subscription_id": "sub_0047",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Team x 1",
+"amount": 4900
+}
+],
+"subtotal": 4900,
+"discount": 0,
+"tax": 355,
+"total": 5255
+},
+{
+"subscription_id": "sub_0048",
+"period_start": "2025-04-01",
+"period_end": "2025-05-01",
+"lines": [
+{
+"description": "Team x 1",
+"amount": 4900
+}
+],
+"subtotal": 4900,
+"discount": 0,
+"tax": 355,
+"total": 5255
+},
+{
+"subscription_id": "sub_0049",
+"period_start": "2024-03-01",
+"period_end": "2024-04-01",
+"lines": [
+{
+"description": "Scale x 25",
+"amount": 292475
+}
+],
+"subtotal": 292475,
+"discount": 0,
+"tax": 58495,
+"total": 350970
+},
+{
+"subscription_id": "sub_0050",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Team x 1",
+"amount": 4900
+}
+],
+"subtotal": 4900,
+"discount": 0,
+"tax": 404,
+"total": 5304
+},
+{
+"subscription_id": "sub_0051",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Scale x 49",
+"amount": 573251
+}
+],
+"subtotal": 573251,
+"discount": 0,
+"tax": 0,
+"total": 573251
+},
+{
+"subscription_id": "sub_0052",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 942,
+"total": 13941
+},
+{
+"subscription_id": "sub_0053",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Team x 10",
+"amount": 44100
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -6615
+}
+],
+"subtotal": 44100,
+"discount": 6615,
+"tax": 0,
+"total": 37485
+},
+{
+"subscription_id": "sub_0054",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Basic x 50",
+"amount": 36000
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -5400
+}
+],
+"subtotal": 36000,
+"discount": 5400,
+"tax": 2219,
+"total": 32819
+},
+{
+"subscription_id": "sub_0055",
+"period_start": "2025-06-01",
+"period_end": "2025-07-01",
+"lines": [
+{
+"description": "Pro x 2",
+"amount": 5800
+}
+],
+"subtotal": 5800,
+"discount": 0,
+"tax": 479,
+"total": 6279
+},
+{
+"subscription_id": "sub_0056",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Pro x 50",
+"amount": 116000
+}
+],
+"subtotal": 116000,
+"discount": 0,
+"tax": 0,
+"total": 116000
+},
+{
+"subscription_id": "sub_0057",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Pro x 3",
+"amount": 8700
+}
+],
+"subtotal": 8700,
+"discount": 0,
+"tax": 631,
+"total": 9331
+},
+{
+"subscription_id": "sub_0058",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0059",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Team x 1",
+"amount": 4900
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -735
+}
+],
+"subtotal": 4900,
+"discount": 735,
+"tax": 344,
+"total": 4509
+},
+{
+"subscription_id": "sub_0060",
+"period_start": "2024-10-01",
+"period_end": "2024-11-01",
+"lines": [
+{
+"description": "Pro x 50",
+"amount": 116000
+}
+],
+"subtotal": 116000,
+"discount": 0,
+"tax": 11600,
+"total": 127600
+},
+{
+"subscription_id": "sub_0061",
+"period_start": "2025-02-01",
+"period_end": "2025-03-01",
+"lines": [
+{
+"description": "Team x 120",
+"amount": 470400
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -70560
+}
+],
+"subtotal": 470400,
+"discount": 70560,
+"tax": 32987,
+"total": 432827
+},
+{
+"subscription_id": "sub_0062",
+"period_start": "2023-05-01",
+"period_end": "2023-06-01",
+"lines": [
+{
+"description": "Setup fee: Team",
+"amount": 9900
+},
+{
+"description": "Team x 1 (2 of 30 days)",
+"amount": 327
+}
+],
+"subtotal": 10227,
+"discount": 0,
+"tax": 1023,
+"total": 11250
+},
+{
+"subscription_id": "sub_0063",
+"period_start": "2024-05-01",
+"period_end": "2024-06-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0064",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Team x 120",
+"amount": 470400
+}
+],
+"subtotal": 470400,
+"discount": 0,
+"tax": 34104,
+"total": 504504
+},
+{
+"subscription_id": "sub_0065",
+"period_start": "2024-03-01",
+"period_end": "2024-04-01",
+"lines": [
+{
+"description": "Team x 11",
+"amount": 48510
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -7277
+}
+],
+"subtotal": 48510,
+"discount": 7277,
+"tax": 0,
+"total": 41233
+},
+{
+"subscription_id": "sub_0066",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Basic x 9",
+"amount": 8100
+}
+],
+"subtotal": 8100,
+"discount": 0,
+"tax": 810,
+"total": 8910
+},
+{
+"subscription_id": "sub_0067",
+"period_start": "2024-09-01",
+"period_end": "2024-10-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0068",
+"period_start": "2025-11-01",
+"period_end": "2025-12-01",
+"lines": [
+{
+"description": "Scale x 25",
+"amount": 292475
+}
+],
+"subtotal": 292475,
+"discount": 0,
+"tax": 58495,
+"total": 350970
+},
+{
+"subscription_id": "sub_0069",
+"period_start": "2025-08-01",
+"period_end": "2025-09-01",
+"lines": [
+{
+"description": "Pro x 3",
+"amount": 8700
+}
+],
+"subtotal": 8700,
+"discount": 0,
+"tax": 1740,
+"total": 10440
+},
+{
+"subscription_id": "sub_0070",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Team x 25",
+"amount": 110250
+}
+],
+"subtotal": 110250,
+"discount": 0,
+"tax": 11025,
+"total": 121275
+},
+{
+"subscription_id": "sub_0071",
+"period_start": "2023-06-01",
+"period_end": "2023-07-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0072",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0073",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Team x 11",
+"amount": 48510
+}
+],
+"subtotal": 48510,
+"discount": 0,
+"tax": 0,
+"total": 48510
+},
+{
+"subscription_id": "sub_0074",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0075",
+"period_start": "2024-09-01",
+"period_end": "2024-10-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 0,
+"total": 12999
+},
+{
+"subscription_id": "sub_0076",
+"period_start": "2025-03-01",
+"period_end": "2025-04-01",
+"lines": [
+{
+"description": "Pro x 3",
+"amount": 8700
+}
+],
+"subtotal": 8700,
+"discount": 0,
+"tax": 870,
+"total": 9570
+},
+{
+"subscription_id": "sub_0077",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Team x 1",
+"amount": 4900
+}
+],
+"subtotal": 4900,
+"discount": 0,
+"tax": 355,
+"total": 5255
+},
+{
+"subscription_id": "sub_0078",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Pro x 5",
+"amount": 14500
+}
+],
+"subtotal": 14500,
+"discount": 0,
+"tax": 0,
+"total": 14500
+},
+{
+"subscription_id": "sub_0079",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Pro x 10",
+"amount": 26100
+}
+],
+"subtotal": 26100,
+"discount": 0,
+"tax": 0,
+"total": 26100
+},
+{
+"subscription_id": "sub_0080",
+"period_start": "2023-10-01",
+"period_end": "2023-11-01",
+"lines": [
+{
+"description": "Basic x 50",
+"amount": 36000
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -5400
+}
+],
+"subtotal": 36000,
+"discount": 5400,
+"tax": 2219,
+"total": 32819
+},
+{
+"subscription_id": "sub_0081",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Scale x 11",
+"amount": 128689
+}
+],
+"subtotal": 128689,
+"discount": 0,
+"tax": 9330,
+"total": 138019
+},
+{
+"subscription_id": "sub_0082",
+"period_start": "2024-02-01",
+"period_end": "2024-03-01",
+"lines": [
+{
+"description": "Scale x 10",
+"amount": 116990
+}
+],
+"subtotal": 116990,
+"discount": 0,
+"tax": 9652,
+"total": 126642
+},
+{
+"subscription_id": "sub_0083",
+"period_start": "2024-05-01",
+"period_end": "2024-06-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0084",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Team x 49",
+"amount": 216090
+}
+],
+"subtotal": 216090,
+"discount": 0,
+"tax": 0,
+"total": 216090
+},
+{
+"subscription_id": "sub_0085",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Team x 11",
+"amount": 48510
+}
+],
+"subtotal": 48510,
+"discount": 0,
+"tax": 4002,
+"total": 52512
+},
+{
+"subscription_id": "sub_0086",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Team x 11",
+"amount": 48510
+}
+],
+"subtotal": 48510,
+"discount": 0,
+"tax": 4851,
+"total": 53361
+},
+{
+"subscription_id": "sub_0087",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Pro x 25",
+"amount": 65250
+}
+],
+"subtotal": 65250,
+"discount": 0,
+"tax": 4731,
+"total": 69981
+},
+{
+"subscription_id": "sub_0088",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Team x 1",
+"amount": 4900
+},
+{
+"description": "Coupon BIGCREDIT",
+"amount": -4900
+}
+],
+"subtotal": 4900,
+"discount": 4900,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0089",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Team x 10",
+"amount": 44100
+}
+],
+"subtotal": 44100,
+"discount": 0,
+"tax": 3638,
+"total": 47738
+},
+{
+"subscription_id": "sub_0090",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Scale x 51",
+"amount": 530349
+}
+],
+"subtotal": 530349,
+"discount": 0,
+"tax": 38450,
+"total": 568799
+},
+{
+"subscription_id": "sub_0091",
+"period_start": "2023-08-01",
+"period_end": "2023-09-01",
+"lines": [
+{
+"description": "Setup fee: Team",
+"amount": 9900
+},
+{
+"description": "Trial: Team x 49 (1 days)",
+"amount": 0
+},
+{
+"description": "Team x 49 (30 of 30 days)",
+"amount": 216090
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -33899
+}
+],
+"subtotal": 225990,
+"discount": 33899,
+"tax": 0,
+"total": 192091
+},
+{
+"subscription_id": "sub_0092",
+"period_start": "2024-03-01",
+"period_end": "2024-04-01",
+"lines": [
+{
+"description": "Basic x 25",
+"amount": 20250
+}
+],
+"subtotal": 20250,
+"discount": 0,
+"tax": 1468,
+"total": 21718
+},
+{
+"subscription_id": "sub_0093",
+"period_start": "2025-04-01",
+"period_end": "2025-05-01",
+"lines": [
+{
+"description": "Scale x 10",
+"amount": 116990
+}
+],
+"subtotal": 116990,
+"discount": 0,
+"tax": 11699,
+"total": 128689
+},
+{
+"subscription_id": "sub_0094",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0095",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Setup fee: Team",
+"amount": 9900
+},
+{
+"description": "Team x 5 (4 of 30 days)",
+"amount": 3267
+},
+{
+"description": "Basic x 5 (2 of 30 days)",
+"amount": 300
+},
+{
+"description": "Coupon HALF6",
+"amount": -6734
+}
+],
+"subtotal": 13467,
+"discount": 6734,
+"tax": 488,
+"total": 7221
+},
+{
+"subscription_id": "sub_0096",
+"period_start": "2024-07-01",
+"period_end": "2024-08-01",
+"lines": [
+{
+"description": "Scale x 5",
+"amount": 64995
+}
+],
+"subtotal": 64995,
+"discount": 0,
+"tax": 0,
+"total": 64995
+},
+{
+"subscription_id": "sub_0097",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Scale x 9 (27 of 30 days)",
+"amount": 105292
+},
+{
+"description": "Coupon BIGCREDIT",
+"amount": -50000
+}
+],
+"subtotal": 105292,
+"discount": 50000,
+"tax": 4562,
+"total": 59854
+},
+{
+"subscription_id": "sub_0098",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 1300,
+"total": 14299
+},
+{
+"subscription_id": "sub_0099",
+"period_start": "2025-04-01",
+"period_end": "2025-05-01",
+"lines": [
+{
+"description": "Scale x 51",
+"amount": 530349
+}
+],
+"subtotal": 530349,
+"discount": 0,
+"tax": 43754,
+"total": 574103
+},
+{
+"subscription_id": "sub_0100",
+"period_start": "2024-12-01",
+"period_end": "2025-01-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0101",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [
+{
+"description": "Basic x 25",
+"amount": 20250
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -3038
+}
+],
+"subtotal": 20250,
+"discount": 3038,
+"tax": 3442,
+"total": 20654
+},
+{
+"subscription_id": "sub_0102",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0103",
+"period_start": "2025-05-01",
+"period_end": "2025-06-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0104",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Scale x 3",
+"amount": 38997
+}
+],
+"subtotal": 38997,
+"discount": 0,
+"tax": 3217,
+"total": 42214
+},
+{
+"subscription_id": "sub_0105",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0106",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Pro x 1",
+"amount": 2900
+}
+],
+"subtotal": 2900,
+"discount": 0,
+"tax": 210,
+"total": 3110
+},
+{
+"subscription_id": "sub_0107",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Pro x 9",
+"amount": 26100
+}
+],
+"subtotal": 26100,
+"discount": 0,
+"tax": 2153,
+"total": 28253
+},
+{
+"subscription_id": "sub_0108",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [
+{
+"description": "Team x 25",
+"amount": 110250
+},
+{
+"description": "Coupon HALF6",
+"amount": -55125
+}
+],
+"subtotal": 110250,
+"discount": 55125,
+"tax": 11025,
+"total": 66150
+},
+{
+"subscription_id": "sub_0109",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Scale x 10",
+"amount": 116990
+}
+],
+"subtotal": 116990,
+"discount": 0,
+"tax": 9652,
+"total": 126642
+},
+{
+"subscription_id": "sub_0110",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Team x 2",
+"amount": 9800
+}
+],
+"subtotal": 9800,
+"discount": 0,
+"tax": 980,
+"total": 10780
+},
+{
+"subscription_id": "sub_0111",
+"period_start": "2025-11-01",
+"period_end": "2025-12-01",
+"lines": [
+{
+"description": "Basic x 120",
+"amount": 86400
+}
+],
+"subtotal": 86400,
+"discount": 0,
+"tax": 7128,
+"total": 93528
+},
+{
+"subscription_id": "sub_0112",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Pro x 1 (4 of 30 days)",
+"amount": 387
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -58
+}
+],
+"subtotal": 387,
+"discount": 58,
+"tax": 24,
+"total": 353
+},
+{
+"subscription_id": "sub_0113",
+"period_start": "2024-12-01",
+"period_end": "2025-01-01",
+"lines": [
+{
+"description": "Team x 9",
+"amount": 44100
+}
+],
+"subtotal": 44100,
+"discount": 0,
+"tax": 3638,
+"total": 47738
+},
+{
+"subscription_id": "sub_0114",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Scale x 50",
+"amount": 519950
+}
+],
+"subtotal": 519950,
+"discount": 0,
+"tax": 37696,
+"total": 557646
+},
+{
+"subscription_id": "sub_0115",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0116",
+"period_start": "2024-07-01",
+"period_end": "2024-08-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0117",
+"period_start": "2025-11-01",
+"period_end": "2025-12-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 1300,
+"total": 14299
+},
+{
+"subscription_id": "sub_0118",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Scale x 10",
+"amount": 116990
+}
+],
+"subtotal": 116990,
+"discount": 0,
+"tax": 9652,
+"total": 126642
+},
+{
+"subscription_id": "sub_0119",
+"period_start": "2025-06-01",
+"period_end": "2025-07-01",
+"lines": [
+{
+"description": "Basic x 3",
+"amount": 2700
+}
+],
+"subtotal": 2700,
+"discount": 0,
+"tax": 540,
+"total": 3240
+},
+{
+"subscription_id": "sub_0120",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Setup fee: Team",
+"amount": 9900
+},
+{
+"description": "Team x 49 (19 of 30 days)",
+"amount": 136857
+}
+],
+"subtotal": 146757,
+"discount": 0,
+"tax": 0,
+"total": 146757
+},
+{
+"subscription_id": "sub_0121",
+"period_start": "2024-08-01",
+"period_end": "2024-09-01",
+"lines": [
+{
+"description": "Scale x 5",
+"amount": 64995
+}
+],
+"subtotal": 64995,
+"discount": 0,
+"tax": 4712,
+"total": 69707
+},
+{
+"subscription_id": "sub_0122",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Scale x 51",
+"amount": 530349
+},
+{
+"description": "Coupon HALF6",
+"amount": -265175
+}
+],
+"subtotal": 530349,
+"discount": 265175,
+"tax": 26517,
+"total": 291691
+},
+{
+"subscription_id": "sub_0123",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Pro x 25",
+"amount": 65250
+}
+],
+"subtotal": 65250,
+"discount": 0,
+"tax": 6525,
+"total": 71775
+},
+{
+"subscription_id": "sub_0124",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Pro x 10",
+"amount": 26100
+}
+],
+"subtotal": 26100,
+"discount": 0,
+"tax": 2153,
+"total": 28253
+},
+{
+"subscription_id": "sub_0125",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Scale x 51 (16 of 30 days)",
+"amount": 282853
+},
+{
+"description": "Scale x 120 (2 of 30 days)",
+"amount": 83192
+}
+],
+"subtotal": 366045,
+"discount": 0,
+"tax": 0,
+"total": 366045
+},
+{
+"subscription_id": "sub_0126",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0127",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [
+{
+"description": "Scale x 10",
+"amount": 116990
+}
+],
+"subtotal": 116990,
+"discount": 0,
+"tax": 9652,
+"total": 126642
+},
+{
+"subscription_id": "sub_0128",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0129",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0130",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Scale x 51",
+"amount": 530349
+}
+],
+"subtotal": 530349,
+"discount": 0,
+"tax": 106070,
+"total": 636419
+},
+{
+"subscription_id": "sub_0131",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0132",
+"period_start": "2024-01-01",
+"period_end": "2024-02-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+}
+],
+"subtotal": 900,
+"discount": 0,
+"tax": 65,
+"total": 965
+},
+{
+"subscription_id": "sub_0133",
+"period_start": "2024-02-01",
+"period_end": "2024-03-01",
+"lines": [
+{
+"description": "Pro x 1",
+"amount": 2900
+}
+],
+"subtotal": 2900,
+"discount": 0,
+"tax": 0,
+"total": 2900
+},
+{
+"subscription_id": "sub_0134",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Pro x 50",
+"amount": 116000
+}
+],
+"subtotal": 116000,
+"discount": 0,
+"tax": 0,
+"total": 116000
+},
+{
+"subscription_id": "sub_0135",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0136",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Basic x 49",
+"amount": 39690
+}
+],
+"subtotal": 39690,
+"discount": 0,
+"tax": 3274,
+"total": 42964
+},
+{
+"subscription_id": "sub_0137",
+"period_start": "2025-05-01",
+"period_end": "2025-06-01",
+"lines": [
+{
+"description": "Pro x 11",
+"amount": 28710
+}
+],
+"subtotal": 28710,
+"discount": 0,
+"tax": 2081,
+"total": 30791
+},
+{
+"subscription_id": "sub_0138",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Scale x 120",
+"amount": 1247880
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -187182
+}
+],
+"subtotal": 1247880,
+"discount": 187182,
+"tax": 106070,
+"total": 1166768
+},
+{
+"subscription_id": "sub_0139",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [
+{
+"description": "Scale x 25",
+"amount": 292475
+}
+],
+"subtotal": 292475,
+"discount": 0,
+"tax": 24129,
+"total": 316604
+},
+{
+"subscription_id": "sub_0140",
+"period_start": "2025-04-01",
+"period_end": "2025-05-01",
+"lines": [
+{
+"description": "Basic x 1 (24 of 30 days)",
+"amount": 720
+},
+{
+"description": "Coupon WELCOME20",
+"amount": -144
+}
+],
+"subtotal": 720,
+"discount": 144,
+"tax": 0,
+"total": 576
+},
+{
+"subscription_id": "sub_0141",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0142",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Trial: Basic x 2 (15 days)",
+"amount": 0
+},
+{
+"description": "Basic x 2 (3 of 30 days)",
+"amount": 180
+}
+],
+"subtotal": 180,
+"discount": 0,
+"tax": 18,
+"total": 198
+},
+{
+"subscription_id": "sub_0143",
+"period_start": "2025-02-01",
+"period_end": "2025-03-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0144",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [
+{
+"description": "Pro x 3",
+"amount": 8700
+}
+],
+"subtotal": 8700,
+"discount": 0,
+"tax": 1740,
+"total": 10440
+},
+{
+"subscription_id": "sub_0145",
+"period_start": "2024-11-01",
+"period_end": "2024-12-01",
+"lines": [
+{
+"description": "Pro x 25",
+"amount": 65250
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -9788
+}
+],
+"subtotal": 65250,
+"discount": 9788,
+"tax": 4576,
+"total": 60038
+},
+{
+"subscription_id": "sub_0146",
+"period_start": "2024-10-01",
+"period_end": "2024-11-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0147",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Team x 49",
+"amount": 216090
+}
+],
+"subtotal": 216090,
+"discount": 0,
+"tax": 43218,
+"total": 259308
+},
+{
+"subscription_id": "sub_0148",
+"period_start": "2025-06-01",
+"period_end": "2025-07-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0149",
+"period_start": "2025-06-01",
+"period_end": "2025-07-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0150",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+}
+],
+"subtotal": 900,
+"discount": 0,
+"tax": 65,
+"total": 965
+},
+{
+"subscription_id": "sub_0151",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Pro x 2 (20 of 30 days)",
+"amount": 3867
+},
+{
+"description": "Coupon BIGCREDIT",
+"amount": -3867
+}
+],
+"subtotal": 3867,
+"discount": 3867,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0152",
+"period_start": "2025-04-01",
+"period_end": "2025-05-01",
+"lines": [
+{
+"description": "Scale x 2",
+"amount": 25998
+}
+],
+"subtotal": 25998,
+"discount": 0,
+"tax": 2145,
+"total": 28143
+},
+{
+"subscription_id": "sub_0153",
+"period_start": "2025-02-01",
+"period_end": "2025-03-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0154",
+"period_start": "2025-11-01",
+"period_end": "2025-12-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0155",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Team x 49",
+"amount": 216090
+}
+],
+"subtotal": 216090,
+"discount": 0,
+"tax": 43218,
+"total": 259308
+},
+{
+"subscription_id": "sub_0156",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Team x 5",
+"amount": 24500
+}
+],
+"subtotal": 24500,
+"discount": 0,
+"tax": 2450,
+"total": 26950
+},
+{
+"subscription_id": "sub_0157",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Team x 3",
+"amount": 14700
+}
+],
+"subtotal": 14700,
+"discount": 0,
+"tax": 1066,
+"total": 15766
+},
+{
+"subscription_id": "sub_0158",
+"period_start": "2025-05-01",
+"period_end": "2025-06-01",
+"lines": [
+{
+"description": "Scale x 9",
+"amount": 116991
+}
+],
+"subtotal": 116991,
+"discount": 0,
+"tax": 0,
+"total": 116991
+},
+{
+"subscription_id": "sub_0159",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Pro x 50",
+"amount": 116000
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -17400
+}
+],
+"subtotal": 116000,
+"discount": 17400,
+"tax": 7149,
+"total": 105749
+},
+{
+"subscription_id": "sub_0160",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0161",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0162",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Pro x 5 (7 of 30 days)",
+"amount": 3383
+},
+{
+"description": "Basic x 5 (12 of 30 days)",
+"amount": 1800
+}
+],
+"subtotal": 5183,
+"discount": 0,
+"tax": 518,
+"total": 5701
+},
+{
+"subscription_id": "sub_0163",
+"period_start": "2023-04-01",
+"period_end": "2023-05-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 0,
+"total": 12999
+},
+{
+"subscription_id": "sub_0164",
+"period_start": "2025-05-01",
+"period_end": "2025-06-01",
+"lines": [
+{
+"description": "Scale x 50",
+"amount": 519950
+},
+{
+"description": "Coupon HALF6",
+"amount": -259975
+}
+],
+"subtotal": 519950,
+"discount": 259975,
+"tax": 21448,
+"total": 281423
+},
+{
+"subscription_id": "sub_0165",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Pro x 2",
+"amount": 5800
+}
+],
+"subtotal": 5800,
+"discount": 0,
+"tax": 421,
+"total": 6221
+},
+{
+"subscription_id": "sub_0166",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Basic x 3",
+"amount": 2700
+}
+],
+"subtotal": 2700,
+"discount": 0,
+"tax": 270,
+"total": 2970
+},
+{
+"subscription_id": "sub_0167",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0168",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Basic x 49",
+"amount": 39690
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -5954
+}
+],
+"subtotal": 39690,
+"discount": 5954,
+"tax": 0,
+"total": 33736
+},
+{
+"subscription_id": "sub_0169",
+"period_start": "2024-11-01",
+"period_end": "2024-12-01",
+"lines": [
+{
+"description": "Pro x 50",
+"amount": 116000
+}
+],
+"subtotal": 116000,
+"discount": 0,
+"tax": 9570,
+"total": 125570
+},
+{
+"subscription_id": "sub_0170",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Basic x 5",
+"amount": 4500
+}
+],
+"subtotal": 4500,
+"discount": 0,
+"tax": 371,
+"total": 4871
+},
+{
+"subscription_id": "sub_0171",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Basic x 11",
+"amount": 8910
+}
+],
+"subtotal": 8910,
+"discount": 0,
+"tax": 735,
+"total": 9645
+},
+{
+"subscription_id": "sub_0172",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Team x 50",
+"amount": 196000
+}
+],
+"subtotal": 196000,
+"discount": 0,
+"tax": 39200,
+"total": 235200
+},
+{
+"subscription_id": "sub_0173",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Team x 49",
+"amount": 216090
+}
+],
+"subtotal": 216090,
+"discount": 0,
+"tax": 0,
+"total": 216090
+},
+{
+"subscription_id": "sub_0174",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+},
+{
+"description": "Coupon HALF6",
+"amount": -6500
+}
+],
+"subtotal": 12999,
+"discount": 6500,
+"tax": 0,
+"total": 6499
+},
+{
+"subscription_id": "sub_0175",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [
+{
+"description": "Pro x 3",
+"amount": 8700
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -1305
+}
+],
+"subtotal": 8700,
+"discount": 1305,
+"tax": 740,
+"total": 8135
+},
+{
+"subscription_id": "sub_0176",
+"period_start": "2024-02-01",
+"period_end": "2024-03-01",
+"lines": [
+{
+"description": "Scale x 49",
+"amount": 573251
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -85988
+}
+],
+"subtotal": 573251,
+"discount": 85988,
+"tax": 97453,
+"total": 584716
+},
+{
+"subscription_id": "sub_0177",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0178",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Basic x 11 (3 of 30 days)",
+"amount": 891
+},
+{
+"description": "Coupon SAVE10X3",
+"amount": -89
+}
+],
+"subtotal": 891,
+"discount": 89,
+"tax": 160,
+"total": 962
+},
+{
+"subscription_id": "sub_0179",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Basic x 50 (13 of 30 days)",
+"amount": 15600
+},
+{
+"description": "Coupon HALF6",
+"amount": -7800
+}
+],
+"subtotal": 15600,
+"discount": 7800,
+"tax": 1560,
+"total": 9360
+},
+{
+"subscription_id": "sub_0180",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 2600,
+"total": 15599
+},
+{
+"subscription_id": "sub_0181",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0182",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Basic x 10",
+"amount": 8100
+}
+],
+"subtotal": 8100,
+"discount": 0,
+"tax": 668,
+"total": 8768
+},
+{
+"subscription_id": "sub_0183",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Basic x 51",
+"amount": 36720
+}
+],
+"subtotal": 36720,
+"discount": 0,
+"tax": 2662,
+"total": 39382
+},
+{
+"subscription_id": "sub_0184",
+"period_start": "2023-09-01",
+"period_end": "2023-10-01",
+"lines": [
+{
+"description": "Team x 9",
+"amount": 44100
+}
+],
+"subtotal": 44100,
+"discount": 0,
+"tax": 8820,
+"total": 52920
+},
+{
+"subscription_id": "sub_0185",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0186",
+"period_start": "2023-06-01",
+"period_end": "2023-07-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+}
+],
+"subtotal": 900,
+"discount": 0,
+"tax": 180,
+"total": 1080
+},
+{
+"subscription_id": "sub_0187",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Basic x 11",
+"amount": 8910
+}
+],
+"subtotal": 8910,
+"discount": 0,
+"tax": 0,
+"total": 8910
+},
+{
+"subscription_id": "sub_0188",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Team x 9",
+"amount": 44100
+}
+],
+"subtotal": 44100,
+"discount": 0,
+"tax": 8820,
+"total": 52920
+},
+{
+"subscription_id": "sub_0189",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 1072,
+"total": 14071
+},
+{
+"subscription_id": "sub_0190",
+"period_start": "2024-06-01",
+"period_end": "2024-07-01",
+"lines": [
+{
+"description": "Team x 9 (19 of 30 days)",
+"amount": 27930
+},
+{
+"description": "Team x 10 (11 of 30 days)",
+"amount": 16170
+}
+],
+"subtotal": 44100,
+"discount": 0,
+"tax": 3197,
+"total": 47297
+},
+{
+"subscription_id": "sub_0191",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Pro x 9",
+"amount": 26100
+}
+],
+"subtotal": 26100,
+"discount": 0,
+"tax": 0,
+"total": 26100
+},
+{
+"subscription_id": "sub_0192",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [
+{
+"description": "Basic x 50",
+"amount": 36000
+}
+],
+"subtotal": 36000,
+"discount": 0,
+"tax": 3600,
+"total": 39600
+},
+{
+"subscription_id": "sub_0193",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Basic x 1 (14 of 30 days)",
+"amount": 420
+},
+{
+"description": "Basic x 9 (17 of 30 days)",
+"amount": 4590
+}
+],
+"subtotal": 5010,
+"discount": 0,
+"tax": 413,
+"total": 5423
+},
+{
+"subscription_id": "sub_0194",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Team x 5 (1 of 30 days)",
+"amount": 817
+}
+],
+"subtotal": 817,
+"discount": 0,
+"tax": 67,
+"total": 884
+},
+{
+"subscription_id": "sub_0195",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Scale x 9",
+"amount": 116991
+}
+],
+"subtotal": 116991,
+"discount": 0,
+"tax": 0,
+"total": 116991
+},
+{
+"subscription_id": "sub_0196",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Basic x 11",
+"amount": 8910
+}
+],
+"subtotal": 8910,
+"discount": 0,
+"tax": 646,
+"total": 9556
+},
+{
+"subscription_id": "sub_0197",
+"period_start": "2024-05-01",
+"period_end": "2024-06-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0198",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0199",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0200",
+"period_start": "2025-11-01",
+"period_end": "2025-12-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0201",
+"period_start": "2025-11-01",
+"period_end": "2025-12-01",
+"lines": [
+{
+"description": "Team x 11",
+"amount": 48510
+}
+],
+"subtotal": 48510,
+"discount": 0,
+"tax": 0,
+"total": 48510
+},
+{
+"subscription_id": "sub_0202",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Basic x 3",
+"amount": 2700
+}
+],
+"subtotal": 2700,
+"discount": 0,
+"tax": 270,
+"total": 2970
+},
+{
+"subscription_id": "sub_0203",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Basic x 50",
+"amount": 36000
+}
+],
+"subtotal": 36000,
+"discount": 0,
+"tax": 7200,
+"total": 43200
+},
+{
+"subscription_id": "sub_0204",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Scale x 1 (10 of 30 days)",
+"amount": 4333
+}
+],
+"subtotal": 4333,
+"discount": 0,
+"tax": 314,
+"total": 4647
+},
+{
+"subscription_id": "sub_0205",
+"period_start": "2025-02-01",
+"period_end": "2025-03-01",
+"lines": [
+{
+"description": "Scale x 3 (6 of 30 days)",
+"amount": 7799
+},
+{
+"description": "Coupon SAVE10X3",
+"amount": -780
+}
+],
+"subtotal": 7799,
+"discount": 780,
+"tax": 509,
+"total": 7528
+},
+{
+"subscription_id": "sub_0206",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Scale x 11",
+"amount": 128689
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -19303
+}
+],
+"subtotal": 128689,
+"discount": 19303,
+"tax": 7930,
+"total": 117316
+},
+{
+"subscription_id": "sub_0207",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Team x 50",
+"amount": 196000
+}
+],
+"subtotal": 196000,
+"discount": 0,
+"tax": 0,
+"total": 196000
+},
+{
+"subscription_id": "sub_0208",
+"period_start": "2024-08-01",
+"period_end": "2024-09-01",
+"lines": [
+{
+"description": "Team x 11",
+"amount": 48510
+}
+],
+"subtotal": 48510,
+"discount": 0,
+"tax": 3517,
+"total": 52027
+},
+{
+"subscription_id": "sub_0209",
+"period_start": "2025-11-01",
+"period_end": "2025-12-01",
+"lines": [
+{
+"description": "Pro x 11",
+"amount": 28710
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -4307
+}
+],
+"subtotal": 28710,
+"discount": 4307,
+"tax": 0,
+"total": 24403
+},
+{
+"subscription_id": "sub_0210",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Team x 1",
+"amount": 4900
+}
+],
+"subtotal": 4900,
+"discount": 0,
+"tax": 490,
+"total": 5390
+},
+{
+"subscription_id": "sub_0211",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0212",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Scale x 5",
+"amount": 64995
+}
+],
+"subtotal": 64995,
+"discount": 0,
+"tax": 0,
+"total": 64995
+},
+{
+"subscription_id": "sub_0213",
+"period_start": "2024-03-01",
+"period_end": "2024-04-01",
+"lines": [
+{
+"description": "Basic x 5",
+"amount": 4500
+}
+],
+"subtotal": 4500,
+"discount": 0,
+"tax": 450,
+"total": 4950
+},
+{
+"subscription_id": "sub_0214",
+"period_start": "2024-08-01",
+"period_end": "2024-09-01",
+"lines": [
+{
+"description": "Team x 49",
+"amount": 216090
+}
+],
+"subtotal": 216090,
+"discount": 0,
+"tax": 21609,
+"total": 237699
+},
+{
+"subscription_id": "sub_0215",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Scale x 51",
+"amount": 530349
+}
+],
+"subtotal": 530349,
+"discount": 0,
+"tax": 38450,
+"total": 568799
+},
+{
+"subscription_id": "sub_0216",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Basic x 25",
+"amount": 20250
+}
+],
+"subtotal": 20250,
+"discount": 0,
+"tax": 1671,
+"total": 21921
+},
+{
+"subscription_id": "sub_0217",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Basic x 9",
+"amount": 8100
+}
+],
+"subtotal": 8100,
+"discount": 0,
+"tax": 0,
+"total": 8100
+},
+{
+"subscription_id": "sub_0218",
+"period_start": "2023-05-01",
+"period_end": "2023-06-01",
+"lines": [
+{
+"description": "Team x 1",
+"amount": 4900
+},
+{
+"description": "Coupon BIGCREDIT",
+"amount": -4900
+}
+],
+"subtotal": 4900,
+"discount": 4900,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0219",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Team x 1",
+"amount": 4900
+}
+],
+"subtotal": 4900,
+"discount": 0,
+"tax": 404,
+"total": 5304
+},
+{
+"subscription_id": "sub_0220",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Team x 3",
+"amount": 14700
+}
+],
+"subtotal": 14700,
+"discount": 0,
+"tax": 0,
+"total": 14700
+},
+{
+"subscription_id": "sub_0221",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0222",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Team x 10",
+"amount": 44100
+}
+],
+"subtotal": 44100,
+"discount": 0,
+"tax": 3197,
+"total": 47297
+},
+{
+"subscription_id": "sub_0223",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Basic x 9",
+"amount": 8100
+}
+],
+"subtotal": 8100,
+"discount": 0,
+"tax": 1620,
+"total": 9720
+},
+{
+"subscription_id": "sub_0224",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Basic x 50",
+"amount": 36000
+}
+],
+"subtotal": 36000,
+"discount": 0,
+"tax": 3600,
+"total": 39600
+},
+{
+"subscription_id": "sub_0225",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Scale x 9",
+"amount": 116991
+},
+{
+"description": "Coupon HALF6",
+"amount": -58496
+}
+],
+"subtotal": 116991,
+"discount": 58496,
+"tax": 4241,
+"total": 62736
+},
+{
+"subscription_id": "sub_0226",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0227",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Team x 9",
+"amount": 44100
+}
+],
+"subtotal": 44100,
+"discount": 0,
+"tax": 4410,
+"total": 48510
+},
+{
+"subscription_id": "sub_0228",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0229",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0230",
+"period_start": "2025-08-01",
+"period_end": "2025-09-01",
+"lines": [
+{
+"description": "Scale x 49",
+"amount": 573251
+}
+],
+"subtotal": 573251,
+"discount": 0,
+"tax": 57325,
+"total": 630576
+},
+{
+"subscription_id": "sub_0231",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Basic x 50",
+"amount": 36000
+}
+],
+"subtotal": 36000,
+"discount": 0,
+"tax": 0,
+"total": 36000
+},
+{
+"subscription_id": "sub_0232",
+"period_start": "2024-11-01",
+"period_end": "2024-12-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -1950
+}
+],
+"subtotal": 12999,
+"discount": 1950,
+"tax": 912,
+"total": 11961
+},
+{
+"subscription_id": "sub_0233",
+"period_start": "2024-04-01",
+"period_end": "2024-05-01",
+"lines": [
+{
+"description": "Scale x 51",
+"amount": 530349
+}
+],
+"subtotal": 530349,
+"discount": 0,
+"tax": 38450,
+"total": 568799
+},
+{
+"subscription_id": "sub_0234",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Scale x 120",
+"amount": 1247880
+}
+],
+"subtotal": 1247880,
+"discount": 0,
+"tax": 0,
+"total": 1247880
+},
+{
+"subscription_id": "sub_0235",
+"period_start": "2025-04-01",
+"period_end": "2025-05-01",
+"lines": [
+{
+"description": "Pro x 2",
+"amount": 5800
+}
+],
+"subtotal": 5800,
+"discount": 0,
+"tax": 479,
+"total": 6279
+},
+{
+"subscription_id": "sub_0236",
+"period_start": "2023-12-01",
+"period_end": "2024-01-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+},
+{
+"description": "Coupon HALF6",
+"amount": -450
+}
+],
+"subtotal": 900,
+"discount": 450,
+"tax": 90,
+"total": 540
+},
+{
+"subscription_id": "sub_0237",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Basic x 9",
+"amount": 8100
+}
+],
+"subtotal": 8100,
+"discount": 0,
+"tax": 810,
+"total": 8910
+},
+{
+"subscription_id": "sub_0238",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0239",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Scale x 5",
+"amount": 64995
+},
+{
+"description": "Coupon HALF6",
+"amount": -32498
+}
+],
+"subtotal": 64995,
+"discount": 32498,
+"tax": 0,
+"total": 32497
+},
+{
+"subscription_id": "sub_0240",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+},
+{
+"description": "Coupon HALF6",
+"amount": -450
+}
+],
+"subtotal": 900,
+"discount": 450,
+"tax": 33,
+"total": 483
+},
+{
+"subscription_id": "sub_0241",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Basic x 25",
+"amount": 20250
+}
+],
+"subtotal": 20250,
+"discount": 0,
+"tax": 0,
+"total": 20250
+},
+{
+"subscription_id": "sub_0242",
+"period_start": "2025-01-01",
+"period_end": "2025-02-01",
+"lines": [
+{
+"description": "Basic x 3",
+"amount": 2700
+}
+],
+"subtotal": 2700,
+"discount": 0,
+"tax": 223,
+"total": 2923
+},
+{
+"subscription_id": "sub_0243",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 1300,
+"total": 14299
+},
+{
+"subscription_id": "sub_0244",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0245",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Scale x 2",
+"amount": 25998
+}
+],
+"subtotal": 25998,
+"discount": 0,
+"tax": 5200,
+"total": 31198
+},
+{
+"subscription_id": "sub_0246",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [
+{
+"description": "Basic x 11",
+"amount": 8910
+}
+],
+"subtotal": 8910,
+"discount": 0,
+"tax": 646,
+"total": 9556
+},
+{
+"subscription_id": "sub_0247",
+"period_start": "2025-11-01",
+"period_end": "2025-12-01",
+"lines": [
+{
+"description": "Basic x 2",
+"amount": 1800
+}
+],
+"subtotal": 1800,
+"discount": 0,
+"tax": 131,
+"total": 1931
+},
+{
+"subscription_id": "sub_0248",
+"period_start": "2024-12-01",
+"period_end": "2025-01-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0249",
+"period_start": "2023-08-01",
+"period_end": "2023-09-01",
+"lines": [
+{
+"description": "Team x 49",
+"amount": 216090
+}
+],
+"subtotal": 216090,
+"discount": 0,
+"tax": 0,
+"total": 216090
+},
+{
+"subscription_id": "sub_0250",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Team x 2",
+"amount": 9800
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -1470
+}
+],
+"subtotal": 9800,
+"discount": 1470,
+"tax": 604,
+"total": 8934
+},
+{
+"subscription_id": "sub_0251",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Pro x 51",
+"amount": 118320
+}
+],
+"subtotal": 118320,
+"discount": 0,
+"tax": 23664,
+"total": 141984
+},
+{
+"subscription_id": "sub_0252",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Trial: Scale x 1 (15 days)",
+"amount": 0
+},
+{
+"description": "Scale x 1 (16 of 30 days)",
+"amount": 6933
+},
+{
+"description": "Coupon HALF6",
+"amount": -3467
+}
+],
+"subtotal": 6933,
+"discount": 3467,
+"tax": 251,
+"total": 3717
+},
+{
+"subscription_id": "sub_0253",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+}
+],
+"subtotal": 900,
+"discount": 0,
+"tax": 0,
+"total": 900
+},
+{
+"subscription_id": "sub_0254",
+"period_start": "2023-11-01",
+"period_end": "2023-12-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0255",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Pro x 5",
+"amount": 14500
+}
+],
+"subtotal": 14500,
+"discount": 0,
+"tax": 1196,
+"total": 15696
+},
+{
+"subscription_id": "sub_0256",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+}
+],
+"subtotal": 900,
+"discount": 0,
+"tax": 180,
+"total": 1080
+},
+{
+"subscription_id": "sub_0257",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Basic x 5",
+"amount": 4500
+}
+],
+"subtotal": 4500,
+"discount": 0,
+"tax": 450,
+"total": 4950
+},
+{
+"subscription_id": "sub_0258",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Basic x 11 (3 of 30 days)",
+"amount": 891
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -134
+}
+],
+"subtotal": 891,
+"discount": 134,
+"tax": 0,
+"total": 757
+},
+{
+"subscription_id": "sub_0259",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Team x 11",
+"amount": 48510
+}
+],
+"subtotal": 48510,
+"discount": 0,
+"tax": 4851,
+"total": 53361
+},
+{
+"subscription_id": "sub_0260",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Basic x 3",
+"amount": 2700
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -405
+}
+],
+"subtotal": 2700,
+"discount": 405,
+"tax": 230,
+"total": 2525
+},
+{
+"subscription_id": "sub_0261",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Basic x 5",
+"amount": 4500
+},
+{
+"description": "Coupon HALF6",
+"amount": -2250
+}
+],
+"subtotal": 4500,
+"discount": 2250,
+"tax": 163,
+"total": 2413
+},
+{
+"subscription_id": "sub_0262",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0263",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Basic x 120",
+"amount": 86400
+}
+],
+"subtotal": 86400,
+"discount": 0,
+"tax": 8640,
+"total": 95040
+},
+{
+"subscription_id": "sub_0264",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Pro x 11",
+"amount": 28710
+}
+],
+"subtotal": 28710,
+"discount": 0,
+"tax": 0,
+"total": 28710
+},
+{
+"subscription_id": "sub_0265",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Team x 51",
+"amount": 199920
+}
+],
+"subtotal": 199920,
+"discount": 0,
+"tax": 19992,
+"total": 219912
+},
+{
+"subscription_id": "sub_0266",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Basic x 50",
+"amount": 36000
+}
+],
+"subtotal": 36000,
+"discount": 0,
+"tax": 2970,
+"total": 38970
+},
+{
+"subscription_id": "sub_0267",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0268",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Setup fee: Team",
+"amount": 9900
+},
+{
+"description": "Team x 11 (8 of 30 days)",
+"amount": 12936
+},
+{
+"description": "Coupon SAVE10X3",
+"amount": -2284
+}
+],
+"subtotal": 22836,
+"discount": 2284,
+"tax": 2055,
+"total": 22607
+},
+{
+"subscription_id": "sub_0269",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Trial: Pro x 49 (1 days)",
+"amount": 0
+}
+],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0270",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0271",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Pro x 50",
+"amount": 116000
+}
+],
+"subtotal": 116000,
+"discount": 0,
+"tax": 11600,
+"total": 127600
+},
+{
+"subscription_id": "sub_0272",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Basic x 3 (7 of 30 days)",
+"amount": 630
+},
+{
+"description": "Basic x 10 (24 of 30 days)",
+"amount": 6480
+}
+],
+"subtotal": 7110,
+"discount": 0,
+"tax": 0,
+"total": 7110
+},
+{
+"subscription_id": "sub_0273",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Scale x 3",
+"amount": 38997
+}
+],
+"subtotal": 38997,
+"discount": 0,
+"tax": 7799,
+"total": 46796
+},
+{
+"subscription_id": "sub_0274",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Team x 2 (24 of 30 days)",
+"amount": 7840
+}
+],
+"subtotal": 7840,
+"discount": 0,
+"tax": 568,
+"total": 8408
+},
+{
+"subscription_id": "sub_0275",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Basic x 25",
+"amount": 20250
+}
+],
+"subtotal": 20250,
+"discount": 0,
+"tax": 1671,
+"total": 21921
+},
+{
+"subscription_id": "sub_0276",
+"period_start": "2024-01-01",
+"period_end": "2024-02-01",
+"lines": [
+{
+"description": "Pro x 11 (9 of 30 days)",
+"amount": 8613
+},
+{
+"description": "Coupon BIGCREDIT",
+"amount": -8613
+}
+],
+"subtotal": 8613,
+"discount": 8613,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0277",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Scale x 11",
+"amount": 128689
+}
+],
+"subtotal": 128689,
+"discount": 0,
+"tax": 0,
+"total": 128689
+},
+{
+"subscription_id": "sub_0278",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Basic x 10",
+"amount": 8100
+},
+{
+"description": "Coupon BIGCREDIT",
+"amount": -8100
+}
+],
+"subtotal": 8100,
+"discount": 8100,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0279",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Scale x 49",
+"amount": 573251
+}
+],
+"subtotal": 573251,
+"discount": 0,
+"tax": 47293,
+"total": 620544
+},
+{
+"subscription_id": "sub_0280",
+"period_start": "2025-03-01",
+"period_end": "2025-04-01",
+"lines": [
+{
+"description": "Pro x 11",
+"amount": 28710
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -4307
+}
+],
+"subtotal": 28710,
+"discount": 4307,
+"tax": 1769,
+"total": 26172
+},
+{
+"subscription_id": "sub_0281",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Pro x 1",
+"amount": 2900
+}
+],
+"subtotal": 2900,
+"discount": 0,
+"tax": 0,
+"total": 2900
+},
+{
+"subscription_id": "sub_0282",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0283",
+"period_start": "2023-12-01",
+"period_end": "2024-01-01",
+"lines": [
+{
+"description": "Setup fee: Team",
+"amount": 9900
+},
+{
+"description": "Trial: Team x 11 (25 days)",
+"amount": 0
+},
+{
+"description": "Team x 11 (3 of 30 days)",
+"amount": 4851
+},
+{
+"description": "Coupon FIVEOFF",
+"amount": -500
+}
+],
+"subtotal": 14751,
+"discount": 500,
+"tax": 1425,
+"total": 15676
+},
+{
+"subscription_id": "sub_0284",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0285",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Basic x 5",
+"amount": 4500
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -675
+}
+],
+"subtotal": 4500,
+"discount": 675,
+"tax": 316,
+"total": 4141
+},
+{
+"subscription_id": "sub_0286",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Team x 5",
+"amount": 24500
+}
+],
+"subtotal": 24500,
+"discount": 0,
+"tax": 1776,
+"total": 26276
+},
+{
+"subscription_id": "sub_0287",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+}
+],
+"subtotal": 900,
+"discount": 0,
+"tax": 65,
+"total": 965
+},
+{
+"subscription_id": "sub_0288",
+"period_start": "2025-04-01",
+"period_end": "2025-05-01",
+"lines": [
+{
+"description": "Scale x 3",
+"amount": 38997
+}
+],
+"subtotal": 38997,
+"discount": 0,
+"tax": 7799,
+"total": 46796
+},
+{
+"subscription_id": "sub_0289",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Team x 51",
+"amount": 199920
+}
+],
+"subtotal": 199920,
+"discount": 0,
+"tax": 14494,
+"total": 214414
+},
+{
+"subscription_id": "sub_0290",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Basic x 51",
+"amount": 36720
+}
+],
+"subtotal": 36720,
+"discount": 0,
+"tax": 0,
+"total": 36720
+},
+{
+"subscription_id": "sub_0291",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Scale x 11",
+"amount": 128689
+}
+],
+"subtotal": 128689,
+"discount": 0,
+"tax": 25738,
+"total": 154427
+},
+{
+"subscription_id": "sub_0292",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+}
+],
+"subtotal": 900,
+"discount": 0,
+"tax": 0,
+"total": 900
+},
+{
+"subscription_id": "sub_0293",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Scale x 50",
+"amount": 519950
+},
+{
+"description": "Coupon SAVE10X3",
+"amount": -51995
+}
+],
+"subtotal": 519950,
+"discount": 51995,
+"tax": 46796,
+"total": 514751
+},
+{
+"subscription_id": "sub_0294",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Pro x 49 (18 of 30 days)",
+"amount": 76734
+},
+{
+"description": "Pro x 10 (13 of 30 days)",
+"amount": 11310
+}
+],
+"subtotal": 88044,
+"discount": 0,
+"tax": 0,
+"total": 88044
+},
+{
+"subscription_id": "sub_0295",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Pro x 3",
+"amount": 8700
+}
+],
+"subtotal": 8700,
+"discount": 0,
+"tax": 718,
+"total": 9418
+},
+{
+"subscription_id": "sub_0296",
+"period_start": "2025-06-01",
+"period_end": "2025-07-01",
+"lines": [
+{
+"description": "Scale x 11",
+"amount": 128689
+}
+],
+"subtotal": 128689,
+"discount": 0,
+"tax": 10617,
+"total": 139306
+},
+{
+"subscription_id": "sub_0297",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Basic x 120",
+"amount": 86400
+}
+],
+"subtotal": 86400,
+"discount": 0,
+"tax": 6264,
+"total": 92664
+},
+{
+"subscription_id": "sub_0298",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [
+{
+"description": "Basic x 2",
+"amount": 1800
+}
+],
+"subtotal": 1800,
+"discount": 0,
+"tax": 180,
+"total": 1980
+},
+{
+"subscription_id": "sub_0299",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Pro x 120",
+"amount": 278400
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -41760
+}
+],
+"subtotal": 278400,
+"discount": 41760,
+"tax": 17156,
+"total": 253796
+},
+{
+"subscription_id": "sub_0300",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+},
+{
+"description": "Coupon HALF6",
+"amount": -450
+}
+],
+"subtotal": 900,
+"discount": 450,
+"tax": 37,
+"total": 487
+},
+{
+"subscription_id": "sub_0301",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Scale x 9",
+"amount": 116991
+}
+],
+"subtotal": 116991,
+"discount": 0,
+"tax": 8482,
+"total": 125473
+},
+{
+"subscription_id": "sub_0302",
+"period_start": "2026-03-01",
+"period_end": "2026-04-01",
+"lines": [
+{
+"description": "Basic x 11",
+"amount": 8910
+}
+],
+"subtotal": 8910,
+"discount": 0,
+"tax": 1782,
+"total": 10692
+},
+{
+"subscription_id": "sub_0303",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Basic x 49 (14 of 30 days)",
+"amount": 18522
+},
+{
+"description": "Pro x 49 (17 of 30 days)",
+"amount": 72471
+},
+{
+"description": "Coupon HALF6",
+"amount": -45497
+}
+],
+"subtotal": 90993,
+"discount": 45497,
+"tax": 9099,
+"total": 54595
+},
+{
+"subscription_id": "sub_0304",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Pro x 1",
+"amount": 2900
+}
+],
+"subtotal": 2900,
+"discount": 0,
+"tax": 210,
+"total": 3110
+},
+{
+"subscription_id": "sub_0305",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Scale x 50",
+"amount": 519950
+}
+],
+"subtotal": 519950,
+"discount": 0,
+"tax": 0,
+"total": 519950
+},
+{
+"subscription_id": "sub_0306",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Basic x 3",
+"amount": 2700
+}
+],
+"subtotal": 2700,
+"discount": 0,
+"tax": 270,
+"total": 2970
+},
+{
+"subscription_id": "sub_0307",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0308",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Setup fee: Team",
+"amount": 9900
+},
+{
+"description": "Trial: Team x 1 (16 days)",
+"amount": 0
+}
+],
+"subtotal": 9900,
+"discount": 0,
+"tax": 1980,
+"total": 11880
+},
+{
+"subscription_id": "sub_0309",
+"period_start": "2025-05-01",
+"period_end": "2025-06-01",
+"lines": [
+{
+"description": "Scale x 25",
+"amount": 292475
+}
+],
+"subtotal": 292475,
+"discount": 0,
+"tax": 58495,
+"total": 350970
+},
+{
+"subscription_id": "sub_0310",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Basic x 9",
+"amount": 8100
+}
+],
+"subtotal": 8100,
+"discount": 0,
+"tax": 0,
+"total": 8100
+},
+{
+"subscription_id": "sub_0311",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0312",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Scale x 25",
+"amount": 292475
+}
+],
+"subtotal": 292475,
+"discount": 0,
+"tax": 24129,
+"total": 316604
+},
+{
+"subscription_id": "sub_0313",
+"period_start": "2025-08-01",
+"period_end": "2025-09-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0314",
+"period_start": "2024-02-01",
+"period_end": "2024-03-01",
+"lines": [
+{
+"description": "Basic x 11",
+"amount": 8910
+}
+],
+"subtotal": 8910,
+"discount": 0,
+"tax": 646,
+"total": 9556
+},
+{
+"subscription_id": "sub_0315",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Scale x 50",
+"amount": 519950
+}
+],
+"subtotal": 519950,
+"discount": 0,
+"tax": 37696,
+"total": 557646
+},
+{
+"subscription_id": "sub_0316",
+"period_start": "2024-03-01",
+"period_end": "2024-04-01",
+"lines": [
+{
+"description": "Trial: Basic x 1 (6 days)",
+"amount": 0
+},
+{
+"description": "Trial: Team x 1 (14 days)",
+"amount": 0
+},
+{
+"description": "Team x 1 (11 of 30 days)",
+"amount": 1797
+},
+{
+"description": "Coupon SAVE10X3",
+"amount": -180
+}
+],
+"subtotal": 1797,
+"discount": 180,
+"tax": 133,
+"total": 1750
+},
+{
+"subscription_id": "sub_0317",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [
+{
+"description": "Pro x 9",
+"amount": 26100
+}
+],
+"subtotal": 26100,
+"discount": 0,
+"tax": 5220,
+"total": 31320
+},
+{
+"subscription_id": "sub_0318",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Team x 51",
+"amount": 199920
+}
+],
+"subtotal": 199920,
+"discount": 0,
+"tax": 39984,
+"total": 239904
+},
+{
+"subscription_id": "sub_0319",
+"period_start": "2023-12-01",
+"period_end": "2024-01-01",
+"lines": [
+{
+"description": "Pro x 5 (26 of 30 days)",
+"amount": 12567
+},
+{
+"description": "Coupon HALF6",
+"amount": -6284
+}
+],
+"subtotal": 12567,
+"discount": 6284,
+"tax": 456,
+"total": 6739
+},
+{
+"subscription_id": "sub_0320",
+"period_start": "2025-11-01",
+"period_end": "2025-12-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0321",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Pro x 51",
+"amount": 118320
+}
+],
+"subtotal": 118320,
+"discount": 0,
+"tax": 11832,
+"total": 130152
+},
+{
+"subscription_id": "sub_0322",
+"period_start": "2024-08-01",
+"period_end": "2024-09-01",
+"lines": [
+{
+"description": "Pro x 50",
+"amount": 116000
+}
+],
+"subtotal": 116000,
+"discount": 0,
+"tax": 9570,
+"total": 125570
+},
+{
+"subscription_id": "sub_0323",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Basic x 9 (21 of 30 days)",
+"amount": 5670
+}
+],
+"subtotal": 5670,
+"discount": 0,
+"tax": 1134,
+"total": 6804
+},
+{
+"subscription_id": "sub_0324",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Pro x 50",
+"amount": 116000
+}
+],
+"subtotal": 116000,
+"discount": 0,
+"tax": 9570,
+"total": 125570
+},
+{
+"subscription_id": "sub_0325",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0326",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 1072,
+"total": 14071
+},
+{
+"subscription_id": "sub_0327",
+"period_start": "2024-07-01",
+"period_end": "2024-08-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0328",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Scale x 120",
+"amount": 1247880
+}
+],
+"subtotal": 1247880,
+"discount": 0,
+"tax": 102950,
+"total": 1350830
+},
+{
+"subscription_id": "sub_0329",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Basic x 5",
+"amount": 4500
+}
+],
+"subtotal": 4500,
+"discount": 0,
+"tax": 450,
+"total": 4950
+},
+{
+"subscription_id": "sub_0330",
+"period_start": "2023-12-01",
+"period_end": "2024-01-01",
+"lines": [
+{
+"description": "Scale x 49",
+"amount": 573251
+}
+],
+"subtotal": 573251,
+"discount": 0,
+"tax": 0,
+"total": 573251
+},
+{
+"subscription_id": "sub_0331",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0332",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0333",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0334",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Scale x 50",
+"amount": 519950
+}
+],
+"subtotal": 519950,
+"discount": 0,
+"tax": 37696,
+"total": 557646
+},
+{
+"subscription_id": "sub_0335",
+"period_start": "2024-07-01",
+"period_end": "2024-08-01",
+"lines": [
+{
+"description": "Basic x 2",
+"amount": 1800
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -270
+}
+],
+"subtotal": 1800,
+"discount": 270,
+"tax": 306,
+"total": 1836
+},
+{
+"subscription_id": "sub_0336",
+"period_start": "2023-12-01",
+"period_end": "2024-01-01",
+"lines": [
+{
+"description": "Basic x 2",
+"amount": 1800
+}
+],
+"subtotal": 1800,
+"discount": 0,
+"tax": 180,
+"total": 1980
+},
+{
+"subscription_id": "sub_0337",
+"period_start": "2025-04-01",
+"period_end": "2025-05-01",
+"lines": [
+{
+"description": "Team x 2",
+"amount": 9800
+}
+],
+"subtotal": 9800,
+"discount": 0,
+"tax": 711,
+"total": 10511
+},
+{
+"subscription_id": "sub_0338",
+"period_start": "2024-04-01",
+"period_end": "2024-05-01",
+"lines": [
+{
+"description": "Pro x 9",
+"amount": 26100
+}
+],
+"subtotal": 26100,
+"discount": 0,
+"tax": 2153,
+"total": 28253
+},
+{
+"subscription_id": "sub_0339",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [
+{
+"description": "Basic x 5 (24 of 30 days)",
+"amount": 3600
+},
+{
+"description": "Basic x 120 (7 of 30 days)",
+"amount": 20160
+}
+],
+"subtotal": 23760,
+"discount": 0,
+"tax": 1960,
+"total": 25720
+},
+{
+"subscription_id": "sub_0340",
+"period_start": "2024-11-01",
+"period_end": "2024-12-01",
+"lines": [
+{
+"description": "Scale x 9",
+"amount": 116991
+}
+],
+"subtotal": 116991,
+"discount": 0,
+"tax": 9652,
+"total": 126643
+},
+{
+"subscription_id": "sub_0341",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Team x 50",
+"amount": 196000
+}
+],
+"subtotal": 196000,
+"discount": 0,
+"tax": 39200,
+"total": 235200
+},
+{
+"subscription_id": "sub_0342",
+"period_start": "2024-05-01",
+"period_end": "2024-06-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0343",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Scale x 50",
+"amount": 519950
+}
+],
+"subtotal": 519950,
+"discount": 0,
+"tax": 0,
+"total": 519950
+},
+{
+"subscription_id": "sub_0344",
+"period_start": "2025-03-01",
+"period_end": "2025-04-01",
+"lines": [
+{
+"description": "Pro x 10",
+"amount": 26100
+}
+],
+"subtotal": 26100,
+"discount": 0,
+"tax": 1892,
+"total": 27992
+},
+{
+"subscription_id": "sub_0345",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Scale x 1 (15 of 30 days)",
+"amount": 6500
+},
+{
+"description": "Coupon HALF6",
+"amount": -3250
+}
+],
+"subtotal": 6500,
+"discount": 3250,
+"tax": 325,
+"total": 3575
+},
+{
+"subscription_id": "sub_0346",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Pro x 51",
+"amount": 118320
+}
+],
+"subtotal": 118320,
+"discount": 0,
+"tax": 23664,
+"total": 141984
+},
+{
+"subscription_id": "sub_0347",
+"period_start": "2024-08-01",
+"period_end": "2024-09-01",
+"lines": [
+{
+"description": "Pro x 49",
+"amount": 127890
+}
+],
+"subtotal": 127890,
+"discount": 0,
+"tax": 0,
+"total": 127890
+},
+{
+"subscription_id": "sub_0348",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Scale x 10",
+"amount": 116990
+}
+],
+"subtotal": 116990,
+"discount": 0,
+"tax": 11699,
+"total": 128689
+},
+{
+"subscription_id": "sub_0349",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Team x 51",
+"amount": 199920
+}
+],
+"subtotal": 199920,
+"discount": 0,
+"tax": 16493,
+"total": 216413
+},
+{
+"subscription_id": "sub_0350",
+"period_start": "2026-06-01",
+"period_end": "2026-07-01",
+"lines": [
+{
+"description": "Pro x 1",
+"amount": 2900
+}
+],
+"subtotal": 2900,
+"discount": 0,
+"tax": 0,
+"total": 2900
+},
+{
+"subscription_id": "sub_0351",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Setup fee: Team",
+"amount": 9900
+},
+{
+"description": "Trial: Team x 1 (18 days)",
+"amount": 0
+},
+{
+"description": "Coupon HALF6",
+"amount": -4950
+}
+],
+"subtotal": 9900,
+"discount": 4950,
+"tax": 359,
+"total": 5309
+},
+{
+"subscription_id": "sub_0352",
+"period_start": "2024-05-01",
+"period_end": "2024-06-01",
+"lines": [
+{
+"description": "Pro x 49",
+"amount": 127890
+}
+],
+"subtotal": 127890,
+"discount": 0,
+"tax": 12789,
+"total": 140679
+},
+{
+"subscription_id": "sub_0353",
+"period_start": "2025-01-01",
+"period_end": "2025-02-01",
+"lines": [
+{
+"description": "Scale x 10",
+"amount": 116990
+}
+],
+"subtotal": 116990,
+"discount": 0,
+"tax": 8482,
+"total": 125472
+},
+{
+"subscription_id": "sub_0354",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Team x 120",
+"amount": 470400
+}
+],
+"subtotal": 470400,
+"discount": 0,
+"tax": 0,
+"total": 470400
+},
+{
+"subscription_id": "sub_0355",
+"period_start": "2025-06-01",
+"period_end": "2025-07-01",
+"lines": [
+{
+"description": "Pro x 49",
+"amount": 127890
+},
+{
+"description": "Coupon HALF6",
+"amount": -63945
+}
+],
+"subtotal": 127890,
+"discount": 63945,
+"tax": 4636,
+"total": 68581
+},
+{
+"subscription_id": "sub_0356",
+"period_start": "2026-07-01",
+"period_end": "2026-08-01",
+"lines": [
+{
+"description": "Pro x 2",
+"amount": 5800
+}
+],
+"subtotal": 5800,
+"discount": 0,
+"tax": 479,
+"total": 6279
+},
+{
+"subscription_id": "sub_0357",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Pro x 1",
+"amount": 2900
+}
+],
+"subtotal": 2900,
+"discount": 0,
+"tax": 290,
+"total": 3190
+},
+{
+"subscription_id": "sub_0358",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Team x 51",
+"amount": 199920
+}
+],
+"subtotal": 199920,
+"discount": 0,
+"tax": 16493,
+"total": 216413
+},
+{
+"subscription_id": "sub_0359",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Scale x 11",
+"amount": 128689
+}
+],
+"subtotal": 128689,
+"discount": 0,
+"tax": 12869,
+"total": 141558
+},
+{
+"subscription_id": "sub_0360",
+"period_start": "2026-04-01",
+"period_end": "2026-05-01",
+"lines": [
+{
+"description": "Pro x 50 (26 of 30 days)",
+"amount": 100533
+},
+{
+"description": "Coupon BIGCREDIT",
+"amount": -50000
+}
+],
+"subtotal": 100533,
+"discount": 50000,
+"tax": 4169,
+"total": 54702
+},
+{
+"subscription_id": "sub_0361",
+"period_start": "2024-05-01",
+"period_end": "2024-06-01",
+"lines": [
+{
+"description": "Team x 11",
+"amount": 48510
+}
+],
+"subtotal": 48510,
+"discount": 0,
+"tax": 4002,
+"total": 52512
+},
+{
+"subscription_id": "sub_0362",
+"period_start": "2024-03-01",
+"period_end": "2024-04-01",
+"lines": [
+{
+"description": "Scale x 11",
+"amount": 128689
+},
+{
+"description": "Coupon HALF6",
+"amount": -64345
+}
+],
+"subtotal": 128689,
+"discount": 64345,
+"tax": 12869,
+"total": 77213
+},
+{
+"subscription_id": "sub_0363",
+"period_start": "2025-12-01",
+"period_end": "2026-01-01",
+"lines": [
+{
+"description": "Basic x 2",
+"amount": 1800
+}
+],
+"subtotal": 1800,
+"discount": 0,
+"tax": 180,
+"total": 1980
+},
+{
+"subscription_id": "sub_0364",
+"period_start": "2024-11-01",
+"period_end": "2024-12-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+}
+],
+"subtotal": 900,
+"discount": 0,
+"tax": 90,
+"total": 990
+},
+{
+"subscription_id": "sub_0365",
+"period_start": "2024-11-01",
+"period_end": "2024-12-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0366",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0367",
+"period_start": "2025-04-01",
+"period_end": "2025-05-01",
+"lines": [
+{
+"description": "Pro x 5 (7 of 30 days)",
+"amount": 3383
+},
+{
+"description": "Coupon SAVE10X3",
+"amount": -338
+}
+],
+"subtotal": 3383,
+"discount": 338,
+"tax": 221,
+"total": 3266
+},
+{
+"subscription_id": "sub_0368",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0369",
+"period_start": "2023-07-01",
+"period_end": "2023-08-01",
+"lines": [
+{
+"description": "Pro x 51",
+"amount": 118320
+},
+{
+"description": "Coupon HALF6",
+"amount": -59160
+}
+],
+"subtotal": 118320,
+"discount": 59160,
+"tax": 11832,
+"total": 70992
+},
+{
+"subscription_id": "sub_0370",
+"period_start": "2024-08-01",
+"period_end": "2024-09-01",
+"lines": [
+{
+"description": "Pro x 5",
+"amount": 14500
+}
+],
+"subtotal": 14500,
+"discount": 0,
+"tax": 1450,
+"total": 15950
+},
+{
+"subscription_id": "sub_0371",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Trial: Pro x 1 (3 days)",
+"amount": 0
+}
+],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0372",
+"period_start": "2025-06-01",
+"period_end": "2025-07-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+},
+{
+"description": "Coupon HALF6",
+"amount": -450
+}
+],
+"subtotal": 900,
+"discount": 450,
+"tax": 37,
+"total": 487
+},
+{
+"subscription_id": "sub_0373",
+"period_start": "2025-08-01",
+"period_end": "2025-09-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 0,
+"total": 12999
+},
+{
+"subscription_id": "sub_0374",
+"period_start": "2024-12-01",
+"period_end": "2025-01-01",
+"lines": [
+{
+"description": "Pro x 11",
+"amount": 28710
+}
+],
+"subtotal": 28710,
+"discount": 0,
+"tax": 2369,
+"total": 31079
+},
+{
+"subscription_id": "sub_0375",
+"period_start": "2026-02-01",
+"period_end": "2026-03-01",
+"lines": [
+{
+"description": "Basic x 25",
+"amount": 20250
+}
+],
+"subtotal": 20250,
+"discount": 0,
+"tax": 4050,
+"total": 24300
+},
+{
+"subscription_id": "sub_0376",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0377",
+"period_start": "2023-04-01",
+"period_end": "2023-05-01",
+"lines": [
+{
+"description": "Basic x 51",
+"amount": 36720
+},
+{
+"description": "Coupon HALF6",
+"amount": -18360
+}
+],
+"subtotal": 36720,
+"discount": 18360,
+"tax": 1331,
+"total": 19691
+},
+{
+"subscription_id": "sub_0378",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Scale x 9",
+"amount": 116991
+}
+],
+"subtotal": 116991,
+"discount": 0,
+"tax": 11699,
+"total": 128690
+},
+{
+"subscription_id": "sub_0379",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0380",
+"period_start": "2026-09-01",
+"period_end": "2026-10-01",
+"lines": [
+{
+"description": "Scale x 9",
+"amount": 116991
+}
+],
+"subtotal": 116991,
+"discount": 0,
+"tax": 0,
+"total": 116991
+},
+{
+"subscription_id": "sub_0381",
+"period_start": "2024-07-01",
+"period_end": "2024-08-01",
+"lines": [
+{
+"description": "Team x 1",
+"amount": 4900
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -735
+}
+],
+"subtotal": 4900,
+"discount": 735,
+"tax": 833,
+"total": 4998
+},
+{
+"subscription_id": "sub_0382",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [
+{
+"description": "Basic x 1",
+"amount": 900
+}
+],
+"subtotal": 900,
+"discount": 0,
+"tax": 74,
+"total": 974
+},
+{
+"subscription_id": "sub_0383",
+"period_start": "2024-05-01",
+"period_end": "2024-06-01",
+"lines": [
+{
+"description": "Team x 49",
+"amount": 216090
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -32414
+}
+],
+"subtotal": 216090,
+"discount": 32414,
+"tax": 36735,
+"total": 220411
+},
+{
+"subscription_id": "sub_0384",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Team x 10",
+"amount": 44100
+}
+],
+"subtotal": 44100,
+"discount": 0,
+"tax": 8820,
+"total": 52920
+},
+{
+"subscription_id": "sub_0385",
+"period_start": "2026-05-01",
+"period_end": "2026-06-01",
+"lines": [
+{
+"description": "Basic x 120",
+"amount": 86400
+}
+],
+"subtotal": 86400,
+"discount": 0,
+"tax": 17280,
+"total": 103680
+},
+{
+"subscription_id": "sub_0386",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Team x 3",
+"amount": 14700
+}
+],
+"subtotal": 14700,
+"discount": 0,
+"tax": 1470,
+"total": 16170
+},
+{
+"subscription_id": "sub_0387",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 1300,
+"total": 14299
+},
+{
+"subscription_id": "sub_0388",
+"period_start": "2025-03-01",
+"period_end": "2025-04-01",
+"lines": [
+{
+"description": "Team x 11",
+"amount": 48510
+}
+],
+"subtotal": 48510,
+"discount": 0,
+"tax": 0,
+"total": 48510
+},
+{
+"subscription_id": "sub_0389",
+"period_start": "2025-11-01",
+"period_end": "2025-12-01",
+"lines": [
+{
+"description": "Team x 2",
+"amount": 9800
+}
+],
+"subtotal": 9800,
+"discount": 0,
+"tax": 1960,
+"total": 11760
+},
+{
+"subscription_id": "sub_0390",
+"period_start": "2025-02-01",
+"period_end": "2025-03-01",
+"lines": [
+{
+"description": "Scale x 5",
+"amount": 64995
+}
+],
+"subtotal": 64995,
+"discount": 0,
+"tax": 6500,
+"total": 71495
+},
+{
+"subscription_id": "sub_0391",
+"period_start": "2025-07-01",
+"period_end": "2025-08-01",
+"lines": [
+{
+"description": "Scale x 120",
+"amount": 1247880
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -187182
+}
+],
+"subtotal": 1247880,
+"discount": 187182,
+"tax": 212140,
+"total": 1272838
+},
+{
+"subscription_id": "sub_0392",
+"period_start": "2025-05-01",
+"period_end": "2025-06-01",
+"lines": [
+{
+"description": "Team x 1 (18 of 30 days)",
+"amount": 2940
+}
+],
+"subtotal": 2940,
+"discount": 0,
+"tax": 588,
+"total": 3528
+},
+{
+"subscription_id": "sub_0393",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [
+{
+"description": "Scale x 11",
+"amount": 128689
+}
+],
+"subtotal": 128689,
+"discount": 0,
+"tax": 12869,
+"total": 141558
+},
+{
+"subscription_id": "sub_0394",
+"period_start": "2025-10-01",
+"period_end": "2025-11-01",
+"lines": [
+{
+"description": "Pro x 50",
+"amount": 116000
+},
+{
+"description": "Coupon LOYAL15",
+"amount": -17400
+}
+],
+"subtotal": 116000,
+"discount": 17400,
+"tax": 8135,
+"total": 106735
+},
+{
+"subscription_id": "sub_0395",
+"period_start": "2025-09-01",
+"period_end": "2025-10-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0396",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0397",
+"period_start": "2026-10-01",
+"period_end": "2026-11-01",
+"lines": [],
+"subtotal": 0,
+"discount": 0,
+"tax": 0,
+"total": 0
+},
+{
+"subscription_id": "sub_0398",
+"period_start": "2026-01-01",
+"period_end": "2026-02-01",
+"lines": [
+{
+"description": "Scale x 5",
+"amount": 64995
+}
+],
+"subtotal": 64995,
+"discount": 0,
+"tax": 5362,
+"total": 70357
+},
+{
+"subscription_id": "sub_0399",
+"period_start": "2026-08-01",
+"period_end": "2026-09-01",
+"lines": [
+{
+"description": "Scale x 1",
+"amount": 12999
+}
+],
+"subtotal": 12999,
+"discount": 0,
+"tax": 2600,
+"total": 15599
+}
+]

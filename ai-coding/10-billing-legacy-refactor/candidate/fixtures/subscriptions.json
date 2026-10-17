@@ -1,0 +1,22 @@
+[
+  {"id": "sub_0001", "customer_id": "cus_alma", "plan_id": "basic", "quantity": 1, "start": "2025-06-01", "tax_rate": "0.0825"},
+  {"id": "sub_0002", "customer_id": "cus_bram", "plan_id": "pro", "quantity": 3, "start": "2026-01-17", "coupon_id": "WELCOME20", "tax_rate": "0.2"},
+  {"id": "sub_0003", "customer_id": "cus_cleo", "plan_id": "team", "quantity": 10, "start": "2026-01-05", "trial_end": "2026-01-19", "tax_rate": "0.0725"},
+  {"id": "sub_0004", "customer_id": "cus_dara", "plan_id": "basic", "quantity": 2, "start": "2025-09-01", "tax_rate": "0.0825",
+   "events": [{"kind": "plan_change", "at": "2026-02-15", "plan_id": "pro"}]},
+  {"id": "sub_0005", "customer_id": "cus_eli", "plan_id": "pro", "quantity": 5, "start": "2025-03-01", "coupon_id": "LOYAL15", "tax_rate": "0.2",
+   "events": [{"kind": "quantity_change", "at": "2026-01-16", "quantity": 12}]},
+  {"id": "sub_0006", "customer_id": "cus_fynn", "plan_id": "scale", "quantity": 61, "start": "2025-12-01", "coupon_id": "HALF6", "tax_rate": "0.0825"},
+  {"id": "sub_0007", "customer_id": "cus_gia", "plan_id": "basic", "quantity": 1, "start": "2025-12-01", "coupon_id": "BIGCREDIT", "tax_rate": "0.0825"},
+  {"id": "sub_0008", "customer_id": "cus_hugo", "plan_id": "pro", "quantity": 4, "start": "2025-10-01", "tax_rate": "0.0825",
+   "events": [{"kind": "cancel", "at": "2026-02-10"}]},
+  {"id": "sub_0009", "customer_id": "cus_ines", "plan_id": "team", "quantity": 1, "start": "2026-02-01", "trial_end": "2026-03-03", "tax_rate": "0"},
+  {"id": "sub_0010", "customer_id": "cus_jon", "plan_id": "pro", "quantity": 1, "start": "2025-11-10", "coupon_id": "SAVE10X3", "tax_rate": "0.0825",
+   "events": [{"kind": "plan_change", "at": "2026-03-20", "plan_id": "basic"}]},
+  {"id": "sub_0011", "customer_id": "cus_kai", "plan_id": "scale", "quantity": 2, "start": "2025-12-12", "coupon_id": "FIVEOFF", "tax_rate": "0.2"},
+  {"id": "sub_0012", "customer_id": "cus_lena", "plan_id": "basic", "quantity": 0, "start": "2025-08-01", "tax_rate": "0.0725",
+   "events": [{"kind": "quantity_change", "at": "2026-02-02", "quantity": 3}]},
+  {"id": "sub_0013", "customer_id": "cus_milo", "plan_id": "pro", "quantity": 1, "start": "2026-06-01", "tax_rate": "0.0825"},
+  {"id": "sub_0014", "customer_id": "cus_nora", "plan_id": "basic", "quantity": 7, "start": "2023-05-01", "tax_rate": "0.1",
+   "events": [{"kind": "plan_change", "at": "2024-02-10", "plan_id": "team"}, {"kind": "quantity_change", "at": "2024-02-20", "quantity": 11}]}
+]
