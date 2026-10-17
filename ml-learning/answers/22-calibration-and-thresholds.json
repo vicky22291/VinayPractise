@@ -1,0 +1,464 @@
+{
+ "lab": "22",
+ "slug": "22-calibration-and-thresholds",
+ "level": "S",
+ "lane": "light",
+ "reference": "answers/22_calibration_and_thresholds_ref.py",
+ "script_sha256": "b10ee8078955727d",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "amount",
+   "seed": 0,
+   "wall_s": 1.9,
+   "lock": "light",
+   "maxrss_mb": 685,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "amount",
+   "seed": 1,
+   "wall_s": 1.7,
+   "lock": "light",
+   "maxrss_mb": 682,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "amount",
+   "seed": 2,
+   "wall_s": 1.9,
+   "lock": "light",
+   "maxrss_mb": 682,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 3.1,
+   "lock": "light",
+   "maxrss_mb": 811,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 4.1,
+   "lock": "light",
+   "maxrss_mb": 825,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 4.7,
+   "lock": "light",
+   "maxrss_mb": 792,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 2.3,
+   "lock": "light",
+   "maxrss_mb": 682,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 2.2,
+   "lock": "light",
+   "maxrss_mb": 682,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 2.1,
+   "lock": "light",
+   "maxrss_mb": 688,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 2.1,
+   "lock": "light",
+   "maxrss_mb": 575,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 2.6,
+   "lock": "light",
+   "maxrss_mb": 574,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 1.9,
+   "lock": "light",
+   "maxrss_mb": 577,
+   "n_result": 5,
+   "stale": false
+  }
+ ],
+ "values": {
+  "amount.net_flat": {
+   "mode": "amount",
+   "by_seed": {
+    "0": 3505,
+    "1": 8256.32,
+    "2": 9963.29
+   },
+   "unit": "dollars",
+   "value": 3505,
+   "spread": 6458.290000000001
+  },
+  "amount.net_aware": {
+   "mode": "amount",
+   "by_seed": {
+    "0": 3445.24,
+    "1": 8217.66,
+    "2": 9897.02
+   },
+   "unit": "dollars",
+   "value": 3445.24,
+   "spread": 6451.780000000001
+  },
+  "amount.net_gain": {
+   "mode": "amount",
+   "by_seed": {
+    "0": -59.7597,
+    "1": -38.6599,
+    "2": -66.2657
+   },
+   "unit": "dollars",
+   "value": -59.7597,
+   "spread": 27.605799999999995
+  },
+  "amount.declines_flat": {
+   "mode": "amount",
+   "by_seed": {
+    "0": 91,
+    "1": 99,
+    "2": 95
+   },
+   "unit": "count",
+   "value": 91,
+   "spread": 8
+  },
+  "amount.declines_aware": {
+   "mode": "amount",
+   "by_seed": {
+    "0": 83,
+    "1": 95,
+    "2": 89
+   },
+   "unit": "count",
+   "value": 83,
+   "spread": 12
+  },
+  "amount.changed": {
+   "mode": "amount",
+   "by_seed": {
+    "0": 8,
+    "1": 4,
+    "2": 6
+   },
+   "unit": "count",
+   "value": 8,
+   "spread": 4
+  },
+  "amount.changed_frauds": {
+   "mode": "amount",
+   "by_seed": {
+    "0": 4,
+    "1": 3,
+    "2": 4
+   },
+   "unit": "count",
+   "value": 4,
+   "spread": 1
+  },
+  "P1.mean_p": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0017368,
+    "1": 0.00188276,
+    "2": 0.00183574
+   },
+   "unit": "fraction",
+   "value": 0.0017368,
+   "spread": 0.0001459600000000001
+  },
+  "baseline.mean_p_legit": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.000671211,
+    "1": 0.000689234,
+    "2": 0.000637972
+   },
+   "unit": "fraction",
+   "value": 0.000671211,
+   "spread": 5.126200000000005e-05
+  },
+  "baseline.fraud_rate": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00172045,
+    "1": 0.00172045,
+    "2": 0.00172045
+   },
+   "unit": "fraction",
+   "value": 0.00172045,
+   "spread": 0.0
+  },
+  "baseline.threshold": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0387062,
+    "1": 0.0421405,
+    "2": 0.0384354
+   },
+   "unit": "probability",
+   "value": 0.0387062,
+   "spread": 0.003705099999999996
+  },
+  "baseline.decline_rate": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00200133,
+    "1": 0.00217689,
+    "2": 0.00200133
+   },
+   "unit": "fraction",
+   "value": 0.00200133,
+   "spread": 0.00017555999999999995
+  },
+  "baseline.false_declines": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 34,
+    "1": 37,
+    "2": 31
+   },
+   "unit": "count",
+   "value": 34,
+   "spread": 6
+  },
+  "baseline.frauds_caught": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 80,
+    "1": 87,
+    "2": 83
+   },
+   "unit": "count",
+   "value": 80,
+   "spread": 7
+  },
+  "baseline.brier": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.000728463,
+    "1": 0.000574138,
+    "2": 0.000571501
+   },
+   "unit": "brier",
+   "value": 0.000728463,
+   "spread": 0.00015696200000000007
+  },
+  "P3.decline_rate": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0103578,
+    "1": 0.00886556,
+    "2": 0.00867245
+   },
+   "unit": "fraction",
+   "value": 0.0103578,
+   "spread": 0.0016853500000000004
+  },
+  "P3.false_declines": {
+   "mode": "break",
+   "by_seed": {
+    "0": 505,
+    "1": 415,
+    "2": 404
+   },
+   "unit": "count",
+   "value": 505,
+   "spread": 101
+  },
+  "break.frauds_caught": {
+   "mode": "break",
+   "by_seed": {
+    "0": 85,
+    "1": 90,
+    "2": 90
+   },
+   "unit": "count",
+   "value": 85,
+   "spread": 5
+  },
+  "break.decline_rate_corrected": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.00214178,
+    "1": 0.00242267,
+    "2": 0.002054
+   },
+   "unit": "fraction",
+   "value": 0.00214178,
+   "spread": 0.0003686700000000002
+  },
+  "break.false_declines_corrected": {
+   "mode": "break",
+   "by_seed": {
+    "0": 43,
+    "1": 50,
+    "2": 34
+   },
+   "unit": "count",
+   "value": 43,
+   "spread": 16
+  },
+  "break.frauds_caught_corrected": {
+   "mode": "break",
+   "by_seed": {
+    "0": 79,
+    "1": 88,
+    "2": 83
+   },
+   "unit": "count",
+   "value": 79,
+   "spread": 9
+  },
+  "break.new_fd_gap": {
+   "mode": "break",
+   "by_seed": {
+    "0": 6.18394,
+    "1": 5.68828,
+    "2": 6.25137
+   },
+   "unit": "ratio",
+   "value": 6.18394,
+   "spread": 0.5630899999999999
+  },
+  "break.new_fd_lift": {
+   "mode": "break",
+   "by_seed": {
+    "0": 12.2305,
+    "1": 9.92798,
+    "2": 9.37861
+   },
+   "unit": "ratio",
+   "value": 12.2305,
+   "spread": 2.851889999999999
+  },
+  "P2.mean_p": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.00470345,
+    "1": 0.00509321,
+    "2": 0.00480902
+   },
+   "unit": "fraction",
+   "value": 0.00470345,
+   "spread": 0.0003897600000000003
+  },
+  "change.mean_p_legit": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.00333985,
+    "1": 0.00361443,
+    "2": 0.00337744
+   },
+   "unit": "fraction",
+   "value": 0.00333985,
+   "spread": 0.00027457999999999996
+  },
+  "change.mean_p_corrected": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.00188795,
+    "1": 0.00198063,
+    "2": 0.00182854
+   },
+   "unit": "fraction",
+   "value": 0.00188795,
+   "spread": 0.00015209000000000012
+  },
+  "change.brier": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.00086552,
+    "1": 0.000757481,
+    "2": 0.000585561
+   },
+   "unit": "brier",
+   "value": 0.00086552,
+   "spread": 0.0002799590000000001
+  },
+  "change.brier_corrected": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.000697716,
+    "1": 0.000522793,
+    "2": 0.00048383
+   },
+   "unit": "brier",
+   "value": 0.000697716,
+   "spread": 0.00021388600000000005
+  }
+ },
+ "effects": {
+  "P2.mean_p:P1.mean_p": {
+   "effect": 0.0030501266666666665,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0003897600000000003,
+   "ok": true
+  },
+  "P3.decline_rate:baseline.decline_rate": {
+   "effect": 0.007238753333333334,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0016853500000000004,
+   "ok": true
+  },
+  "P3.false_declines:baseline.false_declines": {
+   "effect": 407.3333333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 101,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Threshold set on the champion's training scores, not the test scores (knob change for the 2x rule; see Build notes in the .md). --amount also ran at seeds 1 and 2. 29 features: OpenML keeps Time as a row id."
+}

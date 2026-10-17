@@ -1,0 +1,30 @@
+===== baseline (seed 0, 14.8 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/06_leak_through_preprocessing_ref.py --baseline --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 ab05abea350be66a
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT baseline.mae_numeric_only=17513.1 unit=usd seed=0
+RESULT P1.mae_infold=16545.1 unit=usd seed=0
+
+===== break (seed 0, 10.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/06_leak_through_preprocessing_ref.py --break --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 ab05abea350be66a
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT break.mae_cross_infold=21111.1 unit=usd seed=0
+RESULT break.mae_cross_leaky=16333.8 unit=usd seed=0
+RESULT break.mae_change=-4777.28 unit=usd seed=0
+RESULT P3.gap_pct=22.6293 unit=percent seed=0
+
+===== change (seed 0, 37.9 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/06_leak_through_preprocessing_ref.py --change --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 ab05abea350be66a
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.mae_leaky=16695.6 unit=usd seed=0
+RESULT P2.mae_change=150.477 unit=usd seed=0
+RESULT change.gap_pct=-0.909496 unit=percent seed=0
+

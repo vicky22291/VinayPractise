@@ -1,0 +1,534 @@
+{
+ "lab": "21",
+ "slug": "21-delayed-labels",
+ "level": "S",
+ "lane": "light",
+ "reference": "answers/21_delayed_labels_ref.py",
+ "script_sha256": "cd35a06942f8f69a",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 14.4,
+   "lock": "light",
+   "maxrss_mb": 1242,
+   "n_result": 20,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 14.1,
+   "lock": "light",
+   "maxrss_mb": 1397,
+   "n_result": 20,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 14.9,
+   "lock": "light",
+   "maxrss_mb": 1491,
+   "n_result": 20,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 25.0,
+   "lock": "light",
+   "maxrss_mb": 967,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 18.1,
+   "lock": "light",
+   "maxrss_mb": 1408,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 16.3,
+   "lock": "light",
+   "maxrss_mb": 1415,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 14.0,
+   "lock": "light",
+   "maxrss_mb": 1421,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 14.5,
+   "lock": "light",
+   "maxrss_mb": 1422,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 26.1,
+   "lock": "light",
+   "maxrss_mb": 668,
+   "n_result": 8,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.visible_share_30d": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.202677,
+    "1": 0.202677,
+    "2": 0.202677
+   },
+   "unit": "fraction",
+   "value": 0.202677,
+   "spread": 0.0
+  },
+  "baseline.true_rate_age7": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00952607,
+    "1": 0.00952607,
+    "2": 0.00952607
+   },
+   "unit": "fraction",
+   "value": 0.00952607,
+   "spread": 0.0
+  },
+  "baseline.observed_rate_age7": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+   },
+   "unit": "fraction",
+   "value": 0,
+   "spread": 0
+  },
+  "baseline.true_rate_age14": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00912124,
+    "1": 0.00912124,
+    "2": 0.00912124
+   },
+   "unit": "fraction",
+   "value": 0.00912124,
+   "spread": 0.0
+  },
+  "baseline.observed_rate_age14": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.000552272,
+    "1": 0.000552272,
+    "2": 0.000552272
+   },
+   "unit": "fraction",
+   "value": 0.000552272,
+   "spread": 0.0
+  },
+  "baseline.true_rate_age30": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00851781,
+    "1": 0.00851781,
+    "2": 0.00851781
+   },
+   "unit": "fraction",
+   "value": 0.00851781,
+   "spread": 0.0
+  },
+  "baseline.observed_rate_age30": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00172637,
+    "1": 0.00172637,
+    "2": 0.00172637
+   },
+   "unit": "fraction",
+   "value": 0.00172637,
+   "spread": 0.0
+  },
+  "baseline.true_rate_age60": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00842171,
+    "1": 0.00842171,
+    "2": 0.00842171
+   },
+   "unit": "fraction",
+   "value": 0.00842171,
+   "spread": 0.0
+  },
+  "baseline.observed_rate_age60": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00395164,
+    "1": 0.00395164,
+    "2": 0.00395164
+   },
+   "unit": "fraction",
+   "value": 0.00395164,
+   "spread": 0.0
+  },
+  "baseline.true_rate_age90": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00826683,
+    "1": 0.00826683,
+    "2": 0.00826683
+   },
+   "unit": "fraction",
+   "value": 0.00826683,
+   "spread": 0.0
+  },
+  "baseline.observed_rate_age90": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00606,
+    "1": 0.00606,
+    "2": 0.00606
+   },
+   "unit": "fraction",
+   "value": 0.00606,
+   "spread": 0.0
+  },
+  "baseline.true_rate_age120": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0077173,
+    "1": 0.0077173,
+    "2": 0.0077173
+   },
+   "unit": "fraction",
+   "value": 0.0077173,
+   "spread": 0.0
+  },
+  "baseline.observed_rate_age120": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0077173,
+    "1": 0.0077173,
+    "2": 0.0077173
+   },
+   "unit": "fraction",
+   "value": 0.0077173,
+   "spread": 0.0
+  },
+  "baseline.recall_1pct": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.230219,
+    "1": 0.223857,
+    "2": 0.220676
+   },
+   "unit": "fraction",
+   "value": 0.230219,
+   "spread": 0.009542999999999996
+  },
+  "baseline.mean_p_ratio": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.544726,
+    "1": 0.542275,
+    "2": 0.54278
+   },
+   "unit": "ratio",
+   "value": 0.544726,
+   "spread": 0.002451000000000092
+  },
+  "baseline.recall_s4": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0130769,
+    "1": 0.0146154,
+    "2": 0.0107692
+   },
+   "unit": "fraction",
+   "value": 0.0130769,
+   "spread": 0.003846200000000001
+  },
+  "baseline.mean_p": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0106346,
+    "1": 0.0105868,
+    "2": 0.0105967
+   },
+   "unit": "fraction",
+   "value": 0.0106346,
+   "spread": 4.7799999999998885e-05
+  },
+  "baseline.true_rate": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0195229,
+    "1": 0.0195229,
+    "2": 0.0195229
+   },
+   "unit": "fraction",
+   "value": 0.0195229,
+   "spread": 0.0
+  },
+  "baseline.mean_p_ratio_no_s4": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 1.11643,
+    "1": 1.11096,
+    "2": 1.11366
+   },
+   "unit": "ratio",
+   "value": 1.11643,
+   "spread": 0.005470000000000086
+  },
+  "baseline.train_label_rate": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0077173,
+    "1": 0.0077173,
+    "2": 0.0077173
+   },
+   "unit": "fraction",
+   "value": 0.0077173,
+   "spread": 0.0
+  },
+  "P3.mean_p_ratio": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.373352,
+    "1": 0.379176,
+    "2": 0.375187
+   },
+   "unit": "ratio",
+   "value": 0.373352,
+   "spread": 0.005823999999999996
+  },
+  "break.recall_1pct": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.249304,
+    "1": 0.258847,
+    "2": 0.270775
+   },
+   "unit": "fraction",
+   "value": 0.249304,
+   "spread": 0.02147099999999999
+  },
+  "break.recall_s4": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0792308,
+    "1": 0.110769,
+    "2": 0.114615
+   },
+   "unit": "fraction",
+   "value": 0.0792308,
+   "spread": 0.03538419999999999
+  },
+  "break.mean_p": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.00728891,
+    "1": 0.00740262,
+    "2": 0.00732475
+   },
+   "unit": "fraction",
+   "value": 0.00728891,
+   "spread": 0.00011371000000000037
+  },
+  "break.true_rate": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0195229,
+    "1": 0.0195229,
+    "2": 0.0195229
+   },
+   "unit": "fraction",
+   "value": 0.0195229,
+   "spread": 0.0
+  },
+  "break.mean_p_ratio_no_s4": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.736203,
+    "1": 0.745677,
+    "2": 0.732883
+   },
+   "unit": "ratio",
+   "value": 0.736203,
+   "spread": 0.012794000000000083
+  },
+  "break.train_label_rate": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.00597784,
+    "1": 0.00597784,
+    "2": 0.00597784
+   },
+   "unit": "fraction",
+   "value": 0.00597784,
+   "spread": 0.0
+  },
+  "P2.recall_1pct": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.388072,
+    "1": 0.375746,
+    "2": 0.3666
+   },
+   "unit": "fraction",
+   "value": 0.388072,
+   "spread": 0.02147199999999999
+  },
+  "P2.recall_1pct_delta": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.157853,
+    "1": 0.151889,
+    "2": 0.145924
+   },
+   "unit": "fraction",
+   "value": 0.157853,
+   "spread": 0.011928999999999995
+  },
+  "change.mean_p_ratio": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.825467,
+    "1": 0.830381,
+    "2": 0.819287
+   },
+   "unit": "ratio",
+   "value": 0.825467,
+   "spread": 0.011094000000000048
+  },
+  "change.recall_s4": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.366923,
+    "1": 0.350769,
+    "2": 0.327692
+   },
+   "unit": "fraction",
+   "value": 0.366923,
+   "spread": 0.039231000000000016
+  },
+  "change.mean_p": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0161155,
+    "1": 0.0162115,
+    "2": 0.0159949
+   },
+   "unit": "fraction",
+   "value": 0.0161155,
+   "spread": 0.00021660000000000082
+  },
+  "change.true_rate": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0195229,
+    "1": 0.0195229,
+    "2": 0.0195229
+   },
+   "unit": "fraction",
+   "value": 0.0195229,
+   "spread": 0.0
+  },
+  "change.mean_p_ratio_no_s4": {
+   "mode": "change",
+   "by_seed": {
+    "0": 1.46537,
+    "1": 1.4722,
+    "2": 1.46188
+   },
+   "unit": "ratio",
+   "value": 1.46537,
+   "spread": 0.010319999999999885
+  },
+  "change.train_label_rate": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0122796,
+    "1": 0.0122796,
+    "2": 0.0122796
+   },
+   "unit": "fraction",
+   "value": 0.0122796,
+   "spread": 0.0
+  }
+ },
+ "effects": {
+  "P2.recall_1pct:baseline.recall_1pct": {
+   "effect": 0.15188866666666664,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.02147199999999999,
+   "ok": true
+  },
+  "P3.mean_p_ratio:baseline.mean_p_ratio": {
+   "effect": -0.16735533333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.005823999999999996,
+   "ok": true
+  },
+  "break.mean_p:break.true_rate": {
+   "effect": -0.012184140000000001,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.00011371000000000037,
+   "ok": true
+  },
+  "change.recall_s4:baseline.recall_s4": {
+   "effect": 0.33564083333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.039231000000000016,
+   "ok": true
+  },
+  "break.recall_1pct:baseline.recall_1pct": {
+   "effect": 0.034724666666666654,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.02147099999999999,
+   "ok": false
+  }
+ },
+ "precomputed": [],
+ "notes": "Taught effects: P2.recall_1pct vs baseline, change.recall_s4 vs baseline, P3.mean_p_ratio vs baseline, break.mean_p vs break.true_rate; all pass 2x spread. break.recall_1pct vs baseline.recall_1pct is reported, not taught as an effect: it sits inside 2x the spread (naive and mature-only rank about the same overall). P1 and the maturity rows come from the fixed seed-0 synthetic stream, so their spread is 0. No knob changes, no precomputed steps."
+}

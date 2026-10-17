@@ -1,0 +1,38 @@
+===== baseline (seed 0, 27.2 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/31_random_forest_by_hand_ref.py --baseline --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 76afed937f1404fe
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.valid_acc=0.857201 unit=fraction trees=100 seed=0
+RESULT baseline.valid_acc_1_tree=0.823319 unit=fraction seed=0
+RESULT baseline.valid_acc_10_trees=0.850343 unit=fraction seed=0
+RESULT baseline.valid_error=0.142799 unit=fraction seed=0
+RESULT baseline.oob_error=0.1455 unit=fraction seed=0
+
+===== break (seed 0, 1.8 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/31_random_forest_by_hand_ref.py --break --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 76afed937f1404fe
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.train_minus_valid=19.1936 unit=points seed=0
+RESULT break.train_acc=0.9999 unit=fraction seed=0
+RESULT break.valid_acc=0.807964 unit=fraction seed=0
+RESULT break.leaves=1501 seed=0
+RESULT break.depth=37 seed=0
+
+===== change (seed 0, 14.7 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/31_random_forest_by_hand_ref.py --change --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 76afed937f1404fe
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.valid_acc=0.860068 unit=fraction trees=100 seed=0
+RESULT change.valid_acc_1_tree=0.819634 unit=fraction seed=0
+RESULT change.valid_acc_10_trees=0.85628 unit=fraction seed=0
+RESULT change.valid_error=0.139932 unit=fraction seed=0
+RESULT P2.oob_error=0.1382 unit=fraction seed=0
+RESULT P2.valid_acc_change=0.286621 unit=points seed=0
+RESULT P2.oob_error_change=-0.73 unit=points seed=0
+

@@ -1,0 +1,59 @@
+===== baseline (seed 0, 41.1 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/23_selective_labels_and_exploration_ref.py --baseline --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 1fb8a8a2dae9d4fe
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.recall_approved_only=0.146624 unit=fraction seed=0
+RESULT P1.recall_true=0.348415 unit=fraction seed=0
+RESULT P1.gap_points=-20.1791 unit=points seed=0
+RESULT baseline.champion_decline_rate=0.0100539 unit=fraction seed=0
+RESULT baseline.challenger_decline_rate=0.0100539 unit=fraction seed=0
+RESULT baseline.frauds=10476 unit=count seed=0
+RESULT baseline.frauds_declined=2626 unit=count seed=0
+RESULT baseline.hidden_share=0.250668 unit=fraction seed=0
+RESULT baseline.catches_hidden_share=0.684658 unit=fraction seed=0
+
+===== break (seed 0, 97.5 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/23_selective_labels_and_exploration_ref.py --break --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 1fb8a8a2dae9d4fe
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.recall_drop=0.216718 unit=fraction seed=0
+RESULT P3.recall_weighted=0.224751 unit=fraction seed=0
+RESULT P3.gap_points=-0.803366 unit=points seed=0
+RESULT break.recall_as_fraud=0.211362 unit=fraction seed=0
+RESULT break.recall_oracle=0.251913 unit=fraction seed=0
+RESULT break.explored_train=61 unit=count seed=0
+RESULT break.explored_train_frauds=18 unit=count seed=0
+RESULT break.blind_frauds=974 unit=count seed=0
+RESULT break.blind_recall_drop=0.710472 unit=fraction seed=0
+RESULT break.blind_recall_as_fraud=0.962012 unit=fraction seed=0
+RESULT break.blind_recall_weighted=0.740246 unit=fraction seed=0
+RESULT break.blind_recall_oracle=0.918891 unit=fraction seed=0
+
+===== change (seed 0, 49.5 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/23_selective_labels_and_exploration_ref.py --change --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 1fb8a8a2dae9d4fe
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.ci_width=12.2816 unit=points seed=0
+RESULT change.ipw_recall_1pct=0.382581 unit=fraction seed=0
+RESULT change.ci_lo_1pct=0.318909 unit=fraction seed=0
+RESULT change.ci_hi_1pct=0.441725 unit=fraction seed=0
+RESULT change.draws_mean_1pct=0.349895 unit=fraction seed=0
+RESULT change.draws_width_1pct=12.4093 unit=points seed=0
+RESULT change.ci_width_0p1pct=33.9579 unit=points seed=0
+RESULT change.ci_width_5pct=5.10079 unit=points seed=0
+RESULT change.explored_0p1pct=8 unit=count seed=0
+RESULT change.explored_frauds_0p1pct=6 unit=count seed=0
+RESULT change.fraud_dollars_0p1pct=2314.2 unit=dollars seed=0
+RESULT change.explored_1pct=98 unit=count seed=0
+RESULT change.explored_frauds_1pct=30 unit=count seed=0
+RESULT change.fraud_dollars_1pct=9087.82 unit=dollars seed=0
+RESULT change.explored_5pct=466 unit=count seed=0
+RESULT change.explored_frauds_5pct=151 unit=count seed=0
+RESULT change.fraud_dollars_5pct=48261.5 unit=dollars seed=0
+

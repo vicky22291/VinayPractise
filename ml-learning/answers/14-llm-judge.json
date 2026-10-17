@@ -1,0 +1,302 @@
+{
+ "lab": "14",
+ "slug": "14-llm-judge",
+ "level": "S",
+ "lane": "heavy",
+ "reference": "answers/14_llm_judge_ref.py",
+ "script_sha256": "b0d9ad7321126ff6",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 237.5,
+   "lock": "heavy",
+   "maxrss_mb": 159,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 128.6,
+   "lock": "heavy",
+   "maxrss_mb": 164,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 105.9,
+   "lock": "heavy",
+   "maxrss_mb": 161,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 130.3,
+   "lock": "heavy",
+   "maxrss_mb": 163,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 301.2,
+   "lock": "heavy",
+   "maxrss_mb": 162,
+   "n_result": 9,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.agreement_pct": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 82,
+    "1": 82,
+    "2": 82
+   },
+   "unit": "pct",
+   "value": 82,
+   "spread": 0
+  },
+  "baseline.kappa": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.636511,
+    "1": 0.614065,
+    "2": 0.64
+   },
+   "unit": "kappa",
+   "value": 0.636511,
+   "spread": 0.02593500000000004
+  },
+  "baseline.picks_a_pct": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 54,
+    "1": 36,
+    "2": 50
+   },
+   "unit": "pct",
+   "value": 54,
+   "spread": 18
+  },
+  "baseline.human_a_pct": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 56,
+    "1": 38,
+    "2": 48
+   },
+   "unit": "pct",
+   "value": 56,
+   "spread": 18
+  },
+  "baseline.human_human_pct": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 89.5652,
+    "1": 86.9159,
+    "2": 89.4309
+   },
+   "unit": "pct",
+   "value": 89.5652,
+   "spread": 2.649300000000011
+  },
+  "baseline.prompt_tokens": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 682.5,
+    "1": 540.5,
+    "2": 648
+   },
+   "unit": "tokens",
+   "value": 682.5,
+   "spread": 142.0
+  },
+  "baseline.output_tokens": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 8,
+    "1": 8,
+    "2": 8
+   },
+   "unit": "tokens",
+   "value": 8,
+   "spread": 0
+  },
+  "baseline.s_per_item": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 4.07712,
+    "1": 2.07176,
+    "2": 1.86258
+   },
+   "unit": "s",
+   "value": 4.07712,
+   "spread": 2.21454
+  },
+  "P3.flip_rate_pct": {
+   "mode": "break",
+   "by_seed": {
+    "0": 14
+   },
+   "unit": "pct",
+   "value": 14,
+   "spread": null
+  },
+  "break.picks_a_pct": {
+   "mode": "break",
+   "by_seed": {
+    "0": 44
+   },
+   "unit": "pct",
+   "value": 44,
+   "spread": null
+  },
+  "break.agreement_pct": {
+   "mode": "break",
+   "by_seed": {
+    "0": 84
+   },
+   "unit": "pct",
+   "value": 84,
+   "spread": null
+  },
+  "break.prompt_tokens": {
+   "mode": "break",
+   "by_seed": {
+    "0": 682.5
+   },
+   "unit": "tokens",
+   "value": 682.5,
+   "spread": null
+  },
+  "break.output_tokens": {
+   "mode": "break",
+   "by_seed": {
+    "0": 8
+   },
+   "unit": "tokens",
+   "value": 8,
+   "spread": null
+  },
+  "break.s_per_item": {
+   "mode": "break",
+   "by_seed": {
+    "0": 2.06231
+   },
+   "unit": "s",
+   "value": 2.06231,
+   "spread": null
+  },
+  "change.agreement_pct": {
+   "mode": "change",
+   "by_seed": {
+    "0": 78
+   },
+   "unit": "pct",
+   "value": 78,
+   "spread": null
+  },
+  "change.kappa": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.56
+   },
+   "unit": "kappa",
+   "value": 0.56,
+   "spread": null
+  },
+  "change.picks_a_pct": {
+   "mode": "change",
+   "by_seed": {
+    "0": 50
+   },
+   "unit": "pct",
+   "value": 50,
+   "spread": null
+  },
+  "P2.agreement_delta_pts": {
+   "mode": "change",
+   "by_seed": {
+    "0": -4
+   },
+   "unit": "points",
+   "value": -4,
+   "spread": null
+  },
+  "change.right_to_wrong": {
+   "mode": "change",
+   "by_seed": {
+    "0": 3
+   },
+   "unit": "pairs",
+   "value": 3,
+   "spread": null
+  },
+  "change.wrong_to_right": {
+   "mode": "change",
+   "by_seed": {
+    "0": 1
+   },
+   "unit": "pairs",
+   "value": 1,
+   "spread": null
+  },
+  "change.prompt_tokens": {
+   "mode": "change",
+   "by_seed": {
+    "0": 726.5
+   },
+   "unit": "tokens",
+   "value": 726.5,
+   "spread": null
+  },
+  "change.output_tokens": {
+   "mode": "change",
+   "by_seed": {
+    "0": 57
+   },
+   "unit": "tokens",
+   "value": 57,
+   "spread": null
+  },
+  "change.s_per_item": {
+   "mode": "change",
+   "by_seed": {
+    "0": 5.56422
+   },
+   "unit": "s",
+   "value": 5.56422,
+   "spread": null
+  }
+ },
+ "effects": {
+  "change.agreement_pct:P1.agreement_pct": {
+   "effect": -4.0,
+   "seeds": [
+    "0"
+   ],
+   "spread": 0,
+   "ok": true
+  },
+  "break.agreement_pct:P1.agreement_pct": {
+   "effect": 2.0,
+   "seeds": [
+    "0"
+   ],
+   "spread": 0,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Tolerance: the P1 seed spread is 0 by coincidence (each of the three 50-pair draws agreed on 41 of 50); the binomial standard error at n = 50 is 5.4 points, so the 2x spread rule is vacuous for this lab. P2 (change.agreement_pct minus P1.agreement_pct, -4 points) is reported as within noise: 3 pairs right to wrong, 1 wrong to right, two-sided exact sign test p = 0.625. P3's effect is the flip rate itself, against the 0 flips of an order-blind judge (mkanswers takes two names, so this is checked by hand): 7 of 50 pairs flipped, 6 toward the answer shown first and 1 toward the second (from picks_a 54 to 44); 4 flips turned a wrong verdict right and 3 a right verdict wrong (from agreement 82 to 84); counting a win only when it holds in both orders gives 38 of 50 (76%). The judge is deterministic here: the 25 pairs that two baseline draws share (6 + 10 + 9), judged in separate runs in the same order, got identical verdicts, so every flip comes from the order. Offline, from the dataset and the saved seed-0 verdicts: all eligible pairs together have 89.34% human-human agreement over 694 vote pairs; seed 0 by model pair: strong vs 13B 28 of 32 right, strong vs strong 3 of 6, 13B vs 13B 10 of 12 (strong = gpt-4, claude-v1, gpt-3.5-turbo). The spec's whole-file human-human figures reproduce exactly from the parquet. Seconds per item depend on load: baseline seed 0 ran beside other jobs (4.07712 s per item) while break seed 0 sent the same prompt lengths at 2.06231 s."
+}

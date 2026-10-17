@@ -1,0 +1,48 @@
+===== baseline (seed 0, 237.5 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/answers/14_llm_judge_ref.py --baseline --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 b0d9ad7321126ff6
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+OLLAMA http://127.0.0.1:11435 version=0.18.0 model=qwen2.5:7b
+RESULT P1.agreement_pct=82 unit=pct n=50 seed=0
+RESULT baseline.kappa=0.636511 unit=kappa n=50 seed=0
+RESULT baseline.picks_a_pct=54 unit=pct n=50 seed=0
+RESULT baseline.human_a_pct=56 unit=pct n=50 seed=0
+RESULT baseline.human_human_pct=89.5652 unit=pct n=115 seed=0
+SKIP baseline.my_agreement_pct: no verdicts in ~/ml-data/lab14/my_labels.csv (a human step)
+RESULT baseline.prompt_tokens=682.5 unit=tokens device=ollama batch=1 warmup=1 n=50 stat=median seed=0
+RESULT baseline.output_tokens=8 unit=tokens device=ollama batch=1 warmup=1 n=50 stat=median seed=0
+RESULT baseline.s_per_item=4.07712 unit=s device=ollama batch=1 warmup=1 n=50 stat=median seed=0
+
+===== break (seed 0, 130.3 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/answers/14_llm_judge_ref.py --break --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 b0d9ad7321126ff6
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+OLLAMA http://127.0.0.1:11435 version=0.18.0 model=qwen2.5:7b
+RESULT P3.flip_rate_pct=14 unit=pct n=50 seed=0
+RESULT break.picks_a_pct=44 unit=pct n=50 seed=0
+RESULT break.agreement_pct=84 unit=pct n=50 seed=0
+RESULT break.prompt_tokens=682.5 unit=tokens device=ollama batch=1 warmup=1 n=50 stat=median seed=0
+RESULT break.output_tokens=8 unit=tokens device=ollama batch=1 warmup=1 n=50 stat=median seed=0
+RESULT break.s_per_item=2.06231 unit=s device=ollama batch=1 warmup=1 n=50 stat=median seed=0
+
+===== change (seed 0, 301.2 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/answers/14_llm_judge_ref.py --change --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 b0d9ad7321126ff6
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+OLLAMA http://127.0.0.1:11435 version=0.18.0 model=qwen2.5:7b
+RESULT change.agreement_pct=78 unit=pct n=50 seed=0
+RESULT change.kappa=0.56 unit=kappa n=50 seed=0
+RESULT change.picks_a_pct=50 unit=pct n=50 seed=0
+RESULT P2.agreement_delta_pts=-4 unit=points n=50 seed=0
+RESULT change.right_to_wrong=3 unit=pairs seed=0
+RESULT change.wrong_to_right=1 unit=pairs seed=0
+RESULT change.prompt_tokens=726.5 unit=tokens device=ollama batch=1 warmup=1 n=50 stat=median seed=0
+RESULT change.output_tokens=57 unit=tokens device=ollama batch=1 warmup=1 n=50 stat=median seed=0
+RESULT change.s_per_item=5.56422 unit=s device=ollama batch=1 warmup=1 n=50 stat=median seed=0
+

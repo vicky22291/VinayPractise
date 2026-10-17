@@ -1,0 +1,30 @@
+===== baseline (seed 0, 4.3 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/29_softmax_and_cross_entropy_ref.py --baseline --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 c2fbca7ccc30b820
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.first_batch_loss=2.3101 unit=nats seed=0
+RESULT baseline.test_accuracy=0.909 unit=fraction seed=0
+RESULT baseline.min_batch_loss=0.174214 unit=nats seed=0
+
+===== break (seed 0, 2.3 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/29_softmax_and_cross_entropy_ref.py --break --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 c2fbca7ccc30b820
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.test_accuracy=0.8216 unit=fraction seed=0
+RESULT P3.lowest_possible_loss=1.46115 unit=nats seed=0
+RESULT break.min_batch_loss=1.6227 unit=nats seed=0
+
+===== change (seed 0, 3.2 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/29_softmax_and_cross_entropy_ref.py --change --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 c2fbca7ccc30b820
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.test_accuracy=0.8034 unit=fraction seed=0
+RESULT P2.accuracy_delta=-0.1056 unit=fraction seed=0
+RESULT change.min_batch_loss=0.0337847 unit=mse seed=0
+

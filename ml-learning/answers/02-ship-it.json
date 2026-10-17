@@ -1,0 +1,294 @@
+{
+ "lab": "02",
+ "slug": "02-ship-it",
+ "level": "W",
+ "lane": "light",
+ "reference": "m1-whole-game/scripts/02_ship_it.py",
+ "script_sha256": "53d96ac69929a127",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 12.8,
+   "lock": "excl",
+   "maxrss_mb": 723,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 12.6,
+   "lock": "excl",
+   "maxrss_mb": 686,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 12.6,
+   "lock": "excl",
+   "maxrss_mb": 689,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 8.0,
+   "lock": "excl",
+   "maxrss_mb": 663,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 8.1,
+   "lock": "excl",
+   "maxrss_mb": 657,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 7.6,
+   "lock": "excl",
+   "maxrss_mb": 658,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 11.5,
+   "lock": "excl",
+   "maxrss_mb": 697,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 11.7,
+   "lock": "excl",
+   "maxrss_mb": 696,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 11.1,
+   "lock": "excl",
+   "maxrss_mb": 696,
+   "n_result": 6,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.p95_ms": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 24.7684,
+    "1": 25.9139,
+    "2": 26.088
+   },
+   "unit": "ms",
+   "value": 24.7684,
+   "spread": 1.3196000000000012
+  },
+  "baseline.p50_ms": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 23.3536,
+    "1": 23.8602,
+    "2": 23.9682
+   },
+   "unit": "ms",
+   "value": 23.3536,
+   "spread": 0.6145999999999994
+  },
+  "baseline.max_ms": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 108.445,
+    "1": 116.7,
+    "2": 114.196
+   },
+   "unit": "ms",
+   "value": 108.445,
+   "spread": 8.25500000000001
+  },
+  "baseline.accuracy": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.88,
+    "1": 0.88,
+    "2": 0.88
+   },
+   "unit": "fraction",
+   "value": 0.88,
+   "spread": 0.0
+  },
+  "baseline.pet_share_above_0_9": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.62,
+    "1": 0.62,
+    "2": 0.62
+   },
+   "unit": "fraction",
+   "value": 0.62,
+   "spread": 0.0
+  },
+  "baseline.export_mb": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 87.6373,
+    "1": 87.6373,
+    "2": 87.6373
+   },
+   "unit": "MB",
+   "value": 87.6373,
+   "spread": 0.0
+  },
+  "baseline.params": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 21830976,
+    "1": 21830976,
+    "2": 21830976
+   },
+   "unit": "params",
+   "value": 21830976,
+   "spread": 0
+  },
+  "P3.share_above_0_9": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+   },
+   "unit": "fraction",
+   "value": 0,
+   "spread": 0
+  },
+  "break.max_top_prob": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.623649,
+    "1": 0.541302,
+    "2": 0.617037
+   },
+   "unit": "probability",
+   "value": 0.623649,
+   "spread": 0.08234700000000006
+  },
+  "P2.p95_ms": {
+   "mode": "change",
+   "by_seed": {
+    "0": 20.9188,
+    "1": 21.7726,
+    "2": 20.3054
+   },
+   "unit": "ms",
+   "value": 20.9188,
+   "spread": 1.4672000000000018
+  },
+  "change.p50_ms": {
+   "mode": "change",
+   "by_seed": {
+    "0": 19.4555,
+    "1": 19.6242,
+    "2": 19.1653
+   },
+   "unit": "ms",
+   "value": 19.4555,
+   "spread": 0.45889999999999986
+  },
+  "change.max_ms": {
+   "mode": "change",
+   "by_seed": {
+    "0": 108.279,
+    "1": 105.651,
+    "2": 102.311
+   },
+   "unit": "ms",
+   "value": 108.279,
+   "spread": 5.967999999999989
+  },
+  "P2.accuracy": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.835,
+    "1": 0.835,
+    "2": 0.835
+   },
+   "unit": "fraction",
+   "value": 0.835,
+   "spread": 0.0
+  },
+  "P2.p95_ratio_vs_224": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.844575,
+    "1": 0.840192,
+    "2": 0.778344
+   },
+   "unit": "ratio",
+   "value": 0.844575,
+   "spread": 0.06623099999999993
+  },
+  "P2.accuracy_delta_vs_224": {
+   "mode": "change",
+   "by_seed": {
+    "0": -4.5,
+    "1": -4.5,
+    "2": -4.5
+   },
+   "unit": "points",
+   "value": -4.5,
+   "spread": 0.0
+  }
+ },
+ "effects": {
+  "P2.p95_ms:P1.p95_ms": {
+   "effect": -4.591166666666667,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 1.4672000000000018,
+   "ok": true
+  },
+  "P2.accuracy:baseline.accuracy": {
+   "effect": -0.04500000000000004,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  },
+  "P3.share_above_0_9:baseline.pet_share_above_0_9": {
+   "effect": -0.62,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Third reference set, run with no build job beside it and a lower outside load, replaces two earlier sets (a lab 37 download job ran beside both) whose run-to-run timing spread failed the 2x rule for P2.p95_ms; no knob changed, the change stays at the spec's 160 px. P3 is null at every seed and is reported as measured. Parachute synset is n03888257 (the spec's n03888605 is not an Imagenette class)."
+}

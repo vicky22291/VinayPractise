@@ -1,0 +1,39 @@
+===== baseline (seed 0, 4.4 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m6-deep-nets-on-a-mac/scripts/34_convolutions.py --baseline --seed 0
+# cwd ml-learning/m6-deep-nets-on-a-mac
+# script_sha256 86798c9905a9b580
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT baseline.mlp_params=20680 seed=0
+RESULT P1.mlp_test_acc=0.9207 unit=fraction seed=0
+
+===== break (seed 0, 47.3 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m6-deep-nets-on-a-mac/scripts/34_convolutions.py --break --seed 0
+# cwd ml-learning/m6-deep-nets-on-a-mac
+# script_sha256 86798c9905a9b580
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT break.mlp_test_acc=0.9207 unit=fraction seed=0
+RESULT break.mlp_shifted_acc=0.2438 unit=fraction seed=0
+RESULT P3.mlp_drop_points=67.69 unit=points seed=0
+RESULT break.cnn_test_acc=0.975 unit=fraction seed=0
+RESULT break.cnn_shifted_acc=0.5349 unit=fraction seed=0
+RESULT P3.cnn_drop_points=44.01 unit=points seed=0
+RESULT P3.loses_more=mlp seed=0
+RESULT P3.gap_points=23.68 unit=points seed=0
+
+===== change (seed 0, 41.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m6-deep-nets-on-a-mac/scripts/34_convolutions.py --change --seed 0
+# cwd ml-learning/m6-deep-nets-on-a-mac
+# script_sha256 86798c9905a9b580
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+WINDOW rows 6 to 8, cols 7 to 9 of the first test digit, pixels out of 255: [[0, 0, 0], [185, 159, 151], [254, 254, 254]]
+RESULT change.top_edge_by_hand=2.98824 row=6 col=7 seed=0
+RESULT change.top_edge_conv2d=2.98824 row=6 col=7 seed=0
+RESULT change.hand_max_abs_diff=4.76837e-07 seed=0
+RESULT change.unfold_max_abs_diff=5.96046e-07 seed=0
+RESULT change.cnn_params=20490 seed=0
+RESULT P2.cnn_test_acc=0.975 unit=fraction seed=0
+RESULT P2.cnn_minus_mlp_points=5.43 unit=points seed=0
+

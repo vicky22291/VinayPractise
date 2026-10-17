@@ -1,0 +1,90 @@
+===== amount (seed 0, 1.9 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/22_calibration_and_thresholds_ref.py --amount --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 b10ee8078955727d
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT amount.net_flat=3505 unit=dollars seed=0
+RESULT amount.net_aware=3445.24 unit=dollars seed=0
+RESULT amount.net_gain=-59.7597 unit=dollars seed=0
+RESULT amount.declines_flat=91 unit=count seed=0
+RESULT amount.declines_aware=83 unit=count seed=0
+RESULT amount.changed=8 unit=count seed=0
+RESULT amount.changed_frauds=4 unit=count seed=0
+
+===== baseline (seed 0, 3.1 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/22_calibration_and_thresholds_ref.py --baseline --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 b10ee8078955727d
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+SAVED ~/ml-data/models/lab22: champion_lr.joblib challenger_lgbm.joblib test_idx.npy
+RESULT P1.mean_p=0.0017368 unit=fraction seed=0
+RESULT baseline.mean_p_legit=0.000671211 unit=fraction seed=0
+RESULT baseline.fraud_rate=0.00172045 unit=fraction seed=0
+RESULT baseline.threshold=0.0387062 unit=probability seed=0
+RESULT baseline.decline_rate=0.00200133 unit=fraction seed=0
+RESULT baseline.false_declines=34 unit=count seed=0
+RESULT baseline.frauds_caught=80 unit=count seed=0
+RESULT baseline.brier=0.000728463 unit=brier seed=0
+TABLE full bin mean_p observed
+TABLE full   1 0.000026 0.000000
+TABLE full   2 0.000060 0.000176
+TABLE full   3 0.000089 0.000000
+TABLE full   4 0.000123 0.000000
+TABLE full   5 0.000167 0.000000
+TABLE full   6 0.000223 0.000176
+TABLE full   7 0.000302 0.000351
+TABLE full   8 0.000431 0.000527
+TABLE full   9 0.000688 0.000878
+TABLE full  10 0.015256 0.015096
+
+===== break (seed 0, 2.3 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/22_calibration_and_thresholds_ref.py --break --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 b10ee8078955727d
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.decline_rate=0.0103578 unit=fraction seed=0
+RESULT P3.false_declines=505 unit=count seed=0
+RESULT break.frauds_caught=85 unit=count seed=0
+RESULT break.decline_rate_corrected=0.00214178 unit=fraction seed=0
+RESULT break.false_declines_corrected=43 unit=count seed=0
+RESULT break.frauds_caught_corrected=79 unit=count seed=0
+RESULT break.new_fd_gap=6.18394 unit=ratio seed=0
+RESULT break.new_fd_lift=12.2305 unit=ratio seed=0
+
+===== change (seed 0, 2.1 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/22_calibration_and_thresholds_ref.py --change --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 b10ee8078955727d
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.mean_p=0.00470345 unit=fraction seed=0
+RESULT change.mean_p_legit=0.00333985 unit=fraction seed=0
+RESULT change.mean_p_corrected=0.00188795 unit=fraction seed=0
+RESULT change.brier=0.00086552 unit=brier seed=0
+RESULT change.brier_corrected=0.000697716 unit=brier seed=0
+TABLE downsampled bin mean_p observed
+TABLE downsampled   1 0.000106 0.000000
+TABLE downsampled   2 0.000266 0.000000
+TABLE downsampled   3 0.000406 0.000000
+TABLE downsampled   4 0.000568 0.000176
+TABLE downsampled   5 0.000774 0.000000
+TABLE downsampled   6 0.001056 0.000000
+TABLE downsampled   7 0.001481 0.000000
+TABLE downsampled   8 0.002230 0.000702
+TABLE downsampled   9 0.003816 0.000527
+TABLE downsampled  10 0.036328 0.015798
+TABLE corrected bin mean_p observed
+TABLE corrected   1 0.000011 0.000000
+TABLE corrected   2 0.000027 0.000000
+TABLE corrected   3 0.000041 0.000000
+TABLE corrected   4 0.000057 0.000176
+TABLE corrected   5 0.000077 0.000000
+TABLE corrected   6 0.000106 0.000000
+TABLE corrected   7 0.000148 0.000000
+TABLE corrected   8 0.000223 0.000702
+TABLE corrected   9 0.000383 0.000527
+TABLE corrected  10 0.017805 0.015798
+

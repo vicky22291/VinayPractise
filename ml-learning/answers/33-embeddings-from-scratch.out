@@ -1,0 +1,34 @@
+===== baseline (seed 0, 31.6 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/33_embeddings_from_scratch_ref.py --baseline --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 963e9c71b118d8a6
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.valid_rmse=0.900242 unit=stars seed=0
+RESULT baseline.lab05_rmse=0.917706 unit=stars seed=0
+RESULT baseline.minus_lab05=-0.0174635 unit=stars seed=0
+NOTE pca1 one end: McHale's Navy (1997); Jungle2Jungle (1997); Leave It to Beaver (1997); Super Mario Bros. (1993); Children of the Corn: The Gathering (1996)
+NOTE pca1 other end: Close Shave, A (1995); Casablanca (1942); Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1963); Big Sleep, The (1946); Lawrence of Arabia (1962)
+
+===== break (seed 0, 38.1 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/33_embeddings_from_scratch_ref.py --break --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 963e9c71b118d8a6
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.cold_rmse=1.25812 unit=stars seed=0
+RESULT P3.closest=global_mean unit=choice seed=0
+RESULT break.warm_rmse=0.901012 unit=stars seed=0
+RESULT break.cold_global_mean_rmse=1.15882 unit=stars seed=0
+RESULT break.cold_movie_mean_rmse=1.03565 unit=stars seed=0
+NOTE held-out users 50, their ratings 5342, warm validation ratings 18910
+
+===== change (seed 0, 23.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/33_embeddings_from_scratch_ref.py --change --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 963e9c71b118d8a6
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.valid_rmse=0.922987 unit=stars seed=0
+RESULT P2.delta_rmse=0.0227451 unit=stars seed=0
+

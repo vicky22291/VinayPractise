@@ -1,0 +1,414 @@
+{
+ "lab": "17",
+ "slug": "17-anomaly-windows",
+ "level": "S",
+ "lane": "light",
+ "reference": "answers/17_anomaly_windows_ref.py",
+ "script_sha256": "bdf80d5eeab86dbe",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 1.8,
+   "lock": "light",
+   "maxrss_mb": 204,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 2.4,
+   "lock": "light",
+   "maxrss_mb": 204,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 2.7,
+   "lock": "light",
+   "maxrss_mb": 203,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 2.4,
+   "lock": "light",
+   "maxrss_mb": 202,
+   "n_result": 9,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 3.0,
+   "lock": "light",
+   "maxrss_mb": 205,
+   "n_result": 9,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 4.4,
+   "lock": "light",
+   "maxrss_mb": 205,
+   "n_result": 9,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 2.4,
+   "lock": "light",
+   "maxrss_mb": 207,
+   "n_result": 9,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 1.6,
+   "lock": "light",
+   "maxrss_mb": 209,
+   "n_result": 9,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 4.0,
+   "lock": "light",
+   "maxrss_mb": 208,
+   "n_result": 9,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.windows_hit": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 5,
+    "1": 5,
+    "2": 5
+   },
+   "unit": "of_5",
+   "value": 5,
+   "spread": 0
+  },
+  "P1.false_alarms_per_day": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.972093,
+    "1": 0.972093,
+    "2": 0.972093
+   },
+   "unit": "per_day",
+   "value": 0.972093,
+   "spread": 0.0
+  },
+  "baseline.delay_min_w1": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 600,
+    "1": 600,
+    "2": 600
+   },
+   "unit": "min",
+   "value": 600,
+   "spread": 0
+  },
+  "baseline.delay_min_w2": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 360,
+    "1": 360,
+    "2": 360
+   },
+   "unit": "min",
+   "value": 360,
+   "spread": 0
+  },
+  "baseline.delay_min_w3": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 540,
+    "1": 540,
+    "2": 540
+   },
+   "unit": "min",
+   "value": 540,
+   "spread": 0
+  },
+  "baseline.delay_min_w4": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 3060,
+    "1": 3060,
+    "2": 3060
+   },
+   "unit": "min",
+   "value": 3060,
+   "spread": 0
+  },
+  "baseline.delay_min_w5": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 1680,
+    "1": 1680,
+    "2": 1680
+   },
+   "unit": "min",
+   "value": 1680,
+   "spread": 0
+  },
+  "P3.windows_hit": {
+   "mode": "break",
+   "by_seed": {
+    "0": 4,
+    "1": 4,
+    "2": 4
+   },
+   "unit": "of_5",
+   "value": 4,
+   "spread": 0
+  },
+  "break.false_alarms_per_day": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.227907,
+    "1": 0.227907,
+    "2": 0.227907
+   },
+   "unit": "per_day",
+   "value": 0.227907,
+   "spread": 0.0
+  },
+  "break.delay_min_w1": {
+   "mode": "break",
+   "by_seed": {
+    "0": "miss",
+    "1": "miss",
+    "2": "miss"
+   },
+   "unit": "min",
+   "value": "miss",
+   "spread": null
+  },
+  "break.delay_min_w2": {
+   "mode": "break",
+   "by_seed": {
+    "0": 2580,
+    "1": 2580,
+    "2": 2580
+   },
+   "unit": "min",
+   "value": 2580,
+   "spread": 0
+  },
+  "break.delay_min_w3": {
+   "mode": "break",
+   "by_seed": {
+    "0": 2520,
+    "1": 2520,
+    "2": 2520
+   },
+   "unit": "min",
+   "value": 2520,
+   "spread": 0
+  },
+  "break.delay_min_w4": {
+   "mode": "break",
+   "by_seed": {
+    "0": 3060,
+    "1": 3060,
+    "2": 3060
+   },
+   "unit": "min",
+   "value": 3060,
+   "spread": 0
+  },
+  "break.delay_min_w5": {
+   "mode": "break",
+   "by_seed": {
+    "0": 2070,
+    "1": 2070,
+    "2": 2070
+   },
+   "unit": "min",
+   "value": 2070,
+   "spread": 0
+  },
+  "break.std_ratio": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.73518,
+    "1": 1.73518,
+    "2": 1.73518
+   },
+   "unit": "ratio",
+   "value": 1.73518,
+   "spread": 0.0
+  },
+  "break.windows_hit_outside_stats": {
+   "mode": "break",
+   "by_seed": {
+    "0": 5,
+    "1": 5,
+    "2": 5
+   },
+   "unit": "of_5",
+   "value": 5,
+   "spread": 0
+  },
+  "P2.windows_hit": {
+   "mode": "change",
+   "by_seed": {
+    "0": 4,
+    "1": 4,
+    "2": 4
+   },
+   "unit": "of_5",
+   "value": 4,
+   "spread": 0
+  },
+  "P2.false_alarms_per_day": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0,
+    "1": 0,
+    "2": 0.0186047
+   },
+   "unit": "per_day",
+   "value": 0,
+   "spread": 0.0186047
+  },
+  "P2.windows_hit_delta": {
+   "mode": "change",
+   "by_seed": {
+    "0": -1,
+    "1": -1,
+    "2": -1
+   },
+   "unit": "of_5",
+   "value": -1,
+   "spread": 0
+  },
+  "P2.false_alarms_per_day_delta": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.972093,
+    "1": -0.972093,
+    "2": -0.953488
+   },
+   "unit": "per_day",
+   "value": -0.972093,
+   "spread": 0.018604999999999983
+  },
+  "change.delay_min_w1": {
+   "mode": "change",
+   "by_seed": {
+    "0": 3720,
+    "1": 3720,
+    "2": 3780
+   },
+   "unit": "min",
+   "value": 3720,
+   "spread": 60
+  },
+  "change.delay_min_w2": {
+   "mode": "change",
+   "by_seed": {
+    "0": 3660,
+    "1": 3630,
+    "2": 3660
+   },
+   "unit": "min",
+   "value": 3660,
+   "spread": 30
+  },
+  "change.delay_min_w3": {
+   "mode": "change",
+   "by_seed": {
+    "0": 3330,
+    "1": 3300,
+    "2": 3330
+   },
+   "unit": "min",
+   "value": 3330,
+   "spread": 30
+  },
+  "change.delay_min_w4": {
+   "mode": "change",
+   "by_seed": {
+    "0": "miss",
+    "1": "miss",
+    "2": "miss"
+   },
+   "unit": "min",
+   "value": "miss",
+   "spread": null
+  },
+  "change.delay_min_w5": {
+   "mode": "change",
+   "by_seed": {
+    "0": 3330,
+    "1": 3660,
+    "2": 3090
+   },
+   "unit": "min",
+   "value": 3330,
+   "spread": 570
+  }
+ },
+ "effects": {
+  "P2.windows_hit:baseline.windows_hit": {
+   "effect": -1.0,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0,
+   "ok": true
+  },
+  "P2.false_alarms_per_day:P1.false_alarms_per_day": {
+   "effect": -0.9658914333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0186047,
+   "ok": true
+  },
+  "P3.windows_hit:baseline.windows_hit": {
+   "effect": -1.0,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0,
+   "ok": true
+  },
+  "break.false_alarms_per_day:P1.false_alarms_per_day": {
+   "effect": -0.744186,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Deviation from the spec: both z-scores read the week-over-week log change, log(count_t) - log(count_(t-336)), not the raw count; window 336 and threshold 3 are the spec's. On raw counts the day-night cycle sets the std and the causal and whole-series z-scores fire on the same single point, so P1 and P3 could not differ. Details in answers/17-anomaly-windows.md, Build notes."
+}

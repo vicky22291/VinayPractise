@@ -1,0 +1,228 @@
+{
+ "lab": "29",
+ "slug": "29-softmax-and-cross-entropy",
+ "level": "C",
+ "lane": "light",
+ "reference": "answers/29_softmax_and_cross_entropy_ref.py",
+ "script_sha256": "c2fbca7ccc30b820",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 4.3,
+   "lock": "light",
+   "maxrss_mb": 785,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 4.4,
+   "lock": "light",
+   "maxrss_mb": 801,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 5.3,
+   "lock": "light",
+   "maxrss_mb": 802,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 2.3,
+   "lock": "light",
+   "maxrss_mb": 801,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 2.4,
+   "lock": "light",
+   "maxrss_mb": 801,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 2.4,
+   "lock": "light",
+   "maxrss_mb": 801,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 3.2,
+   "lock": "light",
+   "maxrss_mb": 801,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 2.3,
+   "lock": "light",
+   "maxrss_mb": 802,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 2.0,
+   "lock": "light",
+   "maxrss_mb": 801,
+   "n_result": 3,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.first_batch_loss": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 2.3101,
+    "1": 2.2951,
+    "2": 2.31487
+   },
+   "unit": "nats",
+   "value": 2.3101,
+   "spread": 0.019769999999999843
+  },
+  "baseline.test_accuracy": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.909,
+    "1": 0.9088,
+    "2": 0.9095
+   },
+   "unit": "fraction",
+   "value": 0.909,
+   "spread": 0.0006999999999999229
+  },
+  "baseline.min_batch_loss": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.174214,
+    "1": 0.116976,
+    "2": 0.161438
+   },
+   "unit": "nats",
+   "value": 0.174214,
+   "spread": 0.05723800000000001
+  },
+  "P3.test_accuracy": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.8216,
+    "1": 0.8224,
+    "2": 0.821
+   },
+   "unit": "fraction",
+   "value": 0.8216,
+   "spread": 0.0014000000000000679
+  },
+  "P3.lowest_possible_loss": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.46115,
+    "1": 1.46115,
+    "2": 1.46115
+   },
+   "unit": "nats",
+   "value": 1.46115,
+   "spread": 0.0
+  },
+  "break.min_batch_loss": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.6227,
+    "1": 1.58924,
+    "2": 1.60993
+   },
+   "unit": "nats",
+   "value": 1.6227,
+   "spread": 0.033460000000000045
+  },
+  "P2.test_accuracy": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.8034,
+    "1": 0.7973,
+    "2": 0.8109
+   },
+   "unit": "fraction",
+   "value": 0.8034,
+   "spread": 0.013599999999999945
+  },
+  "P2.accuracy_delta": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.1056,
+    "1": -0.1115,
+    "2": -0.0986
+   },
+   "unit": "fraction",
+   "value": -0.1056,
+   "spread": 0.012900000000000009
+  },
+  "change.min_batch_loss": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0337847,
+    "1": 0.0333402,
+    "2": 0.0333637
+   },
+   "unit": "mse",
+   "value": 0.0337847,
+   "spread": 0.00044450000000000045
+  }
+ },
+ "effects": {
+  "P2.test_accuracy:baseline.test_accuracy": {
+   "effect": -0.10523333333333336,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.013599999999999945,
+   "ok": true
+  },
+  "P3.test_accuracy:baseline.test_accuracy": {
+   "effect": -0.08743333333333336,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0014000000000000679,
+   "ok": true
+  },
+  "break.min_batch_loss:baseline.min_batch_loss": {
+   "effect": 1.4564139999999999,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.05723800000000001,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "No knob changes. MSE is taken on the softmax probabilities against one-hot targets. The Hugging Face fallback was tested on the final reference and starter with tagged runs. Build notes: 29-softmax-and-cross-entropy.md."
+}

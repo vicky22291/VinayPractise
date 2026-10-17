@@ -1,0 +1,667 @@
+{
+ "lab": "05",
+ "slug": "05-recommender-embeddings",
+ "level": "W",
+ "lane": "light",
+ "reference": "m1-whole-game/scripts/05_recommender_embeddings.py",
+ "script_sha256": "adb9d394465b49e7",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 45.9,
+   "lock": "light",
+   "maxrss_mb": 439,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 60.2,
+   "lock": "light",
+   "maxrss_mb": 419,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 62.8,
+   "lock": "light",
+   "maxrss_mb": 442,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 84.7,
+   "lock": "light",
+   "maxrss_mb": 478,
+   "n_result": 42,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 110.5,
+   "lock": "light",
+   "maxrss_mb": 439,
+   "n_result": 42,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 121.4,
+   "lock": "light",
+   "maxrss_mb": 525,
+   "n_result": 42,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 61.9,
+   "lock": "light",
+   "maxrss_mb": 438,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 64.9,
+   "lock": "light",
+   "maxrss_mb": 437,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 61.4,
+   "lock": "light",
+   "maxrss_mb": 456,
+   "n_result": 2,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.global_mean_rmse": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 1.1179,
+    "1": 1.12532,
+    "2": 1.12065
+   },
+   "unit": "stars",
+   "value": 1.1179,
+   "spread": 0.007420000000000204
+  },
+  "baseline.movie_mean_rmse": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 1.01814,
+    "1": 1.02917,
+    "2": 1.02335
+   },
+   "unit": "stars",
+   "value": 1.01814,
+   "spread": 0.011029999999999873
+  },
+  "baseline.bias_baseline_rmse": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.949938,
+    "1": 0.959282,
+    "2": 0.95758
+   },
+   "unit": "stars",
+   "value": 0.949938,
+   "spread": 0.009344000000000019
+  },
+  "P1.dot_rmse": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.923509,
+    "1": 0.933682,
+    "2": 0.93317
+   },
+   "unit": "stars",
+   "value": 0.923509,
+   "spread": 0.010172999999999988
+  },
+  "break.train_rmse_ep01": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.26816,
+    "1": 1.26069,
+    "2": 1.26295
+   },
+   "unit": "stars",
+   "value": 1.26816,
+   "spread": 0.007469999999999866
+  },
+  "break.valid_rmse_ep01": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.27308,
+    "1": 1.26564,
+    "2": 1.25813
+   },
+   "unit": "stars",
+   "value": 1.27308,
+   "spread": 0.014950000000000019
+  },
+  "break.train_rmse_ep02": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.953255,
+    "1": 0.954373,
+    "2": 0.954532
+   },
+   "unit": "stars",
+   "value": 0.953255,
+   "spread": 0.0012770000000000836
+  },
+  "break.valid_rmse_ep02": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.977926,
+    "1": 0.985885,
+    "2": 0.981662
+   },
+   "unit": "stars",
+   "value": 0.977926,
+   "spread": 0.00795900000000005
+  },
+  "break.train_rmse_ep03": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.872792,
+    "1": 0.878468,
+    "2": 0.886433
+   },
+   "unit": "stars",
+   "value": 0.872792,
+   "spread": 0.013641000000000014
+  },
+  "break.valid_rmse_ep03": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.947665,
+    "1": 0.963983,
+    "2": 0.965356
+   },
+   "unit": "stars",
+   "value": 0.947665,
+   "spread": 0.017691000000000012
+  },
+  "break.train_rmse_ep04": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.751086,
+    "1": 0.759914,
+    "2": 0.758372
+   },
+   "unit": "stars",
+   "value": 0.751086,
+   "spread": 0.008827999999999947
+  },
+  "break.valid_rmse_ep04": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.956295,
+    "1": 0.973241,
+    "2": 0.964154
+   },
+   "unit": "stars",
+   "value": 0.956295,
+   "spread": 0.016946000000000017
+  },
+  "break.train_rmse_ep05": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.638387,
+    "1": 0.640667,
+    "2": 0.643554
+   },
+   "unit": "stars",
+   "value": 0.638387,
+   "spread": 0.005166999999999922
+  },
+  "break.valid_rmse_ep05": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.997625,
+    "1": 1.00913,
+    "2": 0.999215
+   },
+   "unit": "stars",
+   "value": 0.997625,
+   "spread": 0.011505000000000098
+  },
+  "break.train_rmse_ep06": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.564905,
+    "1": 0.56591,
+    "2": 0.571426
+   },
+   "unit": "stars",
+   "value": 0.564905,
+   "spread": 0.006520999999999999
+  },
+  "break.valid_rmse_ep06": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.0346,
+    "1": 1.03809,
+    "2": 1.04133
+   },
+   "unit": "stars",
+   "value": 1.0346,
+   "spread": 0.006730000000000125
+  },
+  "break.train_rmse_ep07": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.515357,
+    "1": 0.517988,
+    "2": 0.521713
+   },
+   "unit": "stars",
+   "value": 0.515357,
+   "spread": 0.006356000000000028
+  },
+  "break.valid_rmse_ep07": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.06676,
+    "1": 1.06182,
+    "2": 1.07197
+   },
+   "unit": "stars",
+   "value": 1.06676,
+   "spread": 0.010150000000000103
+  },
+  "break.train_rmse_ep08": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.484043,
+    "1": 0.482666,
+    "2": 0.485453
+   },
+   "unit": "stars",
+   "value": 0.484043,
+   "spread": 0.0027870000000000394
+  },
+  "break.valid_rmse_ep08": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.0873,
+    "1": 1.08932,
+    "2": 1.09239
+   },
+   "unit": "stars",
+   "value": 1.0873,
+   "spread": 0.005090000000000039
+  },
+  "break.train_rmse_ep09": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.450504,
+    "1": 0.449159,
+    "2": 0.452512
+   },
+   "unit": "stars",
+   "value": 0.450504,
+   "spread": 0.0033530000000000504
+  },
+  "break.valid_rmse_ep09": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.10674,
+    "1": 1.1032,
+    "2": 1.10757
+   },
+   "unit": "stars",
+   "value": 1.10674,
+   "spread": 0.004369999999999985
+  },
+  "break.train_rmse_ep10": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.420639,
+    "1": 0.423473,
+    "2": 0.425248
+   },
+   "unit": "stars",
+   "value": 0.420639,
+   "spread": 0.00460900000000003
+  },
+  "break.valid_rmse_ep10": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.12191,
+    "1": 1.1141,
+    "2": 1.1209
+   },
+   "unit": "stars",
+   "value": 1.12191,
+   "spread": 0.007809999999999873
+  },
+  "break.train_rmse_ep11": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.395269,
+    "1": 0.391629,
+    "2": 0.39437
+   },
+   "unit": "stars",
+   "value": 0.395269,
+   "spread": 0.0036399999999999766
+  },
+  "break.valid_rmse_ep11": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.13086,
+    "1": 1.12744,
+    "2": 1.12829
+   },
+   "unit": "stars",
+   "value": 1.13086,
+   "spread": 0.0034199999999999786
+  },
+  "break.train_rmse_ep12": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.366551,
+    "1": 0.363379,
+    "2": 0.364953
+   },
+   "unit": "stars",
+   "value": 0.366551,
+   "spread": 0.003172000000000008
+  },
+  "break.valid_rmse_ep12": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.14247,
+    "1": 1.13748,
+    "2": 1.13931
+   },
+   "unit": "stars",
+   "value": 1.14247,
+   "spread": 0.00499000000000005
+  },
+  "break.train_rmse_ep13": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.339636,
+    "1": 0.337881,
+    "2": 0.339138
+   },
+   "unit": "stars",
+   "value": 0.339636,
+   "spread": 0.0017550000000000066
+  },
+  "break.valid_rmse_ep13": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.1494,
+    "1": 1.14957,
+    "2": 1.15275
+   },
+   "unit": "stars",
+   "value": 1.1494,
+   "spread": 0.003349999999999964
+  },
+  "break.train_rmse_ep14": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.314083,
+    "1": 0.312922,
+    "2": 0.31593
+   },
+   "unit": "stars",
+   "value": 0.314083,
+   "spread": 0.0030080000000000107
+  },
+  "break.valid_rmse_ep14": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.15796,
+    "1": 1.15863,
+    "2": 1.16037
+   },
+   "unit": "stars",
+   "value": 1.15796,
+   "spread": 0.002409999999999801
+  },
+  "break.train_rmse_ep15": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.2943,
+    "1": 0.29345,
+    "2": 0.295369
+   },
+   "unit": "stars",
+   "value": 0.2943,
+   "spread": 0.001919000000000004
+  },
+  "break.valid_rmse_ep15": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.16398,
+    "1": 1.16678,
+    "2": 1.16663
+   },
+   "unit": "stars",
+   "value": 1.16398,
+   "spread": 0.0027999999999999137
+  },
+  "break.train_rmse_ep16": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.277931,
+    "1": 0.276887,
+    "2": 0.279567
+   },
+   "unit": "stars",
+   "value": 0.277931,
+   "spread": 0.0026800000000000157
+  },
+  "break.valid_rmse_ep16": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.16914,
+    "1": 1.16991,
+    "2": 1.16976
+   },
+   "unit": "stars",
+   "value": 1.16914,
+   "spread": 0.0007699999999999374
+  },
+  "break.train_rmse_ep17": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.266229,
+    "1": 0.264775,
+    "2": 0.267459
+   },
+   "unit": "stars",
+   "value": 0.266229,
+   "spread": 0.0026840000000000197
+  },
+  "break.valid_rmse_ep17": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.17155,
+    "1": 1.17214,
+    "2": 1.1729
+   },
+   "unit": "stars",
+   "value": 1.17155,
+   "spread": 0.0013499999999999623
+  },
+  "break.train_rmse_ep18": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.259243,
+    "1": 0.257557,
+    "2": 0.260442
+   },
+   "unit": "stars",
+   "value": 0.259243,
+   "spread": 0.0028850000000000264
+  },
+  "break.valid_rmse_ep18": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.17375,
+    "1": 1.17485,
+    "2": 1.17493
+   },
+   "unit": "stars",
+   "value": 1.17375,
+   "spread": 0.0011799999999999589
+  },
+  "break.train_rmse_ep19": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.256188,
+    "1": 0.254572,
+    "2": 0.257344
+   },
+   "unit": "stars",
+   "value": 0.256188,
+   "spread": 0.0027719999999999967
+  },
+  "break.valid_rmse_ep19": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.17438,
+    "1": 1.17542,
+    "2": 1.17558
+   },
+   "unit": "stars",
+   "value": 1.17438,
+   "spread": 0.0012000000000000899
+  },
+  "break.train_rmse_ep20": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.255702,
+    "1": 0.254065,
+    "2": 0.256854
+   },
+   "unit": "stars",
+   "value": 0.255702,
+   "spread": 0.0027890000000000414
+  },
+  "break.valid_rmse_ep20": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.17451,
+    "1": 1.17558,
+    "2": 1.17571
+   },
+   "unit": "stars",
+   "value": 1.17451,
+   "spread": 0.0012000000000000899
+  },
+  "P3.valid_rmse": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.17451,
+    "1": 1.17558,
+    "2": 1.17571
+   },
+   "unit": "stars",
+   "value": 1.17451,
+   "spread": 0.0012000000000000899
+  },
+  "P3.valid_minus_global_mean": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.056606,
+    "1": 0.0502617,
+    "2": 0.0550587
+   },
+   "unit": "stars",
+   "value": 0.056606,
+   "spread": 0.006344299999999997
+  },
+  "P2.dot_bias_rmse": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.917706,
+    "1": 0.928691,
+    "2": 0.92951
+   },
+   "unit": "stars",
+   "value": 0.917706,
+   "spread": 0.011803999999999926
+  },
+  "P2.delta_rmse": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.00580384,
+    "1": -0.00499015,
+    "2": -0.00366054
+   },
+   "unit": "stars",
+   "value": -0.00580384,
+   "spread": 0.0021433000000000003
+  }
+ },
+ "effects": {
+  "P2.dot_bias_rmse:P1.dot_rmse": {
+   "effect": -0.004818000000000026,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.011803999999999926,
+   "ok": false
+  },
+  "P3.valid_rmse:P1.dot_rmse": {
+   "effect": 0.24514633333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.010172999999999988,
+   "ok": true
+  },
+  "P3.valid_rmse:baseline.global_mean_rmse": {
+   "effect": 0.05397666666666671,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.007420000000000204,
+   "ok": true
+  },
+  "P1.dot_rmse:baseline.bias_baseline_rmse": {
+   "effect": -0.025479666666666605,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.010172999999999988,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "- Knob changes: none. Precomputed steps: none; the slowest seed-0 run (break) took 84.7 s.\n- Review round (script sha256 prefix adb9d394465b49e7): the script gained a warnings filter, a third baseline, a nearest-movies NOTE line and two reworded `# Q:` prompts, so all 9 reference runs were rerun. Every value the earlier version printed came out identical, because the new code draws no random numbers.\n  - The filter hides one FutureWarning (`torch.jit.script` is deprecated) that the fastai import printed to stderr, so every log and the .out now start with the HW and SEED lines.\n  - The first seed-0 break run of this version (job 05-break-s0-155011-59428) shared the CPU with two heavy and two light runs from other labs, so its wall time did not represent the lab. It was rerun once (job 05-break-s0-160011-91355) with identical RESULT lines, and mkanswers keeps the rerun.\n  - To stay at 150 lines, load_ratings() moved into the `__main__` block (which replaced main()), each pair of embeddings shares one line, and two plumbing helpers (predict and EpochRMSE) carry a comment instead of a docstring.\n- Rebuild alignment (level W: the rebuild is a retype of code the learner read). The spec's rebuild is rmse, a damped bias_baseline, nearest_items by cosine and a seeded 90/10 split; the earlier script held only rmse. Now baselines() also computes the damped user-plus-movie bias (damping 5), printed as `baseline.bias_baseline_rmse`, and --change calls nearest_items on movie_factors. A build inspection found both give the same output as the rebuild solution's functions. split stays fastai's RandomSplitter in the script, because the spec fixes CollabDataLoaders(valid_pct=0.2, seed=42) and lab 33 reads that exact split; the lab file says to write split from its docstring. The model itself is not rebuilt here: lab 33's rebuild is DotProductBias plus a training step.\n- Deviation from the spec's record: `baseline.bias_baseline_rmse` and the --change NOTE line are additions. The NOTE names the 5 titles whose movie_factors rows have the highest cosine similarity to Star Wars (1977). It prints at every seed, never in smoke, and only the seed-0 line is in the .out. Effect P1 vs the bias baseline: mean -0.0254797 against a spread of 0.010173, so it passes the 2x rule, and `P1.dot_rmse` is below `baseline.bias_baseline_rmse` at all three seeds.\n- Models: P1 has no bias terms and collab_learner always adds them, so the script uses fastbook's DotProduct (fastai Embedding, init std 0.01, sigmoid_range into y_range (0, 5.5)) with Learner, MSELossFlat and fit_one_cycle(5, 5e-3, wd=0.1). The change uses DotProductBias, the same class plus one user and one movie bias embedding, so the bias terms are the only difference; at the same seed both models start from the same factor vectors.\n- Break model (the spec names only wd and epochs): DotProduct with no bias terms, as in P1, with wd 0 and 20 epochs, so each step differs from the baseline in one place. The script passes wd=0.0 explicitly, because fastai's Adam applies wd 0.01 when wd is not passed.\n- Split: CollabDataLoaders.from_df(item_name='title', valid_pct=0.2, seed=42 + --seed, bs=64). --seed 0 gives the spec's seed 42, and the seed also drives the initial vectors and the batch order, so every seed spread includes a new split. Ratings keep u.data line order (pandas 2.3.3 map and merge both keep it), so the validation indices are u.data line numbers and equal fastai RandomSplitter(valid_pct=0.2, seed=42).\n- Items are titles, as in fastbook: 1,664 titles for 1,682 movie ids. fastai's df_shrink turns the title column into a pandas category before Categorify, so every title gets an embedding row, including titles seen only in validation.\n- Baselines: the movie mean is the plain mean of each title's training ratings, and a title missing from training gets the global mean. The bias baseline is the global mean, plus each user's residual sum over (count + 5), plus each title's residual sum over (count + 5) on what the user bias left; an unseen user or title adds 0. It is the rebuild's bias_baseline, keyed by title.\n- Per-epoch train and validation RMSE: a callback scores the full training set and the full validation set with the current weights after each epoch (not fastai's smoothed train loss).\n- Record table: the lab file groups the 40 per-epoch names (break.train_rmse_ep01 to ep20 and break.valid_rmse_ep01 to ep20) into two rows, not one row per name as BRIEF section 6 asks, so the table stays readable. The script prints all 40, and the P3 block lists the seed-0 values.\n- lab05.json for lab 33: every measured mode writes it at --seed 0, merged under a file lock. Keys: rmse.global_mean, rmse.movie_mean, rmse.bias_baseline, rmse.dot (--baseline), rmse.dot_bias (--change), rmse.break_valid (--break), valid_idx (20,000 sorted 0-based u.data line numbers) and a one-line about.\n- Lab file Goal line: the spec's \"say how far it beats\" became \"say how far its RMSE is from\", so the lab file carries no direction hint. It names the three baselines.\n- Effect P2 (bias terms) is below the 2x rule: mean change -0.004818 against a raw seed spread of 0.011804. The raw spread is mostly the split changing with the seed, which moves P1 and P2 together. The paired delta P2.delta_rmse is negative at all three seeds and its own spread is 0.0021433, so P2's size is graded on P2.delta_rmse. No knob was changed: the spec fixes the P1 config, the change is binary, and the small size is the lesson: 50 factors already carry most of a per-movie offset when users keep many ratings in training. Every user has at least 20 ratings in the full data; an inspection of the seed-0 training split (no training) found at least 12 per user there, a median of 52, and 121 of 943 users below 20. Effects P3 vs P1 (0.245146 against a spread of 0.010173) and P3 vs the global mean (0.0539767 against 0.00742) pass.\n- Prototype comparison. The spec's answers-only note: wd 0 for 20 epochs gave validation 1.208 vs the global mean's 1.123, train 0.278. Here at seed 0: validation 1.17451 vs 1.1179, train 0.255702. Same direction: above the global mean at all three seeds. The global-mean gap is inside its spread (0.00742): the prototype used another split (at seed 42, u.data order gives 1.1179 and the grouped-by-movie order of older pandas merges gives 1.1279). The break gap is about 28 times the 0.0012 spread, so it is a configuration difference, not noise. Tagged runs at seed 0, not in the .json, ruled out the obvious causes without an exact match. Each value is in the log of the ledger job named after it:\n  - bias terms, DotProductBias with wd 0 for 20 epochs: validation 1.1732, train 0.2473; the RMSE definition: fastai's own validation loss gives 1.1745 and the square root of its smoothed train loss gives 0.2534 (job 05-break-s0-protobias-102933-36538);\n  - no y_range: validation 1.1010, train 0.3324; a constant learning rate, fit instead of fit_one_cycle: validation 1.2176, train 0.4199 (job 05-break-s0-protovariants-104938-1259);\n  - fastai's default wd 0.01 from not passing wd, DotProduct: validation 1.1280, train 0.2690 (job 05-break-s0-protovariants2-105520-21225, which printed this line, then exited 1 on its second variant);\n  - the same default with collab_learner: validation 1.1183, train 0.2559; lr 1e-2: validation 1.1811, train 0.2601 (job 05-break-s0-protovariants3-110053-45064, the fixed rerun).\n  Of these, only the higher peak learning rate (lr 1e-2) moved both final numbers toward the prototype's, which supports the schedule hypothesis. The prototype most likely ran another schedule or library version. The reference keeps the spec's stated config. One trap worth knowing: forgetting to pass wd=0 leaves fastai's 0.01, and collab_learner then ends level with the global mean."
+}

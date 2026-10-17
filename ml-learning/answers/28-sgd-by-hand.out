@@ -1,0 +1,41 @@
+===== baseline (seed 0, 3.8 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m5-under-the-hood/scripts/28_sgd_by_hand.py --baseline --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 65bb49d53a2db58c
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.mean_image_acc=0.951423 unit=fraction seed=0
+RESULT baseline.acc_epoch1=0.785574 unit=fraction seed=0
+RESULT baseline.acc_epoch5=0.946516 unit=fraction seed=0
+RESULT baseline.acc_epoch20=0.967125 unit=fraction seed=0
+RESULT baseline.epoch_losses=0.3978,0.1268,0.07666,0.06159,0.05344,0.04832,0.0446,0.04171,0.03948,0.03766,0.03624,0.03495,0.03381,0.03276,0.03178,0.0309,0.03008,0.02935,0.02868,0.02805 seed=0
+RESULT baseline.loss_ratio=0.070524 unit=epoch20/epoch1 seed=0
+PLOT ~/ml-data/results/lab28/loss-baseline-seed0.png
+RESULT baseline.loss_outcome=still_falls seed=0
+
+===== break (seed 0, 3.7 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m5-under-the-hood/scripts/28_sgd_by_hand.py --break --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 65bb49d53a2db58c
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT break.acc_epoch20=0.98528 unit=fraction seed=0
+RESULT break.epoch_losses=0.0577,0.02215,0.01762,0.01559,0.01341,0.01288,0.01184,0.0116,0.01157,0.01149,0.01063,0.01048,0.01044,0.009699,0.009395,0.009073,0.009265,0.008881,0.008922,0.008573 seed=0
+RESULT break.loss_ratio=0.148597 unit=epoch20/epoch1 seed=0
+PLOT ~/ml-data/results/lab28/loss-break-seed0.png
+RESULT P3.loss_outcome=still_falls seed=0
+
+===== change (seed 0, 1.8 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m5-under-the-hood/scripts/28_sgd_by_hand.py --change --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 65bb49d53a2db58c
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT change.acc_epoch1=0.919529 unit=fraction seed=0
+RESULT change.acc_epoch5=0.957802 unit=fraction seed=0
+RESULT P2.acc_epoch20=0.970069 unit=fraction seed=0
+RESULT P2.delta_vs_linear=0.00294405 unit=fraction seed=0
+RESULT change.epoch_losses=0.1413,0.06701,0.05314,0.04501,0.0403,0.03629,0.03297,0.0313,0.02903,0.02704,0.0265,0.02547,0.02473,0.02438,0.02386,0.02334,0.02302,0.02263,0.02235,0.02214 seed=0
+RESULT change.loss_ratio=0.156742 unit=epoch20/epoch1 seed=0
+PLOT ~/ml-data/results/lab28/loss-change-seed0.png
+

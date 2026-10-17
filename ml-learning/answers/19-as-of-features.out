@@ -1,0 +1,60 @@
+===== baseline (seed 0, 34.2 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/19_as_of_features_ref.py --baseline --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 9c3c4470d0b6829f
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+DATA rows=1795646 frauds=17821 days=183
+RESULT P1.auc=0.928158 unit=auc seed=0
+RESULT baseline.top3=terminal_fraud_rate,amount,amount_over_30d_mean seed=0
+RESULT baseline.top1_share=0.467362 unit=fraction seed=0
+RESULT baseline.auc_s1=0.999323 unit=auc n=333 seed=0
+RESULT baseline.auc_s2=0.979889 unit=auc n=3135 seed=0
+RESULT baseline.auc_s3=0.99122 unit=auc n=1578 seed=0
+RESULT baseline.auc_s4=0.804077 unit=auc n=2300 seed=0
+
+===== break (seed 0, 120.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/19_as_of_features_ref.py --break --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 9c3c4470d0b6829f
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+DATA rows=1795646 frauds=17821 days=183
+RESULT P3.auc=0.709088 unit=auc seed=0
+RESULT break.top3=amount,amount_over_30d_mean,cust_mean_30d seed=0
+RESULT break.top1_share=0.407778 unit=fraction seed=0
+RESULT break.auc_time_asof=0.709088 unit=auc seed=0
+RESULT break.auc_random_asof=0.802777 unit=auc seed=0
+RESULT break.auc_time_final_others=0.845627 unit=auc seed=0
+RESULT break.auc_random_final_others=0.986601 unit=auc seed=0
+RESULT break.auc_time_final_all=0.928158 unit=auc seed=0
+RESULT break.auc_random_final_all=0.988516 unit=auc seed=0
+test AUC, terminal input x split:
+               time  random
+asof          0.709   0.803
+final_others  0.846   0.987
+final_all     0.928   0.989
+AUC faked, against the as-of input on the time split:
+               time  random
+asof          0.000   0.094
+final_others  0.137   0.278
+final_all     0.219   0.279
+RESULT break.auc_s1=0.999297 unit=auc n=333 seed=0
+RESULT break.auc_s2=0.6257 unit=auc n=3135 seed=0
+RESULT break.auc_s3=0.980741 unit=auc n=1578 seed=0
+RESULT break.auc_s4=0.594354 unit=auc n=2300 seed=0
+
+===== change (seed 0, 38.1 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/19_as_of_features_ref.py --change --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 9c3c4470d0b6829f
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+DATA rows=1795646 frauds=17821 days=183
+RESULT P2.auc=0.988516 unit=auc seed=0
+RESULT P2.auc_delta=0.0603581 unit=auc seed=0
+RESULT change.auc_s1=0.999044 unit=auc n=254 seed=0
+RESULT change.auc_s2=0.985686 unit=auc n=1891 seed=0
+RESULT change.auc_s3=0.988659 unit=auc n=948 seed=0
+RESULT change.auc_s4=0.993971 unit=auc n=466 seed=0
+

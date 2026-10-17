@@ -1,0 +1,35 @@
+===== baseline (seed 0, 2.1 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/07_post_outcome_leak_ref.py --baseline --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 fe1b63e142d9da0d
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.cv_accuracy=0.792223 unit=fraction seed=0
+
+===== break (seed 0, 1.7 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/07_post_outcome_leak_ref.py --break --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 fe1b63e142d9da0d
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.leaky_blanked_accuracy=0.738001 unit=fraction seed=0
+RESULT P3.gap_points=-5.42219 unit=points seed=0
+RESULT P3.leaky_vs_honest=below seed=0
+RESULT break.leaky_real_accuracy=0.955684 unit=fraction seed=0
+RESULT break.predicted_survival_rate=0.155105 unit=fraction seed=0
+RESULT break.actual_survival_rate=0.381972 unit=fraction seed=0
+RESULT break.all_died_accuracy=0.618028 unit=fraction seed=0
+
+===== change (seed 0, 2.2 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/07_post_outcome_leak_ref.py --change --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 fe1b63e142d9da0d
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.cv_accuracy=0.955684 unit=fraction seed=0
+RESULT P2.delta_points=16.3461 unit=points seed=0
+RESULT change.top3_gain_share=boat:0.538,sex:0.167,pclass:0.089 seed=0
+RESULT change.scan_auc_boat=0.975243 unit=auc seed=0
+RESULT change.scan_auc_body=0.574787 unit=auc seed=0
+RESULT change.scan_flagged=boat seed=0
+

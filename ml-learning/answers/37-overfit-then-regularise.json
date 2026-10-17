@@ -1,0 +1,200 @@
+{
+ "lab": "37",
+ "slug": "37-overfit-then-regularise",
+ "level": "S",
+ "lane": "heavy",
+ "reference": "answers/37_overfit_then_regularise_ref.py",
+ "script_sha256": "43f401f63d4a849e",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 46.4,
+   "lock": "heavy",
+   "maxrss_mb": 1151,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 38.8,
+   "lock": "heavy",
+   "maxrss_mb": 1165,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 39.5,
+   "lock": "heavy",
+   "maxrss_mb": 1142,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 12.3,
+   "lock": "heavy",
+   "maxrss_mb": 996,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 44.5,
+   "lock": "heavy",
+   "maxrss_mb": 1147,
+   "n_result": 4,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.gap": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 39.36,
+    "1": 39.14,
+    "2": 36.17
+   },
+   "unit": "points",
+   "value": 39.36,
+   "spread": 3.1899999999999977
+  },
+  "baseline.train_acc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 99.7,
+    "1": 99.96,
+    "2": 100
+   },
+   "unit": "percent",
+   "value": 99.7,
+   "spread": 0.29999999999999716
+  },
+  "baseline.val_acc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 60.34,
+    "1": 60.82,
+    "2": 63.83
+   },
+   "unit": "percent",
+   "value": 60.34,
+   "spread": 3.489999999999995
+  },
+  "P3.val_acc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 36.96
+   },
+   "unit": "percent",
+   "value": 36.96,
+   "spread": null
+  },
+  "break.train_acc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 100
+   },
+   "unit": "percent",
+   "value": 100,
+   "spread": null
+  },
+  "break.gap": {
+   "mode": "break",
+   "by_seed": {
+    "0": 63.04
+   },
+   "unit": "points",
+   "value": 63.04,
+   "spread": null
+  },
+  "break.epochs_to_100": {
+   "mode": "break",
+   "by_seed": {
+    "0": 24
+   },
+   "unit": "epochs",
+   "value": 24,
+   "spread": null
+  },
+  "P2.gap": {
+   "mode": "change",
+   "by_seed": {
+    "0": 9.33
+   },
+   "unit": "points",
+   "value": 9.33,
+   "spread": null
+  },
+  "P2.gap_delta": {
+   "mode": "change",
+   "by_seed": {
+    "0": -30.03
+   },
+   "unit": "points",
+   "value": -30.03,
+   "spread": null
+  },
+  "change.train_acc": {
+   "mode": "change",
+   "by_seed": {
+    "0": 74.68
+   },
+   "unit": "percent",
+   "value": 74.68,
+   "spread": null
+  },
+  "change.val_acc": {
+   "mode": "change",
+   "by_seed": {
+    "0": 65.35
+   },
+   "unit": "percent",
+   "value": 65.35,
+   "spread": null
+  }
+ },
+ "effects": {
+  "P2.gap:P1.gap": {
+   "effect": -30.03,
+   "seeds": [
+    "0"
+   ],
+   "spread": 3.1899999999999977,
+   "ok": true
+  },
+  "P3.val_acc:baseline.val_acc": {
+   "effect": -23.380000000000003,
+   "seeds": [
+    "0"
+   ],
+   "spread": 3.489999999999995,
+   "ok": true
+  },
+  "break.gap:P1.gap": {
+   "effect": 23.68,
+   "seeds": [
+    "0"
+   ],
+   "spread": 3.1899999999999977,
+   "ok": true
+  },
+  "change.val_acc:baseline.val_acc": {
+   "effect": 5.009999999999991,
+   "seeds": [
+    "0"
+   ],
+   "spread": 3.489999999999995,
+   "ok": false
+  }
+ },
+ "precomputed": [],
+ "notes": "Taught effects: P2.gap:P1.gap (augmentation narrows the gap), P3.val_acc:baseline.val_acc and break.gap:P1.gap (the 2-point learning curve). change.val_acc:baseline.val_acc is a secondary effect the lab does not teach as real: one seed, reported with the baseline validation spread and explained in the answer file's P2 block and build notes. No precomputed steps: every run is far under 6 minutes."
+}

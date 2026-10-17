@@ -1,0 +1,295 @@
+{
+ "lab": "40",
+ "slug": "40-lora-vs-prompting",
+ "level": "S",
+ "lane": "heavy",
+ "reference": "answers/40_lora_vs_prompting_ref.py",
+ "script_sha256": "3bb6ed93ca9d17bf",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 mlx=0.32.4 device=mlx",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 55.5,
+   "lock": "heavy",
+   "maxrss_mb": 1472,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 86.0,
+   "lock": "heavy",
+   "maxrss_mb": 1476,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 77.8,
+   "lock": "heavy",
+   "maxrss_mb": 1272,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 946.5,
+   "lock": "heavy",
+   "maxrss_mb": 1459,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 848.7,
+   "lock": "heavy",
+   "maxrss_mb": 998,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 825.2,
+   "lock": "heavy",
+   "maxrss_mb": 1414,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 280.0,
+   "lock": "heavy",
+   "maxrss_mb": 2541,
+   "n_result": 13,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.exact_match_pct": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 15,
+    "1": 21,
+    "2": 22
+   },
+   "unit": "pct",
+   "value": 15,
+   "spread": 7
+  },
+  "baseline.prompt_tokens": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 413.13,
+    "1": 422.13,
+    "2": 437.13
+   },
+   "unit": "tokens",
+   "value": 413.13,
+   "spread": 24.0
+  },
+  "P3.best_iter": {
+   "mode": "break",
+   "by_seed": {
+    "0": 50,
+    "1": 50,
+    "2": 50
+   },
+   "unit": "iteration",
+   "value": 50,
+   "spread": 0
+  },
+  "break.val_loss_start": {
+   "mode": "break",
+   "by_seed": {
+    "0": 3.4239,
+    "1": 3.4239,
+    "2": 3.4239
+   },
+   "unit": "nats",
+   "value": 3.4239,
+   "spread": 0.0
+  },
+  "break.val_loss_min": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.70133,
+    "1": 1.71462,
+    "2": 1.67848
+   },
+   "unit": "nats",
+   "value": 1.70133,
+   "spread": 0.03614000000000006
+  },
+  "break.val_loss_final": {
+   "mode": "break",
+   "by_seed": {
+    "0": 2.6995,
+    "1": 2.59614,
+    "2": 2.64355
+   },
+   "unit": "nats",
+   "value": 2.6995,
+   "spread": 0.1033599999999999
+  },
+  "break.train_loss_final": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0753718,
+    "1": 0.08036,
+    "2": 0.0730588
+   },
+   "unit": "nats",
+   "value": 0.0753718,
+   "spread": 0.007301200000000008
+  },
+  "P2.em_change_pts": {
+   "mode": "change",
+   "by_seed": {
+    "0": 48
+   },
+   "unit": "pts",
+   "value": 48,
+   "spread": null
+  },
+  "P2.flips_to_right": {
+   "mode": "change",
+   "by_seed": {
+    "0": 51
+   },
+   "unit": "items",
+   "value": 51,
+   "spread": null
+  },
+  "P2.flips_to_wrong": {
+   "mode": "change",
+   "by_seed": {
+    "0": 3
+   },
+   "unit": "items",
+   "value": 3,
+   "spread": null
+  },
+  "change.exact_match_pct": {
+   "mode": "change",
+   "by_seed": {
+    "0": 63
+   },
+   "unit": "pct",
+   "value": 63,
+   "spread": null
+  },
+  "change.sign_test_p": {
+   "mode": "change",
+   "by_seed": {
+    "0": 2.91878e-12
+   },
+   "unit": "p",
+   "value": 2.91878e-12,
+   "spread": null
+  },
+  "change.ci95_width_pts": {
+   "mode": "change",
+   "by_seed": {
+    "0": 21.9214
+   },
+   "unit": "pts",
+   "value": 21.9214,
+   "spread": null
+  },
+  "change.prompt_tokens": {
+   "mode": "change",
+   "by_seed": {
+    "0": 56.13
+   },
+   "unit": "tokens",
+   "value": 56.13,
+   "spread": null
+  },
+  "change.trainable_pct": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.456063
+   },
+   "unit": "pct",
+   "value": 0.456063,
+   "spread": null
+  },
+  "change.lora_rank": {
+   "mode": "change",
+   "by_seed": {
+    "0": 8
+   },
+   "unit": "r",
+   "value": 8,
+   "spread": null
+  },
+  "change.lora_scale": {
+   "mode": "change",
+   "by_seed": {
+    "0": 20
+   },
+   "unit": "scale",
+   "value": 20,
+   "spread": null
+  },
+  "change.peak_mem_gb": {
+   "mode": "change",
+   "by_seed": {
+    "0": 3.93578
+   },
+   "unit": "GB",
+   "value": 3.93578,
+   "spread": null
+  },
+  "change.train_tok_per_s": {
+   "mode": "change",
+   "by_seed": {
+    "0": 496.632
+   },
+   "unit": "tok/s",
+   "value": 496.632,
+   "spread": null
+  },
+  "change.tok_s_3b_share": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.577825
+   },
+   "unit": "fraction",
+   "value": 0.577825,
+   "spread": null
+  }
+ },
+ "effects": {
+  "change.exact_match_pct:P1.exact_match_pct": {
+   "effect": 48.0,
+   "seeds": [
+    "0"
+   ],
+   "spread": 7,
+   "ok": true
+  },
+  "break.val_loss_final:break.val_loss_min": {
+   "effect": 0.9482533333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.1033599999999999,
+   "ok": true
+  }
+ },
+ "precomputed": [
+  "P3"
+ ],
+ "notes": "P3 (--break) is precomputed: each run is over the 6-minute cap. It ran at seeds 0, 1 and 2, so its effect has a seed spread. Tolerance exception: P3.best_iter is graded on its own seed spread over those three break seeds, not on the baseline spread, because the baseline spread is in exact-match points and P3 is an iteration count; P1 and P2 use the baseline spread. N = 300 for --change, from the smoke calibration. Seeds 1 and 2 of the baseline draw 5 random train rows as shots; seed 0 uses the first 5."
+}

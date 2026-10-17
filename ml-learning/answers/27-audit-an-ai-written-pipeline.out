@@ -1,0 +1,68 @@
+===== baseline (seed 0, 4.2 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/27_audit_an_ai_written_pipeline_ref.py --baseline --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 e45fbbb4b097d607
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+DATA history: 227,845 payments, 417 frauds; next month: 56,962 payments, 75 frauds
+RESULT baseline.pr_auc=0.96309 unit=fraction seed=0
+RESULT baseline.threshold=0.634736 unit=probability seed=0
+RESULT baseline.recall=0.871703 unit=fraction seed=0
+RESULT baseline.precision=0.983762 unit=fraction seed=0
+RESULT baseline.decline_rate=0.00162172 unit=fraction seed=0
+
+===== break (seed 0, 5.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/27_audit_an_ai_written_pipeline_ref.py --break --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 e45fbbb4b097d607
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+DATA history: 227,845 payments, 417 frauds; next month: 56,962 payments, 75 frauds
+RESULT break.shipped_pr_auc_next=0.791778 unit=fraction seed=0
+RESULT break.shipped_recall_next=0.853333 unit=fraction seed=0
+RESULT break.shipped_precision_next=0.307692 unit=fraction seed=0
+RESULT P3.decline_rate_next=0.00365156 unit=fraction seed=0
+RESULT P1.honest_pr_auc=0.726696 unit=fraction seed=0
+RESULT break.honest_threshold=0.37427 unit=probability seed=0
+RESULT break.honest_recall_next=0.733333 unit=fraction seed=0
+RESULT break.honest_precision_next=0.733333 unit=fraction seed=0
+RESULT break.honest_decline_rate_next=0.00131667 unit=fraction seed=0
+RESULT break.shipped_test_fraud_share=0.154932 unit=fraction seed=0
+RESULT break.shipped_test_unique_frauds=360 unit=count seed=0
+RESULT break.shipped_test_frauds_seen=1 unit=fraction seed=0
+RESULT break.shipped_avg_pr_auc=0.96319 unit=fraction n=10 seed=0
+RESULT break.shipped_avg_recall=0.883453 unit=fraction n=10 seed=0
+RESULT break.shipped_avg_decline_rate=0.00165749 unit=fraction n=10 seed=0
+RESULT break.shipped_avg_decline_rate_next=0.00533865 unit=fraction n=10 seed=0
+RESULT break.fix_oversampling_pr_auc=0.9 unit=fraction n=10 seed=0
+RESULT break.fix_oversampling_recall=0.844578 unit=fraction n=10 seed=0
+RESULT break.fix_oversampling_decline_rate=0.00161851 unit=fraction n=10 seed=0
+RESULT break.fix_oversampling_decline_rate_next=0.0018802 unit=fraction n=10 seed=0
+RESULT break.fix_threshold_pr_auc=0.96833 unit=fraction n=10 seed=0
+RESULT break.fix_threshold_recall=0.798882 unit=fraction n=10 seed=0
+RESULT break.fix_threshold_decline_rate=0.00146795 unit=fraction n=10 seed=0
+RESULT break.fix_threshold_decline_rate_next=0.0012008 unit=fraction n=10 seed=0
+RESULT break.fix_scale_pr_auc=0.90307 unit=fraction n=10 seed=0
+RESULT break.fix_scale_recall=0.852038 unit=fraction n=10 seed=0
+RESULT break.fix_scale_decline_rate=0.0016452 unit=fraction n=10 seed=0
+RESULT break.fix_scale_decline_rate_next=0.00214178 unit=fraction n=10 seed=0
+RESULT break.shipped_split_decline_rate_next_min=0.00254556 unit=fraction n=10 seed=0
+RESULT break.shipped_split_decline_rate_next_max=0.0124644 unit=fraction n=10 seed=0
+
+===== change (seed 0, 3.6 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/27_audit_an_ai_written_pipeline_ref.py --change --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 e45fbbb4b097d607
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+DATA history: 227,845 payments, 417 frauds; next month: 56,962 payments, 75 frauds
+RESULT change.pr_auc=0.789902 unit=fraction seed=0
+RESULT change.threshold=0.876375 unit=probability seed=0
+RESULT change.recall=0.746988 unit=fraction seed=0
+RESULT change.precision=0.837838 unit=fraction seed=0
+RESULT change.decline_rate=0.00163174 unit=fraction seed=0
+RESULT change.pr_auc_avg=0.746899 unit=fraction n=10 seed=0
+RESULT change.recall_avg=0.759036 unit=fraction n=10 seed=0
+RESULT change.precision_avg=0.789305 unit=fraction n=10 seed=0
+RESULT P2.silent_bugs=3 unit=count seed=0
+

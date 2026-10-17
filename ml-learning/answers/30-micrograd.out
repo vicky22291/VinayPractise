@@ -1,0 +1,27 @@
+===== baseline (seed 0, 1.2 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/30_micrograd_ref.py --baseline --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 b031124edf4657c1
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.log10_max_gap=-9.27906 unit=log10 seed=0
+RESULT baseline.a_grad=-0.3 seed=0
+
+===== break (seed 0, 1.2 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/30_micrograd_ref.py --break --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 b031124edf4657c1
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.a_grad=-1.3 seed=0
+RESULT break.log10_max_gap=0.69897 unit=log10 seed=0
+RESULT break.worst_expr=(((((z+y)+x)+y)+((z+y)+x))+((z+y)+x))+(((z+y)+x)+y) seed=0
+
+===== change (seed 0, 1.3 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/30_micrograd_ref.py --change --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 b031124edf4657c1
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.log10_max_gap=-9.46299 unit=log10 seed=0
+

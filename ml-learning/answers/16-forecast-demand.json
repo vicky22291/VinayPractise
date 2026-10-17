@@ -1,0 +1,289 @@
+{
+ "lab": "16",
+ "slug": "16-forecast-demand",
+ "level": "C",
+ "lane": "light",
+ "reference": "answers/16_forecast_demand_ref.py",
+ "script_sha256": "5dd7c41238f813ef",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 1.4,
+   "lock": "light",
+   "maxrss_mb": 575,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 1.2,
+   "lock": "light",
+   "maxrss_mb": 573,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 2.4,
+   "lock": "light",
+   "maxrss_mb": 577,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 11.9,
+   "lock": "light",
+   "maxrss_mb": 575,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 15.6,
+   "lock": "light",
+   "maxrss_mb": 608,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 15.5,
+   "lock": "light",
+   "maxrss_mb": 604,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 6.3,
+   "lock": "light",
+   "maxrss_mb": 595,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 4.8,
+   "lock": "light",
+   "maxrss_mb": 594,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 6.4,
+   "lock": "light",
+   "maxrss_mb": 595,
+   "n_result": 2,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.seasonal_naive_mae": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 26.6441,
+    "1": 26.6441,
+    "2": 26.6441
+   },
+   "unit": "pickups",
+   "value": 26.6441,
+   "spread": 0.0
+  },
+  "break.missing_zone_hours_pct": {
+   "mode": "break",
+   "by_seed": {
+    "0": 4.13477,
+    "1": 4.13477,
+    "2": 4.13477
+   },
+   "unit": "percent",
+   "value": 4.13477,
+   "spread": 0.0
+  },
+  "break.wrong_lag168_pct": {
+   "mode": "break",
+   "by_seed": {
+    "0": 69.3432,
+    "1": 69.3432,
+    "2": 69.3432
+   },
+   "unit": "percent",
+   "value": 69.3432,
+   "spread": 0.0
+  },
+  "break.honest_seasonal_naive_mae": {
+   "mode": "break",
+   "by_seed": {
+    "0": 11.7621,
+    "1": 11.7621,
+    "2": 11.7621
+   },
+   "unit": "pickups",
+   "value": 11.7621,
+   "spread": 0.0
+  },
+  "P3.honest_lightgbm_mae": {
+   "mode": "break",
+   "by_seed": {
+    "0": 10.8973,
+    "1": 10.8973,
+    "2": 10.8973
+   },
+   "unit": "pickups",
+   "value": 10.8973,
+   "spread": 0.0
+  },
+  "break.honest_improvement_pct": {
+   "mode": "break",
+   "by_seed": {
+    "0": 7.35275,
+    "1": 7.35275,
+    "2": 7.35275
+   },
+   "unit": "percent",
+   "value": 7.35275,
+   "spread": 0.0
+  },
+  "break.honest_lightgbm_mae_shipped_rows": {
+   "mode": "break",
+   "by_seed": {
+    "0": 11.3171,
+    "1": 11.3171,
+    "2": 11.3171
+   },
+   "unit": "pickups",
+   "value": 11.3171,
+   "spread": 0.0
+  },
+  "break.leaky_lightgbm_mae": {
+   "mode": "break",
+   "by_seed": {
+    "0": 9.60074,
+    "1": 9.60074,
+    "2": 9.60074
+   },
+   "unit": "pickups",
+   "value": 9.60074,
+   "spread": 0.0
+  },
+  "change.lightgbm_mae": {
+   "mode": "change",
+   "by_seed": {
+    "0": 12.8997,
+    "1": 12.8997,
+    "2": 12.8997
+   },
+   "unit": "pickups",
+   "value": 12.8997,
+   "spread": 0.0
+  },
+  "P2.improvement_pct": {
+   "mode": "change",
+   "by_seed": {
+    "0": 51.5853,
+    "1": 51.5853,
+    "2": 51.5853
+   },
+   "unit": "percent",
+   "value": 51.5853,
+   "spread": 0.0
+  }
+ },
+ "effects": {
+  "change.lightgbm_mae:P1.seasonal_naive_mae": {
+   "effect": -13.744400000000004,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  },
+  "P3.honest_lightgbm_mae:change.lightgbm_mae": {
+   "effect": -2.0023999999999997,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  },
+  "break.honest_seasonal_naive_mae:P1.seasonal_naive_mae": {
+   "effect": -14.882,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  },
+  "P3.honest_lightgbm_mae:break.honest_seasonal_naive_mae": {
+   "effect": -0.8648000000000007,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  },
+  "break.leaky_lightgbm_mae:P3.honest_lightgbm_mae": {
+   "effect": -1.2965599999999995,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  },
+  "break.honest_improvement_pct:P2.improvement_pct": {
+   "effect": -44.232549999999996,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  },
+  "break.honest_lightgbm_mae_shipped_rows:change.lightgbm_mae": {
+   "effect": -1.5825999999999993,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  },
+  "P3.honest_lightgbm_mae:break.honest_lightgbm_mae_shipped_rows": {
+   "effect": -0.4198000000000004,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Deterministic: the split is by time and LightGBM at the spec's config (500 trees, objective l1, no bagging or feature sampling) makes no random choice, so --seed changes nothing and every spread is 0; the 2x rule holds trivially."
+}

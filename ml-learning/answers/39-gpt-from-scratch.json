@@ -1,0 +1,287 @@
+{
+ "lab": "39",
+ "slug": "39-gpt-from-scratch",
+ "level": "W",
+ "lane": "heavy",
+ "reference": "m7-language-models/scripts/39_gpt_from_scratch.py",
+ "script_sha256": "f46c2aa354d45495",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 245.1,
+   "lock": "heavy",
+   "maxrss_mb": 4885,
+   "n_result": 11,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 243.2,
+   "lock": "heavy",
+   "maxrss_mb": 5023,
+   "n_result": 11,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 247.3,
+   "lock": "heavy",
+   "maxrss_mb": 5019,
+   "n_result": 11,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 162.2,
+   "lock": "heavy",
+   "maxrss_mb": 519,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 8.5,
+   "lock": "heavy",
+   "maxrss_mb": 422,
+   "n_result": 3,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.val_loss_step0": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 4.29206,
+    "1": 4.19175,
+    "2": 4.26887
+   },
+   "unit": "nats",
+   "value": 4.29206,
+   "spread": 0.10031000000000034
+  },
+  "baseline.val_loss_250": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 2.09734,
+    "1": 2.10619,
+    "2": 2.09408
+   },
+   "unit": "nats",
+   "value": 2.09734,
+   "spread": 0.012109999999999843
+  },
+  "baseline.val_loss_300": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 2.03037,
+    "1": 2.02184,
+    "2": 2.02203
+   },
+   "unit": "nats",
+   "value": 2.03037,
+   "spread": 0.008529999999999927
+  },
+  "P1b.val_loss_final": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 1.99028,
+    "1": 1.98068,
+    "2": 1.98659
+   },
+   "unit": "nats",
+   "value": 1.99028,
+   "spread": 0.009600000000000053
+  },
+  "baseline.train_loss_300": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 1.90131,
+    "1": 1.88881,
+    "2": 1.90755
+   },
+   "unit": "nats",
+   "value": 1.90131,
+   "spread": 0.01873999999999998
+  },
+  "baseline.mps_s_per_iter": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.442953,
+    "1": 0.476371,
+    "2": 0.462735
+   },
+   "unit": "s",
+   "value": 0.442953,
+   "spread": 0.033418
+  },
+  "baseline.mps_tokens_per_s": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 36988.1,
+    "1": 34393.3,
+    "2": 35406.9
+   },
+   "unit": "tokens/s",
+   "value": 36988.1,
+   "spread": 2594.7999999999956
+  },
+  "baseline.word_share_t10": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.477273,
+    "1": 0.505618,
+    "2": 0.510417
+   },
+   "unit": "fraction",
+   "value": 0.477273,
+   "spread": 0.03314400000000001
+  },
+  "baseline.attention_is_causal": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "true",
+    "1": "true",
+    "2": "true"
+   },
+   "value": "true",
+   "spread": null
+  },
+  "baseline.cpu_tokens_per_s": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 7354.99,
+    "1": 8472.17,
+    "2": 7484.42
+   },
+   "unit": "tokens/s",
+   "value": 7354.99,
+   "spread": 1117.1800000000003
+  },
+  "baseline.max_iters": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 350,
+    "1": 350,
+    "2": 350
+   },
+   "value": 350,
+   "spread": 0
+  },
+  "break.val_loss_0": {
+   "mode": "break",
+   "by_seed": {
+    "0": 4.29159
+   },
+   "unit": "nats",
+   "value": 4.29159,
+   "spread": null
+  },
+  "break.val_loss_250": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0125086
+   },
+   "unit": "nats",
+   "value": 0.0125086,
+   "spread": null
+  },
+  "break.val_loss_300": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0120476
+   },
+   "unit": "nats",
+   "value": 0.0120476,
+   "spread": null
+  },
+  "P3.train_loss_300": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0117554
+   },
+   "unit": "nats",
+   "value": 0.0117554,
+   "spread": null
+  },
+  "P3.delta_train_loss_300": {
+   "mode": "break",
+   "by_seed": {
+    "0": -1.88956
+   },
+   "unit": "nats",
+   "value": -1.88956,
+   "spread": null
+  },
+  "break.word_share_t10": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0
+   },
+   "unit": "fraction",
+   "value": 0,
+   "spread": null
+  },
+  "break.attention_is_causal": {
+   "mode": "break",
+   "by_seed": {
+    "0": "false"
+   },
+   "value": "false",
+   "spread": null
+  },
+  "change.word_share_t05": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.728155
+   },
+   "unit": "fraction",
+   "value": 0.728155,
+   "spread": null
+  },
+  "change.word_share_t10": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.477273
+   },
+   "unit": "fraction",
+   "value": 0.477273,
+   "spread": null
+  },
+  "P2.word_share_t15": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.255814
+   },
+   "unit": "fraction",
+   "value": 0.255814,
+   "spread": null
+  }
+ },
+ "effects": {
+  "P2.word_share_t15:baseline.word_share_t10": {
+   "effect": -0.22145900000000002,
+   "seeds": [
+    "0"
+   ],
+   "spread": 0.03314400000000001,
+   "ok": true
+  },
+  "P3.train_loss_300:baseline.train_loss_300": {
+   "effect": -1.8895546,
+   "seeds": [
+    "0"
+   ],
+   "spread": 0.01873999999999998,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "N = 350 (max_iters = lr_decay_iters), sized so the whole baseline run fits 6 minutes; see Build notes in 39-gpt-from-scratch.md"
+}

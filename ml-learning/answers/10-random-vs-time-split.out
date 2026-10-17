@@ -1,0 +1,26 @@
+===== baseline (seed 0, 2.6 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/10_random_vs_time_split_ref.py --baseline --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 542c77ca0835a05b
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.rmse_random=3.25804 unit=bikes_per_hour seed=0
+
+===== break (seed 0, 3.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/10_random_vs_time_split_ref.py --break --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 542c77ca0835a05b
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.rmse_random_honest=40.1979 unit=bikes_per_hour seed=0
+RESULT break.rmse_time_honest=66.4537 unit=bikes_per_hour seed=0
+
+===== change (seed 0, 3.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/10_random_vs_time_split_ref.py --change --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 542c77ca0835a05b
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.rmse_time=2.28975 unit=bikes_per_hour seed=0
+RESULT P2.rmse_time_minus_random=-0.968288 unit=bikes_per_hour seed=0
+

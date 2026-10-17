@@ -1,0 +1,31 @@
+===== baseline (seed 0, 1.4 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/16_forecast_demand_ref.py --baseline --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 5dd7c41238f813ef
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.seasonal_naive_mae=26.6441 unit=pickups seed=0
+
+===== break (seed 0, 11.9 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/16_forecast_demand_ref.py --break --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 5dd7c41238f813ef
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT break.missing_zone_hours_pct=4.13477 unit=percent seed=0
+RESULT break.wrong_lag168_pct=69.3432 unit=percent seed=0
+RESULT break.honest_seasonal_naive_mae=11.7621 unit=pickups seed=0
+RESULT P3.honest_lightgbm_mae=10.8973 unit=pickups seed=0
+RESULT break.honest_improvement_pct=7.35275 unit=percent seed=0
+RESULT break.honest_lightgbm_mae_shipped_rows=11.3171 unit=pickups seed=0
+RESULT break.leaky_lightgbm_mae=9.60074 unit=pickups seed=0
+
+===== change (seed 0, 6.3 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/16_forecast_demand_ref.py --change --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 5dd7c41238f813ef
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT change.lightgbm_mae=12.8997 unit=pickups seed=0
+RESULT P2.improvement_pct=51.5853 unit=percent seed=0
+

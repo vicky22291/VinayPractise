@@ -1,0 +1,46 @@
+===== baseline (seed 0, 1.8 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/17_anomaly_windows_ref.py --baseline --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 bdf80d5eeab86dbe
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT baseline.windows_hit=5 unit=of_5 seed=0
+RESULT P1.false_alarms_per_day=0.972093 unit=per_day seed=0
+RESULT baseline.delay_min_w1=600 unit=min seed=0
+RESULT baseline.delay_min_w2=360 unit=min seed=0
+RESULT baseline.delay_min_w3=540 unit=min seed=0
+RESULT baseline.delay_min_w4=3060 unit=min seed=0
+RESULT baseline.delay_min_w5=1680 unit=min seed=0
+
+===== break (seed 0, 2.4 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/17_anomaly_windows_ref.py --break --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 bdf80d5eeab86dbe
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.windows_hit=4 unit=of_5 seed=0
+RESULT break.false_alarms_per_day=0.227907 unit=per_day seed=0
+RESULT break.delay_min_w1=miss unit=min seed=0
+RESULT break.delay_min_w2=2580 unit=min seed=0
+RESULT break.delay_min_w3=2520 unit=min seed=0
+RESULT break.delay_min_w4=3060 unit=min seed=0
+RESULT break.delay_min_w5=2070 unit=min seed=0
+RESULT break.std_ratio=1.73518 unit=ratio seed=0
+RESULT break.windows_hit_outside_stats=5 unit=of_5 seed=0
+
+===== change (seed 0, 2.4 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/17_anomaly_windows_ref.py --change --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 bdf80d5eeab86dbe
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.windows_hit=4 unit=of_5 seed=0
+RESULT P2.false_alarms_per_day=0 unit=per_day seed=0
+RESULT P2.windows_hit_delta=-1 unit=of_5 seed=0
+RESULT P2.false_alarms_per_day_delta=-0.972093 unit=per_day seed=0
+RESULT change.delay_min_w1=3720 unit=min seed=0
+RESULT change.delay_min_w2=3660 unit=min seed=0
+RESULT change.delay_min_w3=3330 unit=min seed=0
+RESULT change.delay_min_w4=miss unit=min seed=0
+RESULT change.delay_min_w5=3330 unit=min seed=0
+

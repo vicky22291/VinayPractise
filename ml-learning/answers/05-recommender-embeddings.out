@@ -1,0 +1,76 @@
+===== baseline (seed 0, 45.9 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/05_recommender_embeddings.py --baseline --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 adb9d394465b49e7
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+NOTE this split is random; lab 19 shows what a random split hides
+RESULT baseline.global_mean_rmse=1.1179 unit=stars seed=0
+RESULT baseline.movie_mean_rmse=1.01814 unit=stars seed=0
+RESULT baseline.bias_baseline_rmse=0.949938 unit=stars seed=0
+RESULT P1.dot_rmse=0.923509 unit=stars seed=0
+WROTE ~/ml-data/results/lab05.json
+
+===== break (seed 0, 84.7 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/05_recommender_embeddings.py --break --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 adb9d394465b49e7
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+NOTE this split is random; lab 19 shows what a random split hides
+RESULT break.train_rmse_ep01=1.26816 unit=stars seed=0
+RESULT break.valid_rmse_ep01=1.27308 unit=stars seed=0
+RESULT break.train_rmse_ep02=0.953255 unit=stars seed=0
+RESULT break.valid_rmse_ep02=0.977926 unit=stars seed=0
+RESULT break.train_rmse_ep03=0.872792 unit=stars seed=0
+RESULT break.valid_rmse_ep03=0.947665 unit=stars seed=0
+RESULT break.train_rmse_ep04=0.751086 unit=stars seed=0
+RESULT break.valid_rmse_ep04=0.956295 unit=stars seed=0
+RESULT break.train_rmse_ep05=0.638387 unit=stars seed=0
+RESULT break.valid_rmse_ep05=0.997625 unit=stars seed=0
+RESULT break.train_rmse_ep06=0.564905 unit=stars seed=0
+RESULT break.valid_rmse_ep06=1.0346 unit=stars seed=0
+RESULT break.train_rmse_ep07=0.515357 unit=stars seed=0
+RESULT break.valid_rmse_ep07=1.06676 unit=stars seed=0
+RESULT break.train_rmse_ep08=0.484043 unit=stars seed=0
+RESULT break.valid_rmse_ep08=1.0873 unit=stars seed=0
+RESULT break.train_rmse_ep09=0.450504 unit=stars seed=0
+RESULT break.valid_rmse_ep09=1.10674 unit=stars seed=0
+RESULT break.train_rmse_ep10=0.420639 unit=stars seed=0
+RESULT break.valid_rmse_ep10=1.12191 unit=stars seed=0
+RESULT break.train_rmse_ep11=0.395269 unit=stars seed=0
+RESULT break.valid_rmse_ep11=1.13086 unit=stars seed=0
+RESULT break.train_rmse_ep12=0.366551 unit=stars seed=0
+RESULT break.valid_rmse_ep12=1.14247 unit=stars seed=0
+RESULT break.train_rmse_ep13=0.339636 unit=stars seed=0
+RESULT break.valid_rmse_ep13=1.1494 unit=stars seed=0
+RESULT break.train_rmse_ep14=0.314083 unit=stars seed=0
+RESULT break.valid_rmse_ep14=1.15796 unit=stars seed=0
+RESULT break.train_rmse_ep15=0.2943 unit=stars seed=0
+RESULT break.valid_rmse_ep15=1.16398 unit=stars seed=0
+RESULT break.train_rmse_ep16=0.277931 unit=stars seed=0
+RESULT break.valid_rmse_ep16=1.16914 unit=stars seed=0
+RESULT break.train_rmse_ep17=0.266229 unit=stars seed=0
+RESULT break.valid_rmse_ep17=1.17155 unit=stars seed=0
+RESULT break.train_rmse_ep18=0.259243 unit=stars seed=0
+RESULT break.valid_rmse_ep18=1.17375 unit=stars seed=0
+RESULT break.train_rmse_ep19=0.256188 unit=stars seed=0
+RESULT break.valid_rmse_ep19=1.17438 unit=stars seed=0
+RESULT break.train_rmse_ep20=0.255702 unit=stars seed=0
+RESULT break.valid_rmse_ep20=1.17451 unit=stars seed=0
+RESULT P3.valid_rmse=1.17451 unit=stars seed=0
+RESULT P3.valid_minus_global_mean=0.056606 unit=stars seed=0
+WROTE ~/ml-data/results/lab05.json
+
+===== change (seed 0, 61.9 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/05_recommender_embeddings.py --change --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 adb9d394465b49e7
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+NOTE this split is random; lab 19 shows what a random split hides
+RESULT P2.dot_bias_rmse=0.917706 unit=stars seed=0
+RESULT P2.delta_rmse=-0.00580384 unit=stars seed=0
+NOTE nearest to Star Wars (1977) by cosine: Empire Strikes Back, The (1980); Return of the Jedi (1983); Raiders of the Lost Ark (1981); Man Who Would Be King, The (1975); Indiana Jones and the Last Crusade (1989)
+WROTE ~/ml-data/results/lab05.json
+

@@ -1,0 +1,239 @@
+{
+ "lab": "33",
+ "slug": "33-embeddings-from-scratch",
+ "level": "S",
+ "lane": "light",
+ "reference": "answers/33_embeddings_from_scratch_ref.py",
+ "script_sha256": "963e9c71b118d8a6",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 31.6,
+   "lock": "light",
+   "maxrss_mb": 386,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 35.8,
+   "lock": "light",
+   "maxrss_mb": 380,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 44.5,
+   "lock": "light",
+   "maxrss_mb": 386,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 38.1,
+   "lock": "light",
+   "maxrss_mb": 397,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 36.5,
+   "lock": "light",
+   "maxrss_mb": 382,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 29.0,
+   "lock": "light",
+   "maxrss_mb": 401,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 23.0,
+   "lock": "light",
+   "maxrss_mb": 385,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 18.2,
+   "lock": "light",
+   "maxrss_mb": 373,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 19.6,
+   "lock": "light",
+   "maxrss_mb": 362,
+   "n_result": 2,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.valid_rmse": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.900242,
+    "1": 0.901821,
+    "2": 0.901048
+   },
+   "unit": "stars",
+   "value": 0.900242,
+   "spread": 0.001578999999999997
+  },
+  "baseline.lab05_rmse": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.917706,
+    "1": 0.917706,
+    "2": 0.917706
+   },
+   "unit": "stars",
+   "value": 0.917706,
+   "spread": 0.0
+  },
+  "baseline.minus_lab05": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": -0.0174635,
+    "1": -0.0158848,
+    "2": -0.0166577
+   },
+   "unit": "stars",
+   "value": -0.0174635,
+   "spread": 0.0015786999999999989
+  },
+  "P3.cold_rmse": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.25812,
+    "1": 1.17816,
+    "2": 1.17263
+   },
+   "unit": "stars",
+   "value": 1.25812,
+   "spread": 0.08548999999999984
+  },
+  "P3.closest": {
+   "mode": "break",
+   "by_seed": {
+    "0": "global_mean",
+    "1": "global_mean",
+    "2": "global_mean"
+   },
+   "unit": "choice",
+   "value": "global_mean",
+   "spread": null
+  },
+  "break.warm_rmse": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.901012,
+    "1": 0.905683,
+    "2": 0.903855
+   },
+   "unit": "stars",
+   "value": 0.901012,
+   "spread": 0.004670999999999981
+  },
+  "break.cold_global_mean_rmse": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.15882,
+    "1": 1.065,
+    "2": 1.09783
+   },
+   "unit": "stars",
+   "value": 1.15882,
+   "spread": 0.09382000000000001
+  },
+  "break.cold_movie_mean_rmse": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1.03565,
+    "1": 0.996679,
+    "2": 0.989718
+   },
+   "unit": "stars",
+   "value": 1.03565,
+   "spread": 0.04593199999999997
+  },
+  "P2.valid_rmse": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.922987,
+    "1": 0.926382,
+    "2": 0.92415
+   },
+   "unit": "stars",
+   "value": 0.922987,
+   "spread": 0.003395000000000037
+  },
+  "P2.delta_rmse": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0227451,
+    "1": 0.0245607,
+    "2": 0.0231024
+   },
+   "unit": "stars",
+   "value": 0.0227451,
+   "spread": 0.0018156000000000005
+  }
+ },
+ "effects": {
+  "P2.valid_rmse:P1.valid_rmse": {
+   "effect": 0.02346933333333338,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.003395000000000037,
+   "ok": true
+  },
+  "P3.cold_rmse:break.warm_rmse": {
+   "effect": 0.29945333333333335,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.08548999999999984,
+   "ok": true
+  },
+  "P3.cold_rmse:break.cold_movie_mean_rmse": {
+   "effect": 0.19562100000000004,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.08548999999999984,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "P2 changed from the spec's 5 factors to 4 factors: at 5 factors the change effect was under 2x the seed spread; 4 is the smallest bigger shift from the spec's 5 that clears it (build scans of 1 to 25 factors); see the answer file's build notes."
+}

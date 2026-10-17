@@ -1,0 +1,463 @@
+{
+ "lab": "19",
+ "slug": "19-as-of-features",
+ "level": "S",
+ "lane": "light",
+ "reference": "answers/19_as_of_features_ref.py",
+ "script_sha256": "9c3c4470d0b6829f",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 34.2,
+   "lock": "light",
+   "maxrss_mb": 1848,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 19.9,
+   "lock": "light",
+   "maxrss_mb": 1870,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 32.3,
+   "lock": "light",
+   "maxrss_mb": 1872,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 120.0,
+   "lock": "light",
+   "maxrss_mb": 2043,
+   "n_result": 13,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 118.6,
+   "lock": "light",
+   "maxrss_mb": 2138,
+   "n_result": 13,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 105.2,
+   "lock": "light",
+   "maxrss_mb": 1261,
+   "n_result": 13,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 38.1,
+   "lock": "light",
+   "maxrss_mb": 1907,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 25.7,
+   "lock": "light",
+   "maxrss_mb": 1903,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 32.0,
+   "lock": "light",
+   "maxrss_mb": 1946,
+   "n_result": 6,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.auc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.928158,
+    "1": 0.918234,
+    "2": 0.924933
+   },
+   "unit": "auc",
+   "value": 0.928158,
+   "spread": 0.009924000000000044
+  },
+  "baseline.top3": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "terminal_fraud_rate,amount,amount_over_30d_mean",
+    "1": "terminal_fraud_rate,amount,amount_over_30d_mean",
+    "2": "terminal_fraud_rate,amount_over_30d_mean,cust_mean_7d"
+   },
+   "value": "terminal_fraud_rate,amount,amount_over_30d_mean",
+   "spread": null
+  },
+  "baseline.top1_share": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.467362,
+    "1": 0.48788,
+    "2": 0.464253
+   },
+   "unit": "fraction",
+   "value": 0.467362,
+   "spread": 0.023626999999999954
+  },
+  "baseline.auc_s1": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.999323,
+    "1": 0.999555,
+    "2": 0.999058
+   },
+   "unit": "auc",
+   "value": 0.999323,
+   "spread": 0.0004969999999999697
+  },
+  "baseline.auc_s2": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.979889,
+    "1": 0.980496,
+    "2": 0.980752
+   },
+   "unit": "auc",
+   "value": 0.979889,
+   "spread": 0.0008629999999999471
+  },
+  "baseline.auc_s3": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.99122,
+    "1": 0.991136,
+    "2": 0.990924
+   },
+   "unit": "auc",
+   "value": 0.99122,
+   "spread": 0.00029599999999996296
+  },
+  "baseline.auc_s4": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.804077,
+    "1": 0.771578,
+    "2": 0.792842
+   },
+   "unit": "auc",
+   "value": 0.804077,
+   "spread": 0.032499000000000056
+  },
+  "P3.auc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.709088,
+    "1": 0.693132,
+    "2": 0.69381
+   },
+   "unit": "auc",
+   "value": 0.709088,
+   "spread": 0.01595600000000008
+  },
+  "break.top3": {
+   "mode": "break",
+   "by_seed": {
+    "0": "amount,amount_over_30d_mean,cust_mean_30d",
+    "1": "amount,amount_over_30d_mean,cust_mean_30d",
+    "2": "amount_over_30d_mean,cust_mean_7d,cust_count_30d"
+   },
+   "value": "amount,amount_over_30d_mean,cust_mean_30d",
+   "spread": null
+  },
+  "break.top1_share": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.407778,
+    "1": 0.462112,
+    "2": 0.40659
+   },
+   "unit": "fraction",
+   "value": 0.407778,
+   "spread": 0.055522000000000016
+  },
+  "break.auc_time_asof": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.709088,
+    "1": 0.693132,
+    "2": 0.69381
+   },
+   "unit": "auc",
+   "value": 0.709088,
+   "spread": 0.01595600000000008
+  },
+  "break.auc_random_asof": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.802777,
+    "1": 0.815778,
+    "2": 0.801981
+   },
+   "unit": "auc",
+   "value": 0.802777,
+   "spread": 0.013796999999999948
+  },
+  "break.auc_time_final_others": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.845627,
+    "1": 0.83059,
+    "2": 0.837699
+   },
+   "unit": "auc",
+   "value": 0.845627,
+   "spread": 0.015036999999999967
+  },
+  "break.auc_random_final_others": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.986601,
+    "1": 0.987454,
+    "2": 0.985506
+   },
+   "unit": "auc",
+   "value": 0.986601,
+   "spread": 0.0019480000000000608
+  },
+  "break.auc_time_final_all": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.928158,
+    "1": 0.918234,
+    "2": 0.924933
+   },
+   "unit": "auc",
+   "value": 0.928158,
+   "spread": 0.009924000000000044
+  },
+  "break.auc_random_final_all": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.988516,
+    "1": 0.989288,
+    "2": 0.988061
+   },
+   "unit": "auc",
+   "value": 0.988516,
+   "spread": 0.001226999999999978
+  },
+  "break.auc_s1": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.999297,
+    "1": 0.999656,
+    "2": 0.999665
+   },
+   "unit": "auc",
+   "value": 0.999297,
+   "spread": 0.00036800000000003497
+  },
+  "break.auc_s2": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.6257,
+    "1": 0.624187,
+    "2": 0.630631
+   },
+   "unit": "auc",
+   "value": 0.6257,
+   "spread": 0.006444000000000005
+  },
+  "break.auc_s3": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.980741,
+    "1": 0.980107,
+    "2": 0.979732
+   },
+   "unit": "auc",
+   "value": 0.980741,
+   "spread": 0.0010089999999999266
+  },
+  "break.auc_s4": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.594354,
+    "1": 0.545837,
+    "2": 0.539476
+   },
+   "unit": "auc",
+   "value": 0.594354,
+   "spread": 0.05487800000000009
+  },
+  "P2.auc": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.988516,
+    "1": 0.989288,
+    "2": 0.988061
+   },
+   "unit": "auc",
+   "value": 0.988516,
+   "spread": 0.001226999999999978
+  },
+  "P2.auc_delta": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0603581,
+    "1": 0.0710541,
+    "2": 0.0631274
+   },
+   "unit": "auc",
+   "value": 0.0603581,
+   "spread": 0.010695999999999997
+  },
+  "change.auc_s1": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.999044,
+    "1": 0.999285,
+    "2": 0.999504
+   },
+   "unit": "auc",
+   "value": 0.999044,
+   "spread": 0.00045999999999990493
+  },
+  "change.auc_s2": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.985686,
+    "1": 0.985736,
+    "2": 0.986087
+   },
+   "unit": "auc",
+   "value": 0.985686,
+   "spread": 0.0004010000000000957
+  },
+  "change.auc_s3": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.988659,
+    "1": 0.991314,
+    "2": 0.986931
+   },
+   "unit": "auc",
+   "value": 0.988659,
+   "spread": 0.004383000000000026
+  },
+  "change.auc_s4": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.993971,
+    "1": 0.993921,
+    "2": 0.993188
+   },
+   "unit": "auc",
+   "value": 0.993971,
+   "spread": 0.0007830000000000892
+  }
+ },
+ "effects": {
+  "P2.auc:P1.auc": {
+   "effect": 0.06484666666666661,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.009924000000000044,
+   "ok": true
+  },
+  "P3.auc:P1.auc": {
+   "effect": -0.22509833333333332,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.01595600000000008,
+   "ok": true
+  },
+  "break.auc_time_final_others:break.auc_time_asof": {
+   "effect": 0.13929533333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.01595600000000008,
+   "ok": true
+  },
+  "break.auc_time_final_all:break.auc_time_final_others": {
+   "effect": 0.085803,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.015036999999999967,
+   "ok": true
+  },
+  "break.auc_random_asof:break.auc_time_asof": {
+   "effect": 0.10816866666666665,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.01595600000000008,
+   "ok": true
+  },
+  "break.auc_random_final_others:break.auc_time_final_others": {
+   "effect": 0.1485483333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.015036999999999967,
+   "ok": true
+  },
+  "break.auc_random_final_all:break.auc_random_final_others": {
+   "effect": 0.0021013333333332884,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0019480000000000608,
+   "ok": false
+  },
+  "break.auc_random_final_others:break.auc_random_asof": {
+   "effect": 0.179675,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.013796999999999948,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Build probes are tagged runs that mkanswers ignores; their logs are runs/19/baseline-s0-proto.log and runs/19/baseline-s0-variants.log in the build folder. Frauds by scenario 1 to 4 on the time split: train 765, 5951, 3170, 0; test 333, 3135, 1578, 2300, so card testing is 2300 of 7346 test frauds (0.313096). Random split at seed 0: test 254, 1891, 948, 466 (card testing 466 of 3559, 0.130936). Each overall AUC is the fraud-count-weighted mean of its scenario AUCs (checked to 6 digits for P1, P2 and P3). Without card testing, seed 0: time split as shipped 0.9847, random split as shipped 0.9877, time split as-of 0.7614. P1 with card testing scored as on the random split: 0.9876. Probe A, LightGBM defaults plus the reference bagging (n_estimators 200, subsample 0.8, subsample_freq 1, colsample_bytree 0.8), shipped inputs, time split, seeds 0, 1, 2: AUC 0.8539, 0.7487, 0.8321 (spread 0.1052); without card testing 0.9721, 0.9712, 0.9788; card-testing AUC 0.595, 0.261, 0.510. Probe B, LightGBM defaults, no bagging, seed 0: time split asof 0.6646, final_others 0.7760, final_all 0.7761; random split asof 0.8021, final_others 0.9813, final_all 0.9847; time split card-testing AUC 0.466, 0.356, 0.344 and without card testing 0.7550, 0.9677, 0.9730. Card-testing AUC the prototype's time cells imply, with scenarios 1 to 3 scored as here (0.7614, B's 0.9677, 0.9847): 0.31, 0.34, 0.71. Probe C, other honest terminal inputs, reference model, time split, seed 0: event-time window, the README formula with W = 30 days, 0.7314 (terminal share of gain 0.143); arrival-time window, the reference input, 0.7091; cumulative known frauds, no window, 0.7053. Mean of the input in train and test rows: event-time 0.0162 and 0.0232, arrival-time 0.0832 and 0.2791, cumulative 0.1305 and 0.7892. Spec prototype values, for the comparison in the build notes: time split 0.62 (as-of), 0.77 (final, own label out), 0.90 (final, own label in); random split 0.79, 0.98, 0.99."
+}

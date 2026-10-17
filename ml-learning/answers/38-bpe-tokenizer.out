@@ -1,0 +1,63 @@
+===== baseline (seed 0, 52.3 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m7-language-models/scripts/38_bpe_tokenizer.py --baseline --seed 0
+# cwd ml-learning/m7-language-models
+# script_sha256 e70b6d5aa5e33ba6
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT baseline.tokens_per_1k_chars_0_merges=1000 unit=tokens/1k_chars seed=0
+first and last 10 merges: [b'e ', b'th', b't ', b's ', b'd ', b', ', b'ou', b'er', b'in', b'y ', b'sir', b', and ', b'ct', b'us ', b'ess ', b'self', b' st', b'ake ', b'EL', b'king']
+bpe256  chars=42  bytes=42  tokens=17  ok   'To be, or not to be, that is the question.' -> 'To be, or not to be, that is the question.'
+bpe256  chars=10  bytes=12  tokens=9   ok   'naïve café' -> 'naïve café'
+bpe256  chars=23  bytes=23  tokens=14  ok   'Your card was declined.' -> 'Your card was declined.'
+bpe256  chars=21  bytes=24  tokens=13  ok   'Thanks, that worked 👍' -> 'Thanks, that worked 👍'
+bpe256  chars=37  bytes=37  tokens=24  ok   'Refund of $25.00 sent for order 7781.' -> 'Refund of $25.00 sent for order 7781.'
+bpe256  chars=39  bytes=39  tokens=21  ok   'Is this a dagger which I see before me?' -> 'Is this a dagger which I see before me?'
+bpe256  chars=16  bytes=19  tokens=14  ok   'Grüße aus Zürich' -> 'Grüße aus Zürich'
+bpe256  chars=25  bytes=25  tokens=16  ok   'Reply to help@example.com' -> 'Reply to help@example.com'
+bpe256  chars=9   bytes=27  tokens=27  ok   '東京で会いましょう' -> '東京で会いましょう'
+bpe256  chars=39  bytes=39  tokens=20  ok   "Shall I compare thee to a summer's day?" -> "Shall I compare thee to a summer's day?"
+RESULT P1.tokens_per_1k_chars=509.425 unit=tokens/1k_chars seed=0
+RESULT baseline.train_seconds=52.1388 unit=s device=cpu batch=full_text warmup=0 n=1 stat=median seed=0
+RESULT baseline.byte_roundtrip=10 unit=of_10 seed=0
+
+===== break (seed 0, 0.1 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m7-language-models/scripts/38_bpe_tokenizer.py --break --seed 0
+# cwd ml-learning/m7-language-models
+# script_sha256 e70b6d5aa5e33ba6
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+chars   chars=42  bytes=42  tokens=42  ok   'To be, or not to be, that is the question.' -> 'To be, or not to be, that is the question.'
+chars   chars=10  bytes=12  tokens=10  FAIL 'naïve café' -> 'na�ve caf�'
+chars   chars=23  bytes=23  tokens=23  ok   'Your card was declined.' -> 'Your card was declined.'
+chars   chars=21  bytes=24  tokens=21  FAIL 'Thanks, that worked 👍' -> 'Thanks, that worked �'
+chars   chars=37  bytes=37  tokens=37  FAIL 'Refund of $25.00 sent for order 7781.' -> 'Refund of $��.�� sent for order ����.'
+chars   chars=39  bytes=39  tokens=39  ok   'Is this a dagger which I see before me?' -> 'Is this a dagger which I see before me?'
+chars   chars=16  bytes=19  tokens=16  FAIL 'Grüße aus Zürich' -> 'Gr��e aus Z�rich'
+chars   chars=25  bytes=25  tokens=25  FAIL 'Reply to help@example.com' -> 'Reply to help�example.com'
+chars   chars=9   bytes=27  tokens=9   FAIL '東京で会いましょう' -> '���������'
+chars   chars=39  bytes=39  tokens=39  ok   "Shall I compare thee to a summer's day?" -> "Shall I compare thee to a summer's day?"
+RESULT break.char_vocab_size=65 unit=characters seed=0
+RESULT P3.char_roundtrip=4 unit=of_10 seed=0
+
+===== change (seed 0, 78.3 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m7-language-models/scripts/38_bpe_tokenizer.py --change --seed 0
+# cwd ml-learning/m7-language-models
+# script_sha256 e70b6d5aa5e33ba6
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+first and last 10 merges: [b'e ', b'th', b't ', b's ', b'd ', b', ', b'ou', b'er', b'in', b'y ', b'yself', b'she ', b'ef', b'ster', b'onour', b'ev', b', my ', b'liv', b'ell ', b'love ']
+bpe512  chars=42  bytes=42  tokens=15  ok   'To be, or not to be, that is the question.' -> 'To be, or not to be, that is the question.'
+bpe512  chars=10  bytes=12  tokens=9   ok   'naïve café' -> 'naïve café'
+bpe512  chars=23  bytes=23  tokens=12  ok   'Your card was declined.' -> 'Your card was declined.'
+bpe512  chars=21  bytes=24  tokens=12  ok   'Thanks, that worked 👍' -> 'Thanks, that worked 👍'
+bpe512  chars=37  bytes=37  tokens=21  ok   'Refund of $25.00 sent for order 7781.' -> 'Refund of $25.00 sent for order 7781.'
+bpe512  chars=39  bytes=39  tokens=18  ok   'Is this a dagger which I see before me?' -> 'Is this a dagger which I see before me?'
+bpe512  chars=16  bytes=19  tokens=14  ok   'Grüße aus Zürich' -> 'Grüße aus Zürich'
+bpe512  chars=25  bytes=25  tokens=14  ok   'Reply to help@example.com' -> 'Reply to help@example.com'
+bpe512  chars=9   bytes=27  tokens=27  ok   '東京で会いましょう' -> '東京で会いましょう'
+bpe512  chars=39  bytes=39  tokens=18  ok   "Shall I compare thee to a summer's day?" -> "Shall I compare thee to a summer's day?"
+RESULT P2.tokens_per_1k_chars=437.479 unit=tokens/1k_chars seed=0
+RESULT P2.delta_vs_256=-71.9468 unit=tokens/1k_chars seed=0
+RESULT change.train_seconds=78.066 unit=s device=cpu batch=full_text warmup=0 n=1 stat=median seed=0
+RESULT change.byte_roundtrip=10 unit=of_10 seed=0
+

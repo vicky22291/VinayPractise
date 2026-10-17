@@ -1,0 +1,207 @@
+{
+ "lab": "12",
+ "slug": "12-lexical-vs-dense-retrieval",
+ "level": "C",
+ "lane": "light",
+ "reference": "answers/12_lexical_vs_dense_retrieval_ref.py",
+ "script_sha256": "9bb98b0d261c4a61",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 81.9,
+   "lock": "light",
+   "maxrss_mb": 1244,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 84.7,
+   "lock": "light",
+   "maxrss_mb": 1246,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 83.3,
+   "lock": "light",
+   "maxrss_mb": 1240,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 36.9,
+   "lock": "light",
+   "maxrss_mb": 1299,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 63.5,
+   "lock": "light",
+   "maxrss_mb": 1311,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 63.4,
+   "lock": "light",
+   "maxrss_mb": 1298,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 82.6,
+   "lock": "light",
+   "maxrss_mb": 1245,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 93.6,
+   "lock": "light",
+   "maxrss_mb": 1246,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 77.0,
+   "lock": "light",
+   "maxrss_mb": 1221,
+   "n_result": 4,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.ndcg10_bm25": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.662528,
+    "1": 0.662528,
+    "2": 0.662528
+   },
+   "unit": "ndcg@10",
+   "value": 0.662528,
+   "spread": 0.0
+  },
+  "P1.ndcg10_dense": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.645082,
+    "1": 0.645082,
+    "2": 0.645082
+   },
+   "unit": "ndcg@10",
+   "value": 0.645082,
+   "spread": 0.0
+  },
+  "baseline.docs_per_s": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 101.005,
+    "1": 101.204,
+    "2": 157.729
+   },
+   "unit": "docs/s",
+   "value": 101.005,
+   "spread": 56.72400000000002
+  },
+  "P3.ndcg10_mismatched": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.136588,
+    "1": 0.136588,
+    "2": 0.136588
+   },
+   "unit": "ndcg@10",
+   "value": 0.136588,
+   "spread": 0.0
+  },
+  "P2.ndcg10_hybrid": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.690479,
+    "1": 0.690479,
+    "2": 0.690479
+   },
+   "unit": "ndcg@10",
+   "value": 0.690479,
+   "spread": 0.0
+  },
+  "P2.delta_vs_best": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0279512,
+    "1": 0.0279512,
+    "2": 0.0279512
+   },
+   "unit": "ndcg@10",
+   "value": 0.0279512,
+   "spread": 0.0
+  },
+  "change.delta_ci95_low": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0070094,
+    "1": 0.00720544,
+    "2": 0.00730033
+   },
+   "unit": "ndcg@10",
+   "value": 0.0070094,
+   "spread": 0.00029093
+  },
+  "change.delta_ci95_high": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0497443,
+    "1": 0.04943,
+    "2": 0.0490848
+   },
+   "unit": "ndcg@10",
+   "value": 0.0497443,
+   "spread": 0.0006595000000000004
+  }
+ },
+ "effects": {
+  "P2.ndcg10_hybrid:baseline.ndcg10_bm25": {
+   "effect": 0.027950999999999948,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  },
+  "P3.ndcg10_mismatched:P1.ndcg10_dense": {
+   "effect": -0.508494,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "nDCG@10 values are deterministic (no training, fixed queries), so every seed spread is 0.0; --seed drives only the paired bootstrap of the P2 delta over the 300 queries. No precomputed steps."
+}

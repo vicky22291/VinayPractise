@@ -1,0 +1,586 @@
+{
+ "lab": "24",
+ "slug": "24-shadow-challenger",
+ "level": "B",
+ "lane": "light",
+ "reference": "answers/24_shadow_challenger_ref.py",
+ "script_sha256": "3693a82578a7108c",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 3.4,
+   "lock": "excl",
+   "maxrss_mb": 594,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 2.9,
+   "lock": "excl",
+   "maxrss_mb": 593,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 2.9,
+   "lock": "excl",
+   "maxrss_mb": 590,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 49.5,
+   "lock": "excl",
+   "maxrss_mb": 602,
+   "n_result": 26,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 48.8,
+   "lock": "excl",
+   "maxrss_mb": 608,
+   "n_result": 26,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 49.2,
+   "lock": "excl",
+   "maxrss_mb": 604,
+   "n_result": 26,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 3.0,
+   "lock": "excl",
+   "maxrss_mb": 595,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 3.0,
+   "lock": "excl",
+   "maxrss_mb": 590,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 2.9,
+   "lock": "excl",
+   "maxrss_mb": 596,
+   "n_result": 8,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.challenger_decline_rate": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00238756,
+    "1": 0.00238756,
+    "2": 0.00238756
+   },
+   "unit": "fraction",
+   "value": 0.00238756,
+   "spread": 0.0
+  },
+  "baseline.champion_threshold": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0384511,
+    "1": 0.0384511,
+    "2": 0.0384511
+   },
+   "unit": "probability",
+   "value": 0.0384511,
+   "spread": 0.0
+  },
+  "baseline.champion_decline_rate": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00200133,
+    "1": 0.00200133,
+    "2": 0.00200133
+   },
+   "unit": "fraction",
+   "value": 0.00200133,
+   "spread": 0.0
+  },
+  "baseline.challenger_declines": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 136,
+    "1": 136,
+    "2": 136
+   },
+   "unit": "count",
+   "value": 136,
+   "spread": 0
+  },
+  "P3.closer_to": {
+   "mode": "break",
+   "by_seed": {
+    "0": "alone",
+    "1": "alone",
+    "2": "alone"
+   },
+   "value": "alone",
+   "spread": null
+  },
+  "break.thread_p99_position": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0333416,
+    "1": 0.0179511,
+    "2": 0.032063
+   },
+   "unit": "ratio",
+   "value": 0.0333416,
+   "spread": 0.015390499999999998
+  },
+  "break.thread_drop_share": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.995562,
+    "1": 0.995562,
+    "2": 0.995545
+   },
+   "unit": "fraction",
+   "value": 0.995562,
+   "spread": 1.6999999999933735e-05
+  },
+  "break.thread_walk_p99_position": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.174378,
+    "1": 0.0941865,
+    "2": 0.33367
+   },
+   "unit": "ratio",
+   "value": 0.174378,
+   "spread": 0.23948350000000002
+  },
+  "break.thread_walk_drop_share": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.991299,
+    "1": 0.991299,
+    "2": 0.991299
+   },
+   "unit": "fraction",
+   "value": 0.991299,
+   "spread": 0.0
+  },
+  "break.p50_alone_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.097875,
+    "1": 0.097,
+    "2": 0.096459
+   },
+   "unit": "ms",
+   "value": 0.097875,
+   "spread": 0.0014160000000000006
+  },
+  "break.p99_alone_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.117666,
+    "1": 0.113458,
+    "2": 0.111833
+   },
+   "unit": "ms",
+   "value": 0.117666,
+   "spread": 0.005833000000000005
+  },
+  "break.p99_block_spread_alone_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.021125,
+    "1": 0.011333,
+    "2": 0.012417
+   },
+   "unit": "ms",
+   "value": 0.021125,
+   "spread": 0.009792000000000002
+  },
+  "break.p50_inline_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.269042,
+    "1": 0.266667,
+    "2": 0.2685
+   },
+   "unit": "ms",
+   "value": 0.269042,
+   "spread": 0.002375000000000016
+  },
+  "break.p99_inline_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.363875,
+    "1": 0.338625,
+    "2": 0.323666
+   },
+   "unit": "ms",
+   "value": 0.363875,
+   "spread": 0.040208999999999995
+  },
+  "break.p99_block_spread_inline_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.171209,
+    "1": 0.064625,
+    "2": 0.092708
+   },
+   "unit": "ms",
+   "value": 0.171209,
+   "spread": 0.106584
+  },
+  "break.p50_thread_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.102458,
+    "1": 0.101333,
+    "2": 0.101166
+   },
+   "unit": "ms",
+   "value": 0.102458,
+   "spread": 0.0012919999999999876
+  },
+  "break.p99_thread_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.125875,
+    "1": 0.1175,
+    "2": 0.118625
+   },
+   "unit": "ms",
+   "value": 0.125875,
+   "spread": 0.008374999999999994
+  },
+  "break.p99_block_spread_thread_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0235,
+    "1": 0.018,
+    "2": 0.024042
+   },
+   "unit": "ms",
+   "value": 0.0235,
+   "spread": 0.006042000000000002
+  },
+  "break.p50_inline_walk_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.128583,
+    "1": 0.12675,
+    "2": 0.12675
+   },
+   "unit": "ms",
+   "value": 0.128583,
+   "spread": 0.0018330000000000013
+  },
+  "break.p99_inline_walk_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.156375,
+    "1": 0.142666,
+    "2": 0.151417
+   },
+   "unit": "ms",
+   "value": 0.156375,
+   "spread": 0.013708999999999999
+  },
+  "break.p99_block_spread_inline_walk_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.019667,
+    "1": 0.0155,
+    "2": 0.044208
+   },
+   "unit": "ms",
+   "value": 0.019667,
+   "spread": 0.028707999999999997
+  },
+  "break.p50_thread_walk_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.102917,
+    "1": 0.101084,
+    "2": 0.10175
+   },
+   "unit": "ms",
+   "value": 0.102917,
+   "spread": 0.0018330000000000013
+  },
+  "break.p99_thread_walk_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.124416,
+    "1": 0.116209,
+    "2": 0.125041
+   },
+   "unit": "ms",
+   "value": 0.124416,
+   "spread": 0.008832000000000007
+  },
+  "break.p99_block_spread_thread_walk_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.021542,
+    "1": 0.011376,
+    "2": 0.016833
+   },
+   "unit": "ms",
+   "value": 0.021542,
+   "spread": 0.010165999999999998
+  },
+  "break.cpu_ms_champion": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0973762,
+    "1": 0.0940864,
+    "2": 0.0982636
+   },
+   "unit": "ms",
+   "value": 0.0973762,
+   "spread": 0.004177200000000006
+  },
+  "break.cores_champion": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.194752,
+    "1": 0.188173,
+    "2": 0.196527
+   },
+   "unit": "cores",
+   "value": 0.194752,
+   "spread": 0.008354
+  },
+  "break.cpu_ms_lgbm_100": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.166541,
+    "1": 0.161639,
+    "2": 0.170088
+   },
+   "unit": "ms",
+   "value": 0.166541,
+   "spread": 0.008448999999999984
+  },
+  "break.cores_lgbm_100": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.333081,
+    "1": 0.323277,
+    "2": 0.340176
+   },
+   "unit": "cores",
+   "value": 0.333081,
+   "spread": 0.016898999999999997
+  },
+  "break.cpu_ms_lgbm_1000": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.215464,
+    "1": 0.211424,
+    "2": 0.218279
+   },
+   "unit": "ms",
+   "value": 0.215464,
+   "spread": 0.006855
+  },
+  "break.cores_lgbm_1000": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.430929,
+    "1": 0.422847,
+    "2": 0.436557
+   },
+   "unit": "cores",
+   "value": 0.430929,
+   "spread": 0.01371
+  },
+  "P2.swap_in_share": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.359649,
+    "1": 0.359649,
+    "2": 0.359649
+   },
+   "unit": "fraction",
+   "value": 0.359649,
+   "spread": 0.0
+  },
+  "change.challenger_threshold": {
+   "mode": "change",
+   "by_seed": {
+    "0": 1,
+    "1": 1,
+    "2": 1
+   },
+   "unit": "probability",
+   "value": 1,
+   "spread": 0
+  },
+  "change.challenger_decline_rate": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.00200133,
+    "1": 0.00200133,
+    "2": 0.00200133
+   },
+   "unit": "fraction",
+   "value": 0.00200133,
+   "spread": 0.0
+  },
+  "change.overlap": {
+   "mode": "change",
+   "by_seed": {
+    "0": 73,
+    "1": 73,
+    "2": 73
+   },
+   "unit": "count",
+   "value": 73,
+   "spread": 0
+  },
+  "change.swap_in": {
+   "mode": "change",
+   "by_seed": {
+    "0": 41,
+    "1": 41,
+    "2": 41
+   },
+   "unit": "count",
+   "value": 41,
+   "spread": 0
+  },
+  "change.swap_out": {
+   "mode": "change",
+   "by_seed": {
+    "0": 41,
+    "1": 41,
+    "2": 41
+   },
+   "unit": "count",
+   "value": 41,
+   "spread": 0
+  },
+  "change.swap_in_precision": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+   },
+   "unit": "fraction",
+   "value": 0,
+   "spread": 0
+  },
+  "change.swap_out_precision": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.414634,
+    "1": 0.414634,
+    "2": 0.414634
+   },
+   "unit": "fraction",
+   "value": 0.414634,
+   "spread": 0.0
+  }
+ },
+ "effects": {
+  "change.challenger_decline_rate:P1.challenger_decline_rate": {
+   "effect": -0.00038623,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  },
+  "break.p99_inline_ms:break.p99_alone_ms": {
+   "effect": 0.22773633333333332,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.040208999999999995,
+   "ok": true
+  },
+  "break.p50_inline_ms:break.p50_alone_ms": {
+   "effect": 0.17095833333333332,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.002375000000000016,
+   "ok": true
+  },
+  "break.p99_thread_ms:break.p99_alone_ms": {
+   "effect": 0.006347666666666654,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.008374999999999994,
+   "ok": false
+  },
+  "break.p99_inline_walk_ms:break.p99_alone_ms": {
+   "effect": 0.03583366666666665,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.013708999999999999,
+   "ok": true
+  },
+  "break.p99_thread_walk_ms:break.p99_alone_ms": {
+   "effect": 0.007569666666666669,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.008832000000000007,
+   "ok": false
+  },
+  "break.cpu_ms_lgbm_1000:break.cpu_ms_lgbm_100": {
+   "effect": 0.048966333333333334,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.008448999999999984,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Thread-shadow p99 effects are taught as small: under the back-to-back replay the shadow thread starves, so P3 is alone at every seed and the cost shows up as queue drops. Prototype gaps and their causes are in the build notes of answers/24-shadow-challenger.md."
+}

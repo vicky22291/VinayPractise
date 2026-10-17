@@ -1,0 +1,208 @@
+{
+ "lab": "01",
+ "slug": "01-pet-breeds",
+ "level": "W",
+ "lane": "heavy",
+ "reference": "m1-whole-game/scripts/01_pet_breeds.py",
+ "script_sha256": "9863cd3ba7217f2d",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 208.1,
+   "lock": "heavy",
+   "maxrss_mb": 1157,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 208.1,
+   "lock": "heavy",
+   "maxrss_mb": 1237,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 220.7,
+   "lock": "heavy",
+   "maxrss_mb": 1123,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 233.6,
+   "lock": "heavy",
+   "maxrss_mb": 1095,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 202.9,
+   "lock": "heavy",
+   "maxrss_mb": 1101,
+   "n_result": 3,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.error_rate": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0913396,
+    "1": 0.0757781,
+    "2": 0.0818674
+   },
+   "unit": "fraction",
+   "value": 0.0913396,
+   "spread": 0.015561500000000006
+  },
+  "baseline.trainable_frozen": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 563328,
+    "1": 563328,
+    "2": 563328
+   },
+   "unit": "params",
+   "value": 563328,
+   "spread": 0
+  },
+  "baseline.trainable_unfrozen": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 21830976,
+    "1": 21830976,
+    "2": 21830976
+   },
+   "unit": "params",
+   "value": 21830976,
+   "spread": 0
+  },
+  "baseline.sec_per_epoch_frozen": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 81.3044,
+    "1": 91.0306,
+    "2": 87.0466
+   },
+   "unit": "s",
+   "value": 81.3044,
+   "spread": 9.726200000000006
+  },
+  "baseline.sec_per_epoch_unfrozen": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 115.753,
+    "1": 104.337,
+    "2": 120.04
+   },
+   "unit": "s",
+   "value": 115.753,
+   "spread": 15.703000000000003
+  },
+  "baseline.export_mb": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 87.6369,
+    "1": 87.6369,
+    "2": 87.637
+   },
+   "unit": "MB",
+   "value": 87.6369,
+   "spread": 0.00010000000000331966
+  },
+  "P3.error_rate": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.879567
+   },
+   "unit": "fraction",
+   "value": 0.879567,
+   "spread": null
+  },
+  "break.sec_per_epoch": {
+   "mode": "break",
+   "by_seed": {
+    "0": 109.976
+   },
+   "unit": "s",
+   "value": 109.976,
+   "spread": null
+  },
+  "break.best_accuracy": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.915426
+   },
+   "unit": "fraction",
+   "value": 0.915426,
+   "spread": null
+  },
+  "break.best_minus_parkhi": {
+   "mode": "break",
+   "by_seed": {
+    "0": 32.3326
+   },
+   "unit": "points",
+   "value": 32.3326,
+   "spread": null
+  },
+  "P2.error_rate": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0845737
+   },
+   "unit": "fraction",
+   "value": 0.0845737,
+   "spread": null
+  },
+  "P2.delta_vs_P1": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.67659
+   },
+   "unit": "points",
+   "value": -0.67659,
+   "spread": null
+  },
+  "change.sec_per_epoch": {
+   "mode": "change",
+   "by_seed": {
+    "0": 92.5009
+   },
+   "unit": "s",
+   "value": 92.5009,
+   "spread": null
+  }
+ },
+ "effects": {
+  "P2.error_rate:P1.error_rate": {
+   "effect": -0.006765900000000005,
+   "seeds": [
+    "0"
+   ],
+   "spread": 0.015561500000000006,
+   "ok": false
+  },
+  "P3.error_rate:P1.error_rate": {
+   "effect": 0.7882274,
+   "seeds": [
+    "0"
+   ],
+   "spread": 0.015561500000000006,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "P2 effect fails the 2x-spread rule and is reported as same within noise (the lab does not teach it as real); no knob changed for effect size. The change runs the baseline's fine_tune(1) call with a KeepFrozen callback, so it differs from P1 only in whether the body unfreezes. Resize(448) replaces the spec's 460 (MPS adaptive pool limit). fastai 2.8.12 forces num_workers=0 on macOS; recorded as workers=0. Epoch times start after each epoch's first training batch (warmup=1). No precomputed steps."
+}

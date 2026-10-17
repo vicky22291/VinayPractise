@@ -1,0 +1,228 @@
+{
+ "lab": "06",
+ "slug": "06-leak-through-preprocessing",
+ "level": "C",
+ "lane": "light",
+ "reference": "answers/06_leak_through_preprocessing_ref.py",
+ "script_sha256": "ab05abea350be66a",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 14.8,
+   "lock": "light",
+   "maxrss_mb": 226,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 14.8,
+   "lock": "light",
+   "maxrss_mb": 224,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 11.8,
+   "lock": "light",
+   "maxrss_mb": 222,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 10.0,
+   "lock": "light",
+   "maxrss_mb": 223,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 19.1,
+   "lock": "light",
+   "maxrss_mb": 223,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 18.8,
+   "lock": "light",
+   "maxrss_mb": 227,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 37.9,
+   "lock": "light",
+   "maxrss_mb": 217,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 16.7,
+   "lock": "light",
+   "maxrss_mb": 217,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 14.1,
+   "lock": "light",
+   "maxrss_mb": 217,
+   "n_result": 3,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.mae_numeric_only": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 17513.1,
+    "1": 17090,
+    "2": 17688.8
+   },
+   "unit": "usd",
+   "value": 17513.1,
+   "spread": 598.7999999999993
+  },
+  "P1.mae_infold": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 16545.1,
+    "1": 16859.3,
+    "2": 17221.6
+   },
+   "unit": "usd",
+   "value": 16545.1,
+   "spread": 676.5
+  },
+  "break.mae_cross_infold": {
+   "mode": "break",
+   "by_seed": {
+    "0": 21111.1,
+    "1": 20733.2,
+    "2": 20995.9
+   },
+   "unit": "usd",
+   "value": 21111.1,
+   "spread": 377.8999999999978
+  },
+  "break.mae_cross_leaky": {
+   "mode": "break",
+   "by_seed": {
+    "0": 16333.8,
+    "1": 16187.4,
+    "2": 16560.8
+   },
+   "unit": "usd",
+   "value": 16333.8,
+   "spread": 373.39999999999964
+  },
+  "break.mae_change": {
+   "mode": "break",
+   "by_seed": {
+    "0": -4777.28,
+    "1": -4545.79,
+    "2": -4435.04
+   },
+   "unit": "usd",
+   "value": -4777.28,
+   "spread": 342.2399999999998
+  },
+  "P3.gap_pct": {
+   "mode": "break",
+   "by_seed": {
+    "0": 22.6293,
+    "1": 21.9252,
+    "2": 21.1234
+   },
+   "unit": "percent",
+   "value": 22.6293,
+   "spread": 1.5059000000000005
+  },
+  "P2.mae_leaky": {
+   "mode": "change",
+   "by_seed": {
+    "0": 16695.6,
+    "1": 16830.9,
+    "2": 17224.3
+   },
+   "unit": "usd",
+   "value": 16695.6,
+   "spread": 528.7000000000007
+  },
+  "P2.mae_change": {
+   "mode": "change",
+   "by_seed": {
+    "0": 150.477,
+    "1": -28.454,
+    "2": 2.72062
+   },
+   "unit": "usd",
+   "value": 150.477,
+   "spread": 178.931
+  },
+  "change.gap_pct": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.909496,
+    "1": 0.168773,
+    "2": -0.0157977
+   },
+   "unit": "percent",
+   "value": -0.909496,
+   "spread": 1.078269
+  }
+ },
+ "effects": {
+  "P2.mae_leaky:P1.mae_infold": {
+   "effect": 41.60000000000097,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 676.5,
+   "ok": false
+  },
+  "break.mae_cross_leaky:break.mae_cross_infold": {
+   "effect": -4586.0666666666675,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 377.8999999999978,
+   "ok": true
+  },
+  "P1.mae_infold:baseline.mae_numeric_only": {
+   "effect": -555.3000000000005,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 676.5,
+   "ok": false
+  }
+ },
+ "precomputed": [],
+ "notes": "P2 (Neighborhood, 25 levels) is taught as a null effect and reported with its seed spread; the Neighborhood x YearBuilt effect clears 2x the spread. P1 against numeric-only is reported with its spread and not taught as an established gain. No knob changes, no precomputed steps. Build notes in 06-leak-through-preprocessing.md."
+}

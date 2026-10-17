@@ -1,0 +1,266 @@
+{
+ "lab": "03",
+ "slug": "03-tabular-in-ten-minutes",
+ "level": "W",
+ "lane": "light",
+ "reference": "m1-whole-game/scripts/03_tabular_in_ten_minutes.py",
+ "script_sha256": "d590573e72951060",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 7.6,
+   "lock": "light",
+   "maxrss_mb": 408,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 5.3,
+   "lock": "light",
+   "maxrss_mb": 408,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 6.8,
+   "lock": "light",
+   "maxrss_mb": 405,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 7.1,
+   "lock": "light",
+   "maxrss_mb": 398,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 5.4,
+   "lock": "light",
+   "maxrss_mb": 397,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 7.2,
+   "lock": "light",
+   "maxrss_mb": 360,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 5.6,
+   "lock": "light",
+   "maxrss_mb": 392,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 7.1,
+   "lock": "light",
+   "maxrss_mb": 392,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 5.8,
+   "lock": "light",
+   "maxrss_mb": 390,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "tabpfn",
+   "seed": 0,
+   "wall_s": 296.4,
+   "lock": "light",
+   "maxrss_mb": 2744,
+   "n_result": 2,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.acc_majority": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.760672,
+    "1": 0.760672,
+    "2": 0.760672
+   },
+   "unit": "fraction",
+   "value": 0.760672,
+   "spread": 0.0
+  },
+  "baseline.auc_majority": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.5,
+    "1": 0.5,
+    "2": 0.5
+   },
+   "unit": "fraction",
+   "value": 0.5,
+   "spread": 0.0
+  },
+  "baseline.acc_logreg": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.853619,
+    "1": 0.854642,
+    "2": 0.850241
+   },
+   "unit": "fraction",
+   "value": 0.853619,
+   "spread": 0.004400999999999988
+  },
+  "baseline.auc_logreg": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.906038,
+    "1": 0.907215,
+    "2": 0.909306
+   },
+   "unit": "fraction",
+   "value": 0.906038,
+   "spread": 0.0032679999999999376
+  },
+  "baseline.acc_lgbm": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.871942,
+    "1": 0.877879,
+    "2": 0.871021
+   },
+   "unit": "fraction",
+   "value": 0.871942,
+   "spread": 0.00685799999999992
+  },
+  "P1.auc_lgbm": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.92843,
+    "1": 0.930639,
+    "2": 0.931689
+   },
+   "unit": "fraction",
+   "value": 0.92843,
+   "spread": 0.003259000000000012
+  },
+  "P1.gap_vs_logreg_points": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 2.23919,
+    "1": 2.3424,
+    "2": 2.23828
+   },
+   "unit": "auc_points",
+   "value": 2.23919,
+   "spread": 0.10411999999999999
+  },
+  "P3.auc_shuffled": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.496038,
+    "1": 0.484166,
+    "2": 0.480592
+   },
+   "unit": "fraction",
+   "value": 0.496038,
+   "spread": 0.01544599999999996
+  },
+  "P2.auc_5000_rows": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.912911,
+    "1": 0.917974,
+    "2": 0.917733
+   },
+   "unit": "fraction",
+   "value": 0.912911,
+   "spread": 0.005062999999999929
+  },
+  "P2.delta_points": {
+   "mode": "change",
+   "by_seed": {
+    "0": -1.55195,
+    "1": -1.2665,
+    "2": -1.39556
+   },
+   "unit": "auc_points",
+   "value": -1.55195,
+   "spread": 0.28545
+  },
+  "tabpfn.auc_lgbm_1000_rows": {
+   "mode": "tabpfn",
+   "by_seed": {
+    "0": 0.885742
+   },
+   "unit": "fraction",
+   "value": 0.885742,
+   "spread": null
+  },
+  "tabpfn.auc_tabpfn_1000_rows": {
+   "mode": "tabpfn",
+   "by_seed": {
+    "0": 0.900388
+   },
+   "unit": "fraction",
+   "value": 0.900388,
+   "spread": null
+  }
+ },
+ "effects": {
+  "P2.auc_5000_rows:P1.auc_lgbm": {
+   "effect": -0.014046666666666652,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.005062999999999929,
+   "ok": true
+  },
+  "P3.auc_shuffled:P1.auc_lgbm": {
+   "effect": -0.4433206666666667,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.01544599999999996,
+   "ok": true
+  },
+  "P1.auc_lgbm:baseline.auc_logreg": {
+   "effect": 0.022733000000000003,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0032679999999999376,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Build notes, prototype comparison and the TabPFN OpenMP workaround: see 03-tabular-in-ten-minutes.md"
+}

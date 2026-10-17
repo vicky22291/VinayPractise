@@ -1,0 +1,41 @@
+===== baseline (seed 0, 38.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/32_gradient_boosting_by_hand_ref.py --baseline --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 8cc4b91a349d714a
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.auc_gap=-0.019119 unit=auc seed=0
+RESULT baseline.loop_auc=0.909384 unit=auc seed=0
+RESULT baseline.lgbm_auc=0.928502 unit=auc seed=0
+RESULT baseline.loop_logloss_10=0.494205 unit=logloss seed=0
+RESULT baseline.loop_logloss_100=0.362802 unit=logloss seed=0
+RESULT baseline.loop_logloss_300=0.321561 unit=logloss seed=0
+RESULT baseline.lgbm_logloss=0.275635 unit=logloss seed=0
+RESULT baseline.lgbm_best_iter=173 unit=trees seed=0
+RESULT baseline.lgbm_depth=11.8844 unit=levels seed=0
+RESULT baseline.lgbm_us_300=32.542 unit=us device=cpu batch=1 warmup=20 n=200 stat=median threads=1 seed=0
+RESULT baseline.lgbm_us_1000=58.958 unit=us device=cpu batch=1 warmup=20 n=200 stat=median threads=1 seed=0
+
+===== break (seed 0, 9.5 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/32_gradient_boosting_by_hand_ref.py --break --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 8cc4b91a349d714a
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.lgbm_logloss_300=6.73391 unit=logloss seed=0
+RESULT break.lgbm_auc_300=0.784803 unit=auc seed=0
+RESULT break.lgbm_best_iter=5 unit=trees seed=0
+RESULT break.lgbm_best_logloss=0.291881 unit=logloss seed=0
+
+===== change (seed 0, 11.5 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/32_gradient_boosting_by_hand_ref.py --change --seed 0
+# cwd ml-learning/m5-under-the-hood
+# script_sha256 8cc4b91a349d714a
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.loop_logloss_300=0.279188 unit=logloss seed=0
+RESULT P2.loop_logloss_300_delta=-0.0423736 unit=logloss seed=0
+RESULT change.loop_logloss_10=0.358523 unit=logloss seed=0
+RESULT change.loop_logloss_100=0.29111 unit=logloss seed=0
+RESULT change.loop_auc=0.927098 unit=auc seed=0
+

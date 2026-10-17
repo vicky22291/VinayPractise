@@ -1,0 +1,54 @@
+===== baseline (seed 0, 208.6 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/answers/15_llm_in_production_ref.py --baseline --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 5fcd56240fe4decc
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+OLLAMA http://127.0.0.1:11435 version=0.18.0 model=qwen2.5:7b
+RESULT baseline.ttft_p50_ms_c1=211.142 unit=ms stat=p50 device=ollama batch=1 concurrency=1 warmup=3 n=154 seed=0
+RESULT baseline.ttft_p95_ms_c1=251.607 unit=ms stat=p95 device=ollama batch=1 concurrency=1 warmup=3 n=154 seed=0
+RESULT baseline.tokens_per_s_c1=50.1932 unit=tokens_per_s stat=median device=ollama batch=1 concurrency=1 warmup=3 n=154 seed=0
+RESULT baseline.mac_s_per_1000_c1=657.536 unit=s device=ollama batch=1 concurrency=1 warmup=3 n=154 seed=0
+RESULT baseline.ttft_p50_ms_c4=643.986 unit=ms stat=p50 device=ollama batch=1 concurrency=4 warmup=4 n=154 seed=0
+RESULT baseline.ttft_p95_ms_c4=855.182 unit=ms stat=p95 device=ollama batch=1 concurrency=4 warmup=4 n=154 seed=0
+RESULT baseline.tokens_per_s_c4=6.82613 unit=tokens_per_s stat=median device=ollama batch=1 concurrency=4 warmup=4 n=154 seed=0
+RESULT baseline.mac_s_per_1000_c4=659.687 unit=s device=ollama batch=1 concurrency=4 warmup=4 n=154 seed=0
+RESULT P1.ttft_p95_ratio_c4_c1=3.39888 unit=ratio seed=0
+RESULT baseline.exact_match_v1=0.597403 unit=fraction seed=0
+RESULT baseline.schema_valid_share=1 unit=fraction seed=0
+RESULT baseline.ollama_num_parallel=4 seed=0
+
+===== break (seed 0, 78.4 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/answers/15_llm_in_production_ref.py --break --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 5fcd56240fe4decc
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+OLLAMA http://127.0.0.1:11435 version=0.18.0 model=qwen2.5:7b
+RESULT break.ttft_p50_ms_c8=3220.04 unit=ms stat=p50 device=ollama batch=1 concurrency=8 warmup=8 n=48 seed=0
+RESULT break.ttft_p95_ms_c8=4507.26 unit=ms stat=p95 device=ollama batch=1 concurrency=8 warmup=8 n=48 seed=0
+RESULT break.tokens_per_s_c8=5.87115 unit=tokens_per_s stat=median device=ollama batch=1 concurrency=8 warmup=8 n=48 seed=0
+RESULT break.mac_s_per_1000_c8=651.755 unit=s device=ollama batch=1 concurrency=8 warmup=8 n=48 seed=0
+RESULT P3.invalid_share=0.0416667 unit=fraction seed=0
+RESULT break.parse_fail_share=0 unit=fraction seed=0
+RESULT break.unknown_intent_share=0.0416667 unit=fraction seed=0
+RESULT break.schema_valid_share=0.958333 unit=fraction seed=0
+RESULT break.with_schema_valid_share=1 unit=fraction seed=0
+
+===== change (seed 0, 152.9 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/answers/15_llm_in_production_ref.py --change --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 5fcd56240fe4decc
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+OLLAMA http://127.0.0.1:11435 version=0.18.0 model=qwen2.5:7b
+RESULT change.ttft_p50_ms_c1=297.706 unit=ms stat=p50 device=ollama batch=1 concurrency=1 warmup=3 n=154 seed=0
+RESULT change.ttft_p95_ms_c1=368.994 unit=ms stat=p95 device=ollama batch=1 concurrency=1 warmup=3 n=154 seed=0
+RESULT change.tokens_per_s_c1=46.1937 unit=tokens_per_s stat=median device=ollama batch=1 concurrency=1 warmup=3 n=154 seed=0
+RESULT change.mac_s_per_1000_c1=893.504 unit=s device=ollama batch=1 concurrency=1 warmup=3 n=154 seed=0
+RESULT change.exact_match_v2=0.649351 unit=fraction seed=0
+RESULT P2.exact_match_delta_pts=5.19481 unit=points seed=0
+RESULT P2.right_to_wrong=7 unit=queries seed=0
+RESULT P2.wrong_to_right=15 unit=queries seed=0
+RESULT change.sign_test_p=0.133801 unit=p_two_sided seed=0
+

@@ -1,0 +1,339 @@
+{
+ "lab": "18",
+ "slug": "18-clustering-hygiene",
+ "level": "S",
+ "lane": "light",
+ "reference": "answers/18_clustering_hygiene_ref.py",
+ "script_sha256": "e28d8e294650cd49",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 15.6,
+   "lock": "light",
+   "maxrss_mb": 615,
+   "n_result": 11,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 8.3,
+   "lock": "light",
+   "maxrss_mb": 614,
+   "n_result": 11,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 12.3,
+   "lock": "light",
+   "maxrss_mb": 563,
+   "n_result": 11,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 12.7,
+   "lock": "light",
+   "maxrss_mb": 605,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 9.6,
+   "lock": "light",
+   "maxrss_mb": 613,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 9.9,
+   "lock": "light",
+   "maxrss_mb": 608,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 12.8,
+   "lock": "light",
+   "maxrss_mb": 597,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 8.5,
+   "lock": "light",
+   "maxrss_mb": 634,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 10.1,
+   "lock": "light",
+   "maxrss_mb": 632,
+   "n_result": 5,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.n_customers": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 4372,
+    "1": 4372,
+    "2": 4372
+   },
+   "unit": "customers",
+   "value": 4372,
+   "spread": 0
+  },
+  "baseline.sizes": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "3169/1087/110/6",
+    "1": "3204/1092/70/6",
+    "2": "3169/1087/110/6"
+   },
+   "unit": "customers",
+   "value": "3169/1087/110/6",
+   "spread": null
+  },
+  "P1.biggest_share": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.72484,
+    "1": 0.732845,
+    "2": 0.72484
+   },
+   "unit": "fraction",
+   "value": 0.72484,
+   "spread": 0.008004999999999929
+  },
+  "baseline.silhouette": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.611331,
+    "1": 0.605631,
+    "2": 0.611331
+   },
+   "unit": "score",
+   "value": 0.611331,
+   "spread": 0.005699999999999927
+  },
+  "baseline.inertia_k2": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 9204.01,
+    "1": 9134.64,
+    "2": 9134.64
+   },
+   "unit": "sum_sq",
+   "value": 9204.01,
+   "spread": 69.3700000000008
+  },
+  "baseline.inertia_k3": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 5527.71,
+    "1": 5527.7,
+    "2": 5527.7
+   },
+   "unit": "sum_sq",
+   "value": 5527.71,
+   "spread": 0.010000000000218279
+  },
+  "baseline.inertia_k4": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 4046.64,
+    "1": 4065.07,
+    "2": 4046.64
+   },
+   "unit": "sum_sq",
+   "value": 4046.64,
+   "spread": 18.43000000000029
+  },
+  "baseline.inertia_k5": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 3020.25,
+    "1": 3020.27,
+    "2": 3027.88
+   },
+   "unit": "sum_sq",
+   "value": 3020.25,
+   "spread": 7.630000000000109
+  },
+  "baseline.inertia_k6": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 2383.6,
+    "1": 2370,
+    "2": 2370.19
+   },
+   "unit": "sum_sq",
+   "value": 2383.6,
+   "spread": 13.599999999999909
+  },
+  "baseline.inertia_k7": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 1906.34,
+    "1": 1911.02,
+    "2": 1906.2
+   },
+   "unit": "sum_sq",
+   "value": 1906.34,
+   "spread": 4.819999999999936
+  },
+  "baseline.inertia_k8": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 1585.88,
+    "1": 1585.56,
+    "2": 1585.56
+   },
+   "unit": "sum_sq",
+   "value": 1585.88,
+   "spread": 0.3200000000001637
+  },
+  "break.n_customers": {
+   "mode": "break",
+   "by_seed": {
+    "0": 4372,
+    "1": 4372,
+    "2": 4372
+   },
+   "unit": "customers",
+   "value": 4372,
+   "spread": 0
+  },
+  "break.sizes": {
+   "mode": "break",
+   "by_seed": {
+    "0": "4252/102/15/3",
+    "1": "4237/117/15/3",
+    "2": "4252/102/15/3"
+   },
+   "unit": "customers",
+   "value": "4252/102/15/3",
+   "spread": null
+  },
+  "P3.biggest_share": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.972553,
+    "1": 0.969122,
+    "2": 0.972553
+   },
+   "unit": "fraction",
+   "value": 0.972553,
+   "spread": 0.003430999999999962
+  },
+  "break.silhouette": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.884206,
+    "1": 0.878134,
+    "2": 0.884206
+   },
+   "unit": "score",
+   "value": 0.884206,
+   "spread": 0.006072000000000077
+  },
+  "change.n_customers": {
+   "mode": "change",
+   "by_seed": {
+    "0": 4295,
+    "1": 4295,
+    "2": 4295
+   },
+   "unit": "customers",
+   "value": 4295,
+   "spread": 0
+  },
+  "change.sizes": {
+   "mode": "change",
+   "by_seed": {
+    "0": "2442/1027/688/138",
+    "1": "2438/1025/694/138",
+    "2": "2426/1027/704/138"
+   },
+   "unit": "customers",
+   "value": "2442/1027/688/138",
+   "spread": null
+  },
+  "P2.biggest_share": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.568568,
+    "1": 0.567637,
+    "2": 0.564843
+   },
+   "unit": "fraction",
+   "value": 0.568568,
+   "spread": 0.0037249999999999783
+  },
+  "P2.delta_share": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.156272,
+    "1": -0.165209,
+    "2": -0.159997
+   },
+   "unit": "fraction",
+   "value": -0.156272,
+   "spread": 0.008937
+  },
+  "change.silhouette": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.509394,
+    "1": 0.508967,
+    "2": 0.508376
+   },
+   "unit": "score",
+   "value": 0.509394,
+   "spread": 0.0010179999999999634
+  }
+ },
+ "effects": {
+  "P2.biggest_share:P1.biggest_share": {
+   "effect": -0.16049233333333338,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.008004999999999929,
+   "ok": true
+  },
+  "P3.biggest_share:P1.biggest_share": {
+   "effect": 0.243901,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.008004999999999929,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": ""
+}

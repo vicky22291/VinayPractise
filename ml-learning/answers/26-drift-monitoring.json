@@ -1,0 +1,359 @@
+{
+ "lab": "26",
+ "slug": "26-drift-monitoring",
+ "level": "S",
+ "lane": "light",
+ "reference": "answers/26_drift_monitoring_ref.py",
+ "script_sha256": "f39a9d5518b4f239",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 28.2,
+   "lock": "light",
+   "maxrss_mb": 2360,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 27.0,
+   "lock": "light",
+   "maxrss_mb": 3082,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 81.7,
+   "lock": "light",
+   "maxrss_mb": 3082,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 18.7,
+   "lock": "light",
+   "maxrss_mb": 2303,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 31.7,
+   "lock": "light",
+   "maxrss_mb": 1438,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 109.9,
+   "lock": "light",
+   "maxrss_mb": 2246,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 12.3,
+   "lock": "light",
+   "maxrss_mb": 1962,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 30.2,
+   "lock": "light",
+   "maxrss_mb": 1586,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 79.4,
+   "lock": "light",
+   "maxrss_mb": 1740,
+   "n_result": 5,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.domain_auc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.60288,
+    "1": 0.601866,
+    "2": 0.600698
+   },
+   "unit": "auc",
+   "value": 0.60288,
+   "spread": 0.0021820000000000173
+  },
+  "baseline.ks_flagged": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 10,
+    "1": 10,
+    "2": 10
+   },
+   "unit": "of_10",
+   "value": 10,
+   "spread": 0
+  },
+  "baseline.psi_flagged": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+   },
+   "unit": "of_10",
+   "value": 0,
+   "spread": 0
+  },
+  "baseline.max_ks_stat": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.06398,
+    "1": 0.06454,
+    "2": 0.06285
+   },
+   "unit": "fraction",
+   "value": 0.06398,
+   "spread": 0.001689999999999997
+  },
+  "baseline.max_psi": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0314665,
+    "1": 0.0320919,
+    "2": 0.0325164
+   },
+   "unit": "psi",
+   "value": 0.0314665,
+   "spread": 0.0010498999999999994
+  },
+  "baseline.mae_jan_w4": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 11.5601,
+    "1": 11.5601,
+    "2": 11.5601
+   },
+   "unit": "pickups",
+   "value": 11.5601,
+   "spread": 0.0
+  },
+  "baseline.mae_jul_w2": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 13.5945,
+    "1": 13.5945,
+    "2": 13.5945
+   },
+   "unit": "pickups",
+   "value": 13.5945,
+   "spread": 0.0
+  },
+  "baseline.pred_psi": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0176522,
+    "1": 0.0176522,
+    "2": 0.0176522
+   },
+   "unit": "psi",
+   "value": 0.0176522,
+   "spread": 0.0
+  },
+  "P3.ks_flagged": {
+   "mode": "break",
+   "by_seed": {
+    "0": 10,
+    "1": 10,
+    "2": 10
+   },
+   "unit": "of_10",
+   "value": 10,
+   "spread": 0
+  },
+  "break.psi_flagged": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+   },
+   "unit": "of_10",
+   "value": 0,
+   "spread": 0
+  },
+  "break.domain_auc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.61046,
+    "1": 0.610389,
+    "2": 0.610462
+   },
+   "unit": "auc",
+   "value": 0.61046,
+   "spread": 7.299999999998974e-05
+  },
+  "break.max_ks_stat": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0456651,
+    "1": 0.0456651,
+    "2": 0.0456651
+   },
+   "unit": "fraction",
+   "value": 0.0456651,
+   "spread": 0.0
+  },
+  "break.max_psi": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0188949,
+    "1": 0.0188949,
+    "2": 0.0188949
+   },
+   "unit": "psi",
+   "value": 0.0188949,
+   "spread": 0.0
+  },
+  "break.n_week1": {
+   "mode": "break",
+   "by_seed": {
+    "0": 609698,
+    "1": 609698,
+    "2": 609698
+   },
+   "unit": "trips",
+   "value": 609698,
+   "spread": 0
+  },
+  "break.n_week2": {
+   "mode": "break",
+   "by_seed": {
+    "0": 676839,
+    "1": 676839,
+    "2": 676839
+   },
+   "unit": "trips",
+   "value": 676839,
+   "spread": 0
+  },
+  "P2.domain_auc": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.49958,
+    "1": 0.501214,
+    "2": 0.499464
+   },
+   "unit": "auc",
+   "value": 0.49958,
+   "spread": 0.0017500000000000293
+  },
+  "P2.psi_flagged": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+   },
+   "unit": "of_10",
+   "value": 0,
+   "spread": 0
+  },
+  "change.ks_flagged": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0,
+    "1": 1,
+    "2": 0
+   },
+   "unit": "of_10",
+   "value": 0,
+   "spread": 1
+  },
+  "change.max_ks_stat": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.004275,
+    "1": 0.004385,
+    "2": 0.00299
+   },
+   "unit": "fraction",
+   "value": 0.004275,
+   "spread": 0.001395
+  },
+  "change.max_psi": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.00020016,
+    "1": 0.000112353,
+    "2": 0.000126788
+   },
+   "unit": "psi",
+   "value": 0.00020016,
+   "spread": 8.780700000000001e-05
+  }
+ },
+ "effects": {
+  "P2.domain_auc:P1.domain_auc": {
+   "effect": -0.10172866666666662,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0021820000000000173,
+   "ok": true
+  },
+  "P3.ks_flagged:break.psi_flagged": {
+   "effect": 10.0,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0,
+   "ok": true
+  },
+  "P3.ks_flagged:change.ks_flagged": {
+   "effect": 9.666666666666666,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 1,
+   "ok": true
+  },
+  "baseline.mae_jul_w2:baseline.mae_jan_w4": {
+   "effect": 2.0343999999999998,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Build diagnostics, seed 0, from a one-off script (not RESULT lines). Week 1 vs week 2 domain AUC: 0.6076 at 200,000 trips per side and 0.6105 on all rows, so the break AUC is not a sample-size effect; without the two Mondays (1 and 8 January) it is 0.5958. Week 1 vs week 2 single-feature AUCs: 0.506 to 0.5339 on the ten features, 0.5566 on speed (trip_distance / duration_min, median 0.172 vs 0.159 miles per minute) and 0.5614 on trip_distance plus duration_min together; dropping any one feature lowers the AUC by at most 0.019 (hour). January vs July single-feature AUCs top out at 0.549 (fare_amount). passenger_count is missing on 0.0473 of January trips and 0.0907 of July trips (the payment_type 0 rows); KS and PSI drop missing values, the classifier sees them. Forecaster: 59 zones; mean pickups per zone-hour 70.07 in January week 4 and 72.1 in July week 2; seasonal-naive MAE (lag_168 alone) 14.371 vs 24.415, last-hour naive MAE (lag_1 alone) 17.87 vs 17.928. July week 1 (1 to 7 July) holds the 4 July holiday, so July week 2's lag_168 reads a holiday week. Derived from the values: the asymptotic KS critical statistic at p = 0.05 is 1.358 x sqrt(1/n1 + 1/n2), which is 0.0043 at 200,000 trips per side and 0.0024 for week 1 vs week 2 (609,698 and 676,839 trips); the forecaster's MAE is 17.6% higher in July week 2 than in January week 4."
+}

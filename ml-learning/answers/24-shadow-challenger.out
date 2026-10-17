@@ -1,0 +1,60 @@
+===== baseline (seed 0, 3.4 s, lock excl) =====
+# mlrun python -X faulthandler ml-learning/answers/24_shadow_challenger_ref.py --baseline --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 3693a82578a7108c
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.challenger_decline_rate=0.00238756 unit=fraction n=56962 seed=0
+RESULT baseline.champion_threshold=0.0384511 unit=probability seed=0
+RESULT baseline.champion_decline_rate=0.00200133 unit=fraction n=56962 seed=0
+RESULT baseline.challenger_declines=136 unit=count seed=0
+
+===== break (seed 0, 49.5 s, lock excl) =====
+# mlrun python -X faulthandler ml-learning/answers/24_shadow_challenger_ref.py --break --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 3693a82578a7108c
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+DATA payments=56962 blocks=5 warmup=100 slots=50 trees=100,1000
+RESULT P3.closer_to=alone device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.thread_p99_position=0.0333416 unit=ratio seed=0
+RESULT break.thread_drop_share=0.995562 unit=fraction slots=50 seed=0
+RESULT break.thread_walk_p99_position=0.174378 unit=ratio seed=0
+RESULT break.thread_walk_drop_share=0.991299 unit=fraction slots=50 seed=0
+RESULT break.p50_alone_ms=0.097875 unit=ms stat=median_of_block_p50 device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p99_alone_ms=0.117666 unit=ms stat=median_of_block_p99 device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p99_block_spread_alone_ms=0.021125 unit=ms stat=max_minus_min device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p50_inline_ms=0.269042 unit=ms stat=median_of_block_p50 device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p99_inline_ms=0.363875 unit=ms stat=median_of_block_p99 device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p99_block_spread_inline_ms=0.171209 unit=ms stat=max_minus_min device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p50_thread_ms=0.102458 unit=ms stat=median_of_block_p50 device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p99_thread_ms=0.125875 unit=ms stat=median_of_block_p99 device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p99_block_spread_thread_ms=0.0235 unit=ms stat=max_minus_min device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p50_inline_walk_ms=0.128583 unit=ms stat=median_of_block_p50 device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p99_inline_walk_ms=0.156375 unit=ms stat=median_of_block_p99 device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p99_block_spread_inline_walk_ms=0.019667 unit=ms stat=max_minus_min device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p50_thread_walk_ms=0.102917 unit=ms stat=median_of_block_p50 device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p99_thread_walk_ms=0.124416 unit=ms stat=median_of_block_p99 device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.p99_block_spread_thread_walk_ms=0.021542 unit=ms stat=max_minus_min device=cpu batch=1 warmup=100 n=56962 blocks=5 seed=0
+RESULT break.cpu_ms_champion=0.0973762 unit=ms clock=thread_time batch=1 warmup=100 n=2000 stat=median seed=0
+RESULT break.cores_champion=0.194752 unit=cores qps=2000 seed=0
+RESULT break.cpu_ms_lgbm_100=0.166541 unit=ms clock=thread_time batch=1 warmup=100 n=2000 stat=median seed=0
+RESULT break.cores_lgbm_100=0.333081 unit=cores qps=2000 seed=0
+RESULT break.cpu_ms_lgbm_1000=0.215464 unit=ms clock=thread_time batch=1 warmup=100 n=2000 stat=median seed=0
+RESULT break.cores_lgbm_1000=0.430929 unit=cores qps=2000 seed=0
+
+===== change (seed 0, 3.0 s, lock excl) =====
+# mlrun python -X faulthandler ml-learning/answers/24_shadow_challenger_ref.py --change --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 3693a82578a7108c
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.swap_in_share=0.359649 unit=fraction seed=0
+RESULT change.challenger_threshold=1 unit=probability seed=0
+RESULT change.challenger_decline_rate=0.00200133 unit=fraction n=56962 seed=0
+RESULT change.overlap=73 unit=count seed=0
+RESULT change.swap_in=41 unit=count seed=0
+RESULT change.swap_out=41 unit=count seed=0
+RESULT change.swap_in_precision=0 unit=fraction seed=0
+RESULT change.swap_out_precision=0.414634 unit=fraction seed=0
+

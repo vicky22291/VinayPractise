@@ -1,0 +1,280 @@
+{
+ "lab": "07",
+ "slug": "07-post-outcome-leak",
+ "level": "C",
+ "lane": "light",
+ "reference": "answers/07_post_outcome_leak_ref.py",
+ "script_sha256": "fe1b63e142d9da0d",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 2.1,
+   "lock": "light",
+   "maxrss_mb": 211,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 2.3,
+   "lock": "light",
+   "maxrss_mb": 211,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 2.4,
+   "lock": "light",
+   "maxrss_mb": 211,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 1.7,
+   "lock": "light",
+   "maxrss_mb": 210,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 1.8,
+   "lock": "light",
+   "maxrss_mb": 210,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 1.7,
+   "lock": "light",
+   "maxrss_mb": 209,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 2.2,
+   "lock": "light",
+   "maxrss_mb": 210,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 2.2,
+   "lock": "light",
+   "maxrss_mb": 211,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 2.2,
+   "lock": "light",
+   "maxrss_mb": 211,
+   "n_result": 6,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.cv_accuracy": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.792223,
+    "1": 0.799093,
+    "2": 0.814349
+   },
+   "unit": "fraction",
+   "value": 0.792223,
+   "spread": 0.02212599999999998
+  },
+  "P3.leaky_blanked_accuracy": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.738001,
+    "1": 0.741031,
+    "2": 0.7288
+   },
+   "unit": "fraction",
+   "value": 0.738001,
+   "spread": 0.012230999999999992
+  },
+  "P3.gap_points": {
+   "mode": "break",
+   "by_seed": {
+    "0": -5.42219,
+    "1": -5.80621,
+    "2": -8.55488
+   },
+   "unit": "points",
+   "value": -5.42219,
+   "spread": 3.132690000000001
+  },
+  "P3.leaky_vs_honest": {
+   "mode": "break",
+   "by_seed": {
+    "0": "below",
+    "1": "below",
+    "2": "below"
+   },
+   "value": "below",
+   "spread": null
+  },
+  "break.leaky_real_accuracy": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.955684,
+    "1": 0.949577,
+    "2": 0.95569
+   },
+   "unit": "fraction",
+   "value": 0.955684,
+   "spread": 0.006113000000000035
+  },
+  "break.predicted_survival_rate": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.155105,
+    "1": 0.16426,
+    "2": 0.138282
+   },
+   "unit": "fraction",
+   "value": 0.155105,
+   "spread": 0.025978
+  },
+  "break.actual_survival_rate": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.381972,
+    "1": 0.381972,
+    "2": 0.381972
+   },
+   "unit": "fraction",
+   "value": 0.381972,
+   "spread": 0.0
+  },
+  "break.all_died_accuracy": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.618028,
+    "1": 0.618028,
+    "2": 0.618028
+   },
+   "unit": "fraction",
+   "value": 0.618028,
+   "spread": 0.0
+  },
+  "P2.cv_accuracy": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.955684,
+    "1": 0.949577,
+    "2": 0.95569
+   },
+   "unit": "fraction",
+   "value": 0.955684,
+   "spread": 0.006113000000000035
+  },
+  "P2.delta_points": {
+   "mode": "change",
+   "by_seed": {
+    "0": 16.3461,
+    "1": 15.0484,
+    "2": 14.1341
+   },
+   "unit": "points",
+   "value": 16.3461,
+   "spread": 2.2119999999999997
+  },
+  "change.top3_gain_share": {
+   "mode": "change",
+   "by_seed": {
+    "0": "boat:0.538,sex:0.167,pclass:0.089",
+    "1": "boat:0.538,sex:0.167,pclass:0.089",
+    "2": "boat:0.538,sex:0.167,pclass:0.089"
+   },
+   "value": "boat:0.538,sex:0.167,pclass:0.089",
+   "spread": null
+  },
+  "change.scan_auc_boat": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.975243,
+    "1": 0.975067,
+    "2": 0.975111
+   },
+   "unit": "auc",
+   "value": 0.975243,
+   "spread": 0.00017599999999995397
+  },
+  "change.scan_auc_body": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.574787,
+    "1": 0.574833,
+    "2": 0.57476
+   },
+   "unit": "auc",
+   "value": 0.574787,
+   "spread": 7.299999999998974e-05
+  },
+  "change.scan_flagged": {
+   "mode": "change",
+   "by_seed": {
+    "0": "boat",
+    "1": "boat",
+    "2": "boat"
+   },
+   "value": "boat",
+   "spread": null
+  }
+ },
+ "effects": {
+  "P2.cv_accuracy:P1.cv_accuracy": {
+   "effect": 0.15176199999999998,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.02212599999999998,
+   "ok": true
+  },
+  "P3.leaky_blanked_accuracy:P1.cv_accuracy": {
+   "effect": -0.06594433333333334,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.02212599999999998,
+   "ok": true
+  },
+  "P3.leaky_blanked_accuracy:break.leaky_real_accuracy": {
+   "effect": -0.21770633333333334,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.012230999999999992,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Knob change: the break scores the change step's model on the same 5 stratified folds as P1 and P2, each test fold with boat and body blanked, instead of one 20% holdout. On one 262-row holdout the blanked and honest accuracies were uncorrelated across 20 split seeds, so the gap P3 asks about did not reliably clear 2x the seed spread. On the same folds the honest model is the baseline's, so P3.leaky_blanked_accuracy:P1.cv_accuracy is the comparison P3 asks about; P3.leaky_blanked_accuracy:break.leaky_real_accuracy is the collapse. See the build notes in 07-post-outcome-leak.md."
+}

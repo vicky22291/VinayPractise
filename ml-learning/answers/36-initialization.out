@@ -1,0 +1,42 @@
+===== baseline (seed 0, 5.8 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/36_initialization_ref.py --baseline --seed 0
+# cwd ml-learning/m6-deep-nets-on-a-mac
+# script_sha256 82e5eedb25ba5b5f
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT baseline.log10_std_by_layer=1.23,2.07,2.93,3.82,4.65,5.37,6.21,7.09,7.92,8.76 unit=log10 seed=0
+RESULT P1.log10_std_layer10=8.76175 unit=log10 seed=0
+RESULT baseline.train_loss=nan unit=nats seed=0
+RESULT baseline.test_acc=0.1 unit=fraction seed=0
+
+===== break (seed 0, 6.5 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/36_initialization_ref.py --break --seed 0
+# cwd ml-learning/m6-deep-nets-on-a-mac
+# script_sha256 82e5eedb25ba5b5f
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT break.x10_log10_std_by_layer=0.93,1.93,2.93,3.97,4.95,5.83,6.82,7.85,8.83,9.82 unit=log10 seed=0
+RESULT break.x10_log10_std_layer10=9.81974 unit=log10 seed=0
+RESULT P3.x10_train_loss=nan unit=nats seed=0
+RESULT break.x10_test_acc=0.1 unit=fraction seed=0
+RESULT break.x01_log10_std_by_layer=-1.07,-2.07,-3.07,-4.03,-5.05,-6.17,-7.18,-8.15,-9.17,-10.18 unit=log10 seed=0
+RESULT break.x01_log10_std_layer10=-10.1803 unit=log10 seed=0
+RESULT P3.x01_train_loss=2.30259 unit=nats seed=0
+RESULT break.x01_test_acc=0.1231 unit=fraction seed=0
+RESULT P3.near_untrained=x0.1 seed=0
+
+===== change (seed 0, 7.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/36_initialization_ref.py --change --seed 0
+# cwd ml-learning/m6-deep-nets-on-a-mac
+# script_sha256 82e5eedb25ba5b5f
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT change.log10_std_by_layer=-0.07,-0.07,-0.07,-0.03,-0.05,-0.17,-0.18,-0.15,-0.17,-0.18 unit=log10 seed=0
+RESULT P2.log10_std_layer10=-0.180262 unit=log10 seed=0
+RESULT change.train_loss=0.402957 unit=nats seed=0
+RESULT change.test_acc=0.7862 unit=fraction seed=0
+RESULT change.bn_log10_std_by_layer=-0.23,-0.23,-0.23,-0.23,-0.23,-0.24,-0.23,-0.22,-0.23,-0.23 unit=log10 seed=0
+RESULT change.bn_log10_std_layer10=-0.226186 unit=log10 seed=0
+RESULT change.bn_train_loss=0.428968 unit=nats seed=0
+RESULT change.bn_test_acc=0.8536 unit=fraction seed=0
+

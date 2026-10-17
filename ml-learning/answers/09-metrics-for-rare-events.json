@@ -1,0 +1,391 @@
+{
+ "lab": "09",
+ "slug": "09-metrics-for-rare-events",
+ "level": "C",
+ "lane": "light",
+ "reference": "answers/09_metrics_for_rare_events_ref.py",
+ "script_sha256": "c4634e792362f9a4",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 14.6,
+   "lock": "light",
+   "maxrss_mb": 577,
+   "n_result": 12,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 18.5,
+   "lock": "light",
+   "maxrss_mb": 580,
+   "n_result": 12,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 16.6,
+   "lock": "light",
+   "maxrss_mb": 579,
+   "n_result": 12,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 6.5,
+   "lock": "light",
+   "maxrss_mb": 553,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 4.3,
+   "lock": "light",
+   "maxrss_mb": 580,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 4.0,
+   "lock": "light",
+   "maxrss_mb": 576,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 3.1,
+   "lock": "light",
+   "maxrss_mb": 576,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 5.6,
+   "lock": "light",
+   "maxrss_mb": 572,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 4.5,
+   "lock": "light",
+   "maxrss_mb": 566,
+   "n_result": 4,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.never_fraud_accuracy": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.99828,
+    "1": 0.99828,
+    "2": 0.99828
+   },
+   "unit": "fraction",
+   "value": 0.99828,
+   "spread": 0.0
+  },
+  "P1.roc_auc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.965091,
+    "1": 0.981598,
+    "2": 0.991297
+   },
+   "unit": "fraction",
+   "value": 0.965091,
+   "spread": 0.02620599999999995
+  },
+  "P1.pr_auc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.722553,
+    "1": 0.814736,
+    "2": 0.817291
+   },
+   "unit": "fraction",
+   "value": 0.722553,
+   "spread": 0.09473799999999999
+  },
+  "P1.gap": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.242538,
+    "1": 0.166861,
+    "2": 0.174005
+   },
+   "unit": "fraction",
+   "value": 0.242538,
+   "spread": 0.075677
+  },
+  "baseline.roc_auc_lo": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.938518,
+    "1": 0.964192,
+    "2": 0.982771
+   },
+   "unit": "fraction",
+   "value": 0.938518,
+   "spread": 0.04425299999999999
+  },
+  "baseline.roc_auc_hi": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.986113,
+    "1": 0.995361,
+    "2": 0.997917
+   },
+   "unit": "fraction",
+   "value": 0.986113,
+   "spread": 0.011804000000000037
+  },
+  "baseline.pr_auc_lo": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.62636,
+    "1": 0.731943,
+    "2": 0.733911
+   },
+   "unit": "fraction",
+   "value": 0.62636,
+   "spread": 0.10755099999999995
+  },
+  "baseline.pr_auc_hi": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.804083,
+    "1": 0.887413,
+    "2": 0.890438
+   },
+   "unit": "fraction",
+   "value": 0.804083,
+   "spread": 0.08635499999999996
+  },
+  "baseline.recall": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.622449,
+    "1": 0.704082,
+    "2": 0.693878
+   },
+   "unit": "fraction",
+   "value": 0.622449,
+   "spread": 0.08163299999999996
+  },
+  "baseline.precision": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.847222,
+    "1": 0.873418,
+    "2": 0.906667
+   },
+   "unit": "fraction",
+   "value": 0.847222,
+   "spread": 0.05944499999999997
+  },
+  "baseline.cost": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 196,
+    "1": 155,
+    "2": 157
+   },
+   "unit": "false_declines",
+   "value": 196,
+   "spread": 41
+  },
+  "baseline.recall_at_95_precision": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.142857,
+    "1": 0.387755,
+    "2": 0.336735
+   },
+   "unit": "fraction",
+   "value": 0.142857,
+   "spread": 0.244898
+  },
+  "break.threshold": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.3978,
+    "1": 0.150232,
+    "2": 0.10642
+   },
+   "unit": "probability",
+   "value": 0.3978,
+   "spread": 0.29138
+  },
+  "break.accuracy": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.999245,
+    "1": 0.999386,
+    "2": 0.999438
+   },
+   "unit": "fraction",
+   "value": 0.999245,
+   "spread": 0.00019299999999999873
+  },
+  "P3.recall": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.673469,
+    "1": 0.826531,
+    "2": 0.836735
+   },
+   "unit": "fraction",
+   "value": 0.673469,
+   "spread": 0.16326600000000002
+  },
+  "break.precision": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.857143,
+    "1": 0.818182,
+    "2": 0.836735
+   },
+   "unit": "fraction",
+   "value": 0.857143,
+   "spread": 0.03896100000000002
+  },
+  "break.cost": {
+   "mode": "break",
+   "by_seed": {
+    "0": 171,
+    "1": 103,
+    "2": 96
+   },
+   "unit": "false_declines",
+   "value": 171,
+   "spread": 75
+  },
+  "break.extra_cost": {
+   "mode": "break",
+   "by_seed": {
+    "0": 54,
+    "1": 11,
+    "2": 4
+   },
+   "unit": "false_declines",
+   "value": 54,
+   "spread": 50
+  },
+  "change.threshold": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0306176,
+    "1": 0.0425415,
+    "2": 0.0894984
+   },
+   "unit": "probability",
+   "value": 0.0306176,
+   "spread": 0.05888080000000001
+  },
+  "P2.recall": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.836735,
+    "1": 0.887755,
+    "2": 0.846939
+   },
+   "unit": "fraction",
+   "value": 0.836735,
+   "spread": 0.051019999999999954
+  },
+  "change.precision": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.689076,
+    "1": 0.701613,
+    "2": 0.83
+   },
+   "unit": "fraction",
+   "value": 0.689076,
+   "spread": 0.14092399999999994
+  },
+  "change.cost": {
+   "mode": "change",
+   "by_seed": {
+    "0": 117,
+    "1": 92,
+    "2": 92
+   },
+   "unit": "false_declines",
+   "value": 117,
+   "spread": 25
+  }
+ },
+ "effects": {
+  "P1.roc_auc:P1.pr_auc": {
+   "effect": 0.19446866666666665,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.09473799999999999,
+   "ok": true
+  },
+  "P2.recall:baseline.recall": {
+   "effect": 0.18367333333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.08163299999999996,
+   "ok": true
+  },
+  "change.cost:baseline.cost": {
+   "effect": -69.0,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 41,
+   "ok": false
+  },
+  "P3.recall:P2.recall": {
+   "effect": -0.07823133333333332,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.16326600000000002,
+   "ok": false
+  },
+  "break.cost:change.cost": {
+   "effect": 23.0,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 75,
+   "ok": false
+  }
+ },
+ "precomputed": [],
+ "notes": "Spec configuration kept (5:1 cost, stratified 80/20 split). Knob experiment (tagged run baseline-s0-explore, 20 splits at test_size 0.2 and 10 at 0.5, cost factors 5, 10 and 20): on seeds 0 to 2 no combination brings the break effect above 2x the seed spread; the recall effect falls 2.6 to 4.2 times short and the cost effect 3.2 to 6.5 times short, because the max-accuracy threshold itself moves between splits. Over 20 splits at 5:1 and test_size 0.2 the max-accuracy threshold's extra cost had mean 28.5, sd 18.7, min 0 and max 59, and its recall gap had mean -0.0898 and sd 0.0539. Per-seed paired differences on seeds 0, 1 and 2: P3.recall minus P2.recall -0.163266, -0.061224 and -0.010204; break.cost minus change.cost 54, 11 and 4. The change cost effect fails only against the level spread of cost at 0.5; its per-seed paired differences are -79, -63 and -65. Band check (tagged run baseline-s0-bands): between the cheapest threshold and 0.5 the fraud rate was 0.447, 0.400 and 0.600 at seeds 0, 1 and 2 against mean scores of 0.168, 0.182 and 0.268; the calibrated-probability threshold 1/6 would cost 154, 118 and 125. The three failing comparisons (change.cost:baseline.cost, P3.recall:P2.recall and break.cost:change.cost) are framed as split noise under the BRIEF rule for small or null effects: the answer claims only their direction, which holds on every split by construction in-sample, and reports their size with its spread. Thresholds are chosen and priced on the same test rows, as in the spec's prototype, so P2, P3 and the costs at the two chosen thresholds are in-sample: they show each rule's mechanism, not production estimates, and the lab file and the answer file say so. The recall direction would survive a validation split; the cost directions would not."
+}

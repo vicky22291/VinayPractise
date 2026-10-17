@@ -1,0 +1,325 @@
+{
+ "lab": "20",
+ "slug": "20-training-serving-skew",
+ "level": "S",
+ "lane": "light",
+ "reference": "answers/20_training_serving_skew_ref.py",
+ "script_sha256": "381054b17e537fa6",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 26.1,
+   "lock": "light",
+   "maxrss_mb": 534,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 16.9,
+   "lock": "light",
+   "maxrss_mb": 541,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 7.7,
+   "lock": "light",
+   "maxrss_mb": 517,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 174.9,
+   "lock": "light",
+   "maxrss_mb": 544,
+   "n_result": 13,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 176.9,
+   "lock": "light",
+   "maxrss_mb": 545,
+   "n_result": 13,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 146.9,
+   "lock": "light",
+   "maxrss_mb": 541,
+   "n_result": 13,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 53.5,
+   "lock": "light",
+   "maxrss_mb": 545,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 34.8,
+   "lock": "light",
+   "maxrss_mb": 550,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 45.1,
+   "lock": "light",
+   "maxrss_mb": 545,
+   "n_result": 2,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.mae": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 22.4356,
+    "1": 22.4213,
+    "2": 22.2303
+   },
+   "unit": "pickups",
+   "value": 22.4356,
+   "spread": 0.20530000000000115
+  },
+  "P3.mismatch_rate": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.99167,
+    "1": 0.991895,
+    "2": 0.991775
+   },
+   "unit": "fraction",
+   "value": 0.99167,
+   "spread": 0.0002249999999999197
+  },
+  "break.mismatch_rate_fix_clock": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.963035,
+    "1": 0.96256,
+    "2": 0.961765
+   },
+   "unit": "fraction",
+   "value": 0.963035,
+   "spread": 0.0012699999999999934
+  },
+  "break.mismatch_rate_fix_window": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.99167,
+    "1": 0.991895,
+    "2": 0.991775
+   },
+   "unit": "fraction",
+   "value": 0.99167,
+   "spread": 0.0002249999999999197
+  },
+  "break.mismatch_rate_fix_clock_and_right_edge": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0423,
+    "1": 0.04291,
+    "2": 0.04384
+   },
+   "unit": "fraction",
+   "value": 0.0423,
+   "spread": 0.0015399999999999997
+  },
+  "break.mismatch_rate_fixed": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0,
+    "1": 0,
+    "2": 0
+   },
+   "unit": "fraction",
+   "value": 0,
+   "spread": 0
+  },
+  "break.serving_zero_share": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1,
+    "1": 1,
+    "2": 1
+   },
+   "unit": "fraction",
+   "value": 1,
+   "spread": 0
+  },
+  "break.batch_zero_share": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.00833,
+    "1": 0.008105,
+    "2": 0.008225
+   },
+   "unit": "fraction",
+   "value": 0.00833,
+   "spread": 0.00022500000000000124
+  },
+  "break.test_mean_target": {
+   "mode": "break",
+   "by_seed": {
+    "0": 174.032,
+    "1": 174.683,
+    "2": 173.678
+   },
+   "unit": "pickups",
+   "value": 174.032,
+   "spread": 1.0049999999999955
+  },
+  "break.mean_prediction_shipped": {
+   "mode": "break",
+   "by_seed": {
+    "0": 24.4992,
+    "1": 26.9395,
+    "2": 25.8187
+   },
+   "unit": "pickups",
+   "value": 24.4992,
+   "spread": 2.4403000000000006
+  },
+  "break.mae_fix_clock": {
+   "mode": "break",
+   "by_seed": {
+    "0": 22.4144,
+    "1": 22.4168,
+    "2": 22.2034
+   },
+   "unit": "pickups",
+   "value": 22.4144,
+   "spread": 0.21340000000000003
+  },
+  "break.mae_fixed": {
+   "mode": "break",
+   "by_seed": {
+    "0": 22.4356,
+    "1": 22.4213,
+    "2": 22.2303
+   },
+   "unit": "pickups",
+   "value": 22.4356,
+   "spread": 0.20530000000000115
+  },
+  "break.mae_logged": {
+   "mode": "break",
+   "by_seed": {
+    "0": 28.2738,
+    "1": 28.0389,
+    "2": 28.2555
+   },
+   "unit": "pickups",
+   "value": 28.2738,
+   "spread": 0.23489999999999966
+  },
+  "break.mismatch_rate_your_fix": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.99167,
+    "1": 0.991895,
+    "2": 0.991775
+   },
+   "unit": "fraction",
+   "value": 0.99167,
+   "spread": 0.0002249999999999197
+  },
+  "P2.mae": {
+   "mode": "change",
+   "by_seed": {
+    "0": 149.63,
+    "1": 147.84,
+    "2": 147.942
+   },
+   "unit": "pickups",
+   "value": 149.63,
+   "spread": 1.789999999999992
+  },
+  "P2.mae_ratio": {
+   "mode": "change",
+   "by_seed": {
+    "0": 6.66929,
+    "1": 6.59372,
+    "2": 6.65497
+   },
+   "unit": "ratio",
+   "value": 6.66929,
+   "spread": 0.07556999999999992
+  }
+ },
+ "effects": {
+  "P2.mae:P1.mae": {
+   "effect": 126.10826666666667,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 1.789999999999992,
+   "ok": true
+  },
+  "P3.mismatch_rate:break.mismatch_rate_fixed": {
+   "effect": 0.99178,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0002249999999999197,
+   "ok": true
+  },
+  "break.mae_logged:P2.mae": {
+   "effect": -120.28126666666667,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 1.789999999999992,
+   "ok": true
+  },
+  "break.mae_logged:P1.mae": {
+   "effect": 5.827000000000002,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.23489999999999966,
+   "ok": true
+  },
+  "break.mae_fix_clock:P1.mae": {
+   "effect": -0.017533333333333918,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.21340000000000003,
+   "ok": false
+  }
+ },
+ "precomputed": [],
+ "notes": "The seed draws the 200,000 queries; LightGBM at these settings is deterministic, so the query sample is the only source of spread. The 9 runs ran while other build jobs loaded the CPU (load average above 100), so wall times are upper bounds. break.mae_fix_clock vs P1.mae is the effect the lab teaches as small. break.mismatch_rate_your_fix scores the provided serving_features.py as it stands; at build time it is as shipped, so it equals P3.mismatch_rate at every seed."
+}

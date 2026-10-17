@@ -1,0 +1,369 @@
+{
+ "lab": "32",
+ "slug": "32-gradient-boosting-by-hand",
+ "level": "S",
+ "lane": "light",
+ "reference": "answers/32_gradient_boosting_by_hand_ref.py",
+ "script_sha256": "8cc4b91a349d714a",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 38.0,
+   "lock": "light",
+   "maxrss_mb": 295,
+   "n_result": 11,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 37.7,
+   "lock": "light",
+   "maxrss_mb": 291,
+   "n_result": 11,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 30.3,
+   "lock": "light",
+   "maxrss_mb": 296,
+   "n_result": 11,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 9.5,
+   "lock": "light",
+   "maxrss_mb": 258,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 11.8,
+   "lock": "light",
+   "maxrss_mb": 262,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 9.1,
+   "lock": "light",
+   "maxrss_mb": 255,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 11.5,
+   "lock": "light",
+   "maxrss_mb": 236,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 15.7,
+   "lock": "light",
+   "maxrss_mb": 236,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 11.7,
+   "lock": "light",
+   "maxrss_mb": 241,
+   "n_result": 5,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.auc_gap": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": -0.019119,
+    "1": -0.017524,
+    "2": -0.0180343
+   },
+   "unit": "auc",
+   "value": -0.019119,
+   "spread": 0.0015949999999999992
+  },
+  "baseline.loop_auc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.909384,
+    "1": 0.912843,
+    "2": 0.913431
+   },
+   "unit": "auc",
+   "value": 0.909384,
+   "spread": 0.004047000000000023
+  },
+  "baseline.lgbm_auc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.928502,
+    "1": 0.930367,
+    "2": 0.931465
+   },
+   "unit": "auc",
+   "value": 0.928502,
+   "spread": 0.002962999999999938
+  },
+  "baseline.loop_logloss_10": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.494205,
+    "1": 0.494361,
+    "2": 0.495308
+   },
+   "unit": "logloss",
+   "value": 0.494205,
+   "spread": 0.0011030000000000206
+  },
+  "baseline.loop_logloss_100": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.362802,
+    "1": 0.360786,
+    "2": 0.364018
+   },
+   "unit": "logloss",
+   "value": 0.362802,
+   "spread": 0.0032320000000000126
+  },
+  "baseline.loop_logloss_300": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.321561,
+    "1": 0.318062,
+    "2": 0.320464
+   },
+   "unit": "logloss",
+   "value": 0.321561,
+   "spread": 0.0034989999999999744
+  },
+  "baseline.lgbm_logloss": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.275635,
+    "1": 0.27302,
+    "2": 0.271053
+   },
+   "unit": "logloss",
+   "value": 0.275635,
+   "spread": 0.0045820000000000305
+  },
+  "baseline.lgbm_best_iter": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 173,
+    "1": 133,
+    "2": 176
+   },
+   "unit": "trees",
+   "value": 173,
+   "spread": 43
+  },
+  "baseline.lgbm_depth": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 11.8844,
+    "1": 12.0075,
+    "2": 11.9375
+   },
+   "unit": "levels",
+   "value": 11.8844,
+   "spread": 0.12310000000000088
+  },
+  "baseline.lgbm_us_300": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 32.542,
+    "1": 29,
+    "2": 35.9375
+   },
+   "unit": "us",
+   "value": 32.542,
+   "spread": 6.9375
+  },
+  "baseline.lgbm_us_1000": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 58.958,
+    "1": 54.104,
+    "2": 63.0625
+   },
+   "unit": "us",
+   "value": 58.958,
+   "spread": 8.9585
+  },
+  "P3.lgbm_logloss_300": {
+   "mode": "break",
+   "by_seed": {
+    "0": 6.73391,
+    "1": 6.64654,
+    "2": 7.06513
+   },
+   "unit": "logloss",
+   "value": 6.73391,
+   "spread": 0.41859
+  },
+  "break.lgbm_auc_300": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.784803,
+    "1": 0.781876,
+    "2": 0.802646
+   },
+   "unit": "auc",
+   "value": 0.784803,
+   "spread": 0.020769999999999955
+  },
+  "break.lgbm_best_iter": {
+   "mode": "break",
+   "by_seed": {
+    "0": 5,
+    "1": 4,
+    "2": 5
+   },
+   "unit": "trees",
+   "value": 5,
+   "spread": 1
+  },
+  "break.lgbm_best_logloss": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.291881,
+    "1": 0.298851,
+    "2": 0.290167
+   },
+   "unit": "logloss",
+   "value": 0.291881,
+   "spread": 0.00868399999999997
+  },
+  "P2.loop_logloss_300": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.279188,
+    "1": 0.278507,
+    "2": 0.27608
+   },
+   "unit": "logloss",
+   "value": 0.279188,
+   "spread": 0.0031079999999999997
+  },
+  "P2.loop_logloss_300_delta": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.0423736,
+    "1": -0.039555,
+    "2": -0.0443841
+   },
+   "unit": "logloss",
+   "value": -0.0423736,
+   "spread": 0.004829100000000003
+  },
+  "change.loop_logloss_10": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.358523,
+    "1": 0.357388,
+    "2": 0.360731
+   },
+   "unit": "logloss",
+   "value": 0.358523,
+   "spread": 0.0033430000000000404
+  },
+  "change.loop_logloss_100": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.29111,
+    "1": 0.289877,
+    "2": 0.288732
+   },
+   "unit": "logloss",
+   "value": 0.29111,
+   "spread": 0.0023779999999999912
+  },
+  "change.loop_auc": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.927098,
+    "1": 0.927884,
+    "2": 0.930271
+   },
+   "unit": "auc",
+   "value": 0.927098,
+   "spread": 0.0031729999999999814
+  }
+ },
+ "effects": {
+  "P2.loop_logloss_300:baseline.loop_logloss_300": {
+   "effect": -0.04210400000000001,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0034989999999999744,
+   "ok": true
+  },
+  "P3.lgbm_logloss_300:baseline.lgbm_logloss": {
+   "effect": 6.541957333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.41859,
+   "ok": true
+  },
+  "baseline.loop_auc:baseline.lgbm_auc": {
+   "effect": -0.01822533333333339,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.004047000000000023,
+   "ok": true
+  },
+  "change.loop_auc:baseline.lgbm_auc": {
+   "effect": -0.0016936666666667044,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0031729999999999814,
+   "ok": false
+  },
+  "break.lgbm_best_logloss:baseline.lgbm_logloss": {
+   "effect": 0.020397,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.00868399999999997,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Light lane, 9 reference runs, no knob changes, no precomputed steps. The P3 gap to the prototype is explained in the .md build notes (pandas category columns and LightGBM's own metric clip)."
+}

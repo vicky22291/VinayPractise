@@ -1,0 +1,71 @@
+===== baseline (seed 0, 28.2 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/26_drift_monitoring_ref.py --baseline --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 f39a9d5518b4f239
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.domain_auc=0.60288 unit=auc seed=0
+RESULT baseline.ks_flagged=10 unit=of_10 seed=0
+RESULT baseline.psi_flagged=0 unit=of_10 seed=0
+RESULT baseline.max_ks_stat=0.06398 unit=fraction seed=0
+RESULT baseline.max_psi=0.0314665 unit=psi seed=0
+RESULT baseline.mae_jan_w4=11.5601 unit=pickups seed=0
+RESULT baseline.mae_jul_w2=13.5945 unit=pickups seed=0
+RESULT baseline.pred_psi=0.0176522 unit=psi seed=0
+TABLE baseline trip_distance   ks_stat=0.033335 ks_p=5.6e-97 psi=0.005721
+TABLE baseline fare_amount     ks_stat=0.048235 ks_p=1.25e-202 psi=0.010982
+TABLE baseline tip_amount      ks_stat=0.063980 ks_p=0 psi=0.020683
+TABLE baseline total_amount    ks_stat=0.035845 ks_p=4.54e-112 psi=0.006650
+TABLE baseline passenger_count ks_stat=0.010144 ks_p=9.53e-09 psi=0.000482
+TABLE baseline payment_type    ks_stat=0.043045 ks_p=1.92e-161 psi=0.031467
+TABLE baseline PULocationID    ks_stat=0.028225 ks_p=1.21e-69 psi=0.008971
+TABLE baseline DOLocationID    ks_stat=0.030960 ks_p=1.04e-83 psi=0.010490
+TABLE baseline duration_min    ks_stat=0.050455 ks_p=1.11e-221 psi=0.015067
+TABLE baseline hour            ks_stat=0.015030 ks_p=4.72e-20 psi=0.001718
+
+===== break (seed 0, 18.7 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/26_drift_monitoring_ref.py --break --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 f39a9d5518b4f239
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.ks_flagged=10 unit=of_10 seed=0
+RESULT break.psi_flagged=0 unit=of_10 seed=0
+RESULT break.domain_auc=0.61046 unit=auc seed=0
+RESULT break.max_ks_stat=0.0456651 unit=fraction seed=0
+RESULT break.max_psi=0.0188949 unit=psi seed=0
+RESULT break.n_week1=609698 unit=trips seed=0
+RESULT break.n_week2=676839 unit=trips seed=0
+TABLE break trip_distance   ks_stat=0.036051 ks_p=0 psi=0.007619
+TABLE break fare_amount     ks_stat=0.028017 ks_p=3.64e-219 psi=0.005868
+TABLE break tip_amount      ks_stat=0.045665 ks_p=0 psi=0.013822
+TABLE break total_amount    ks_stat=0.025293 ks_p=1.09e-178 psi=0.006350
+TABLE break passenger_count ks_stat=0.042748 ks_p=0 psi=0.010155
+TABLE break payment_type    ks_stat=0.036465 ks_p=0 psi=0.009079
+TABLE break PULocationID    ks_stat=0.028410 ks_p=2.38e-225 psi=0.006055
+TABLE break DOLocationID    ks_stat=0.019033 ks_p=2.31e-101 psi=0.003013
+TABLE break duration_min    ks_stat=0.008849 ks_p=3.02e-22 psi=0.001120
+TABLE break hour            ks_stat=0.038173 ks_p=0 psi=0.018895
+
+===== change (seed 0, 12.3 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/26_drift_monitoring_ref.py --change --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 f39a9d5518b4f239
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.domain_auc=0.49958 unit=auc seed=0
+RESULT P2.psi_flagged=0 unit=of_10 seed=0
+RESULT change.ks_flagged=0 unit=of_10 seed=0
+RESULT change.max_ks_stat=0.004275 unit=fraction seed=0
+RESULT change.max_psi=0.00020016 unit=psi seed=0
+TABLE change trip_distance   ks_stat=0.003730 ks_p=0.123 psi=0.000200
+TABLE change fare_amount     ks_stat=0.004275 ks_p=0.0516 psi=0.000195
+TABLE change tip_amount      ks_stat=0.001465 ks_p=0.983 psi=0.000038
+TABLE change total_amount    ks_stat=0.003775 ks_p=0.115 psi=0.000173
+TABLE change passenger_count ks_stat=0.001208 ks_p=0.999 psi=0.000009
+TABLE change payment_type    ks_stat=0.000410 ks_p=1 psi=0.000002
+TABLE change PULocationID    ks_stat=0.001440 ks_p=0.985 psi=0.000058
+TABLE change DOLocationID    ks_stat=0.002185 ks_p=0.725 psi=0.000071
+TABLE change duration_min    ks_stat=0.003830 ks_p=0.106 psi=0.000081
+TABLE change hour            ks_stat=0.001685 ks_p=0.939 psi=0.000062
+

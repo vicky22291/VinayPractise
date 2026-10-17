@@ -1,0 +1,184 @@
+{
+ "lab": "10",
+ "slug": "10-random-vs-time-split",
+ "level": "C",
+ "lane": "light",
+ "reference": "answers/10_random_vs_time_split_ref.py",
+ "script_sha256": "542c77ca0835a05b",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 2.6,
+   "lock": "light",
+   "maxrss_mb": 217,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 3.0,
+   "lock": "light",
+   "maxrss_mb": 212,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 2.7,
+   "lock": "light",
+   "maxrss_mb": 212,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 3.0,
+   "lock": "light",
+   "maxrss_mb": 217,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 3.4,
+   "lock": "light",
+   "maxrss_mb": 214,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 4.1,
+   "lock": "light",
+   "maxrss_mb": 223,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 3.0,
+   "lock": "light",
+   "maxrss_mb": 212,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 2.8,
+   "lock": "light",
+   "maxrss_mb": 213,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 2.4,
+   "lock": "light",
+   "maxrss_mb": 214,
+   "n_result": 2,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.rmse_random": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 3.25804,
+    "1": 2.88242,
+    "2": 3.57417
+   },
+   "unit": "bikes_per_hour",
+   "value": 3.25804,
+   "spread": 0.6917499999999999
+  },
+  "P3.rmse_random_honest": {
+   "mode": "break",
+   "by_seed": {
+    "0": 40.1979,
+    "1": 38.5854,
+    "2": 41.5098
+   },
+   "unit": "bikes_per_hour",
+   "value": 40.1979,
+   "spread": 2.9243999999999986
+  },
+  "break.rmse_time_honest": {
+   "mode": "break",
+   "by_seed": {
+    "0": 66.4537,
+    "1": 66.4537,
+    "2": 66.4537
+   },
+   "unit": "bikes_per_hour",
+   "value": 66.4537,
+   "spread": 0.0
+  },
+  "P2.rmse_time": {
+   "mode": "change",
+   "by_seed": {
+    "0": 2.28975,
+    "1": 2.28975,
+    "2": 2.28975
+   },
+   "unit": "bikes_per_hour",
+   "value": 2.28975,
+   "spread": 0.0
+  },
+  "P2.rmse_time_minus_random": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.968288,
+    "1": -0.592674,
+    "2": -1.28443
+   },
+   "unit": "bikes_per_hour",
+   "value": -0.968288,
+   "spread": 0.6917559999999999
+  }
+ },
+ "effects": {
+  "P2.rmse_time:P1.rmse_random": {
+   "effect": -0.9484599999999999,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.6917499999999999,
+   "ok": false
+  },
+  "P3.rmse_random_honest:P1.rmse_random": {
+   "effect": 36.859489999999994,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 2.9243999999999986,
+   "ok": true
+  },
+  "break.rmse_time_honest:P3.rmse_random_honest": {
+   "effect": 26.355999999999998,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 2.9243999999999986,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Find-it lab. The as-shipped P2 effect is below 2x the seed spread by design: the planted columns make the model nearly exact under either split. The honest split effect (break.rmse_time_honest vs P3) carries the time-split lesson. No knob changes, no precomputed steps."
+}

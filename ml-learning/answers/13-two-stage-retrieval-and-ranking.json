@@ -1,0 +1,375 @@
+{
+ "lab": "13",
+ "slug": "13-two-stage-retrieval-and-ranking",
+ "level": "C",
+ "lane": "light",
+ "reference": "answers/13_two_stage_retrieval_and_ranking_ref.py",
+ "script_sha256": "1067e66a7a5a3712",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 7.6,
+   "lock": "light",
+   "maxrss_mb": 544,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 4.5,
+   "lock": "light",
+   "maxrss_mb": 544,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 4.8,
+   "lock": "light",
+   "maxrss_mb": 542,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 5.5,
+   "lock": "light",
+   "maxrss_mb": 542,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 7.0,
+   "lock": "light",
+   "maxrss_mb": 542,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 5.3,
+   "lock": "light",
+   "maxrss_mb": 543,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 9.2,
+   "lock": "light",
+   "maxrss_mb": 542,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 8.4,
+   "lock": "light",
+   "maxrss_mb": 543,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 7.4,
+   "lock": "light",
+   "maxrss_mb": 544,
+   "n_result": 6,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.p50_ms": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.075708,
+    "1": 0.036916,
+    "2": 0.038875
+   },
+   "unit": "ms",
+   "value": 0.075708,
+   "spread": 0.038792
+  },
+  "baseline.p99_ms": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.119262,
+    "1": 0.060472,
+    "2": 0.0595821
+   },
+   "unit": "ms",
+   "value": 0.119262,
+   "spread": 0.05967990000000001
+  },
+  "P1.recall_at_100": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.269545,
+    "1": 0.264829,
+    "2": 0.270923
+   },
+   "unit": "fraction",
+   "value": 0.269545,
+   "spread": 0.006094000000000044
+  },
+  "baseline.recall_at_10": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0531043,
+    "1": 0.05386,
+    "2": 0.0578642
+   },
+   "unit": "fraction",
+   "value": 0.0531043,
+   "spread": 0.0047598999999999975
+  },
+  "baseline.ndcg_at_10": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.179265,
+    "1": 0.177486,
+    "2": 0.179646
+   },
+   "unit": "ndcg@10",
+   "value": 0.179265,
+   "spread": 0.0021599999999999953
+  },
+  "break.p50_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.241292,
+    "1": 0.41375,
+    "2": 0.253334
+   },
+   "unit": "ms",
+   "value": 0.241292,
+   "spread": 0.172458
+  },
+  "break.p99_ms": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.393813,
+    "1": 0.65396,
+    "2": 0.388643
+   },
+   "unit": "ms",
+   "value": 0.393813,
+   "spread": 0.26531699999999997
+  },
+  "P3.ndcg_delta": {
+   "mode": "break",
+   "by_seed": {
+    "0": -0.00234847,
+    "1": 0.00226611,
+    "2": 0.000654924
+   },
+   "unit": "ndcg@10",
+   "value": -0.00234847,
+   "spread": 0.00461458
+  },
+  "break.ndcg_at_10": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.176917,
+    "1": 0.179752,
+    "2": 0.180301
+   },
+   "unit": "ndcg@10",
+   "value": 0.176917,
+   "spread": 0.003383999999999998
+  },
+  "break.recall_at_10": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0531043,
+    "1": 0.05386,
+    "2": 0.0578642
+   },
+   "unit": "fraction",
+   "value": 0.0531043,
+   "spread": 0.0047598999999999975
+  },
+  "change.p50_ms": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.715875,
+    "1": 0.59125,
+    "2": 0.513042
+   },
+   "unit": "ms",
+   "value": 0.715875,
+   "spread": 0.20283300000000004
+  },
+  "change.p99_ms": {
+   "mode": "change",
+   "by_seed": {
+    "0": 1.06869,
+    "1": 0.843604,
+    "2": 0.713028
+   },
+   "unit": "ms",
+   "value": 1.06869,
+   "spread": 0.3556619999999999
+  },
+  "P2.ndcg_at_10": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.184453,
+    "1": 0.187723,
+    "2": 0.185598
+   },
+   "unit": "ndcg@10",
+   "value": 0.184453,
+   "spread": 0.003269999999999995
+  },
+  "P2.ndcg_delta": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.00518761,
+    "1": 0.0102372,
+    "2": 0.00595158
+   },
+   "unit": "ndcg@10",
+   "value": 0.00518761,
+   "spread": 0.0050495900000000005
+  },
+  "change.recall_at_10": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0539146,
+    "1": 0.0540837,
+    "2": 0.05608
+   },
+   "unit": "fraction",
+   "value": 0.0539146,
+   "spread": 0.002165399999999998
+  },
+  "change.popsort_ndcg_at_10": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.204257,
+    "1": 0.202326,
+    "2": 0.199375
+   },
+   "unit": "ndcg@10",
+   "value": 0.204257,
+   "spread": 0.0048819999999999975
+  }
+ },
+ "effects": {
+  "P2.ndcg_at_10:baseline.ndcg_at_10": {
+   "effect": 0.007125666666666669,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.003269999999999995,
+   "ok": true
+  },
+  "P3.ndcg_delta:P2.ndcg_delta": {
+   "effect": -0.0069346086666666655,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0050495900000000005,
+   "ok": false
+  },
+  "break.ndcg_at_10:baseline.ndcg_at_10": {
+   "effect": 0.00019099999999998749,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.003383999999999998,
+   "ok": false
+  },
+  "P2.ndcg_at_10:change.popsort_ndcg_at_10": {
+   "effect": -0.016061333333333327,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0048819999999999975,
+   "ok": true
+  },
+  "change.popsort_ndcg_at_10:baseline.ndcg_at_10": {
+   "effect": 0.023186999999999996,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0048819999999999975,
+   "ok": true
+  },
+  "change.recall_at_10:baseline.recall_at_10": {
+   "effect": -0.0002500666666666665,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0047598999999999975,
+   "ok": false
+  },
+  "change.p50_ms:baseline.p50_ms": {
+   "effect": 0.5562226666666668,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.20283300000000004,
+   "ok": true
+  },
+  "change.p99_ms:baseline.p99_ms": {
+   "effect": 0.7953353,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.3556619999999999,
+   "ok": true
+  },
+  "break.p50_ms:change.p50_ms": {
+   "effect": -0.30393033333333336,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.20283300000000004,
+   "ok": false
+  },
+  "break.p99_ms:change.p99_ms": {
+   "effect": -0.396302,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.3556619999999999,
+   "ok": false
+  }
+ },
+ "precomputed": [],
+ "notes": "Ranker config (fix round 3): LightGBM lambdarank at the library defaults (LightGBM 4.7.0: 100 trees of 31 leaves, learning rate 0.1). It is one pre-registered configuration with no search: the spec names no LightGBM setting, so the defaults are its configuration, and nothing was tuned on any window. Why a third round: the first build scored about a dozen configs on the test period (positives after T2) and picked learning rate 0.03; fix round 2 replaced that with 7 leaves, picked on the [T1, T2) validation window but from a grid set after that test-period exploration, so the test period still shaped the pick. The test period is not untouched: the first build's exploration also scored the defaults on it, and they scored below every other LightGBM config it tried. They are used because the spec names no setting, not because of that score, so the choice cannot favour the test period. Every ranker value in these answers comes from runs made after this change; they reproduce that exploration's scores for the defaults to the five decimals it printed (the pipeline is deterministic per seed). Oracle: in the first build's test-period exploration, a list that puts every positive among the 100 candidates first scores about 0.69 nDCG@10; it depends on the candidates only, not on any ranker config. Users: the test set is the 1,159 users with a rating before T2 and a positive after it; 29 users with a test positive but no earlier rating are cold start and left out. The ranker trains on the 492 of the 1,103 users with a positive in [T1, T2) who also rated a movie before T1 (about 2,450 positive rows); the other 611 (55%) are cold start at T1, so train_ranker() leaves them out, as evaluate() does at T2. Timing: the nine reference runs ran one at a time, back to back by seed, with no other build job running beside any of them; work outside the build kept the machine's one-minute load average between about 7 and 10 on 14 cores, so the timing rows are noisier than a quiet machine would give. Two earlier sets of the nine runs in this round were replaced because heavy jobs from other labs ran beside them (lab 15's local LLM beside every run of the first, smoke jobs from labs 37 and 01 beside four runs of the second). Their ranking values were identical; only their timing rows differed, and those were seen before each replacement. This set was declared final before it ran. The spec gives no prototype values for lab 13."
+}

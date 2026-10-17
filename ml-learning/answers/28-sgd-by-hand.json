@@ -1,0 +1,301 @@
+{
+ "lab": "28",
+ "slug": "28-sgd-by-hand",
+ "level": "W",
+ "lane": "light",
+ "reference": "m5-under-the-hood/scripts/28_sgd_by_hand.py",
+ "script_sha256": "65bb49d53a2db58c",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 3.8,
+   "lock": "light",
+   "maxrss_mb": 427,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 1.9,
+   "lock": "light",
+   "maxrss_mb": 427,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 1.9,
+   "lock": "light",
+   "maxrss_mb": 428,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 3.7,
+   "lock": "light",
+   "maxrss_mb": 428,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 2.0,
+   "lock": "light",
+   "maxrss_mb": 429,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 2.1,
+   "lock": "light",
+   "maxrss_mb": 427,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 1.8,
+   "lock": "light",
+   "maxrss_mb": 429,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 1.9,
+   "lock": "light",
+   "maxrss_mb": 428,
+   "n_result": 6,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 1.9,
+   "lock": "light",
+   "maxrss_mb": 428,
+   "n_result": 6,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.mean_image_acc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.951423,
+    "1": 0.951423,
+    "2": 0.951423
+   },
+   "unit": "fraction",
+   "value": 0.951423,
+   "spread": 0.0
+  },
+  "baseline.acc_epoch1": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.785574,
+    "1": 0.916094,
+    "2": 0.909715
+   },
+   "unit": "fraction",
+   "value": 0.785574,
+   "spread": 0.13051999999999997
+  },
+  "baseline.acc_epoch5": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.946516,
+    "1": 0.957311,
+    "2": 0.952895
+   },
+   "unit": "fraction",
+   "value": 0.946516,
+   "spread": 0.010794999999999999
+  },
+  "baseline.acc_epoch20": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.967125,
+    "1": 0.973013,
+    "2": 0.969087
+   },
+   "unit": "fraction",
+   "value": 0.967125,
+   "spread": 0.005888000000000004
+  },
+  "baseline.epoch_losses": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "0.3978,0.1268,0.07666,0.06159,0.05344,0.04832,0.0446,0.04171,0.03948,0.03766,0.03624,0.03495,0.03381,0.03276,0.03178,0.0309,0.03008,0.02935,0.02868,0.02805",
+    "1": "0.1412,0.07373,0.05768,0.04928,0.04398,0.0403,0.03747,0.03514,0.0332,0.03154,0.03021,0.029,0.02798,0.0271,0.0263,0.0256,0.02496,0.02438,0.02386,0.02337",
+    "2": "0.2316,0.07315,0.05576,0.04776,0.04284,0.03924,0.03649,0.03433,0.03266,0.03122,0.02997,0.02896,0.02805,0.02725,0.02655,0.02591,0.02526,0.02472,0.02416,0.0237"
+   },
+   "value": "0.3978,0.1268,0.07666,0.06159,0.05344,0.04832,0.0446,0.04171,0.03948,0.03766,0.03624,0.03495,0.03381,0.03276,0.03178,0.0309,0.03008,0.02935,0.02868,0.02805",
+   "spread": null
+  },
+  "baseline.loss_ratio": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.070524,
+    "1": 0.165488,
+    "2": 0.10235
+   },
+   "unit": "epoch20/epoch1",
+   "value": 0.070524,
+   "spread": 0.09496399999999999
+  },
+  "baseline.loss_outcome": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "still_falls",
+    "1": "still_falls",
+    "2": "still_falls"
+   },
+   "value": "still_falls",
+   "spread": null
+  },
+  "break.acc_epoch20": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.98528,
+    "1": 0.504416,
+    "2": 0.984789
+   },
+   "unit": "fraction",
+   "value": 0.98528,
+   "spread": 0.48086400000000007
+  },
+  "break.epoch_losses": {
+   "mode": "break",
+   "by_seed": {
+    "0": "0.0577,0.02215,0.01762,0.01559,0.01341,0.01288,0.01184,0.0116,0.01157,0.01149,0.01063,0.01048,0.01044,0.009699,0.009395,0.009073,0.009265,0.008881,0.008922,0.008573",
+    "1": "0.4904,0.4946,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945,0.4945",
+    "2": "0.04543,0.01919,0.0169,0.01405,0.01337,0.01238,0.01182,0.01084,0.01059,0.0108,0.01067,0.01032,0.009936,0.009852,0.009587,0.008982,0.009361,0.008636,0.008631,0.0089"
+   },
+   "value": "0.0577,0.02215,0.01762,0.01559,0.01341,0.01288,0.01184,0.0116,0.01157,0.01149,0.01063,0.01048,0.01044,0.009699,0.009395,0.009073,0.009265,0.008881,0.008922,0.008573",
+   "spread": null
+  },
+  "break.loss_ratio": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.148597,
+    "1": 1.00843,
+    "2": 0.195885
+   },
+   "unit": "epoch20/epoch1",
+   "value": 0.148597,
+   "spread": 0.859833
+  },
+  "P3.loss_outcome": {
+   "mode": "break",
+   "by_seed": {
+    "0": "still_falls",
+    "1": "oscillates_or_stalls",
+    "2": "still_falls"
+   },
+   "value": "still_falls",
+   "spread": null
+  },
+  "change.acc_epoch1": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.919529,
+    "1": 0.930815,
+    "2": 0.502453
+   },
+   "unit": "fraction",
+   "value": 0.919529,
+   "spread": 0.4283619999999999
+  },
+  "change.acc_epoch5": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.957802,
+    "1": 0.95633,
+    "2": 0.502944
+   },
+   "unit": "fraction",
+   "value": 0.957802,
+   "spread": 0.4548580000000001
+  },
+  "P2.acc_epoch20": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.970069,
+    "1": 0.972522,
+    "2": 0.965653
+   },
+   "unit": "fraction",
+   "value": 0.970069,
+   "spread": 0.006869000000000014
+  },
+  "P2.delta_vs_linear": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.00294405,
+    "1": -0.000490665,
+    "2": -0.00343478
+   },
+   "unit": "fraction",
+   "value": 0.00294405,
+   "spread": 0.00637883
+  },
+  "change.epoch_losses": {
+   "mode": "change",
+   "by_seed": {
+    "0": "0.1413,0.06701,0.05314,0.04501,0.0403,0.03629,0.03297,0.0313,0.02903,0.02704,0.0265,0.02547,0.02473,0.02438,0.02386,0.02334,0.02302,0.02263,0.02235,0.02214",
+    "1": "0.1276,0.06348,0.05062,0.04426,0.03952,0.03547,0.03286,0.02986,0.02815,0.02695,0.02567,0.02482,0.02387,0.02328,0.02267,0.02202,0.0211,0.02053,0.02019,0.01973",
+    "2": "0.4973,0.4949,0.4948,0.4946,0.4945,0.4944,0.4944,0.4943,0.4943,0.4942,0.4942,0.4941,0.4939,0.4933,0.492,0.2664,0.05509,0.04068,0.03415,0.03092"
+   },
+   "value": "0.1413,0.06701,0.05314,0.04501,0.0403,0.03629,0.03297,0.0313,0.02903,0.02704,0.0265,0.02547,0.02473,0.02438,0.02386,0.02334,0.02302,0.02263,0.02235,0.02214",
+   "spread": null
+  },
+  "change.loss_ratio": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.156742,
+    "1": 0.154653,
+    "2": 0.0621674
+   },
+   "unit": "epoch20/epoch1",
+   "value": 0.156742,
+   "spread": 0.0945746
+  }
+ },
+ "effects": {
+  "P2.acc_epoch20:baseline.acc_epoch20": {
+   "effect": -0.0003270000000000402,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.006869000000000014,
+   "ok": false
+  },
+  "break.loss_ratio:baseline.loss_ratio": {
+   "effect": 0.33818333333333334,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.859833,
+   "ok": false
+  }
+ },
+ "precomputed": [],
+ "notes": "Knobs: none changed. Every spec configuration is kept: learning rate 1.0, batch 256, N(0, 1) init, 20 epochs, 30 hidden units, learning rate x 100.\nSpec silent, simplest correct choice: (a) a seeded reshuffle every epoch, from its own generator, seeded with --seed and restarted for each model, so the baseline, change and break runs at one seed train on the same batch order; fastbook's hand loop does not shuffle, so its batches run all 3s, then all 7s. (b) P1 is plain accuracy over all 2,038 validation images; fastbook prints the mean of the two per-class accuracies. (c) The P3 rule: still_falls when the epoch-20 mean loss is under half of epoch 1's, diverges_to_nan on any NaN or inf, oscillates_or_stalls otherwise. The third label was oscillates until the fix round; it was renamed because a frozen run sits flat instead of bouncing. (d) The P2 same band: a delta under 0.005 either way (about 10 of the 2,038 validation images) is same; up or down needs 0.005 or more on that side. The lab file states the band before any run, as a grading definition. (e) An epoch's loss is the mean loss per training image: each batch's mean weighted by its size (48 batches of 256 images and one of 108).\nFix round: --smoke now draws its three plots in memory and saves none, so no loss curve exists before the measured runs; the backward() comment no longer says it fills p.grad. The rerun of the 9 reference runs reproduced all 51 RESULT lines exactly; only the text of the seed-1 P3 label changed (oscillates to oscillates_or_stalls).\nVerifier round: in --smoke, P2.delta_vs_linear now compares with smoke's own linear run instead of a stored --baseline value. Before, a learner's first --smoke (no --baseline run yet) printed a NOTE telling them to run --baseline first, which would show the P1 value before its row is logged; now it prints only SMOKE lines, checked at a seed with no stored values. No training code changed: the rerun of the 9 reference runs reproduced all 51 RESULT lines exactly.\nReview round (an independent reviewer), two training-code fixes: (1) the shuffles now come from their own generator. Before, they came from the init's generator, so the hidden net's larger init (23,581 parameters against 785) moved its batch order away from the linear model's at the same seed, and P2.delta_vs_linear compared two batch orders as well as two architectures. (2) An epoch's loss is now the mean per training image. Before, it averaged the 49 batch means equally, so the last batch of 108 images counted as much as a full batch of 256. The init draws did not change. The rerun of the 9 reference runs changed every trained value; P1 did not change, and every label held at every seed: baseline.loss_outcome still_falls at seeds 0 to 2, P2 same at seeds 0 to 2, P3 still_falls, oscillates_or_stalls and still_falls. The frozen seed-1 break run now sits flat from epoch 3 on, at 0.4945, just under the share of 3s in the training set (6,131 of 12,396); under the unweighted mean its epoch means moved with the share of 3s in each epoch's last batch.\nEffects under 2x the spread, kept and explained, not inflated: P2 (a null effect at this configuration) and the P3 loss ratio (seed 1 froze).\nTagged exploration runs (ignored by mkanswers; made before the review round with the earlier wiring: shuffles from the init's generator and an unweighted epoch mean; not rerun). Init and batch order are random draws in both wirings, so the tallies still estimate how often each outcome occurs, but which seed gives which outcome can differ in the current script. At seeds 0 to 2 the current script gives the same outcome as these runs at every step. Before the review round, every seed a later script reran matched exactly: seeds 0 to 2 in the reference runs, break seeds 3 to 7 as tagged tally runs.\n--break, seeds 0 to 19: oscillates_or_stalls (frozen) at seeds 1, 5 and 15, still_falls at the other 17, diverges_to_nan at none. Seeds 1 and 15 call every image a 7 (break.acc_epoch20 0.504416); seed 5 calls every image a 3 (0.495584). Seed 16 sat near 0.5 in epoch 1 (epoch-1 loss 0.5029) and escaped in epoch 2 (0.05061). A plain 'epoch 20 below epoch 1' rule would call frozen seed 5 still_falls (0.5097 to 0.5061), so the rule asks for a fall to under half.\n--baseline then --change, seeds 0 to 11: P2.delta_vs_linear from -0.00490677 (seed 2) to 0.00834155 (seed 9), mean 0.000736028. By sign: 7 up, 4 down, 1 tie. By the 0.005 band: 11 same, 1 up (seed 9). One stall in 12: seed 2 (change.acc_epoch1 0.501963).\nBuild-only prototypes (scratchpad scripts, never shipped; the same hand loop with the earlier wiring, seeds 0 to 2): fastbook's simple_net setting (PyTorch default init, learning rate 0.1, 40 epochs) gives 0.982336, 0.982336 and 0.981354. PyTorch default init, learning rate 1.0, 20 epochs: hidden 0.984298, 0.983317 and 0.983808; linear 0.982826, 0.982336 and 0.982336.\nInit probe (build-only; the lab's init order, seed 0, all training images): linear model median |logit| 10.6884, share with |logit| over 5 0.75355; hidden net median |logit| 23.2856, share over 5 0.898032. The sigmoid's slope at 5 is under 0.007, against 0.25 at 0. The review round did not change the init draws, so the probe holds for the current script. The probe stays build-only: a printed starting-logit line would sit in the script the learner reads before predicting, and would point at the mechanism behind P2 and P3. The P2 block points to an after-session --change --seed 2 run and an on-request plot instead.\nfastbook ch 4 published values: cell 99 prints 0.9168 (3s), 0.9854 (7s) and 0.9511 (their mean); cell 289, the hand-written linear model (N(0, 1) init, learning rate 1.0, batch 256, no shuffle, 1 + 20 epochs), ends at 0.9696; cell 331, simple_net with fastai's Learner, ends at 0.982826.\nRebuild: check() fails on six broken variants (no gradient zeroing, no learning rate, no torch.no_grad(), a flipped loss, L2 instead of L1, a summed loss)."
+}

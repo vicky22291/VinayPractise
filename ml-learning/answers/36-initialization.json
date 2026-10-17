@@ -1,0 +1,369 @@
+{
+ "lab": "36",
+ "slug": "36-initialization",
+ "level": "C",
+ "lane": "light",
+ "reference": "answers/36_initialization_ref.py",
+ "script_sha256": "82e5eedb25ba5b5f",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 5.8,
+   "lock": "light",
+   "maxrss_mb": 1149,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 5.7,
+   "lock": "light",
+   "maxrss_mb": 1161,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 5.1,
+   "lock": "light",
+   "maxrss_mb": 1190,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 6.5,
+   "lock": "light",
+   "maxrss_mb": 1160,
+   "n_result": 9,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 7.5,
+   "lock": "light",
+   "maxrss_mb": 1179,
+   "n_result": 9,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 8.1,
+   "lock": "light",
+   "maxrss_mb": 1161,
+   "n_result": 9,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 7.0,
+   "lock": "light",
+   "maxrss_mb": 1199,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 7.0,
+   "lock": "light",
+   "maxrss_mb": 1197,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 7.2,
+   "lock": "light",
+   "maxrss_mb": 1162,
+   "n_result": 8,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.log10_std_by_layer": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "1.23,2.07,2.93,3.82,4.65,5.37,6.21,7.09,7.92,8.76",
+    "1": "1.23,2.06,2.91,3.81,4.70,5.56,6.35,7.10,7.96,8.87",
+    "2": "1.23,2.03,2.89,3.76,4.59,5.48,6.35,7.18,7.99,8.69"
+   },
+   "unit": "log10",
+   "value": "1.23,2.07,2.93,3.82,4.65,5.37,6.21,7.09,7.92,8.76",
+   "spread": null
+  },
+  "P1.log10_std_layer10": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 8.76175,
+    "1": 8.86868,
+    "2": 8.68554
+   },
+   "unit": "log10",
+   "value": 8.76175,
+   "spread": 0.18313999999999986
+  },
+  "baseline.train_loss": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "nan",
+    "1": "nan",
+    "2": "nan"
+   },
+   "unit": "nats",
+   "value": "nan",
+   "spread": "nan"
+  },
+  "baseline.test_acc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.1,
+    "1": 0.1,
+    "2": 0.1
+   },
+   "unit": "fraction",
+   "value": 0.1,
+   "spread": 0.0
+  },
+  "break.x10_log10_std_by_layer": {
+   "mode": "break",
+   "by_seed": {
+    "0": "0.93,1.93,2.93,3.97,4.95,5.83,6.82,7.85,8.83,9.82",
+    "1": "0.93,1.91,2.91,3.97,5.01,6.01,6.95,7.86,8.86,9.93",
+    "2": "0.93,1.88,2.89,3.91,4.90,5.93,6.96,7.94,8.90,9.74"
+   },
+   "unit": "log10",
+   "value": "0.93,1.93,2.93,3.97,4.95,5.83,6.82,7.85,8.83,9.82",
+   "spread": null
+  },
+  "break.x10_log10_std_layer10": {
+   "mode": "break",
+   "by_seed": {
+    "0": 9.81974,
+    "1": 9.92667,
+    "2": 9.74353
+   },
+   "unit": "log10",
+   "value": 9.81974,
+   "spread": 0.18313999999999986
+  },
+  "P3.x10_train_loss": {
+   "mode": "break",
+   "by_seed": {
+    "0": "nan",
+    "1": "nan",
+    "2": "nan"
+   },
+   "unit": "nats",
+   "value": "nan",
+   "spread": "nan"
+  },
+  "break.x10_test_acc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.1,
+    "1": 0.1,
+    "2": 0.1
+   },
+   "unit": "fraction",
+   "value": 0.1,
+   "spread": 0.0
+  },
+  "break.x01_log10_std_by_layer": {
+   "mode": "break",
+   "by_seed": {
+    "0": "-1.07,-2.07,-3.07,-4.03,-5.05,-6.17,-7.18,-8.15,-9.17,-10.18",
+    "1": "-1.07,-2.09,-3.09,-4.03,-4.99,-5.99,-7.05,-8.14,-9.14,-10.07",
+    "2": "-1.07,-2.12,-3.11,-4.09,-5.10,-6.07,-7.04,-8.06,-9.10,-10.26"
+   },
+   "unit": "log10",
+   "value": "-1.07,-2.07,-3.07,-4.03,-5.05,-6.17,-7.18,-8.15,-9.17,-10.18",
+   "spread": null
+  },
+  "break.x01_log10_std_layer10": {
+   "mode": "break",
+   "by_seed": {
+    "0": -10.1803,
+    "1": -10.0733,
+    "2": -10.2565
+   },
+   "unit": "log10",
+   "value": -10.1803,
+   "spread": 0.18320000000000114
+  },
+  "P3.x01_train_loss": {
+   "mode": "break",
+   "by_seed": {
+    "0": 2.30259,
+    "1": 2.30259,
+    "2": 2.30259
+   },
+   "unit": "nats",
+   "value": 2.30259,
+   "spread": 0.0
+  },
+  "break.x01_test_acc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.1231,
+    "1": 0.0972,
+    "2": 0.1071
+   },
+   "unit": "fraction",
+   "value": 0.1231,
+   "spread": 0.025900000000000006
+  },
+  "P3.near_untrained": {
+   "mode": "break",
+   "by_seed": {
+    "0": "x0.1",
+    "1": "x0.1",
+    "2": "x0.1"
+   },
+   "value": "x0.1",
+   "spread": null
+  },
+  "change.log10_std_by_layer": {
+   "mode": "change",
+   "by_seed": {
+    "0": "-0.07,-0.07,-0.07,-0.03,-0.05,-0.17,-0.18,-0.15,-0.17,-0.18",
+    "1": "-0.07,-0.09,-0.09,-0.03,0.01,0.01,-0.05,-0.14,-0.14,-0.07",
+    "2": "-0.07,-0.12,-0.11,-0.09,-0.10,-0.07,-0.04,-0.06,-0.10,-0.26"
+   },
+   "unit": "log10",
+   "value": "-0.07,-0.07,-0.07,-0.03,-0.05,-0.17,-0.18,-0.15,-0.17,-0.18",
+   "spread": null
+  },
+  "P2.log10_std_layer10": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.180262,
+    "1": -0.073331,
+    "2": -0.256465
+   },
+   "unit": "log10",
+   "value": -0.180262,
+   "spread": 0.18313400000000002
+  },
+  "change.train_loss": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.402957,
+    "1": 0.405192,
+    "2": 0.406275
+   },
+   "unit": "nats",
+   "value": 0.402957,
+   "spread": 0.0033179999999999876
+  },
+  "change.test_acc": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.7862,
+    "1": 0.8429,
+    "2": 0.8337
+   },
+   "unit": "fraction",
+   "value": 0.7862,
+   "spread": 0.05669999999999997
+  },
+  "change.bn_log10_std_by_layer": {
+   "mode": "change",
+   "by_seed": {
+    "0": "-0.23,-0.23,-0.23,-0.23,-0.23,-0.24,-0.23,-0.22,-0.23,-0.23",
+    "1": "-0.23,-0.23,-0.23,-0.24,-0.23,-0.23,-0.23,-0.23,-0.23,-0.22",
+    "2": "-0.24,-0.23,-0.23,-0.22,-0.23,-0.23,-0.23,-0.22,-0.22,-0.24"
+   },
+   "unit": "log10",
+   "value": "-0.23,-0.23,-0.23,-0.23,-0.23,-0.24,-0.23,-0.22,-0.23,-0.23",
+   "spread": null
+  },
+  "change.bn_log10_std_layer10": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.226186,
+    "1": -0.223282,
+    "2": -0.235509
+   },
+   "unit": "log10",
+   "value": -0.226186,
+   "spread": 0.012226999999999988
+  },
+  "change.bn_train_loss": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.428968,
+    "1": 0.42931,
+    "2": 0.434361
+   },
+   "unit": "nats",
+   "value": 0.428968,
+   "spread": 0.005392999999999981
+  },
+  "change.bn_test_acc": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.8536,
+    "1": 0.8552,
+    "2": 0.8584
+   },
+   "unit": "fraction",
+   "value": 0.8536,
+   "spread": 0.0048000000000000265
+  }
+ },
+ "effects": {
+  "P2.log10_std_layer10:P1.log10_std_layer10": {
+   "effect": -8.942009333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.18313999999999986,
+   "ok": true
+  },
+  "break.x10_log10_std_layer10:P2.log10_std_layer10": {
+   "effect": 9.999999333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.18313999999999986,
+   "ok": true
+  },
+  "break.x01_log10_std_layer10:P2.log10_std_layer10": {
+   "effect": -10.000014,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.18320000000000114,
+   "ok": true
+  },
+  "P3.x01_train_loss:change.train_loss": {
+   "effect": 1.897782,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0033179999999999876,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "baseline.train_loss and P3.x10_train_loss are NaN at every seed by design: those runs diverge in their first SGD steps. This file stores each of those values, by seed, value and spread, as the string \"nan\", so it stays strict JSON. P3 effect is measured against change.train_loss because the N(0, 1) loss is NaN. Details in answers/36-initialization.md, Build notes."
+}

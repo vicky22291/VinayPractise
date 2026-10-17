@@ -1,0 +1,35 @@
+===== baseline (seed 0, 1.4 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/25_experiments_with_late_labels_ref.py --baseline --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 286f017ccc406729
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P1.n_per_arm=315206 unit=users seed=0
+RESULT baseline.n_per_arm_cohens_h=315161 unit=users seed=0
+RESULT baseline.srm_p_value=2.34504e-11 unit=p seed=0
+RESULT baseline.srm_caught=true seed=0
+
+===== break (seed 0, 2.1 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/25_experiments_with_late_labels_ref.py --break --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 286f017ccc406729
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT break.fpr_fixed=0.045 unit=fraction seed=0
+RESULT P3.fpr_peeking=0.2275 unit=fraction seed=0
+PLOT ~/ml-data/results/lab25/peeking-seed0.png
+
+===== change (seed 0, 1.6 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/25_experiments_with_late_labels_ref.py --change --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 286f017ccc406729
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT change.n_per_arm=1489870 unit=payments seed=0
+RESULT change.n_per_arm_cohens_h=1488835 unit=payments seed=0
+RESULT change.enrollment_days=1 unit=days seed=0
+RESULT P2.calendar_days=121 unit=days seed=0
+RESULT change.guardrail_n_per_arm=31234 unit=payments seed=0
+RESULT change.guardrail_n_per_arm_cohens_h=31218 unit=payments seed=0
+RESULT change.guardrail_days=0.0208227 unit=days seed=0
+

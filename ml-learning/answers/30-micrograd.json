@@ -1,0 +1,192 @@
+{
+ "lab": "30",
+ "slug": "30-micrograd",
+ "level": "C",
+ "lane": "light",
+ "reference": "answers/30_micrograd_ref.py",
+ "script_sha256": "b031124edf4657c1",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 1.2,
+   "lock": "light",
+   "maxrss_mb": 209,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 1.0,
+   "lock": "light",
+   "maxrss_mb": 210,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 1.1,
+   "lock": "light",
+   "maxrss_mb": 209,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 1.2,
+   "lock": "light",
+   "maxrss_mb": 209,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 1.1,
+   "lock": "light",
+   "maxrss_mb": 209,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 1.3,
+   "lock": "light",
+   "maxrss_mb": 209,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 1.3,
+   "lock": "light",
+   "maxrss_mb": 209,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 1.2,
+   "lock": "light",
+   "maxrss_mb": 209,
+   "n_result": 1,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 1.2,
+   "lock": "light",
+   "maxrss_mb": 209,
+   "n_result": 1,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.log10_max_gap": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": -9.27906,
+    "1": -9.28986,
+    "2": -9.28114
+   },
+   "unit": "log10",
+   "value": -9.27906,
+   "spread": 0.010799999999999699
+  },
+  "baseline.a_grad": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": -0.3,
+    "1": -0.3,
+    "2": -0.3
+   },
+   "value": -0.3,
+   "spread": 0.0
+  },
+  "P3.a_grad": {
+   "mode": "break",
+   "by_seed": {
+    "0": -1.3,
+    "1": -1.3,
+    "2": -1.3
+   },
+   "value": -1.3,
+   "spread": 0.0
+  },
+  "break.log10_max_gap": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.69897,
+    "1": 0.194926,
+    "2": 0.203716
+   },
+   "unit": "log10",
+   "value": 0.69897,
+   "spread": 0.5040439999999999
+  },
+  "break.worst_expr": {
+   "mode": "break",
+   "by_seed": {
+    "0": "(((((z+y)+x)+y)+((z+y)+x))+((z+y)+x))+(((z+y)+x)+y)",
+    "1": "tanh(((tanh((((z+y)+x)*y))+y)+y))",
+    "2": "((((z+x)*x)*x)+x)+x"
+   },
+   "value": "(((((z+y)+x)+y)+((z+y)+x))+((z+y)+x))+(((z+y)+x)+y)",
+   "spread": null
+  },
+  "P2.log10_max_gap": {
+   "mode": "change",
+   "by_seed": {
+    "0": -9.46299,
+    "1": -9.66056,
+    "2": -9.7805
+   },
+   "unit": "log10",
+   "value": -9.46299,
+   "spread": 0.3175100000000004
+  }
+ },
+ "effects": {
+  "P2.log10_max_gap:P1.log10_max_gap": {
+   "effect": -0.3513300000000002,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.3175100000000004,
+   "ok": false
+  },
+  "break.log10_max_gap:P2.log10_max_gap": {
+   "effect": 10.000554,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.5040439999999999,
+   "ok": true
+  },
+  "P3.a_grad:baseline.a_grad": {
+   "effect": -1.0,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "The P2 minus P1 shift is inside 2x the seed spread. --change keeps the baseline's 20 expressions and inputs and only adds tanh nodes, so P2 and P1 are paired at each seed. The lab teaches the shift as small (a correctly differentiated op keeps the check at the rounding floor), so no knob was changed. The break effect on the gap is measured against P2, which uses the same expressions. Details in answers/30-micrograd.md, Build notes."
+}

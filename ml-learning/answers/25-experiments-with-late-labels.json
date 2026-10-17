@@ -1,0 +1,261 @@
+{
+ "lab": "25",
+ "slug": "25-experiments-with-late-labels",
+ "level": "B",
+ "lane": "light",
+ "reference": "answers/25_experiments_with_late_labels_ref.py",
+ "script_sha256": "286f017ccc406729",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 1.4,
+   "lock": "light",
+   "maxrss_mb": 160,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 1.3,
+   "lock": "light",
+   "maxrss_mb": 156,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 1.5,
+   "lock": "light",
+   "maxrss_mb": 151,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 2.1,
+   "lock": "light",
+   "maxrss_mb": 195,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 1.7,
+   "lock": "light",
+   "maxrss_mb": 196,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 2.1,
+   "lock": "light",
+   "maxrss_mb": 193,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 1.6,
+   "lock": "light",
+   "maxrss_mb": 161,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 1.5,
+   "lock": "light",
+   "maxrss_mb": 158,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 1.3,
+   "lock": "light",
+   "maxrss_mb": 160,
+   "n_result": 7,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.n_per_arm": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 315206,
+    "1": 315206,
+    "2": 315206
+   },
+   "unit": "users",
+   "value": 315206,
+   "spread": 0
+  },
+  "baseline.n_per_arm_cohens_h": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 315161,
+    "1": 315161,
+    "2": 315161
+   },
+   "unit": "users",
+   "value": 315161,
+   "spread": 0
+  },
+  "baseline.srm_p_value": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 2.34504e-11,
+    "1": 1.38126e-17,
+    "2": 4.72956e-15
+   },
+   "unit": "p",
+   "value": 2.34504e-11,
+   "spread": 2.3450386187399998e-11
+  },
+  "baseline.srm_caught": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "true",
+    "1": "true",
+    "2": "true"
+   },
+   "value": "true",
+   "spread": null
+  },
+  "break.fpr_fixed": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.045,
+    "1": 0.0375,
+    "2": 0.0475
+   },
+   "unit": "fraction",
+   "value": 0.045,
+   "spread": 0.010000000000000002
+  },
+  "P3.fpr_peeking": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.2275,
+    "1": 0.225,
+    "2": 0.2425
+   },
+   "unit": "fraction",
+   "value": 0.2275,
+   "spread": 0.017499999999999988
+  },
+  "change.n_per_arm": {
+   "mode": "change",
+   "by_seed": {
+    "0": 1489870,
+    "1": 1489870,
+    "2": 1489870
+   },
+   "unit": "payments",
+   "value": 1489870,
+   "spread": 0
+  },
+  "change.n_per_arm_cohens_h": {
+   "mode": "change",
+   "by_seed": {
+    "0": 1488835,
+    "1": 1488835,
+    "2": 1488835
+   },
+   "unit": "payments",
+   "value": 1488835,
+   "spread": 0
+  },
+  "change.enrollment_days": {
+   "mode": "change",
+   "by_seed": {
+    "0": 1,
+    "1": 1,
+    "2": 1
+   },
+   "unit": "days",
+   "value": 1,
+   "spread": 0
+  },
+  "P2.calendar_days": {
+   "mode": "change",
+   "by_seed": {
+    "0": 121,
+    "1": 121,
+    "2": 121
+   },
+   "unit": "days",
+   "value": 121,
+   "spread": 0
+  },
+  "change.guardrail_n_per_arm": {
+   "mode": "change",
+   "by_seed": {
+    "0": 31234,
+    "1": 31234,
+    "2": 31234
+   },
+   "unit": "payments",
+   "value": 31234,
+   "spread": 0
+  },
+  "change.guardrail_n_per_arm_cohens_h": {
+   "mode": "change",
+   "by_seed": {
+    "0": 31218,
+    "1": 31218,
+    "2": 31218
+   },
+   "unit": "payments",
+   "value": 31218,
+   "spread": 0
+  },
+  "change.guardrail_days": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.0208227,
+    "1": 0.0208227,
+    "2": 0.0208227
+   },
+   "unit": "days",
+   "value": 0.0208227,
+   "spread": 0.0
+  }
+ },
+ "effects": {
+  "P2.calendar_days:change.enrollment_days": {
+   "effect": 120.0,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0,
+   "ok": true
+  },
+  "P3.fpr_peeking:break.fpr_fixed": {
+   "effect": 0.18833333333333332,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.017499999999999988,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "P1, P2 and every sample-size row are closed form, so their seed spread is 0. The A/A traffic, ceil(P1 users per arm / 20) per arm per day, is fixed in the lab's Terms so that P3 names an exact config. Prototype gaps are explained in the .md build notes."
+}

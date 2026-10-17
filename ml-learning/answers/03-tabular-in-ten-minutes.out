@@ -1,0 +1,47 @@
+===== baseline (seed 0, 7.6 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/03_tabular_in_ten_minutes.py --baseline --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 d590573e72951060
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+DATA train 39,073 rows, test 9,769 rows
+RESULT baseline.acc_majority=0.760672 unit=fraction seed=0
+RESULT baseline.auc_majority=0.5 unit=fraction seed=0
+RESULT baseline.acc_logreg=0.853619 unit=fraction seed=0
+RESULT baseline.auc_logreg=0.906038 unit=fraction seed=0
+RESULT baseline.acc_lgbm=0.871942 unit=fraction seed=0
+RESULT P1.auc_lgbm=0.92843 unit=fraction seed=0
+RESULT P1.gap_vs_logreg_points=2.23919 unit=auc_points seed=0
+
+===== break (seed 0, 7.1 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/03_tabular_in_ten_minutes.py --break --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 d590573e72951060
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+DATA train 39,073 rows, test 9,769 rows
+RESULT P3.auc_shuffled=0.496038 unit=fraction seed=0
+
+===== change (seed 0, 5.6 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/03_tabular_in_ten_minutes.py --change --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 d590573e72951060
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+DATA train 39,073 rows, test 9,769 rows
+RESULT P2.auc_5000_rows=0.912911 unit=fraction seed=0
+RESULT P2.delta_points=-1.55195 unit=auc_points seed=0
+
+===== tabpfn (seed 0, 296.4 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/03_tabular_in_ten_minutes.py --tabpfn --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 d590573e72951060
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+DATA train 39,073 rows, test 9,769 rows
+RESULT tabpfn.auc_lgbm_1000_rows=0.885742 unit=fraction seed=0
+<build>/venv/lib/python3.13/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+RESULT tabpfn.auc_tabpfn_1000_rows=0.900388 unit=fraction seed=0
+

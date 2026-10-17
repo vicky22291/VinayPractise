@@ -1,0 +1,44 @@
+===== baseline (seed 0, 15.6 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/18_clustering_hygiene_ref.py --baseline --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 e28d8e294650cd49
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT baseline.n_customers=4372 unit=customers seed=0
+RESULT baseline.sizes=3169/1087/110/6 unit=customers seed=0
+RESULT P1.biggest_share=0.72484 unit=fraction seed=0
+RESULT baseline.silhouette=0.611331 unit=score seed=0
+PLOT ~/ml-data/results/lab18/baseline-s0.png
+RESULT baseline.inertia_k2=9204.01 unit=sum_sq seed=0
+RESULT baseline.inertia_k3=5527.71 unit=sum_sq seed=0
+RESULT baseline.inertia_k4=4046.64 unit=sum_sq seed=0
+RESULT baseline.inertia_k5=3020.25 unit=sum_sq seed=0
+RESULT baseline.inertia_k6=2383.6 unit=sum_sq seed=0
+RESULT baseline.inertia_k7=1906.34 unit=sum_sq seed=0
+RESULT baseline.inertia_k8=1585.88 unit=sum_sq seed=0
+
+===== break (seed 0, 12.7 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/18_clustering_hygiene_ref.py --break --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 e28d8e294650cd49
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT break.n_customers=4372 unit=customers seed=0
+RESULT break.sizes=4252/102/15/3 unit=customers seed=0
+RESULT P3.biggest_share=0.972553 unit=fraction seed=0
+RESULT break.silhouette=0.884206 unit=score seed=0
+PLOT ~/ml-data/results/lab18/break-s0.png
+
+===== change (seed 0, 12.8 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/18_clustering_hygiene_ref.py --change --seed 0
+# cwd ml-learning/m3-more-of-the-map
+# script_sha256 e28d8e294650cd49
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT change.n_customers=4295 unit=customers seed=0
+RESULT change.sizes=2442/1027/688/138 unit=customers seed=0
+RESULT P2.biggest_share=0.568568 unit=fraction seed=0
+RESULT P2.delta_share=-0.156272 unit=fraction seed=0
+RESULT change.silhouette=0.509394 unit=score seed=0
+PLOT ~/ml-data/results/lab18/change-s0.png
+

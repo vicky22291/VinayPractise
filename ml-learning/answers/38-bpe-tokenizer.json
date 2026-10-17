@@ -1,0 +1,229 @@
+{
+ "lab": "38",
+ "slug": "38-bpe-tokenizer",
+ "level": "W",
+ "lane": "light",
+ "reference": "m7-language-models/scripts/38_bpe_tokenizer.py",
+ "script_sha256": "e70b6d5aa5e33ba6",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 52.3,
+   "lock": "light",
+   "maxrss_mb": 330,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 38.9,
+   "lock": "light",
+   "maxrss_mb": 179,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 34.1,
+   "lock": "light",
+   "maxrss_mb": 411,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 0.1,
+   "lock": "light",
+   "maxrss_mb": 31,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 0.1,
+   "lock": "light",
+   "maxrss_mb": 31,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 0.1,
+   "lock": "light",
+   "maxrss_mb": 31,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 78.3,
+   "lock": "light",
+   "maxrss_mb": 471,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 70.6,
+   "lock": "light",
+   "maxrss_mb": 368,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 53.3,
+   "lock": "light",
+   "maxrss_mb": 474,
+   "n_result": 4,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.tokens_per_1k_chars_0_merges": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 1000,
+    "1": 1000,
+    "2": 1000
+   },
+   "unit": "tokens/1k_chars",
+   "value": 1000,
+   "spread": 0
+  },
+  "P1.tokens_per_1k_chars": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 509.425,
+    "1": 509.425,
+    "2": 509.425
+   },
+   "unit": "tokens/1k_chars",
+   "value": 509.425,
+   "spread": 0.0
+  },
+  "baseline.train_seconds": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 52.1388,
+    "1": 38.7387,
+    "2": 33.9284
+   },
+   "unit": "s",
+   "value": 52.1388,
+   "spread": 18.2104
+  },
+  "baseline.byte_roundtrip": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 10,
+    "1": 10,
+    "2": 10
+   },
+   "unit": "of_10",
+   "value": 10,
+   "spread": 0
+  },
+  "break.char_vocab_size": {
+   "mode": "break",
+   "by_seed": {
+    "0": 65,
+    "1": 65,
+    "2": 65
+   },
+   "unit": "characters",
+   "value": 65,
+   "spread": 0
+  },
+  "P3.char_roundtrip": {
+   "mode": "break",
+   "by_seed": {
+    "0": 4,
+    "1": 4,
+    "2": 4
+   },
+   "unit": "of_10",
+   "value": 4,
+   "spread": 0
+  },
+  "P2.tokens_per_1k_chars": {
+   "mode": "change",
+   "by_seed": {
+    "0": 437.479,
+    "1": 437.479,
+    "2": 437.479
+   },
+   "unit": "tokens/1k_chars",
+   "value": 437.479,
+   "spread": 0.0
+  },
+  "P2.delta_vs_256": {
+   "mode": "change",
+   "by_seed": {
+    "0": -71.9468,
+    "1": -71.9468,
+    "2": -71.9468
+   },
+   "unit": "tokens/1k_chars",
+   "value": -71.9468,
+   "spread": 0.0
+  },
+  "change.train_seconds": {
+   "mode": "change",
+   "by_seed": {
+    "0": 78.066,
+    "1": 70.5017,
+    "2": 53.1399
+   },
+   "unit": "s",
+   "value": 78.066,
+   "spread": 24.926100000000005
+  },
+  "change.byte_roundtrip": {
+   "mode": "change",
+   "by_seed": {
+    "0": 10,
+    "1": 10,
+    "2": 10
+   },
+   "unit": "of_10",
+   "value": 10,
+   "spread": 0
+  }
+ },
+ "effects": {
+  "P2.tokens_per_1k_chars:P1.tokens_per_1k_chars": {
+   "effect": -71.94600000000003,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0,
+   "ok": true
+  },
+  "P3.char_roundtrip:baseline.byte_roundtrip": {
+   "effect": -6.0,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Fixer timing evidence for the plain-loop restore and the rebuild limit. Tagged runs in runs/38, ignored by mkanswers. Load means the 1-minute load average on 14 cores. (1) change-s0-flat.log, first build, flat script: 512 merges trained in 350.716 s, load not logged. (2) baseline-s0-plain.log and change-s0-plain.log, this script, at load 58.6 to 86.0 (read by the fixer at start, middle and end): 256 merges in 80.4776 s, 512 merges in 136.517 s. (3) change-s0-cpuprobe.log, the same merge() and train() timed in CPU and wall seconds at load 15.3 to 20.7: full text, 256 merges 49.34 CPU s and 52.77 wall s, 512 merges 83.19 CPU s and 86.65 wall s; first 50,000 characters, 256 merges 2.43 CPU s. (4) change-s0-small50k.log at load 13.2 to 15.0: first 50,000 characters, 100 merges 0.45 CPU s, 256 merges 1.13 CPU s. Reference runs: one at a time from 16:03 to 16:13, load 11.1 to 17.5 at each start and end. Every timing run shared the machine with another build's heavy job: baseline s0 and change s0 with a lab 15 Ollama run, change s1 with a lab 35 change run, the others with a lab 35 baseline run. The slow ones line up with the Ollama and lab 35 change runs, which the load average does not show."
+}

@@ -1,0 +1,228 @@
+{
+ "lab": "35",
+ "slug": "35-learning-rates-and-one-cycle",
+ "level": "C",
+ "lane": "heavy",
+ "reference": "answers/35_learning_rates_and_one_cycle_ref.py",
+ "script_sha256": "e886c2f879197892",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 186.6,
+   "lock": "heavy",
+   "maxrss_mb": 821,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 185.0,
+   "lock": "heavy",
+   "maxrss_mb": 817,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 169.7,
+   "lock": "heavy",
+   "maxrss_mb": 845,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 188.6,
+   "lock": "heavy",
+   "maxrss_mb": 816,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 183.3,
+   "lock": "heavy",
+   "maxrss_mb": 812,
+   "n_result": 4,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.lr_find_steps": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 89,
+    "1": 89,
+    "2": 90
+   },
+   "unit": "steps",
+   "value": 89,
+   "spread": 1
+  },
+  "baseline.suggested_lr": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.00453488,
+    "1": 0.00657933,
+    "2": 0.00546228
+   },
+   "unit": "lr",
+   "value": 0.00453488,
+   "spread": 0.0020444500000000006
+  },
+  "baseline.valley_lr": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.000432876,
+    "1": 0.000911163,
+    "2": 0.000521401
+   },
+   "unit": "lr",
+   "value": 0.000432876,
+   "spread": 0.000478287
+  },
+  "P1.valid_acc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 79.6433,
+    "1": 79.7962,
+    "2": 79.6178
+   },
+   "unit": "percent",
+   "value": 79.6433,
+   "spread": 0.17839999999999634
+  },
+  "baseline.acc_by_epoch": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "38.19,56.82,56.94,77.38,79.64",
+    "1": "46.85,52.13,69.50,77.17,79.80",
+    "2": "42.24,64.46,69.48,76.97,79.62"
+   },
+   "unit": "percent",
+   "value": "38.19,56.82,56.94,77.38,79.64",
+   "spread": null
+  },
+  "baseline.sec_per_epoch": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 31.5179,
+    "1": 32.865,
+    "2": 30.381
+   },
+   "unit": "s",
+   "value": 31.5179,
+   "spread": 2.4840000000000018
+  },
+  "baseline.sec_per_epoch_nosync": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 31.5179,
+    "1": 32.865,
+    "2": 30.381
+   },
+   "unit": "s",
+   "value": 31.5179,
+   "spread": 2.4840000000000018
+  },
+  "break.peak_lr": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0453488
+   },
+   "unit": "lr",
+   "value": 0.0453488,
+   "spread": null
+  },
+  "P3.valid_acc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 77.5796
+   },
+   "unit": "percent",
+   "value": 77.5796,
+   "spread": null
+  },
+  "break.delta_vs_P1": {
+   "mode": "break",
+   "by_seed": {
+    "0": -2.0637
+   },
+   "unit": "points",
+   "value": -2.0637,
+   "spread": null
+  },
+  "break.acc_by_epoch": {
+   "mode": "break",
+   "by_seed": {
+    "0": "23.36,44.03,65.50,70.93,77.58"
+   },
+   "unit": "percent",
+   "value": "23.36,44.03,65.50,70.93,77.58",
+   "spread": null
+  },
+  "change.peak_lr": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.00453488
+   },
+   "unit": "lr",
+   "value": 0.00453488,
+   "spread": null
+  },
+  "P2.valid_acc": {
+   "mode": "change",
+   "by_seed": {
+    "0": 67.3121
+   },
+   "unit": "percent",
+   "value": 67.3121,
+   "spread": null
+  },
+  "P2.delta_vs_P1": {
+   "mode": "change",
+   "by_seed": {
+    "0": -12.3312
+   },
+   "unit": "points",
+   "value": -12.3312,
+   "spread": null
+  },
+  "change.acc_by_epoch": {
+   "mode": "change",
+   "by_seed": {
+    "0": "46.85,63.90,64.56,72.31,67.31"
+   },
+   "unit": "percent",
+   "value": "46.85,63.90,64.56,72.31,67.31",
+   "spread": null
+  }
+ },
+ "effects": {
+  "P2.valid_acc:P1.valid_acc": {
+   "effect": -12.331199999999995,
+   "seeds": [
+    "0"
+   ],
+   "spread": 0.17839999999999634,
+   "ok": true
+  },
+  "P3.valid_acc:P1.valid_acc": {
+   "effect": -2.063699999999997,
+   "seeds": [
+    "0"
+   ],
+   "spread": 0.17839999999999634,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": ""
+}

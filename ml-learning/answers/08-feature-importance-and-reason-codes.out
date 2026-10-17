@@ -1,0 +1,71 @@
+===== baseline (seed 0, 15.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/08_feature_importance_and_reason_codes_ref.py --baseline --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 cfd0b7e896269d82
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+                split        gain  perm_auc_drop  split_rank  gain_rank  perm_auc_drop_rank
+age               494   9116.3560         0.0446           1          6                   2
+capital-gain      375  23565.9814         0.0603           2          2                   1
+capital-loss      364   8109.0256         0.0131           3          7                   7
+fnlwgt            347   2150.7703         0.0009           4          9                  12
+random            312   1824.4264         0.0005           5         10                  14
+hours-per-week    263   4272.9427         0.0123           6          8                   8
+education-num     214  15183.6044         0.0189           7          3                   4
+occupation        195   9645.3823         0.0160           8          5                   6
+workclass          86   1040.7281         0.0024           9         11                   9
+native-country     77    855.8948         0.0015          10         12                  10
+education          71    623.0829         0.0001          11         13                  15
+relationship       71  33001.7872         0.0168          11          1                   5
+marital-status     59  14242.7036         0.0230          13          4                   3
+sex                51    596.0867         0.0012          14         14                  11
+race               21    170.0118         0.0006          15         15                  13
+RESULT P1.random_rank_split=5 unit=rank_of_15 seed=0
+RESULT P1.random_rank_perm=14 unit=rank_of_15 seed=0
+RESULT baseline.random_rank_gain=10 unit=rank_of_15 seed=0
+RESULT baseline.auc=0.928516 unit=fraction seed=0
+RESULT baseline.sex_shap_rank=9 unit=rank_of_15 seed=0
+RESULT baseline.reasons_1=capital-gain=15024:+6.33|age=43:+0.79|relationship=Wife:+0.75 unit=column=value:log_odds score=0.999 seed=0
+RESULT baseline.reasons_2=capital-gain=15024:+6.15|education-num=15:+0.82|age=39:+0.67 unit=column=value:log_odds score=0.999 seed=0
+RESULT baseline.reasons_3=capital-gain=99999:+5.60|education-num=15:+0.73|age=38:+0.71 unit=column=value:log_odds score=0.999 seed=0
+RESULT baseline.ms_per_score=0.0293955 unit=ms device=cpu batch=1 warmup=20 n=200 stat=median threads=1 seed=0
+RESULT baseline.ms_per_explanation=0.654459 unit=ms device=cpu batch=1 warmup=20 n=200 stat=median threads=1 seed=0
+
+===== break (seed 0, 39.9 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/08_feature_importance_and_reason_codes_ref.py --break --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 cfd0b7e896269d82
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+                split        gain  perm_auc_drop  split_rank  gain_rank  perm_auc_drop_rank
+fnlwgt           3383  10706.6477         0.0008           1          6                  15
+random           3364  10508.1086         0.0017           2          8                  11
+age              2680  14844.2305         0.0504           3          4                   2
+hours-per-week   1391   7176.4910         0.0129           4         10                   8
+education-num     889  16840.5774         0.0183           5          3                   4
+capital-gain      749  24107.3972         0.0658           6          2                   1
+capital-loss      725   8564.8134         0.0164           7          9                   6
+occupation        578  10619.8237         0.0165           8          7                   5
+education         290   1216.3572         0.0010           9         12                  13
+sex               236   1061.6155         0.0019          10         14                  10
+workclass         211   1321.3945         0.0026          11         11                   9
+native-country    206   1154.5569         0.0016          12         13                  12
+relationship      132  33099.6764         0.0156          13          1                   7
+marital-status    113  14347.6849         0.0229          14          5                   3
+race               53    206.0198         0.0008          15         15                  14
+RESULT P3.random_rank_split=2 unit=rank_of_15 seed=0
+RESULT break.random_rank_perm=11 unit=rank_of_15 seed=0
+RESULT break.random_rank_gain=8 unit=rank_of_15 seed=0
+RESULT break.auc=0.926012 unit=fraction seed=0
+
+===== change (seed 0, 13.2 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/08_feature_importance_and_reason_codes_ref.py --change --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 cfd0b7e896269d82
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.auc_without_relationship=0.928171 unit=fraction seed=0
+RESULT P2.auc_change_without_relationship=-0.000345235 unit=fraction seed=0
+RESULT P2.auc_without_both=0.900736 unit=fraction seed=0
+RESULT P2.auc_change_without_both=-0.0277801 unit=fraction seed=0
+

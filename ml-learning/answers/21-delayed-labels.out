@@ -1,0 +1,83 @@
+===== baseline (seed 0, 14.4 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/21_delayed_labels_ref.py --baseline --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 cd35a06942f8f69a
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+TABLE cohort week_of=2018-03-26 n=9727 true_rate=0.001336 observed_rate=0.001336
+TABLE cohort week_of=2018-04-02 n=68734 true_rate=0.002677 observed_rate=0.002677
+TABLE cohort week_of=2018-04-09 n=68769 true_rate=0.005962 observed_rate=0.005962
+TABLE cohort week_of=2018-04-16 n=68667 true_rate=0.007485 observed_rate=0.007485
+TABLE cohort week_of=2018-04-23 n=68649 true_rate=0.008944 observed_rate=0.008944
+TABLE cohort week_of=2018-04-30 n=68661 true_rate=0.009350 observed_rate=0.009350
+TABLE cohort week_of=2018-05-07 n=68377 true_rate=0.008409 observed_rate=0.008409
+TABLE cohort week_of=2018-05-14 n=68102 true_rate=0.009001 observed_rate=0.009001
+TABLE cohort week_of=2018-05-21 n=69364 true_rate=0.009198 observed_rate=0.009198
+TABLE cohort week_of=2018-05-28 n=68547 true_rate=0.009497 observed_rate=0.009497
+TABLE cohort week_of=2018-06-04 n=68332 true_rate=0.009220 observed_rate=0.008868
+TABLE cohort week_of=2018-06-11 n=68782 true_rate=0.009421 observed_rate=0.008549
+TABLE cohort week_of=2018-06-18 n=68248 true_rate=0.009260 observed_rate=0.007590
+TABLE cohort week_of=2018-06-25 n=69005 true_rate=0.009550 observed_rate=0.007405
+TABLE cohort week_of=2018-07-02 n=68438 true_rate=0.009790 observed_rate=0.006765
+TABLE cohort week_of=2018-07-09 n=68956 true_rate=0.008890 observed_rate=0.005743
+TABLE cohort week_of=2018-07-16 n=68376 true_rate=0.008366 observed_rate=0.005338
+TABLE cohort week_of=2018-07-23 n=68406 true_rate=0.008888 observed_rate=0.004780
+TABLE cohort week_of=2018-07-30 n=68393 true_rate=0.008612 observed_rate=0.004152
+TABLE cohort week_of=2018-08-06 n=68945 true_rate=0.008383 observed_rate=0.003380
+TABLE cohort week_of=2018-08-13 n=68666 true_rate=0.009248 observed_rate=0.003437
+TABLE cohort week_of=2018-08-20 n=68496 true_rate=0.009490 observed_rate=0.002686
+TABLE cohort week_of=2018-08-27 n=68746 true_rate=0.009048 observed_rate=0.001964
+TABLE cohort week_of=2018-09-03 n=68720 true_rate=0.011845 observed_rate=0.001906
+TABLE cohort week_of=2018-09-10 n=68687 true_rate=0.019480 observed_rate=0.001791
+TABLE cohort week_of=2018-09-17 n=69418 true_rate=0.019188 observed_rate=0.000634
+TABLE cohort week_of=2018-09-24 n=69435 true_rate=0.019831 observed_rate=0.000000
+RESULT P1.visible_share_30d=0.202677 unit=fraction seed=0
+RESULT baseline.true_rate_age7=0.00952607 unit=fraction seed=0
+RESULT baseline.observed_rate_age7=0 unit=fraction seed=0
+RESULT baseline.true_rate_age14=0.00912124 unit=fraction seed=0
+RESULT baseline.observed_rate_age14=0.000552272 unit=fraction seed=0
+RESULT baseline.true_rate_age30=0.00851781 unit=fraction seed=0
+RESULT baseline.observed_rate_age30=0.00172637 unit=fraction seed=0
+RESULT baseline.true_rate_age60=0.00842171 unit=fraction seed=0
+RESULT baseline.observed_rate_age60=0.00395164 unit=fraction seed=0
+RESULT baseline.true_rate_age90=0.00826683 unit=fraction seed=0
+RESULT baseline.observed_rate_age90=0.00606 unit=fraction seed=0
+RESULT baseline.true_rate_age120=0.0077173 unit=fraction seed=0
+RESULT baseline.observed_rate_age120=0.0077173 unit=fraction seed=0
+RESULT baseline.recall_1pct=0.230219 unit=fraction seed=0
+RESULT baseline.mean_p_ratio=0.544726 unit=ratio seed=0
+RESULT baseline.recall_s4=0.0130769 unit=fraction seed=0
+RESULT baseline.mean_p=0.0106346 unit=fraction seed=0
+RESULT baseline.true_rate=0.0195229 unit=fraction seed=0
+RESULT baseline.mean_p_ratio_no_s4=1.11643 unit=ratio seed=0
+RESULT baseline.train_label_rate=0.0077173 unit=fraction seed=0
+
+===== break (seed 0, 25.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/21_delayed_labels_ref.py --break --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 cd35a06942f8f69a
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P3.mean_p_ratio=0.373352 unit=ratio seed=0
+RESULT break.recall_1pct=0.249304 unit=fraction seed=0
+RESULT break.recall_s4=0.0792308 unit=fraction seed=0
+RESULT break.mean_p=0.00728891 unit=fraction seed=0
+RESULT break.true_rate=0.0195229 unit=fraction seed=0
+RESULT break.mean_p_ratio_no_s4=0.736203 unit=ratio seed=0
+RESULT break.train_label_rate=0.00597784 unit=fraction seed=0
+
+===== change (seed 0, 14.0 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/21_delayed_labels_ref.py --change --seed 0
+# cwd ml-learning/m4-production-ml-payments
+# script_sha256 cd35a06942f8f69a
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT P2.recall_1pct=0.388072 unit=fraction seed=0
+RESULT P2.recall_1pct_delta=0.157853 unit=fraction seed=0
+RESULT change.mean_p_ratio=0.825467 unit=ratio seed=0
+RESULT change.recall_s4=0.366923 unit=fraction seed=0
+RESULT change.mean_p=0.0161155 unit=fraction seed=0
+RESULT change.true_rate=0.0195229 unit=fraction seed=0
+RESULT change.mean_p_ratio_no_s4=1.46537 unit=ratio seed=0
+RESULT change.train_label_rate=0.0122796 unit=fraction seed=0
+

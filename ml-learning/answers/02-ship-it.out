@@ -1,0 +1,74 @@
+===== baseline (seed 0, 12.8 s, lock excl) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/02_ship_it.py --baseline --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 53d96ac69929a127
+<build>/venv/lib/python3.13/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+<build>/venv/lib/python3.13/site-packages/fastai/learner.py:456: UserWarning: load_learner` uses Python's insecure pickle module, which can execute malicious arbitrary code when loading. Only load files you trust.
+If you only need to load model weights and optimizer state, use the safe `Learner.load` instead.
+  warn("load_learner` uses Python's insecure pickle module, which can execute malicious arbitrary code when loading. Only load files you trust.\nIf you only need to load model weights and optimizer state, use the safe `Learner.load` instead.")
+DATA requests=200 input=1x3x224x224 threads=1 warmup=10 load1=5.4
+RESULT P1.p95_ms=24.7684 unit=ms device=cpu batch=1 warmup=10 n=200 threads=1 stat=p95 seed=0
+RESULT baseline.p50_ms=23.3536 unit=ms device=cpu batch=1 warmup=10 n=200 threads=1 stat=p50 seed=0
+RESULT baseline.max_ms=108.445 unit=ms device=cpu batch=1 warmup=10 n=200 threads=1 stat=max seed=0
+RESULT baseline.accuracy=0.88 unit=fraction px=224 n=200 seed=0
+RESULT baseline.pet_share_above_0_9=0.62 unit=fraction n=200 threshold=0.9 seed=0
+RESULT baseline.export_mb=87.6373 unit=MB seed=0
+RESULT baseline.params=21830976 unit=params seed=0
+
+===== break (seed 0, 8.0 s, lock excl) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/02_ship_it.py --break --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 53d96ac69929a127
+<build>/venv/lib/python3.13/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+<build>/venv/lib/python3.13/site-packages/fastai/learner.py:456: UserWarning: load_learner` uses Python's insecure pickle module, which can execute malicious arbitrary code when loading. Only load files you trust.
+If you only need to load model weights and optimizer state, use the safe `Learner.load` instead.
+  warn("load_learner` uses Python's insecure pickle module, which can execute malicious arbitrary code when loading. Only load files you trust.\nIf you only need to load model weights and optimizer state, use the safe `Learner.load` instead.")
+DATA requests=20 input=1x3x224x224 threads=1 warmup=10 load1=6.7
+NONPET class=church file=n03028079_28352.JPEG breed=american_pit_bull_terrier top_prob=0.0914
+NONPET class=church file=n03028079_901.JPEG breed=samoyed top_prob=0.1932
+NONPET class=church file=n03028079_29920.JPEG breed=basset_hound top_prob=0.1039
+NONPET class=church file=n03028079_1002.JPEG breed=basset_hound top_prob=0.1409
+NONPET class=parachute file=n03888257_20572.JPEG breed=Bombay top_prob=0.6236
+NONPET class=parachute file=n03888257_38501.JPEG breed=Ragdoll top_prob=0.2014
+NONPET class=parachute file=n03888257_3651.JPEG breed=basset_hound top_prob=0.1575
+NONPET class=parachute file=n03888257_31742.JPEG breed=miniature_pinscher top_prob=0.2302
+NONPET class=golf_ball file=n03445777_2362.JPEG breed=german_shorthaired top_prob=0.5505
+NONPET class=golf_ball file=n03445777_501.JPEG breed=Bombay top_prob=0.3450
+NONPET class=golf_ball file=n03445777_3321.JPEG breed=Bombay top_prob=0.2697
+NONPET class=golf_ball file=n03445777_6421.JPEG breed=Bombay top_prob=0.2229
+NONPET class=gas_pump file=n03425413_14552.JPEG breed=german_shorthaired top_prob=0.2740
+NONPET class=gas_pump file=n03425413_20562.JPEG breed=Maine_Coon top_prob=0.1542
+NONPET class=gas_pump file=n03425413_1342.JPEG breed=miniature_pinscher top_prob=0.2584
+NONPET class=gas_pump file=n03425413_15321.JPEG breed=pug top_prob=0.2473
+NONPET class=garbage_truck file=n03417042_1330.JPEG breed=pug top_prob=0.2395
+NONPET class=garbage_truck file=n03417042_9620.JPEG breed=Bengal top_prob=0.4265
+NONPET class=garbage_truck file=n03417042_12002.JPEG breed=pug top_prob=0.1788
+NONPET class=garbage_truck file=n03417042_6662.JPEG breed=pug top_prob=0.2885
+RESULT P3.share_above_0_9=0 unit=fraction n=20 threshold=0.9 seed=0
+RESULT break.max_top_prob=0.623649 unit=probability n=20 seed=0
+
+===== change (seed 0, 11.5 s, lock excl) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/02_ship_it.py --change --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 53d96ac69929a127
+<build>/venv/lib/python3.13/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+<build>/venv/lib/python3.13/site-packages/fastai/learner.py:456: UserWarning: load_learner` uses Python's insecure pickle module, which can execute malicious arbitrary code when loading. Only load files you trust.
+If you only need to load model weights and optimizer state, use the safe `Learner.load` instead.
+  warn("load_learner` uses Python's insecure pickle module, which can execute malicious arbitrary code when loading. Only load files you trust.\nIf you only need to load model weights and optimizer state, use the safe `Learner.load` instead.")
+DATA requests=200 input=1x3x160x160 threads=1 warmup=10 load1=5.4
+RESULT P2.p95_ms=20.9188 unit=ms device=cpu batch=1 warmup=10 n=200 threads=1 stat=p95 seed=0
+RESULT change.p50_ms=19.4555 unit=ms device=cpu batch=1 warmup=10 n=200 threads=1 stat=p50 seed=0
+RESULT change.max_ms=108.279 unit=ms device=cpu batch=1 warmup=10 n=200 threads=1 stat=max seed=0
+RESULT P2.accuracy=0.835 unit=fraction px=160 n=200 seed=0
+RESULT P2.p95_ratio_vs_224=0.844575 unit=ratio seed=0
+RESULT P2.accuracy_delta_vs_224=-4.5 unit=points seed=0
+

@@ -1,0 +1,50 @@
+===== baseline (seed 0, 134.1 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/04_text_bag_of_words_vs_transformer.py --baseline --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 40feb06831606283
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps
+SEED seed=0 pythonhashseed=0
+DATA train=2000 test=2000 ids=~/ml-data/results/lab04/ids-seed0.json
+RESULT baseline.tfidf_train_s=0.163408 unit=s device=cpu warmup=0 n=1 stat=total seed=0
+W1017 17:45:02.603000 24510 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+RESULT baseline.bert_train_s=90.1932 unit=s device=mps batch=16 warmup=0 n=250 stat=total seed=0
+RESULT P1.gap_points=7.9 unit=points pieces=256 seed=0
+RESULT baseline.tfidf_accuracy=0.7965 unit=fraction pieces=256 seed=0
+RESULT baseline.bert_accuracy=0.8755 unit=fraction pieces=256 seed=0
+RESULT baseline.tfidf_ms_per_1000=76.3 unit=ms device=cpu batch=50 warmup=1 n=20 stat=median threads=1 pieces=256 seed=0
+RESULT baseline.bert_ms_per_1000=16796 unit=ms device=cpu batch=50 warmup=1 n=20 stat=median threads=10 pieces=256 seed=0
+
+===== break (seed 0, 139.1 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/04_text_bag_of_words_vs_transformer.py --break --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 40feb06831606283
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps
+SEED seed=0 pythonhashseed=0
+DATA train=2000 test=2000 ids=~/ml-data/results/lab04/ids-seed0.json
+RESULT break.tfidf_train_s=0.112359 unit=s device=cpu warmup=0 n=1 stat=total seed=0
+W1017 18:01:46.521000 2473 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+RESULT break.bert_train_s=91.9298 unit=s device=mps batch=16 warmup=0 n=250 stat=total seed=0
+RESULT P3.tfidf_drop_points=0 unit=points pieces=256 seed=0
+RESULT break.tfidf_accuracy=0.7965 unit=fraction pieces=256 seed=0
+RESULT break.tfidf_accuracy_shuffled=0.7965 unit=fraction pieces=256 seed=0
+RESULT P3.bert_drop_points=10.7 unit=points pieces=256 seed=0
+RESULT break.bert_accuracy=0.8755 unit=fraction pieces=256 seed=0
+RESULT break.bert_accuracy_shuffled=0.7685 unit=fraction pieces=256 seed=0
+
+===== change (seed 0, 32.0 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/m1-whole-game/scripts/04_text_bag_of_words_vs_transformer.py --change --seed 0
+# cwd ml-learning/m1-whole-game
+# script_sha256 40feb06831606283
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps
+SEED seed=0 pythonhashseed=0
+DATA train=2000 test=2000 ids=~/ml-data/results/lab04/ids-seed0.json
+RESULT change.tfidf_train_s=0.0302128 unit=s device=cpu warmup=0 n=1 stat=total seed=0
+W1017 18:00:14.632000 93590 torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+RESULT change.bert_train_s=16.9127 unit=s device=mps batch=16 warmup=0 n=250 stat=total seed=0
+RESULT P2.tfidf_accuracy=0.6525 unit=fraction pieces=32 seed=0
+RESULT P2.tfidf_delta_vs_P1=-14.4 unit=points seed=0
+RESULT P2.bert_accuracy=0.7215 unit=fraction pieces=32 seed=0
+RESULT P2.bert_delta_vs_P1=-15.4 unit=points seed=0
+RESULT change.tfidf_ms_per_1000=17.7217 unit=ms device=cpu batch=50 warmup=1 n=20 stat=median threads=1 pieces=32 seed=0
+RESULT change.bert_ms_per_1000=2453.94 unit=ms device=cpu batch=50 warmup=1 n=20 stat=median threads=10 pieces=32 seed=0
+

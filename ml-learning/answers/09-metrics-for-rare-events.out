@@ -1,0 +1,43 @@
+===== baseline (seed 0, 14.6 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/09_metrics_for_rare_events_ref.py --baseline --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 c4634e792362f9a4
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT baseline.never_fraud_accuracy=0.99828 unit=fraction seed=0
+RESULT P1.roc_auc=0.965091 unit=fraction seed=0
+RESULT P1.pr_auc=0.722553 unit=fraction seed=0
+RESULT P1.gap=0.242538 unit=fraction seed=0
+RESULT baseline.roc_auc_lo=0.938518 unit=fraction seed=0
+RESULT baseline.roc_auc_hi=0.986113 unit=fraction seed=0
+RESULT baseline.pr_auc_lo=0.62636 unit=fraction seed=0
+RESULT baseline.pr_auc_hi=0.804083 unit=fraction seed=0
+RESULT baseline.recall=0.622449 unit=fraction seed=0
+RESULT baseline.precision=0.847222 unit=fraction seed=0
+RESULT baseline.cost=196 unit=false_declines seed=0
+RESULT baseline.recall_at_95_precision=0.142857 unit=fraction seed=0
+
+===== break (seed 0, 6.5 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/09_metrics_for_rare_events_ref.py --break --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 c4634e792362f9a4
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT break.threshold=0.3978 unit=probability seed=0
+RESULT break.accuracy=0.999245 unit=fraction seed=0
+RESULT P3.recall=0.673469 unit=fraction seed=0
+RESULT break.precision=0.857143 unit=fraction seed=0
+RESULT break.cost=171 unit=false_declines seed=0
+RESULT break.extra_cost=54 unit=false_declines seed=0
+
+===== change (seed 0, 3.1 s, lock light) =====
+# mlrun python -X faulthandler ml-learning/answers/09_metrics_for_rare_events_ref.py --change --seed 0
+# cwd ml-learning/m2-dont-fool-yourself
+# script_sha256 c4634e792362f9a4
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu
+SEED seed=0 pythonhashseed=0
+RESULT change.threshold=0.0306176 unit=probability seed=0
+RESULT P2.recall=0.836735 unit=fraction seed=0
+RESULT change.precision=0.689076 unit=fraction seed=0
+RESULT change.cost=117 unit=false_declines seed=0
+

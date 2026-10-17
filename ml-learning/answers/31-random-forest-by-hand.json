@@ -1,0 +1,334 @@
+{
+ "lab": "31",
+ "slug": "31-random-forest-by-hand",
+ "level": "S",
+ "lane": "light",
+ "reference": "answers/31_random_forest_by_hand_ref.py",
+ "script_sha256": "76afed937f1404fe",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 27.2,
+   "lock": "light",
+   "maxrss_mb": 235,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 47.0,
+   "lock": "light",
+   "maxrss_mb": 232,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 41.5,
+   "lock": "light",
+   "maxrss_mb": 241,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 1.8,
+   "lock": "light",
+   "maxrss_mb": 233,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 5.3,
+   "lock": "light",
+   "maxrss_mb": 232,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 3.3,
+   "lock": "light",
+   "maxrss_mb": 234,
+   "n_result": 5,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 14.7,
+   "lock": "light",
+   "maxrss_mb": 242,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 9.5,
+   "lock": "light",
+   "maxrss_mb": 236,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 8.7,
+   "lock": "light",
+   "maxrss_mb": 238,
+   "n_result": 7,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.valid_acc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.857201,
+    "1": 0.856382,
+    "2": 0.8528
+   },
+   "unit": "fraction",
+   "value": 0.857201,
+   "spread": 0.004400999999999988
+  },
+  "baseline.valid_acc_1_tree": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.823319,
+    "1": 0.818303,
+    "2": 0.822909
+   },
+   "unit": "fraction",
+   "value": 0.823319,
+   "spread": 0.0050160000000000204
+  },
+  "baseline.valid_acc_10_trees": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.850343,
+    "1": 0.851264,
+    "2": 0.851059
+   },
+   "unit": "fraction",
+   "value": 0.850343,
+   "spread": 0.0009210000000000607
+  },
+  "baseline.valid_error": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.142799,
+    "1": 0.143618,
+    "2": 0.1472
+   },
+   "unit": "fraction",
+   "value": 0.142799,
+   "spread": 0.004400999999999988
+  },
+  "baseline.oob_error": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.1455,
+    "1": 0.1467,
+    "2": 0.1454
+   },
+   "unit": "fraction",
+   "value": 0.1455,
+   "spread": 0.0012999999999999956
+  },
+  "P3.train_minus_valid": {
+   "mode": "break",
+   "by_seed": {
+    "0": 19.1936,
+    "1": 19.2036,
+    "2": 19.4802
+   },
+   "unit": "points",
+   "value": 19.1936,
+   "spread": 0.28659999999999997
+  },
+  "break.train_acc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.9999,
+    "1": 1,
+    "2": 0.9999
+   },
+   "unit": "fraction",
+   "value": 0.9999,
+   "spread": 9.999999999998899e-05
+  },
+  "break.valid_acc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.807964,
+    "1": 0.807964,
+    "2": 0.805098
+   },
+   "unit": "fraction",
+   "value": 0.807964,
+   "spread": 0.002866000000000035
+  },
+  "break.leaves": {
+   "mode": "break",
+   "by_seed": {
+    "0": 1501,
+    "1": 1485,
+    "2": 1447
+   },
+   "value": 1501,
+   "spread": 54
+  },
+  "break.depth": {
+   "mode": "break",
+   "by_seed": {
+    "0": 37,
+    "1": 30,
+    "2": 31
+   },
+   "value": 37,
+   "spread": 7
+  },
+  "P2.valid_acc": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.860068,
+    "1": 0.85976,
+    "2": 0.856894
+   },
+   "unit": "fraction",
+   "value": 0.860068,
+   "spread": 0.00317400000000001
+  },
+  "change.valid_acc_1_tree": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.819634,
+    "1": 0.815846,
+    "2": 0.825878
+   },
+   "unit": "fraction",
+   "value": 0.819634,
+   "spread": 0.010032000000000041
+  },
+  "change.valid_acc_10_trees": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.85628,
+    "1": 0.857918,
+    "2": 0.855973
+   },
+   "unit": "fraction",
+   "value": 0.85628,
+   "spread": 0.0019449999999999745
+  },
+  "change.valid_error": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.139932,
+    "1": 0.14024,
+    "2": 0.143106
+   },
+   "unit": "fraction",
+   "value": 0.139932,
+   "spread": 0.00317400000000001
+  },
+  "P2.oob_error": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.1382,
+    "1": 0.1432,
+    "2": 0.1441
+   },
+   "unit": "fraction",
+   "value": 0.1382,
+   "spread": 0.005900000000000016
+  },
+  "P2.valid_acc_change": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.286621,
+    "1": 0.337803,
+    "2": 0.409458
+   },
+   "unit": "points",
+   "value": 0.286621,
+   "spread": 0.12283699999999997
+  },
+  "P2.oob_error_change": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.73,
+    "1": -0.35,
+    "2": -0.13
+   },
+   "unit": "points",
+   "value": -0.73,
+   "spread": 0.6
+  }
+ },
+ "effects": {
+  "P2.valid_acc:P1.valid_acc": {
+   "effect": 0.003446333333333366,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.004400999999999988,
+   "ok": false
+  },
+  "P2.oob_error:baseline.oob_error": {
+   "effect": -0.004033333333333333,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.005900000000000016,
+   "ok": false
+  },
+  "break.train_acc:break.valid_acc": {
+   "effect": 0.19292466666666666,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.002866000000000035,
+   "ok": true
+  },
+  "P1.valid_acc:break.valid_acc": {
+   "effect": 0.04845233333333332,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.004400999999999988,
+   "ok": true
+  },
+  "P1.valid_acc:baseline.valid_acc_1_tree": {
+   "effect": 0.03395066666666665,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0050160000000000204,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "P2 level effects (accuracy, OOB error) sit below 2x the level spread (split and training-sample noise). P2 is graded on the paired same-seed accuracy change P2.valid_acc_change, whose three values each exceed 2x its spread; the paired OOB change P2.oob_error_change does not clear 2x its spread and is reported, not graded. No knob changed: see Build notes in 31-random-forest-by-hand.md."
+}

@@ -1,0 +1,319 @@
+{
+ "lab": "34",
+ "slug": "34-convolutions",
+ "level": "W",
+ "lane": "light",
+ "reference": "m6-deep-nets-on-a-mac/scripts/34_convolutions.py",
+ "script_sha256": "86798c9905a9b580",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 4.4,
+   "lock": "light",
+   "maxrss_mb": 804,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 4.2,
+   "lock": "light",
+   "maxrss_mb": 801,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 3.7,
+   "lock": "light",
+   "maxrss_mb": 804,
+   "n_result": 2,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 47.3,
+   "lock": "light",
+   "maxrss_mb": 760,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 41.6,
+   "lock": "light",
+   "maxrss_mb": 791,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 43.3,
+   "lock": "light",
+   "maxrss_mb": 835,
+   "n_result": 8,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 41.0,
+   "lock": "light",
+   "maxrss_mb": 701,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 49.0,
+   "lock": "light",
+   "maxrss_mb": 988,
+   "n_result": 7,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 47.8,
+   "lock": "light",
+   "maxrss_mb": 943,
+   "n_result": 7,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.mlp_params": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 20680,
+    "1": 20680,
+    "2": 20680
+   },
+   "value": 20680,
+   "spread": 0
+  },
+  "P1.mlp_test_acc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.9207,
+    "1": 0.9209,
+    "2": 0.919
+   },
+   "unit": "fraction",
+   "value": 0.9207,
+   "spread": 0.0019000000000000128
+  },
+  "break.mlp_test_acc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.9207,
+    "1": 0.9209,
+    "2": 0.919
+   },
+   "unit": "fraction",
+   "value": 0.9207,
+   "spread": 0.0019000000000000128
+  },
+  "break.mlp_shifted_acc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.2438,
+    "1": 0.222,
+    "2": 0.2298
+   },
+   "unit": "fraction",
+   "value": 0.2438,
+   "spread": 0.021799999999999986
+  },
+  "P3.mlp_drop_points": {
+   "mode": "break",
+   "by_seed": {
+    "0": 67.69,
+    "1": 69.89,
+    "2": 68.92
+   },
+   "unit": "points",
+   "value": 67.69,
+   "spread": 2.200000000000003
+  },
+  "break.cnn_test_acc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.975,
+    "1": 0.9752,
+    "2": 0.9747
+   },
+   "unit": "fraction",
+   "value": 0.975,
+   "spread": 0.0004999999999999449
+  },
+  "break.cnn_shifted_acc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.5349,
+    "1": 0.5404,
+    "2": 0.5934
+   },
+   "unit": "fraction",
+   "value": 0.5349,
+   "spread": 0.058499999999999996
+  },
+  "P3.cnn_drop_points": {
+   "mode": "break",
+   "by_seed": {
+    "0": 44.01,
+    "1": 43.48,
+    "2": 38.13
+   },
+   "unit": "points",
+   "value": 44.01,
+   "spread": 5.8799999999999955
+  },
+  "P3.loses_more": {
+   "mode": "break",
+   "by_seed": {
+    "0": "mlp",
+    "1": "mlp",
+    "2": "mlp"
+   },
+   "value": "mlp",
+   "spread": null
+  },
+  "P3.gap_points": {
+   "mode": "break",
+   "by_seed": {
+    "0": 23.68,
+    "1": 26.41,
+    "2": 30.79
+   },
+   "unit": "points",
+   "value": 23.68,
+   "spread": 7.109999999999999
+  },
+  "change.top_edge_by_hand": {
+   "mode": "change",
+   "by_seed": {
+    "0": 2.98824,
+    "1": 2.98824,
+    "2": 2.98824
+   },
+   "value": 2.98824,
+   "spread": 0.0
+  },
+  "change.top_edge_conv2d": {
+   "mode": "change",
+   "by_seed": {
+    "0": 2.98824,
+    "1": 2.98824,
+    "2": 2.98824
+   },
+   "value": 2.98824,
+   "spread": 0.0
+  },
+  "change.hand_max_abs_diff": {
+   "mode": "change",
+   "by_seed": {
+    "0": 4.76837e-07,
+    "1": 4.76837e-07,
+    "2": 4.76837e-07
+   },
+   "value": 4.76837e-07,
+   "spread": 0.0
+  },
+  "change.unfold_max_abs_diff": {
+   "mode": "change",
+   "by_seed": {
+    "0": 5.96046e-07,
+    "1": 5.96046e-07,
+    "2": 5.96046e-07
+   },
+   "value": 5.96046e-07,
+   "spread": 0.0
+  },
+  "change.cnn_params": {
+   "mode": "change",
+   "by_seed": {
+    "0": 20490,
+    "1": 20490,
+    "2": 20490
+   },
+   "value": 20490,
+   "spread": 0
+  },
+  "P2.cnn_test_acc": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.975,
+    "1": 0.9752,
+    "2": 0.9747
+   },
+   "unit": "fraction",
+   "value": 0.975,
+   "spread": 0.0004999999999999449
+  },
+  "P2.cnn_minus_mlp_points": {
+   "mode": "change",
+   "by_seed": {
+    "0": 5.43,
+    "1": 5.43,
+    "2": 5.57
+   },
+   "unit": "points",
+   "value": 5.43,
+   "spread": 0.14000000000000057
+  }
+ },
+ "effects": {
+  "P2.cnn_test_acc:P1.mlp_test_acc": {
+   "effect": 0.05476666666666663,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0019000000000000128,
+   "ok": true
+  },
+  "P3.mlp_drop_points:P3.cnn_drop_points": {
+   "effect": 26.959999999999997,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 5.8799999999999955,
+   "ok": true
+  },
+  "break.mlp_shifted_acc:break.mlp_test_acc": {
+   "effect": -0.6883333333333334,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.021799999999999986,
+   "ok": true
+  },
+  "break.cnn_shifted_acc:break.cnn_test_acc": {
+   "effect": -0.41873333333333324,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.058499999999999996,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "P2 is graded on P2.cnn_test_acc against P1.mlp_test_acc. P3 is graded on the pick, P3.loses_more, with its Brier score. Each model's drop and the gap between the drops are reported for the Lesson column and the debrief, not graded. Fix round: script hash 86798c9905a9b580 only moved prints and the torchvision import, and every value equals the 05422e58984ef07f round at every seed. Knob change: the spec's 3-pixel shift became 4 pixels. The 3-pixel round (script hash a93958b918c9e504, otherwise the same script, seeds 0, 1, 2) gave break.mlp_shifted_acc 0.4488, 0.4279, 0.4317; break.cnn_shifted_acc 0.7289, 0.7908, 0.8331; P3.mlp_drop_points 47.19, 49.3, 48.73; P3.cnn_drop_points 24.61, 18.44, 14.16; P3.gap_points 22.58, 30.86, 34.57. There the CNN's own drop (effect -0.1907 against a spread of 0.1042) sat under 2x its spread, while the gap (mean 29.34 points against a spread of 10.45) and the MLP's drop cleared 2x. At 4 pixels every effect listed here clears 2x. That round, with less CPU sharing, took 2.9, 26.4 and 24.0 s at seed 0 for baseline, change and break. Details and the prototype comparison: 34-convolutions.md, Build notes."
+}

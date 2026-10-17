@@ -1,0 +1,240 @@
+{
+ "lab": "11",
+ "slug": "11-error-analysis",
+ "level": "C",
+ "lane": "heavy",
+ "reference": "answers/11_error_analysis_ref.py",
+ "script_sha256": "70f0ab4f577603c9",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 173.2,
+   "lock": "heavy",
+   "maxrss_mb": 1289,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 170.1,
+   "lock": "heavy",
+   "maxrss_mb": 1298,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 163.6,
+   "lock": "heavy",
+   "maxrss_mb": 1315,
+   "n_result": 3,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 258.4,
+   "lock": "heavy",
+   "maxrss_mb": 930,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 215.8,
+   "lock": "heavy",
+   "maxrss_mb": 1102,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 199.4,
+   "lock": "heavy",
+   "maxrss_mb": 1077,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 25.9,
+   "lock": "heavy",
+   "maxrss_mb": 1151,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 29.6,
+   "lock": "heavy",
+   "maxrss_mb": 1118,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 22.7,
+   "lock": "heavy",
+   "maxrss_mb": 1091,
+   "n_result": 4,
+   "stale": false
+  }
+ ],
+ "values": {
+  "baseline.error_rate": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0913396,
+    "1": 0.0757781,
+    "2": 0.0818674
+   },
+   "unit": "fraction",
+   "value": 0.0913396,
+   "spread": 0.015561500000000006
+  },
+  "baseline.valid_errors": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 135,
+    "1": 112,
+    "2": 121
+   },
+   "unit": "images",
+   "value": 135,
+   "spread": 23
+  },
+  "baseline.top50_misclassified": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 50,
+    "1": 50,
+    "2": 50
+   },
+   "unit": "images",
+   "value": 50,
+   "spread": 0
+  },
+  "P3.flipped_in_top50": {
+   "mode": "break",
+   "by_seed": {
+    "0": 50,
+    "1": 50,
+    "2": 50
+   },
+   "unit": "images",
+   "value": 50,
+   "spread": 0
+  },
+  "break.chance_in_top50": {
+   "mode": "break",
+   "by_seed": {
+    "0": 4.99831,
+    "1": 4.99831,
+    "2": 4.99831
+   },
+   "unit": "images",
+   "value": 4.99831,
+   "spread": 0.0
+  },
+  "break.flipped_memorised": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.0203046,
+    "1": 0.0101523,
+    "2": 0.0236887
+   },
+   "unit": "fraction",
+   "value": 0.0203046,
+   "spread": 0.0135364
+  },
+  "break.error_rate": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.104871,
+    "1": 0.0866035,
+    "2": 0.100135
+   },
+   "unit": "fraction",
+   "value": 0.104871,
+   "spread": 0.018267500000000006
+  },
+  "P2.top_pair": {
+   "mode": "change",
+   "by_seed": {
+    "0": "Ragdoll/Birman",
+    "1": "american_pit_bull_terrier/staffordshire_bull_terrier",
+    "2": "Ragdoll/Birman"
+   },
+   "unit": "actual/predicted",
+   "value": "Ragdoll/Birman",
+   "spread": null
+  },
+  "change.top_pair_count": {
+   "mode": "change",
+   "by_seed": {
+    "0": 13,
+    "1": 9,
+    "2": 10
+   },
+   "unit": "images",
+   "value": 13,
+   "spread": 4
+  },
+  "change.pairs_min3": {
+   "mode": "change",
+   "by_seed": {
+    "0": 10,
+    "1": 9,
+    "2": 15
+   },
+   "unit": "pairs",
+   "value": 10,
+   "spread": 6
+  },
+  "change.images_in_pairs_min3": {
+   "mode": "change",
+   "by_seed": {
+    "0": 59,
+    "1": 41,
+    "2": 63
+   },
+   "unit": "images",
+   "value": 59,
+   "spread": 22
+  }
+ },
+ "effects": {
+  "P3.flipped_in_top50:break.chance_in_top50": {
+   "effect": 45.001689999999996,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0,
+   "ok": true
+  },
+  "break.error_rate:baseline.error_rate": {
+   "effect": 0.014208133333333331,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.018267500000000006,
+   "ok": false
+  }
+ },
+ "precomputed": [],
+ "notes": "Change and break were also run at seeds 1 and 2, so every value has its own spread over seeds 0, 1 and 2, and that spread is its tolerance, in place of the baseline spread."
+}

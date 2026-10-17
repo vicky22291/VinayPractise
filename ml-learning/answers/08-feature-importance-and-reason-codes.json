@@ -1,0 +1,327 @@
+{
+ "lab": "08",
+ "slug": "08-feature-importance-and-reason-codes",
+ "level": "C",
+ "lane": "light",
+ "reference": "answers/08_feature_importance_and_reason_codes_ref.py",
+ "script_sha256": "cfd0b7e896269d82",
+ "hw": "HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=cpu",
+ "tolerance_rule": "tol = spread (max - min) over seeds 0, 1, 2; heavy labs: the baseline spread applies to every step",
+ "runs": [
+  {
+   "mode": "baseline",
+   "seed": 0,
+   "wall_s": 15.0,
+   "lock": "light",
+   "maxrss_mb": 262,
+   "n_result": 10,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 1,
+   "wall_s": 20.1,
+   "lock": "light",
+   "maxrss_mb": 259,
+   "n_result": 10,
+   "stale": false
+  },
+  {
+   "mode": "baseline",
+   "seed": 2,
+   "wall_s": 22.9,
+   "lock": "light",
+   "maxrss_mb": 262,
+   "n_result": 10,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 0,
+   "wall_s": 39.9,
+   "lock": "light",
+   "maxrss_mb": 279,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 1,
+   "wall_s": 35.0,
+   "lock": "light",
+   "maxrss_mb": 272,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "break",
+   "seed": 2,
+   "wall_s": 39.6,
+   "lock": "light",
+   "maxrss_mb": 260,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 0,
+   "wall_s": 13.2,
+   "lock": "light",
+   "maxrss_mb": 265,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 1,
+   "wall_s": 19.1,
+   "lock": "light",
+   "maxrss_mb": 269,
+   "n_result": 4,
+   "stale": false
+  },
+  {
+   "mode": "change",
+   "seed": 2,
+   "wall_s": 14.0,
+   "lock": "light",
+   "maxrss_mb": 269,
+   "n_result": 4,
+   "stale": false
+  }
+ ],
+ "values": {
+  "P1.random_rank_split": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 5,
+    "1": 4,
+    "2": 5
+   },
+   "unit": "rank_of_15",
+   "value": 5,
+   "spread": 1
+  },
+  "P1.random_rank_perm": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 14,
+    "1": 15,
+    "2": 15
+   },
+   "unit": "rank_of_15",
+   "value": 14,
+   "spread": 1
+  },
+  "baseline.random_rank_gain": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 10,
+    "1": 10,
+    "2": 10
+   },
+   "unit": "rank_of_15",
+   "value": 10,
+   "spread": 0
+  },
+  "baseline.auc": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.928516,
+    "1": 0.931301,
+    "2": 0.932056
+   },
+   "unit": "fraction",
+   "value": 0.928516,
+   "spread": 0.0035399999999999876
+  },
+  "baseline.sex_shap_rank": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 9,
+    "1": 9,
+    "2": 9
+   },
+   "unit": "rank_of_15",
+   "value": 9,
+   "spread": 0
+  },
+  "baseline.reasons_1": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "capital-gain=15024:+6.33|age=43:+0.79|relationship=Wife:+0.75",
+    "1": "capital-gain=15024:+5.53|age=53:+0.84|education-num=16:+0.83",
+    "2": "capital-gain=99999:+5.77|age=45:+0.87|relationship=Wife:+0.81"
+   },
+   "unit": "column=value:log_odds",
+   "value": "capital-gain=15024:+6.33|age=43:+0.79|relationship=Wife:+0.75",
+   "spread": null
+  },
+  "baseline.reasons_2": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "capital-gain=15024:+6.15|education-num=15:+0.82|age=39:+0.67",
+    "1": "capital-gain=15024:+5.81|education-num=15:+0.87|age=46:+0.83",
+    "2": "capital-gain=15024:+5.71|education-num=15:+0.75|age=43:+0.72"
+   },
+   "unit": "column=value:log_odds",
+   "value": "capital-gain=15024:+6.15|education-num=15:+0.82|age=39:+0.67",
+   "spread": null
+  },
+  "baseline.reasons_3": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": "capital-gain=99999:+5.60|education-num=15:+0.73|age=38:+0.71",
+    "1": "capital-gain=15024:+5.60|education-num=15:+0.75|relationship=Wife:+0.62",
+    "2": "capital-gain=15024:+6.41|age=31:+0.54|marital-status=Married-civ-spouse:+0.51"
+   },
+   "unit": "column=value:log_odds",
+   "value": "capital-gain=99999:+5.60|education-num=15:+0.73|age=38:+0.71",
+   "spread": null
+  },
+  "baseline.ms_per_score": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.0293955,
+    "1": 0.0338545,
+    "2": 0.031375
+   },
+   "unit": "ms",
+   "value": 0.0293955,
+   "spread": 0.004459000000000001
+  },
+  "baseline.ms_per_explanation": {
+   "mode": "baseline",
+   "by_seed": {
+    "0": 0.654459,
+    "1": 0.661083,
+    "2": 0.749729
+   },
+   "unit": "ms",
+   "value": 0.654459,
+   "spread": 0.09526999999999997
+  },
+  "P3.random_rank_split": {
+   "mode": "break",
+   "by_seed": {
+    "0": 2,
+    "1": 1,
+    "2": 2
+   },
+   "unit": "rank_of_15",
+   "value": 2,
+   "spread": 1
+  },
+  "break.random_rank_perm": {
+   "mode": "break",
+   "by_seed": {
+    "0": 11,
+    "1": 15,
+    "2": 14
+   },
+   "unit": "rank_of_15",
+   "value": 11,
+   "spread": 4
+  },
+  "break.random_rank_gain": {
+   "mode": "break",
+   "by_seed": {
+    "0": 8,
+    "1": 6,
+    "2": 7
+   },
+   "unit": "rank_of_15",
+   "value": 8,
+   "spread": 2
+  },
+  "break.auc": {
+   "mode": "break",
+   "by_seed": {
+    "0": 0.926012,
+    "1": 0.928565,
+    "2": 0.929327
+   },
+   "unit": "fraction",
+   "value": 0.926012,
+   "spread": 0.003315000000000068
+  },
+  "P2.auc_without_relationship": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.928171,
+    "1": 0.930451,
+    "2": 0.93069
+   },
+   "unit": "fraction",
+   "value": 0.928171,
+   "spread": 0.002519000000000049
+  },
+  "P2.auc_change_without_relationship": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.000345235,
+    "1": -0.000850396,
+    "2": -0.00136678
+   },
+   "unit": "fraction",
+   "value": -0.000345235,
+   "spread": 0.001021545
+  },
+  "P2.auc_without_both": {
+   "mode": "change",
+   "by_seed": {
+    "0": 0.900736,
+    "1": 0.90219,
+    "2": 0.898965
+   },
+   "unit": "fraction",
+   "value": 0.900736,
+   "spread": 0.0032250000000000334
+  },
+  "P2.auc_change_without_both": {
+   "mode": "change",
+   "by_seed": {
+    "0": -0.0277801,
+    "1": -0.0291113,
+    "2": -0.0330914
+   },
+   "unit": "fraction",
+   "value": -0.0277801,
+   "spread": 0.0053113000000000014
+  }
+ },
+ "effects": {
+  "P2.auc_without_both:baseline.auc": {
+   "effect": -0.029994000000000003,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0035399999999999876,
+   "ok": true
+  },
+  "P2.auc_without_relationship:baseline.auc": {
+   "effect": -0.0008536666666666785,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 0.0035399999999999876,
+   "ok": false
+  },
+  "P3.random_rank_split:P1.random_rank_split": {
+   "effect": -3.0,
+   "seeds": [
+    "0",
+    "1",
+    "2"
+   ],
+   "spread": 1,
+   "ok": true
+  }
+ },
+ "precomputed": [],
+ "notes": "Prototype values (spec, answers only): the random column ranked 5th of 15 by split count at 100 trees and 1st at 500, 10th and 8th by gain, last by permutation; dropping one correlated column cost 0.0006 AUC, both 0.0275; sex ranked 9th of 14 by mean |SHAP|. Build: no knob changes and no precomputed steps; the drop-one effect is a null effect by design (correlated features share importance)."
+}

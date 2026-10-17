@@ -1,0 +1,38 @@
+===== baseline (seed 0, 46.4 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/answers/37_overfit_then_regularise_ref.py --baseline --seed 0
+# cwd ml-learning/m6-deep-nets-on-a-mac
+# script_sha256 43f401f63d4a849e
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps
+SEED seed=0 pythonhashseed=0
+DATA device=mps batch=128 lr=0.001 params=308650
+DATA mode=baseline train=5000 valid=10000 augment=False
+RESULT P1.gap=39.36 unit=points seed=0
+RESULT baseline.train_acc=99.7 unit=percent seed=0
+RESULT baseline.val_acc=60.34 unit=percent seed=0
+
+===== break (seed 0, 12.3 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/answers/37_overfit_then_regularise_ref.py --break --seed 0
+# cwd ml-learning/m6-deep-nets-on-a-mac
+# script_sha256 43f401f63d4a849e
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps
+SEED seed=0 pythonhashseed=0
+DATA device=mps batch=128 lr=0.001 params=308650
+DATA mode=break train=500 valid=10000 augment=False
+RESULT P3.val_acc=36.96 unit=percent seed=0
+RESULT break.train_acc=100 unit=percent seed=0
+RESULT break.gap=63.04 unit=points seed=0
+RESULT break.epochs_to_100=24 unit=epochs seed=0
+
+===== change (seed 0, 44.5 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/answers/37_overfit_then_regularise_ref.py --change --seed 0
+# cwd ml-learning/m6-deep-nets-on-a-mac
+# script_sha256 43f401f63d4a849e
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps
+SEED seed=0 pythonhashseed=0
+DATA device=mps batch=128 lr=0.001 params=308650
+DATA mode=change train=5000 valid=10000 augment=True
+RESULT P2.gap=9.33 unit=points seed=0
+RESULT P2.gap_delta=-30.03 unit=points seed=0
+RESULT change.train_acc=74.68 unit=percent seed=0
+RESULT change.val_acc=65.35 unit=percent seed=0
+

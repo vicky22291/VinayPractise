@@ -1,0 +1,628 @@
+===== baseline (seed 0, 245.1 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/m7-language-models/scripts/39_gpt_from_scratch.py --baseline --seed 0
+# cwd ml-learning/m7-language-models
+# script_sha256 f46c2aa354d45495
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps
+SEED seed=0 pythonhashseed=0
+number of parameters: 10.65M
+num decayed parameter tensors: 26, with 10,740,096 parameters
+num non-decayed parameter tensors: 13, with 4,992 parameters
+using fused AdamW: False
+RESULT P1.val_loss_step0=4.29206 unit=nats seed=0
+RESULT baseline.val_loss_250=2.09734 unit=nats seed=0
+RESULT baseline.val_loss_300=2.03037 unit=nats seed=0
+RESULT P1b.val_loss_final=1.99028 unit=nats seed=0
+RESULT baseline.train_loss_300=1.90131 unit=nats seed=0
+RESULT baseline.mps_s_per_iter=0.442953 unit=s device=mps n=348 batch=64 warmup=2 stat=median seed=0
+RESULT baseline.mps_tokens_per_s=36988.1 unit=tokens/s device=mps n=348 batch=64 warmup=2 stat=median seed=0
+SAMPLE baseline.word_share_t10 temperature=1.0
+Well oncle the caush't njuch frientss
+My well go outuchion'd exeattlove,
+Wa heir ic texcustree then one not the the her.
+
+FRRIOL:
+I cout fity yestel cioules,
+If me forock hon your your foagerse-caks les
+cosenter all head scand of al Bea;
+Moriens to meate wo heself your placiences,
+And norsipircy in
+Wy to may brale goods, Gookesty my his of You thee tooss,
+Wit retnem, and I bady be the be croatiorion?
+
+RUMEO:
+Go, dadstend gring; sincene that you the deave!
+
+MOLONCEO:
+Whou priereop on your-henm, f
+
+RESULT baseline.word_share_t10=0.477273 unit=fraction temperature=1 chars=500 words=88 seed=0
+RESULT baseline.attention_is_causal=true seed=0
+number of parameters: 10.65M
+num decayed parameter tensors: 26, with 10,740,096 parameters
+num non-decayed parameter tensors: 13, with 4,992 parameters
+using fused AdamW: False
+RESULT baseline.cpu_tokens_per_s=7354.99 unit=tokens/s device=cpu n=20 batch=64 warmup=2 stat=median seed=0
+RESULT baseline.max_iters=350 seed=0
+
+===== break (seed 0, 162.2 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/m7-language-models/scripts/39_gpt_from_scratch.py --break --seed 0
+# cwd ml-learning/m7-language-models
+# script_sha256 f46c2aa354d45495
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps
+SEED seed=0 pythonhashseed=0
+number of parameters: 10.65M
+num decayed parameter tensors: 26, with 10,740,096 parameters
+num non-decayed parameter tensors: 13, with 4,992 parameters
+using fused AdamW: False
+RESULT break.val_loss_0=4.29159 unit=nats seed=0
+RESULT break.val_loss_250=0.0125086 unit=nats seed=0
+RESULT break.val_loss_300=0.0120476 unit=nats seed=0
+RESULT P3.train_loss_300=0.0117554 unit=nats iters=300 seed=0
+RESULT P3.delta_train_loss_300=-1.88956 unit=nats seed=0
+SAMPLE break.word_share_t10 temperature=1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RESULT break.word_share_t10=0 unit=fraction temperature=1 chars=500 words=3 seed=0
+RESULT break.attention_is_causal=false seed=0
+
+===== change (seed 0, 8.5 s, lock heavy) =====
+# mlrun python -X faulthandler ml-learning/m7-language-models/scripts/39_gpt_from_scratch.py --change --seed 0
+# cwd ml-learning/m7-language-models
+# script_sha256 f46c2aa354d45495
+HW chip='Apple M4 Pro' cpu=14 gpu=20 mem_gib=24 macos=26.5.1 python=3.13.7 torch=2.14.1 device=mps
+SEED seed=0 pythonhashseed=0
+number of parameters: 10.65M
+SAMPLE change.word_share_t05 temperature=0.5
+Which shat the caus the spither his stertant
+Whou good it him the thou on fromienter prace,
+Which not the so sway the reart his the cout frome
+The the proth nothee for conest and to with theeres for be do she the the ead?
+
+LAUNE:
+Why the hold the be the can heady a the plack to couself.
+
+DUKE VINCENTIO:
+So so stee the stay the the they to beot the makess,
+With the houst of have be the be cand I will the he the seeads
+To shat and in the by say heard the packenteress.
+
+GLOUCESTER:
+Not you the mort
+
+RESULT change.word_share_t05=0.728155 unit=fraction temperature=0.5 chars=500 words=103 seed=0
+SAMPLE change.word_share_t10 temperature=1.0
+Well oncle the caush't njuch frientss
+My well go outuchion'd exeattlove,
+Wa heir ic texcustree then one not the the her.
+
+FRRIOL:
+I cout fity yestel cioules,
+If me forock hon your your foagerse-caks les
+cosenter all head scand of al Bea;
+Moriens to meate wo heself your placiences,
+And norsipircy in
+Wy to may brale goods, Gookesty my his of You thee tooss,
+Wit retnem, and I bady be the be croatiorion?
+
+RUMEO:
+Go, dadstend gring; sincene that you the deave!
+
+MOLONCEO:
+Whou priereop on your-henm, f
+
+RESULT change.word_share_t10=0.477273 unit=fraction temperature=1 chars=500 words=88 seed=0
+SAMPLE P2.word_share_t15 temperature=1.5
+Welf? Bot bemke pe Evannj in fipecuss
+Mybatt ago! ghuidiov' in's qtlove, af thie
+AcoApicustree? I no me not ther
+At jory-bleh mats krougecttrCy: thatcioules,
+If, sife'onJo3 ENFIY:
+NowG How crrey f as blac thist.
+But hus on; I'll dat Beu; holiend to meate?
+Sir-smy vutruckly ime! cried: nees, facfain
+Wy tointy . Roe gojod, Gevice? Thlehving, You th
+way&ss, boid, thn: yis
+To hat yea mO; the croatitrion? hy Iy ton, Cdadst:
+Faghtn mesincene thall hoe; 'dteeve!'
+My O, why coore, bhenren, fyath-$
+Om, f
+
+RESULT P2.word_share_t15=0.255814 unit=fraction temperature=1.5 chars=500 words=86 seed=0
+
