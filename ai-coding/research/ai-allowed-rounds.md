@@ -2,7 +2,7 @@
 
 > One-line answer: Stripe, Meta, DoorDash, Coinbase, Canva and Rippling now run a coding round where you are **expected** to use an AI assistant. Stripe calls it the **AI Programming Exercise**. In 5 of 7 Stripe reports it is the same multi-part problem: a transaction rule evaluator. The round grades how you drive, check and explain the AI's code. It does not grade whether you can hand-write an algorithm.
 
-Research and observations for the AI-allowed coding round. **How to approach and practise it: [strategy.md](strategy.md).** Each exercise will get its own subfolder here (see §9).
+Research and observations for the AI-allowed coding round. **How to approach and practise it: [../strategy.md](../strategy.md).** The practice kits are in [../README.md](../README.md) (see §9).
 
 Checked 2026-10-08. Tags:
 
@@ -67,7 +67,7 @@ flowchart LR
 | **Anthropic** | **Bans** by default | n/a | Live interviews: "This is all you–no AI assistance unless we indicate otherwise." | n/a | ✅ official [candidate-ai-guidance](https://www.anthropic.com/candidate-ai-guidance) (updated 2025-07-10) |
 | **Amazon** | **Bans** unless permitted | n/a | Internal guidance: no GenAI tools in interviews unless explicitly permitted | n/a | [agent] [ITPro 2025-03-14](https://itpro.com/business/careers-and-training/amazon-bans-ai-tools-during-job-interviews) |
 | **Microsoft** | **Bans** unless permitted | n/a | Hiring tips: show your own skills without outside help unless explicitly permitted | n/a | [agent] [careers.microsoft.com](https://careers.microsoft.com/v2/global/en/hiring-tips.html) |
-| Databricks, Intuit, Uber, Airbnb | Nothing found | n/a | Intuit grades AI inside its case study instead. See [hld/company-questions.md](../hld/company-questions.md) §1 | n/a | n/a |
+| Databricks, Intuit, Uber, Airbnb | Nothing found | n/a | Intuit grades AI inside its case study instead. See [hld/company-questions.md](../../hld/company-questions.md) §1 | n/a | n/a |
 
 ---
 
@@ -176,8 +176,8 @@ The Rippling offer post (7649290) recommends "offerretriever" for questions. Tre
 
 ## 9. Where the kits live
 
-The practice kits are built in [`../ai-coding/`](../ai-coding/README.md), not in this folder. That folder holds 10 timed kits on existing code (Stripe first), a stdlib runner (`kit.py`), the interviewer protocol and its own research. The kit design follows [strategy.md §6 and §7](strategy.md#6-practice-setup-reuse-an-existing-one-or-build-our-own): `candidate/` plus `interviewer/` per kit, and the run copy outside the repo.
+The practice kits live in [`ai-coding/`](../README.md). That folder holds 10 timed kits on existing code (Stripe first), a stdlib runner (`kit.py`), the interviewer protocol and its own research. The kit design follows [strategy.md §6 and §7](../strategy.md#6-practice-setup-reuse-an-existing-one-or-build-our-own): `candidate/` plus `interviewer/` per kit, and the run copy outside the repo.
 
-This folder keeps the research on AI-allowed rounds and the in-round playbook.
+This file is the research on AI-allowed rounds. The in-round playbook is [../strategy.md](../strategy.md).
 
 Meta-style bug, implement, optimize problems are not rebuilt anywhere in this repo. Use [azizu06/ai-coding-interview-practice](https://github.com/azizu06/ai-coding-interview-practice), cloned outside this repo.

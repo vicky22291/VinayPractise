@@ -1,10 +1,10 @@
 # Strategy: how to approach and practise the AI Programming Exercise
 
-> One-line answer: **You make the decisions, the AI does the typing, and you say every decision out loud before you prompt.** Practise in two places. Use the company's own practice pad (or Hello Interview's sandbox) for the platform feel. Use our own kits in this folder for problems nobody else has built, such as Stripe's rule evaluator.
+> One-line answer: **You make the decisions, the AI does the typing, and you say every decision out loud before you prompt.** Practise in two places. Use the company's own practice pad (or Hello Interview's sandbox) for the platform feel. Use our own kits in this folder ([README.md](README.md)) for problems nobody else has built, such as Stripe's rule evaluator.
 
 Built 2026-10-08 from:
 - Hello Interview's AI-coding track: introduction, formats, patterns, the five fundamentals, and the Meta, LinkedIn and Shopify posts. All read in full, tagged [HI].
-- The official company posts and candidate reports in [README.md](README.md).
+- The official company posts and candidate reports in [research/ai-allowed-rounds.md](research/ai-allowed-rounds.md).
 
 Rules marked [HI] are Hello Interview's advice, built from candidate and interviewer interviews. They are not company policy.
 
@@ -71,7 +71,7 @@ sequenceDiagram
 
 ### Before the day
 - **Take the practice pad.** Meta's is a sample problem called "the puzzle", and it is harder than most real problems. LinkedIn also offers a practice session [HI]. One Meta E7 said the biggest win was that he "wasn't surprised in the interview" [HI].
-- **Set up your IDE a day early.** A Stripe candidate lost the first 30 minutes of a round installing it ([README §3](README.md#3-stripe-deep-dive-the-ai-programming-exercise)).
+- **Set up your IDE a day early.** A Stripe candidate lost the first 30 minutes of a round installing it ([research §3](research/ai-allowed-rounds.md#3-stripe-deep-dive-the-ai-programming-exercise)).
 - **Open-ended:** configure the IDE, an agent, and a browser chat as a fallback [HI]. DoorDash requires "a working setup" ✅ official.
 - **Do one run with weak AI or none.** "The candidates who panicked when the AI gave bad answers were the ones who had never practiced without it" [HI].
 
@@ -185,7 +185,7 @@ DEBUG    test_or_precedence fails. My hypothesis: the evaluator reads left to
 ```mermaid
 %% One exercise kit. The AI assistant only ever sees the run copy, never the interviewer files.
 flowchart LR
-    subgraph KIT[ai-programming-exercises/stripe-transaction-rules]
+    subgraph KIT[ai-coding/01-transaction-rules]
         CM[CLAUDE.md<br/>interviewer script]
         CA[candidate/<br/>starter, part 1, tests]
         IV[interviewer/<br/>later parts, hidden tests,<br/>rubric, solution]
@@ -296,7 +296,7 @@ flowchart LR
 
 | Step | Output | Done when |
 |---|---|---|
-| 1. Part statements | One README per part: string equality, then AND / OR, then parentheses, then more ([README §3](README.md#3-stripe-deep-dive-the-ai-programming-exercise)) | Each part reads like a minute-zero prompt, with no hints or algorithm names |
+| 1. Part statements | One README per part: string equality, then AND / OR, then parentheses, then more ([research §3](research/ai-allowed-rounds.md#3-stripe-deep-dive-the-ai-programming-exercise)) | Each part reads like a minute-zero prompt, with no hints or algorithm names |
 | 2. Tests per part | `unittest` files, one per part. These are the product: you watch them go from failing to passing, and they gate the next reveal | Every reported edge case has a test, e.g. a merchant name containing "and" |
 | 3. LLD of the answer key | `classDiagram` plus the patterns used, per root `CLAUDE.md` §6. Python, matching the Stripe report | Each part is a small diff on the last part, not a rewrite |
 | 4. Verify script | `interviewer/verify.py` | The answer key passes every part. The starter fails part 1 |
@@ -305,7 +305,7 @@ flowchart LR
 
 ### Phase 3: extract the template on kit 2
 
-- Next candidates: Rippling's expense rule engine or LinkedIn's LRU, then TTL, then thread-safe (README §5).
+- Next candidates: Rippling's expense rule engine or LinkedIn's LRU, then TTL, then thread-safe ([research §5](research/ai-allowed-rounds.md#5-practice-list)).
 - Whatever kit 2 had to copy from the Stripe kit becomes the template. Whatever it had to change stays per kit.
 
 ### Who writes the hidden parts

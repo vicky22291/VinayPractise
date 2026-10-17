@@ -2,11 +2,11 @@
 
 > One-line answer: 10 timed kits. Each hands you a small existing repo with open tickets, failing tests, logs or a slow job. You fix it, extend it and defend it, with an AI assistant or without one, while an interviewer session reveals the next part and grades you. Kits 01 to 04 mirror the Stripe rounds candidates reported in Sep and Oct 2026.
 
-- **Why these 10:** [research/stripe-rounds.md](research/stripe-rounds.md) (what Stripe ran, Aug to Oct 2026) and [research/brownfield-formats.md](research/brownfield-formats.md) (task types across Meta, Coinbase, DoorDash, Canva and others). Both were spot-checked on 2026-10-17.
-- **How to drive the AI inside the round:** [../ai-programming-exercises/strategy.md](../ai-programming-exercises/strategy.md) §2 (60-minute playbook) and §4 (prompt templates).
+- **Why these 10:** [research/stripe-rounds.md](research/stripe-rounds.md) (what Stripe ran, Aug to Oct 2026) and [research/brownfield-formats.md](research/brownfield-formats.md) (task types across Meta, Coinbase, DoorDash, Canva and others) and [research/ai-allowed-rounds.md](research/ai-allowed-rounds.md) (which companies allow AI and how they grade it). Both were spot-checked on 2026-10-17.
+- **How to drive the AI inside the round:** [strategy.md](strategy.md) §2 (60-minute playbook) and §4 (prompt templates).
 - **Conventions and the interviewer protocol:** [CLAUDE.md](CLAUDE.md).
 
-**Spoiler rule.** Only this file, `research/`, each kit's `README.md` and each kit's `candidate/` are safe to read before a run. A kit's `CLAUDE.md` and `interviewer/` hold the later parts and the answer key.
+**Spoiler rule.** Only this file, `strategy.md`, `research/`, each kit's `README.md` and each kit's `candidate/` are safe to read before a run. A kit's `CLAUDE.md` and `interviewer/` hold the later parts and the answer key.
 
 ---
 
