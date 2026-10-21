@@ -36,6 +36,47 @@ flowchart TD
 
 **The shard key is the design.** Pick it from the access pattern: the key that every hot query has in hand. `user_id` for a profile store, `channel_id` for chat, `tenant_id` for SaaS. A query without the shard key is a scatter-gather across all N nodes, which is fine at N=4 and a fan-out disaster at N=400. See [fan-out-fan-in.md](fan-out-fan-in.md).
 
+**The second test is atomicity.** The rows that must change in one transaction must share the shard key. Otherwise every such write becomes a [distributed transaction](distributed-transactions.md). Read paths keyed differently become async projections.
+
+```mermaid
+%% Four questions to ask about a candidate shard key, in order
+flowchart TD
+    A{"Do rows that must change<br/>atomically share this key?"}
+    B{"Do the hot reads<br/>include this key?"}
+    C{"At least 100x more distinct<br/>values than shards?"}
+    D{"Any single value<br/>over ~1% of traffic?"}
+    OK["Good key"]
+    X1["Reject: every write becomes<br/>a distributed transaction"]
+    X2["Keep it. Add an async view<br/>sharded by the other key"]
+    X3["Reject: cannot spread load"]
+    X4["Keep it. Split, cache,<br/>or isolate the hot value"]
+
+    A -->|"no"| X1
+    A -->|"yes"| B
+    B -->|"no"| X2
+    B -->|"yes"| C
+    X2 -->|"then"| C
+    C -->|"no"| X3
+    C -->|"yes"| D
+    D -->|"yes"| X4
+    D -->|"no"| OK
+    X4 -->|"then"| OK
+
+    class A,B,C,D decision
+    class OK,X2,X4 service
+    class X1,X3 critical
+    classDef service  fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#111
+    classDef critical fill:#fee2e2,stroke:#dc2626,stroke-width:4px,color:#111
+    classDef decision fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#111
+```
+
+| System | Key | Why | Price paid |
+|---|---|---|---|
+| Hotel booking | `hotel_id` | Inventory and booking commit in one local transaction | "My bookings" is a CDC view keyed by `user_id` |
+| Chat | `channel_id` | One channel's messages are written, ordered, and read together | "All my channels" needs a per-user inbox table |
+| Multi-tenant SaaS | `tenant_id` | Isolation, per-tenant backup and moves | One huge tenant can outgrow a shard |
+| Timeline | reader's `user_id` | "My timeline" is one read | Celebrity fan-out on write |
+
 ---
 
 ## 2. Consistent hashing
@@ -220,6 +261,7 @@ flowchart TD
 | **Write-hot key** (like counter on a viral post, a global rate limit) | **Key splitting**: append a random suffix `0..k`, write to one of k sub-keys, read sums all k. | Reads cost k lookups. `k` must be chosen up front or discovered by the detector. |
 | **Hot shard from sequential keys** (timestamp, auto-increment ID) | Salt the key: prefix with `hash(key) mod 16`, or reverse the timestamp bits. Or range-split aggressively. | Range scans now need 16 sub-scans. |
 | **Hot tenant** | Directory routing: move that tenant to a dedicated shard. Slack moved big workspaces this way. | Needs the directory in the first place. |
+| **Write-hot row that cannot split** (last room of one hotel on New Year's Eve) | Usually nothing. A conditional update holds the row lock ~5 ms, so one row takes ~200 claims/s, above most per-key demand. Past that, a queue or waiting room in front of that key. | Queueing latency for that one key only. |
 | **Cache stampede / thundering herd** (hot key expires, 10k requests miss at once) | Single-flight (one in-flight fetch per key, others wait on it), request coalescing at the cache, jittered TTLs, probabilistic early refresh. | One request pays the latency, the rest queue for ~1 RTT. See [caching-patterns.md](caching-patterns.md). |
 | **Celebrity fan-out** (one user with 50M followers posts) | Hybrid fan-out: push to followers for normal users, pull at read time for celebrities above a follower threshold. | Two code paths. The threshold is a tuning knob. See [fan-out-fan-in.md](fan-out-fan-in.md). |
 
@@ -261,6 +303,7 @@ flowchart TD
 | **Throttled, resumable range move** | Rebalance starves foreground traffic or restarts from zero after a blip. |
 | **Directory cached in every client, invalidated by version** | Directory is a hot read path. |
 | **Scatter-gather query budget** | Query without shard key fans out to all N. Reject or cap at a max shard count. |
+| **Shard id encoded in the entity id** (high bits of `booking_id`) | A lookup by id from a caller without the shard key would scatter-gather. |
 
 ---
 
@@ -279,6 +322,9 @@ flowchart TD
 | Hot key with no detector | One node pegged, alarms say "node 7 is slow", nobody knows why. | Per-key top-k at the router. |
 | Kafka partition count increased | Key ordering breaks across the boundary; consumers see old and new partitions interleaved. | Over-provision partitions (10x expected) at topic creation. |
 | Directory down | No request can route. | Cache the directory in every client with a version, serve stale on directory outage. |
+| Client routes with a stale map after a move | Writes land on the old home. They are lost when the source is dropped. | Map version in every request. The node rejects a stale version and the client reloads. |
+| Schema migration half-applied | 200 shards on the new schema, 56 on the old. | Expand and contract. Code reads both shapes until every shard reports the new version. |
+| Global invariant across shards (unique email) | Two shards accept the same email. | A second table sharded by the email, written first as a reservation. |
 
 ---
 
@@ -297,6 +343,8 @@ flowchart TD
 
 **What a Staff answer refuses to build:** `hash mod N` for anything with dynamic membership, a timestamp as a shard key, a shard key that the main query does not have, a rebalance without dual-write and a rollback window, and a "distributed cache" with no hot-key story.
 
+**What a Staff answer tries before sharding at all:** read replicas and a cache for read load, a bigger box for write load. Shard when write throughput, restore time, or blast radius demands it. Table size alone is rarely the reason.
+
 ---
 
 ## 10. Numbers worth memorizing
@@ -310,6 +358,7 @@ flowchart TD
 - Hot key detector: count-min sketch with 4 rows x 2^16 counters is 1 MB, top-100 heap. Finds any key over ~0.1% of traffic.
 - Local hot-key cache TTL: 1 to 5 s. Cuts backend load on a hot key by the app node count times requests per TTL.
 - Celebrity threshold for hybrid fan-out: ~10k to 100k followers, depending on write budget.
+- One Postgres or MySQL primary: comfortable to a few TB. A multi-TB single-node restore takes hours, and that is the RTO of an unsharded database.
 
 ---
 
@@ -329,4 +378,4 @@ Follow-ups an interviewer will ask, in order of likelihood:
 8. How do you *find* the hot key? (Section 5, count-min plus top-k.)
 9. Timestamp as a shard key. (Section 8, salt it.)
 
-Related: [replication-and-quorums.md](replication-and-quorums.md) (what the N replicas do once placed), [gossip-protocol.md](gossip-protocol.md) (how nodes learn the ring), [merkle-tree.md](merkle-tree.md) (verifying a range move), [caching-patterns.md](caching-patterns.md) (stampede and single-flight in depth), [fan-out-fan-in.md](fan-out-fan-in.md) (scatter-gather cost, celebrity fan-out), [rate-limiting-and-load-shedding.md](rate-limiting-and-load-shedding.md) (the hot-key counter problem), [stream-sketches.md](stream-sketches.md) (count-min sketch internals), `popular_systems_deepdive/cassandra/cassandra-06-membership-gossip.md` (vnodes and the 256 to 16 change), `hld/slack-messaging/` (directory sharding by workspace).
+Related: [replication-and-quorums.md](replication-and-quorums.md) (what the N replicas do once placed), [gossip-protocol.md](gossip-protocol.md) (how nodes learn the ring), [merkle-tree.md](merkle-tree.md) (verifying a range move), [caching-patterns.md](caching-patterns.md) (stampede and single-flight in depth), [fan-out-fan-in.md](fan-out-fan-in.md) (scatter-gather cost, celebrity fan-out), [rate-limiting-and-load-shedding.md](rate-limiting-and-load-shedding.md) (the hot-key counter problem), [stream-sketches.md](stream-sketches.md) (count-min sketch internals), `popular_systems_deepdive/cassandra/cassandra-06-membership-gossip.md` (vnodes and the 256 to 16 change), `hld/slack-messaging/` (directory sharding by workspace), [`hld/ticket-booking/`](../hld/ticket-booking/solution.md) (shard by `hotel_id` so the last-room hold is one local transaction, see [last-room-and-inventory-locking](../hld/ticket-booking/deep-dives/last-room-and-inventory-locking.md)).

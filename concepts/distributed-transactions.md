@@ -88,6 +88,8 @@ The failure that defines it:
 
 **2PC is a blocking protocol.** The fix is to make the coordinator itself highly available: run it on a Raft group so its log survives and a new coordinator can finish the protocol. That is what Spanner, CockroachDB, TiDB, and FoundationDB do: 2PC across shards with Paxos or Raft under both the coordinator and every participant. **Inside one system, with consensus under it, 2PC is fine and widely used.** Across independent systems (XA between a database and a message broker, or between two companies), the coordinator is a plain process and in-doubt is real.
 
+**Postgres exposes the participant side directly.** `PREPARE TRANSACTION 'tx1'`, then `COMMIT PREPARED 'tx1'` or `ROLLBACK PREPARED 'tx1'`. It is off by default (`max_prepared_transactions = 0`). An orphaned prepared transaction survives restarts, keeps its locks, and blocks vacuum until someone resolves it by hand. Alert on any row in `pg_prepared_xacts` older than a minute.
+
 **Three-phase commit** adds a pre-commit phase so participants can decide without the coordinator. It assumes bounded network delay, which a partition violates, so it is rarely deployed. Say the name, say why not.
 
 ---
@@ -125,7 +127,44 @@ Rules that make a saga survivable:
 - **Every `Ti` and `Ci` is idempotent.** The orchestrator will retry them. See [exactly-once.md](exactly-once.md).
 - **Compensations must not fail permanently.** `C2` (cancel hotel) can fail transiently; it is retried forever. If it can fail *permanently* (the hotel refuses), a human is paged. Design compensations to be things the other side always accepts.
 - **Order steps by compensability.** Put the hardest-to-undo step **last**. Charge the card after the reservations, send the confirmation email after the charge. A step with no compensation (email sent, SMS delivered) must be the final step, or be replaced by a "pending" version that is confirmed later.
-- **Pivot step.** The step after which the saga will not compensate, only retry forward. Usually the charge. Everything before it can roll back; everything after it must succeed eventually.
+- **Pivot step.** The step after which the saga will not compensate, only retry forward. Often said to be the charge, but only when the payment cannot be split into authorise and capture (see the push back below). Everything before it can roll back; everything after it must succeed eventually.
+
+**Three kinds of step.** Rule of thumb: the step most likely to fail goes as early as possible, the irreversible one as late as possible.
+
+| Kind | Meaning | Rule |
+|---|---|---|
+| **Compensatable** | Has an undo | Before the pivot. Make the undo cheap: a void beats a refund. |
+| **Pivot** | The go / no-go step. After it, only forward. | Exactly one. The likeliest "no" you cannot cheaply undo goes here. |
+| **Retriable** | After the pivot. Must eventually succeed. | Idempotent, backoff, human queue at the end. |
+
+**Push back on "the charge is the pivot".** Split the charge into authorise and capture. A void of an authorisation is free and instant, so authorise is compensatable. Capture moves after the pivot and becomes retriable. The pivot becomes the counterpart's confirmation (hotel, airline), which is the step most likely to say no. Charging first turns every rejection into a refund: fees often not returned, 5 to 10 days to reach the card, a support ticket, sometimes a chargeback. The charge is the pivot only for methods that cannot authorise separately (some wallets, bank transfers).
+
+```mermaid
+%% Hotel booking saga with auth split from capture. Green has an undo, pink is the pivot, purple retries until done.
+flowchart LR
+    S1["1 Hold inventory<br/>undo: release"]
+    S2["2 Authorise card<br/>undo: void, free"]
+    S3["3 Hotel confirms<br/>PIVOT"]
+    S4["4 Capture<br/>retry until done"]
+    S5["5 Notify<br/>retry until done"]
+    F["Failure before pivot:<br/>void, then release"]
+
+    S1 -->|"held"| S2
+    S2 -->|"authorised"| S3
+    S3 -->|"confirmation no"| S4
+    S4 -->|"captured"| S5
+    S2 -.->|"declined"| F
+    S3 -.->|"rejected"| F
+
+    class S1,S2 service
+    class S3 decision
+    class S4,S5 store
+    class F external
+    classDef service  fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#111
+    classDef store    fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#111
+    classDef external fill:#e5e7eb,stroke:#6b7280,stroke-width:2px,color:#111,stroke-dasharray:4 3
+    classDef decision fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#111
+```
 
 **What isolation loss looks like.** Between T1 and T3, another saga sees a reserved flight seat it cannot get, and after C1 the seat reappears. A user checking their card sees a charge that is later reversed. Balance reads mid-saga are wrong. Mitigations, each a cost:
 
@@ -146,6 +185,8 @@ A saga variant for resources that support a soft hold. Each participant exposes 
 - **Cancel**: release the hold. Must be idempotent and always succeed. Also run by a timer if confirm never arrives.
 
 TCC has better isolation than a plain saga because the try phase holds the resource, so a second saga cannot take it. The cost is that every participant must be built with a hold state and an expiry. Airlines, hotels, ticketing, and card networks already work this way (authorisation then capture), which is why TCC fits booking problems.
+
+Hotel booking is TCC end to end. `RESERVED` (rooms held, card authorised) is try. `CONFIRMED` plus capture is confirm. Hold expiry or a void is cancel. See [`hld/ticket-booking/`](../hld/ticket-booking/solution.md).
 
 ---
 
@@ -184,6 +225,7 @@ flowchart LR
 - The order row is the saga state. Its status column is the state machine. No separate orchestrator service.
 - The first write is atomic and local. The rest is a choreographed saga over an outbox, with the order service as the implicit orchestrator because every reply comes back to it.
 - User-visible contract: "order placed, confirming" then "confirmed" or "cancelled" within seconds. Most real checkout flows already work this way, which is why users accept it.
+- Often the single writer falls out of the shard key. Choose it so the rows that must change together live on one shard ([sharding.md](sharding.md)). Hotel booking shards inventory and bookings by `hotel_id`, so the hold is one local transaction. Only payment and hotel confirmation remain a saga.
 - When this does not work: the change is genuinely symmetric across two systems that both own truth (moving money between two banks' ledgers, both authoritative). Then it is a saga with a pivot, or 2PC inside a system that owns both ledgers.
 
 ---
@@ -202,6 +244,7 @@ flowchart LR
 | **Amazon order pipeline** | Order placed, then inventory, payment, fulfilment as async steps with compensation | Section 5 at scale. |
 | **`hld/payments-ledger/`** | Idempotency row in the payment txn, attempt per rail call, reversal on unknown | A saga with the rail as the non-compensable pivot. |
 | **`hld/distributed-job-scheduler/`** | Event log plus rows in one txn | Outbox: the run's state change and its event commit together. |
+| **`hld/ticket-booking/`** | Conditional-update hold on the hotel shard, then authorise, hotel confirm (pivot), capture | TCC with auth split from capture, so every failure before the pivot is a free void. |
 
 ---
 
@@ -265,6 +308,7 @@ flowchart LR
 - Spanner commit: 2PC plus Paxos plus a ~7 ms TrueTime commit wait, ~10 to 15 ms in-region.
 - CockroachDB parallel commit: 1 round trip instead of 2 for the common case.
 - Card authorisation hold: **7 days** typical expiry. Hotel hold: 10 to 30 minutes. Airline PNR hold: 24 to 72 hours.
+- Void of an authorisation: free and instant. Refund: 5 to 10 days to reach the card, processing fee often not returned.
 - Saga step timeout: 30 s to 5 min per step, saga timeout 10 min to 24 h depending on the domain.
 - Outbox relay latency: 100 ms polling, sub-second with CDC.
 - Temporal history limit: ~50k events per workflow before you must continue-as-new.
@@ -273,7 +317,7 @@ flowchart LR
 
 ## 11. Interview soundbite
 
-> "I avoid distributed transactions by finding the one system that owns the truth, writing its row and an outbox event in one local transaction, and letting the other systems react and reply. The row's status column is the saga state. Where a real multi-step flow is unavoidable I run an orchestrated saga with persisted state before every step, idempotent steps, compensations that the counterpart always accepts, and the least compensable step, the charge, as the pivot at the end. TCC when the resources support holds, which booking and payments already do. 2PC only inside a system that puts consensus under both the coordinator and the participants, like Spanner or CockroachDB, because a plain 2PC coordinator dying after prepare leaves every participant locked and in-doubt until it returns."
+> "I avoid distributed transactions by finding the one system that owns the truth, writing its row and an outbox event in one local transaction, and letting the other systems react and reply. The row's status column is the saga state. Where a real multi-step flow is unavoidable I run an orchestrated saga with persisted state before every step, idempotent steps, compensations that the counterpart always accepts, and the least compensable step as the pivot. With cards that is the counterpart's confirmation, not the charge: I authorise before it and capture after it, so every failure before the pivot is a free void. TCC when the resources support holds, which booking and payments already do. 2PC only inside a system that puts consensus under both the coordinator and the participants, like Spanner or CockroachDB, because a plain 2PC coordinator dying after prepare leaves every participant locked and in-doubt until it returns."
 
 Follow-ups an interviewer will ask, in order of likelihood:
 
@@ -286,5 +330,7 @@ Follow-ups an interviewer will ask, in order of likelihood:
 7. Orchestration or choreography? (Section 3, orchestration past three steps.)
 8. The email was sent and then the payment failed. (Section 3, reorder, non-compensable last.)
 9. What about XA? (Section 8, in-doubt with locks, use an outbox.)
+10. Is the charge always the pivot? (Section 3, split authorise from capture. The counterpart's confirmation becomes the pivot.)
+11. Compensation vs rollback? (A rollback erases uncommitted work. A compensation is a new committed action that semantically undoes a committed one, which others may already have seen.)
 
-Related: [exactly-once.md](exactly-once.md) (idempotent steps, outbox and inbox), [raft.md](raft.md) and [paxos.md](paxos.md) (what makes a replicated coordinator possible), [leases-fencing-clocks.md](leases-fencing-clocks.md) (one owner per saga, fenced), [fan-out-fan-in.md](fan-out-fan-in.md) (a fan-out with side effects is a saga), [replication-and-quorums.md](replication-and-quorums.md) (why a quorum write is not a transaction), `hld/payments-ledger/` (saga with a rail as pivot), `hld/distributed-job-scheduler/` (outbox in the run state machine).
+Related: [exactly-once.md](exactly-once.md) (idempotent steps, outbox and inbox), [raft.md](raft.md) and [paxos.md](paxos.md) (what makes a replicated coordinator possible), [leases-fencing-clocks.md](leases-fencing-clocks.md) (one owner per saga, fenced), [fan-out-fan-in.md](fan-out-fan-in.md) (a fan-out with side effects is a saga), [replication-and-quorums.md](replication-and-quorums.md) (why a quorum write is not a transaction), `hld/payments-ledger/` (saga with a rail as pivot), `hld/distributed-job-scheduler/` (outbox in the run state machine), [`hld/ticket-booking/`](../hld/ticket-booking/solution.md) (TCC hold, hotel confirmation as pivot, see [booking-saga-and-payment](../hld/ticket-booking/deep-dives/booking-saga-and-payment.md)).
