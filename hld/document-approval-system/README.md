@@ -693,4 +693,4 @@ Refined:
 8. **Push assignment needs a timeout.** A task pushed to an absent operator must fall back to the pool after `assigned_until`.
 9. **Retry only transient errors.** A corrupt or encrypted PDF fails the same way every time. Send it straight to `NEEDS_ATTENTION`. Also, separate "this doc is bad" from "a dependency is down". The second needs a circuit breaker and a pause, not 100k quarantines.
 
-**Concept notes worth extracting next** (not written yet): `concepts/transactional-outbox.md`, `concepts/leases-and-fencing-tokens.md`, `concepts/idempotency.md`, `concepts/queueing-theory-littles-law.md`.
+**Related concept notes:** [exactly-once](../../concepts/exactly-once.md) (transactional outbox, idempotency keys, inbox dedup), [leases, fencing, clocks](../../concepts/leases-fencing-clocks.md) (operator task leases and fencing tokens), [rate limiting and load shedding](../../concepts/rate-limiting-and-load-shedding.md) (Little's law for concurrency limits, backpressure). Not written yet: `concepts/queueing-theory-littles-law.md` (Erlang C and backlog budgets in depth).
