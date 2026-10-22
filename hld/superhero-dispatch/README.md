@@ -1,6 +1,6 @@
 # Superhero dispatch: exactly one hero per emergency
 
-> Status: **todo**. Registered 2026-10-08 so a later session can build the full set. The crux: ride-hailing dispatch at low volume, where a dropped or double-assigned emergency is the worst failure. One conditional write decides the winner of the accept race. Live location lives in a fast, lossy index that is never trusted at commit time.
+> One-line answer: everything here is small (~8 incidents/s, ~2,000 pings/s), so optimise for correctness under failure and refuse the ride-hailing template. **Two stores, two jobs:** Postgres holds incidents, offers and assignments; a Redis GEO index holds live location, which is a hint and never trusted at commit time. Reporting is **one transaction** that writes the incident and its dispatch task row, so an incident cannot exist without dispatch starting. Workers claim task rows with `SKIP LOCKED` and a fenced lease, check availability in Postgres, and offer to a **wave of 3** heroes for 15 s over a WebSocket with a 3 s delivery ack (push is only a wake-up). The accept is **one transaction that locks the incident row first** and moves `DISPATCHING -> ASSIGNED` only if it is still dispatching; partial unique indexes make a second active assignment per incident or per hero impossible. Expiry, reassignment and escalation are transitions on the same task row, so there is one clock. Under a 50x burst the bottleneck is **local hero supply**, not compute. The Postgres primary is the red node: its ~30 s failover is a delay, never a loss.
 
 Tier 3, problem #57 in [`hld/README.md`](../README.md). Reported at **Stripe**, 2 onsite design rounds in 2026, both rejected:
 
@@ -51,13 +51,21 @@ Working numbers from the prompt page ("state your own numbers, but a reasonable 
 4. The assigned hero stops sending heartbeats mid-rescue. How do you detect it and reassign without double-dispatching?
 5. A disaster sends a 50x burst into one neighbourhood. What degrades first?
 6. For every box: why this technology and not the obvious alternative? (This is the stated grading signal.)
+7. Multi-hero incidents with complementary skills, without double-booking anyone. (Prompt follow-up.)
+8. Add an ML model for acceptance probability and ETA, and keep matching within seconds. (Prompt follow-up.)
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `solution.md` | Not written yet |
-| `diagrams.md` | Not written yet |
-| `edge-cases.md` | Not written yet |
-| `deep-dives/` | Planned: accept race and assignment store, outbox and reliable dispatch start, location index vs truth, offer strategy and timeouts, incident state machine and stuck-incident detection |
+| [`solution.md`](solution.md) | Full HLD: requirements, numbers, one incremental diagram per FR, deep dives per NFR, the technology-justification table (§7), nitty-gritty, and a plan for Stripe's round (§12) |
+| [`diagrams.md`](diagrams.md) | The D1 to D12 diagram set |
+| [`edge-cases.md`](edge-cases.md) | Every "what if" with a 60-second answer and a confidence box |
+| [`deep-dives/accept-race-and-assignment-store.md`](deep-dives/accept-race-and-assignment-store.md) | The accept transaction, READ COMMITTED re-check vs SERIALIZABLE, the lock-order deadlock, partial unique indexes, the DynamoDB version |
+| [`deep-dives/reliable-dispatch-start.md`](deep-dives/reliable-dispatch-start.md) | Task row as outbox, queue and timer; `SKIP LOCKED` claims, leases, `NOTIFY` plus poll; the invariant sweeper; Temporal comparison |
+| [`deep-dives/location-index-vs-truth.md`](deep-dives/location-index-vs-truth.md) | Ping pipeline, Redis GEO internals, `last_seen` pruning, H3 for zone stats, staleness math, why availability is checked in Postgres |
+| [`deep-dives/offer-strategy-and-timeouts.md`](deep-dives/offer-strategy-and-timeouts.md) | Broadcast vs sequential vs waves, acceptance math, delivery ack vs decision window, ranking, push vs socket, the ML seam |
+| [`deep-dives/incident-state-machine-and-stuck-detection.md`](deep-dives/incident-state-machine-and-stuck-detection.md) | Transition table, one `transition()` function, fencing by assignment id, silent heroes, escalation, multi-hero slots |
+| [`deep-dives/surge-and-degradation.md`](deep-dives/surge-and-degradation.md) | 50x burst: Little's law on heroes, duplicate clustering, priority, surge-mode batch matching, zone reserves |
+| [`research/facts-survey.md`](research/facts-survey.md) | Raw web research notes with source links. Input to the files above, not study material |
 | `superhero-dispatch.excalidraw` | My drawing. Missing until I draw it |
