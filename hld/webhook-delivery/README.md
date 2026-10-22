@@ -1,6 +1,8 @@
 # Webhook delivery service (Stripe style)
 
-> Status: **todo**. Registered 2026-10-08 so a later session can build the full set. The crux: at-least-once delivery to thousands of merchant endpoints you do not control. One slow or dead endpoint must not delay anyone else, and retries must not become a self-inflicted DDoS. Events carry an id so receivers can drop duplicates, and a signed timestamp so they can reject replays.
+> One-line answer: an outbox read by CDC feeds a fan-out that writes one delivery per (event, endpoint) to Kafka **partitioned by endpoint**, so one dispatcher owns each endpoint's adaptive concurrency cap, circuit breaker and retry timers in memory. Whatever cannot be sent now spills to that endpoint's durable queue, so a hung endpoint costs only its own cap. Retries back off with jitter for 3 days, a dead endpoint gets one probe at a time, our own outages are detected and never charged to merchants, every attempt is signed fresh with HMAC over a timestamp, and egress goes through a proxy that connects only to the public IP it checked. The red node is the dispatcher's pool of in-flight connections: merchants' slowness, not our CPU, decides how long each is held.
+
+Status: **studied** (solution, diagrams, edge cases, six deep dives). Missing: `my-attempt.md` and my excalidraw.
 
 Tier 3, problem #58 in [`hld/README.md`](../README.md). **Guide-only for Stripe:** no candidate post names it. DesignGurus lists it among Stripe's "Reported questions" ("a rate limiter, a metrics service, a distributed cache, a webhook delivery service, and a ledger", [DesignGurus](https://www.designgurus.io/blog/stripe-interview-guide)) without a source. It is registered anyway because webhooks are Stripe's own product, and because the same mechanics appear in reported prompts (#32 integration platform for Rippling, the outbox in #57).
 
@@ -19,6 +21,9 @@ From [docs.stripe.com/webhooks](https://docs.stripe.com/webhooks):
 - **No ordering:** "Stripe doesn't guarantee the delivery of events in the order that they're generated."
 - **Duplicates happen:** "Webhook endpoints might occasionally receive the same event more than once." Receivers are told to log processed event ids, and to "Track event IDs to identify duplicate deliveries" rather than use `created`.
 - **Signatures:** the signature covers a timestamp. "Our libraries have a default tolerance of 5 minutes between the timestamp and the current time."
+- **Each retry is re-signed:** "we generate a new signature and timestamp for the new delivery attempt." A roll keeps "the previous secret active for up to 24 hours", with two `v1` signatures meanwhile.
+- **Redirects fail:** "We consider redirect responses to webhook requests as failures."
+- **Not published:** the timeout, the disable rule, and any volume. The 30 s timeout used here is Svix's. Full list in [`research/facts-survey.md`](research/facts-survey.md).
 
 ## Functional requirements
 
@@ -32,7 +37,7 @@ Below the line: transforming payloads per merchant, guaranteed ordering, non-HTT
 
 ## Non-functional requirements
 
-All numbers are [estimate] until the build session checks them:
+Stripe publishes no volume, so the scale numbers stay [estimate] ([facts survey](research/facts-survey.md)):
 
 | Dimension | Target |
 |---|---|
@@ -52,10 +57,4 @@ All numbers are [estimate] until the build session checks them:
 
 ## Files
 
-| File | What it is |
-|---|---|
-| `solution.md` | Not written yet |
-| `diagrams.md` | Not written yet |
-| `edge-cases.md` | Not written yet |
-| `deep-dives/` | Planned: outbox and event fan-out, per-endpoint isolation and scheduling, retry policy and storms, signing and secret rotation, SSRF and egress, replay and delivery logs |
-| `webhook-delivery.excalidraw` | My drawing. Missing until I draw it |
+[`solution.md`](solution.md) · [`diagrams.md`](diagrams.md) · [`edge-cases.md`](edge-cases.md) · deep dives: [outbox and event fan-out](deep-dives/outbox-and-event-fan-out.md), [per-endpoint isolation and scheduling](deep-dives/per-endpoint-isolation-and-scheduling.md), [retry policy and storms](deep-dives/retry-policy-and-storms.md), [delivery semantics and replay](deep-dives/delivery-semantics-and-replay.md), [SSRF and egress](deep-dives/ssrf-and-egress.md), [signing and secret rotation](deep-dives/signing-and-secret-rotation.md) · research: [facts survey](research/facts-survey.md) · missing: `webhook-delivery.excalidraw` (mine to draw), `my-attempt.md`
