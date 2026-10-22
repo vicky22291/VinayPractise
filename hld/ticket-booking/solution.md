@@ -386,7 +386,7 @@ sequenceDiagram
 
 ### 4.4 Pay, confirm with the hotel, and cancel
 
-The recruiter's three states map one to one. **Reserved** = inventory held, no money. **Pending** = card authorized, waiting for the hotel. **Confirmed** = hotel confirmation number received.
+The three required states map one to one. **Reserved** = inventory held, no money. **Pending** = card authorized, waiting for the hotel. **Confirmed** = hotel confirmation number received.
 
 **Bad: charge first, then ask the hotel.**
 - Approach: capture the card, then call the CRS or channel manager.

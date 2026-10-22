@@ -59,7 +59,7 @@ Then say: *"I'll build three layers: controller, service, in-memory repositories
 | 24 to 28 | `QuestionController`: 4 endpoints | "POST returns 201 with a Location header. The upvote is a sub-resource, so it's POST `/questions/{id}/upvotes` returning 201. No business logic here, just mapping." |
 | 28 to 32 | `GlobalExceptionHandler extends ResponseEntityExceptionHandler`, 5 handlers | "The parent class already turns validation and bad JSON into 400 ProblemDetail. I add 404, 409, 403, 400 for a bad cursor, and 401 for a missing user header." |
 | 32 to 34 | Run the app, curl create, list, upvote twice | Debug out loud if anything fails (script below). |
-| 34 to 38 | `QuestionApiTest` (MockMvc): 201 + Location, 400, upvote flow 201/409/403/404/401 | "One test per contract the brief grades." |
+| 34 to 38 | `QuestionApiTest` (MockMvc): 201 + Location, 400, upvote flow 201/409/403/404/401 | "One test per graded contract." |
 | 38 to 41 | `VoteConcurrencyTest`: 100 threads, start gate latch | "A `CountDownLatch` releases all threads at once to maximize contention. 100 users give exactly 100. One user 100 times gives exactly 1." |
 | 41 to 45 | Buffer. Walk through the code. List what's next | "Next I'd add an opaque cursor, an injected Clock for tests, PUT for idempotent votes, and a DB with a unique constraint." |
 
@@ -92,7 +92,7 @@ Cut in this order. Each cut still leaves a correct, gradeable solution.
 
 1. **At minute 25:** drop `GET /{id}` (the Location header still points at the right URL; mention it).
 2. **At minute 28:** drop the cursor. Return `findNewestFirst(null, limit)` and say "cursor pagination is next".
-3. **At minute 33:** drop the MockMvc test. Keep the concurrency test plus one curl run. The brief needs "at least 1 test case".
+3. **At minute 33:** drop the MockMvc test. Keep the concurrency test plus one curl run. The minimum bar is "at least 1 test case".
 4. **Never cut:** the concurrent vote map, the exception handler, 201/400 codes, or the layer split. Those are graded.
 
 ## Debugging out loud (graded: "good debugging")
@@ -111,5 +111,5 @@ Say each step as you do it. The interviewer is grading the method, not the speed
 - `new HashSet<>()` inside `computeIfAbsent` gives a thread-safe map holding non-thread-safe sets.
 - `@Validated` on the controller class changes which exception Spring throws for `@Min/@Max` (it becomes `ConstraintViolationException`, a 500 unless handled). Leave it off. Spring 6.1+ validates `@Min/@Max` params without it.
 - Forgetting `@Valid` on `@RequestBody` means validation silently doesn't run.
-- `ResponseEntity.ok()` on create gives 200. The brief checks for 201.
+- `ResponseEntity.ok()` on create gives 200. The expected code is 201.
 - Putting `@ResponseStatus` on domain exceptions couples the domain to HTTP. Map them in the advice.

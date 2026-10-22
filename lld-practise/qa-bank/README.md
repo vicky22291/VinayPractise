@@ -1,4 +1,4 @@
-# LLD: Q&A Bank API (Rippling machine coding)
+# LLD: Q&A Bank API (machine coding)
 
 > One line: a three-layer Spring Boot API (web, service, repository) over immutable domain records,
 > where the duplicate-vote rule is one atomic `ConcurrentHashMap.putIfAbsent` and the vote count is derived, never stored.
@@ -122,7 +122,7 @@ classDiagram
 
 | Principle / pattern | Where | Why |
 |---|---|---|
-| Layered architecture | `web` / `service` / `repository` / `domain` / `exception` | The brief grades "clear separation of web API and business logic" |
+| Layered architecture | `web` / `service` / `repository` / `domain` / `exception` | Graded on "clear separation of web API and business logic" |
 | Repository + Dependency Inversion | Service depends on `QuestionRepository`, `VoteRepository` interfaces | Swapping in Postgres is one new class (see discussion sheet section 13) |
 | DTO | `web/dto/*` records | The API shape can change without touching the domain. The domain is never serialized directly |
 | Immutable value objects | `Question`, `Vote`, `PageCursor` records | Safe to share across threads with no locks |
@@ -246,13 +246,13 @@ curl -i "$BASE?cursor=garbage"     # 400 {"title":"Invalid cursor"}
 
 ## Critique of the original draft (`original-draft/`, from the Desktop zip)
 
-Good parts first: it has layers, constructor injection, a `ConcurrentHashMap`, and `synchronized` on `Question.upvote`, which does make dedupe correct per question. Against the brief and the Staff bar, it would lose points here:
+Good parts first: it has layers, constructor injection, a `ConcurrentHashMap`, and `synchronized` on `Question.upvote`, which does make dedupe correct per question. Against the grading list and the Staff bar, it would lose points here:
 
 | # | Issue | Where | Fix in this repo |
 |---|---|---|---|
 | 1 | Voter and author identity come from the JSON body, so anyone can vote as anyone | `dto/VoteReq.java:3`, `dto/CreateQuestionReq.java:3` | Identity from a header (JWT later), never the body |
 | 2 | Duplicate vote and self vote both return **400**. They should be 409 and 403 | `controller/QuestionController.java:49` | Typed exceptions, mapped in one advice |
-| 3 | Upvote returns **200**, brief expects 201. Create has no `Location` header | `controller/QuestionController.java:46`, `:29` | `ResponseEntity.created(location)` |
+| 3 | Upvote returns **200**, 201 is expected. Create has no `Location` header | `controller/QuestionController.java:46`, `:29` | `ResponseEntity.created(location)` |
 | 4 | `try/catch` in every controller method. Error bodies are bare strings | `controller/QuestionController.java:27-32`, `:44-51` | `@RestControllerAdvice` + `ProblemDetail` |
 | 5 | List order is random: `ConcurrentHashMap.values()` has no order, so offset pages repeat and skip | `dao/QuestionDAO.java:22-23` | Sorted skip-list index + cursor |
 | 6 | `voteCount` is a plain `int` read without the lock: another thread may see a stale value | `model/Question.java:13`, `:42` | Count derived from a concurrent set |

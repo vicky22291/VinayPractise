@@ -1,6 +1,6 @@
-# Discussion Sheet: Q&A Bank (Rippling machine coding, minutes 45 to 90)
+# Discussion Sheet: Q&A Bank (machine coding, minutes 45 to 90)
 
-> One line: every probe from the recruiter brief, with a spoken answer of 2 to 5 bullets,
+> One line: every probe on the grading list, with a spoken answer of 2 to 5 bullets,
 > plus the code or SQL to sketch when they push.
 
 Code references point at `reference-version/` unless marked `interview-version/`.
@@ -41,7 +41,7 @@ Code references point at `reference-version/` unless marked `interview-version/`
 |---|---|---|
 | Two maps in the question repo are written one after the other, not atomically | `InMemoryQuestionRepository.java:28-32` | `byId` is written first, so anything visible in the list is fetchable. No deletes, so no stale index entries. |
 | The count returned by upvote may include other users' concurrent votes | `DefaultQuestionService.java:66` | It is "the count right after my vote", which is still a true value. |
-| Upvote is not idempotent (409 on retry) | `QuestionController.java:67` | Matches the brief. Section 8 explains the PUT alternative. |
+| Upvote is not idempotent (409 on retry) | `QuestionController.java:67` | Matches the spec. Section 8 explains the PUT alternative. |
 | `POST /questions` is not idempotent | `QuestionController.java:43` | A client retry after a timeout creates a duplicate question. Fix: `Idempotency-Key` header. |
 | The service also checks `limit`, but throws `IllegalArgumentException`, which the catch-all maps to 500 | `DefaultQuestionService.java:46-48` | Unreachable over HTTP: the controller's `@Min/@Max` returns 400 first. For a second caller I'd add a typed `InvalidPageSizeException` mapped to 400. |
 | `interview-version` returns a `nextCursor` when the last page is exactly full | `interview-version/.../QuestionServiceImpl.java:45` | Costs one extra empty request. The reference fetches `limit + 1` to avoid it. |
@@ -425,7 +425,7 @@ COMMIT;
 
 **Say:**
 
-- I built POST because the brief says "upvote" and the interviewer wants to see duplicate detection surface as a clear 409.
+- I built POST because the spec says "upvote" and the interviewer wants to see duplicate detection surface as a clear 409.
 - In production I would pick PUT plus DELETE. Votes are a set membership, and set membership is naturally idempotent. Mobile clients retry. Idempotency removes a whole class of "why did my vote fail" bugs.
 - If we must keep POST, accept an `Idempotency-Key` header and return the original response on a repeat.
 - Nit to pre-empt: a 201 with no `Location` implies the request URI is the new resource. With PUT `/votes/me` the URL *is* the vote, so that problem disappears.
@@ -499,7 +499,7 @@ sequenceDiagram
 
 **409 vs 422:**
 - 409 Conflict: the request is valid, but it clashes with the resource's current state. "You already voted" is state, so 409.
-- 422 Unprocessable Content: the JSON parses but its content breaks semantic rules (title too short). Some teams use 422 for validation and keep 400 for unparseable input. The brief asks for 400, and Spring defaults to 400, so I use 400 for both and say I'd follow the team's convention.
+- 422 Unprocessable Content: the JSON parses but its content breaks semantic rules (title too short). Some teams use 422 for validation and keep 400 for unparseable input. The spec asks for 400, and Spring defaults to 400, so I use 400 for both and say I'd follow the team's convention.
 
 **Error body:** RFC 9457 `ProblemDetail`, content type `application/problem+json`: `type`, `title`, `status`, `detail`, `instance`, plus an `errors` map for field validation. One shape for every error, so clients write one parser.
 

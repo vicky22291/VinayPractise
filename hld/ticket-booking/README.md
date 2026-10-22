@@ -4,7 +4,7 @@
 
 Tier 3, problem #25 in [`hld/README.md`](../README.md) ("Global ticket / hotel booking"). This folder solves the **hotel** variant. Reported at Rippling (hotel reservation, 2 candidate posts plus PracHub pages), Google, and Airbnb. Problem source: [Hello Interview: Hotel Booking System](https://www.hellointerview.com/community/questions/hotel-booking-system/cm80nptng04jg2pu4cq8rpxzm) (only the statement is public: search, reserve, manage bookings, with a focus on data modeling and SQL for availability, pricing, and reservations).
 
-## Problem statement (recruiter brief)
+## Problem statement
 
 > Focus on ability to ingest, search and reserve rooms. Booking service: booking flow, booking states (reserved, pending, confirmed), locking mechanism. Search service: search by location and date. Storing metadata (100k hotels, 1000 rooms per hotel): better go by room type (AC, suite, deluxe) to avoid storing a lot of metadata, because each hotel has only a few room types. Search by geo location. API adaptors from hotel partners who push data to us vs where we pull data from hotels. Hotels include large chains as well as small hotels. SQL vs NoSQL trade-offs. Push vs pull trade-offs. Detailed data modeling for each service. APIs. Monitoring and security. Observability. Data freshness and consistency issues because data is not accurate when it comes from hotel partners: how will you solve it? Concurrency in booking the last available room when it is available on multiple platforms (the last-room problem). Data freshness and consistency, overbooking.
 
