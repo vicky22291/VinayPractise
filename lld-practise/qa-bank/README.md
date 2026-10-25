@@ -11,6 +11,7 @@
 | [`discussion-sheet.md`](discussion-sheet.md) | Spoken answers for every probe in the second 45 minutes |
 | [`qa-bank.postman_collection.json`](qa-bank.postman_collection.json) | Postman collection for every endpoint and error case |
 | [`original-draft/`](original-draft/) | The earlier draft from `~/Desktop/qa-backend-springboot.zip`, kept for the critique below |
+| [`practice-version/`](practice-version/) | Later practice reps that go past the prompt: answers, downvotes, tags, `Idempotency-Key` replay, per-API and journey FTs (functional tests) |
 
 Stack: Java 21, Spring Boot 3.5, Maven wrapper, JUnit 5, MockMvc, AssertJ. No Lombok, no database.
 
