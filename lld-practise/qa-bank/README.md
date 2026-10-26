@@ -12,6 +12,7 @@
 | [`qa-bank.postman_collection.json`](qa-bank.postman_collection.json) | Postman collection for every endpoint and error case |
 | [`original-draft/`](original-draft/) | The earlier draft from `~/Desktop/qa-backend-springboot.zip`, kept for the critique below |
 | [`practice-version/`](practice-version/) | Later practice reps that go past the prompt: answers, downvotes, tags, `Idempotency-Key` replay, per-API and journey FTs (functional tests) |
+| [`fresh-practice/`](fresh-practice/) | Clean starter for a new rep: Spring Boot server with `GET /health` and `POST /echo` only, the prompt in its README |
 
 Stack: Java 21, Spring Boot 3.5, Maven wrapper, JUnit 5, MockMvc, AssertJ. No Lombok, no database.
 
