@@ -96,6 +96,7 @@ tool-practise/  Hands-on lab: one folder per open source tool (Redis, Kafka, ...
 ai-coding/    Timed coding rounds on existing code: one kit per question (starter repo, hidden parts and tests), kit.py runner, strategy.md playbook, own CLAUDE.md
 scoping-drills/  First-10-minutes requirements sprints: README (rules, scorecard, log), hidden cards for the voice agent
 ml-learning/  Hands-on ML track: 40 one-hour labs in 7 modules plus 4 capstones, labkit.py, own CLAUDE.md (spoiler gate), answers/ holds the spoilers
+llm-learning/  LLM study text: 20 chapters in six parts, 12 practical guides, teaching scripts and a small-model capstone, own CLAUDE.md
 ```
 
 - File names: `kebab-case.md`, e.g. `hld/design-whatsapp.md`.

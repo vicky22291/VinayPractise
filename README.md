@@ -18,6 +18,8 @@ Read `CLAUDE.md` for the answer style, color legend, and templates.
 | `ai-coding/` | Timed AI-allowed coding rounds on existing code (Stripe first): 10 kits, `kit.py` runner, in-round playbook in `strategy.md` |
 | `databricks/` | Harvested Databricks engineering blog: 651 technical posts, 1,803 diagrams turned into Mermaid |
 | `openai/` | Harvested OpenAI engineering blog: 20 posts, 77 diagrams turned into Mermaid |
+| [`ml-learning/`](ml-learning/README.md) | Practical ML course: 40 labs, seven modules, and four capstones |
+| [`llm-learning/`](llm-learning/README.md) | LLM study text: 20 chapters in six parts, 12 practical guides, and a small-model capstone |
 
 Both harvests are incremental. `python3 refresh.py` fetches whatever is new on either blog
 and runs it through the full chain; `python3 refresh.py --dry-run` says what is new without
