@@ -9,6 +9,7 @@ Read `CLAUDE.md` for the answer style, color legend, and templates.
 |---|---|
 | `hld/` | System design case studies |
 | `lld/` | Object-oriented design problems |
+| `lld-practise/` | Timed machine-coding reps and the Stripe Staff coding practice path |
 | `concepts/` | Reusable building blocks (CAP, sharding, Kafka, caching, consensus) |
 | `problem_solving/` | DSA patterns and solutions (Python) |
 | `behavioral/` | Staff-level STAR stories |

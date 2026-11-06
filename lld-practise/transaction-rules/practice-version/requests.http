@@ -1,0 +1,14 @@
+### IntelliJ HTTP client examples. Start the server first.
+GET http://localhost:8092/health
+
+### Valid request
+POST http://localhost:8092/echo
+Content-Type: application/json
+
+{"message": "Ready to practise"}
+
+### Validation error: expected HTTP 400
+POST http://localhost:8092/echo
+Content-Type: application/json
+
+{"message": ""}
