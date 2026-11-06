@@ -12,3 +12,61 @@ POST http://localhost:8091/echo
 Content-Type: application/json
 
 {"message": ""}
+
+### Stage 1: whole IDs, memo commas and already-matched invoices
+POST http://localhost:8091/reconciliations
+Content-Type: application/json
+
+{
+  "stage": "MEMO_ONLY",
+  "payments": [
+    "p1,500,Paying INV-12, thanks",
+    "p2,500,Paying INV-1",
+    "p3,700,Paying INV-12 again"
+  ],
+  "invoices": ["INV-1,500,2026-11-10", "INV-12,700,2026-11-12"]
+}
+
+### Stage 2: memo priority, then earliest due date and lexical ID for exact amounts
+POST http://localhost:8091/reconciliations
+Content-Type: application/json
+
+{
+  "stage": "EXACT_AMOUNT",
+  "payments": ["p1,1,INV-1", "p2,500,", "p3,500,"],
+  "invoices": ["INV-1,500,2026-12-01", "INV-2,500,2026-11-01", "INV-10,500,2026-11-01"]
+}
+
+### Stage 3: exact amount wins first, then tolerance (inclusive) by due date
+POST http://localhost:8091/reconciliations
+Content-Type: application/json
+
+{
+  "tolerance": 5,
+  "payments": ["p1,500,", "p2,500,", "p3,500,", "p4,500,"],
+  "invoices": ["INV-1,500,2026-11-10", "INV-2,505,2026-11-01", "INV-3,495,2026-11-02"]
+}
+
+### Defaults: all stages, zero tolerance
+POST http://localhost:8091/reconciliations
+Content-Type: application/json
+
+{
+  "payments": ["p1,500,"],
+  "invoices": ["INV-1,500,2026-11-10"]
+}
+
+### Row validation: HTTP 400 with invoice row number
+POST http://localhost:8091/reconciliations
+Content-Type: application/json
+
+{
+  "payments": ["p1,500,INV-1"],
+  "invoices": ["INV-1,500,2026-02-30"]
+}
+
+### Invalid tolerance: HTTP 400
+POST http://localhost:8091/reconciliations
+Content-Type: application/json
+
+{"payments": [], "invoices": [], "tolerance": -1}
