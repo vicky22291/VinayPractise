@@ -4,6 +4,16 @@ This folder is the standalone workspace for this question. Open its pom.xml as a
 
 ## Commands
 
+With Maven and JDK 21 or newer installed, use the scripts to build and test:
+
+```bash
+./scripts/build.sh             # clean and package the executable JAR; skips test execution
+./scripts/test.sh              # run all tests
+./scripts/test.sh -Dtest=StarterControllerTest  # run one test class
+```
+
+The scripts work from any directory when invoked by path and forward additional arguments to Maven. Build output and test reports are under `target/`.
+
 ```bash
 cd lld-practise/transaction-rules/practice-version
 mvn test                     # starter tests and your exercise tests

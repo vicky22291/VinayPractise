@@ -4,6 +4,16 @@ This standalone project implements **all three stages** of the question in `stri
 
 ## Run
 
+With Maven and JDK 21 or newer installed, use the scripts to build and test:
+
+```bash
+./scripts/build.sh             # clean and package the executable JAR; skips test execution
+./scripts/test.sh              # run all tests
+./scripts/test.sh -Dtest=StarterControllerTest  # run one test class
+```
+
+The scripts work from any directory when invoked by path and forward additional arguments to Maven. Build output and test reports are under `target/`.
+
 ```bash
 cd lld-practise/payment-lifecycle/practice-version
 mvn test                    # business, concurrency (where relevant), and MockMvc API tests
