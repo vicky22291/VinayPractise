@@ -1,14 +1,55 @@
-### IntelliJ HTTP client examples. Start the server first.
-GET http://localhost:8094/health
+@base = http://localhost:8094
 
-### Valid request
-POST http://localhost:8094/echo
+### Create source
+POST {{base}}/accounts
 Content-Type: application/json
+Idempotency-Key: demo-source
 
-{"message": "Ready to practise"}
+{"currency":"USD","openingBalance":1000}
 
-### Validation error: expected HTTP 400
-POST http://localhost:8094/echo
+> {% client.global.set("sourceId", response.body.id); %}
+
+### Create destination
+POST {{base}}/accounts
 Content-Type: application/json
+Idempotency-Key: demo-destination
 
-{"message": ""}
+{"currency":"USD","openingBalance":0}
+
+> {% client.global.set("destinationId", response.body.id); %}
+
+### Stage 1: transfer; Stage 2: re-run to replay the same transfer
+POST {{base}}/transfers
+Content-Type: application/json
+Idempotency-Key: demo-transfer
+
+{"sourceId":"{{sourceId}}","destinationId":"{{destinationId}}","amount":400}
+
+> {% client.global.set("transferId", response.body.id); %}
+
+### Immutable balanced entries
+GET {{base}}/entries
+
+### Stage 3: reverse; re-run with the same key to replay
+POST {{base}}/transfers/{{transferId}}/reversals
+Idempotency-Key: demo-reversal
+
+### Expected 409: another reversal key cannot reverse twice
+POST {{base}}/transfers/{{transferId}}/reversals
+Idempotency-Key: demo-duplicate-reversal
+
+### Transfer now links to its reversal
+GET {{base}}/transfers/{{transferId}}
+
+### Rebuilt and stored balances agree
+GET {{base}}/accounts/{{sourceId}}/audit
+
+### Destination is back at 0
+GET {{base}}/accounts/{{destinationId}}
+
+### Expected 409: insufficient funds
+POST {{base}}/transfers
+Content-Type: application/json
+Idempotency-Key: demo-overdraw
+
+{"sourceId":"{{sourceId}}","destinationId":"{{destinationId}}","amount":1001}

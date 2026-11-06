@@ -1,14 +1,68 @@
-### IntelliJ HTTP client examples. Start the server first.
-GET http://localhost:8096/health
+@base = http://localhost:8096
 
-### Valid request
-POST http://localhost:8096/echo
+### Stage 1: register matching endpoint
+POST {{base}}/endpoints
+Content-Type: application/json
+Idempotency-Key: demo-endpoint
+
+{"destination":"https://example.com/webhooks","eventTypes":["payment.captured"]}
+
+### Publish; re-run to verify no duplicate fanout
+POST {{base}}/events
+Content-Type: application/json
+Idempotency-Key: demo-event
+
+{"id":"evt-demo-1","type":"payment.captured","payload":"demo"}
+
+> {% client.global.set("deliveryId", response.body.deliveries[0].id); %}
+
+### Claim manually, simulating a worker (no outbound HTTP)
+POST {{base}}/deliveries/claim
 Content-Type: application/json
 
-{"message": "Ready to practise"}
+{"workerId":"worker-1"}
 
-### Validation error: expected HTTP 400
-POST http://localhost:8096/echo
+> {% if (response.status === 200) { client.global.set("leaseToken", response.body.leaseToken); } %}
+
+### Stage 2: unknown outcome schedules retry in 1 second
+POST {{base}}/deliveries/{{deliveryId}}/attempts
 Content-Type: application/json
 
-{"message": ""}
+{"leaseToken":"{{leaseToken}}","outcome":"UNKNOWN"}
+
+### Wait until nextAttemptAt, then claim again
+POST {{base}}/deliveries/claim
+Content-Type: application/json
+
+{"workerId":"worker-2"}
+
+> {% if (response.status === 200) { client.global.set("leaseToken", response.body.leaseToken); } %}
+
+### Stage 3: simulate a crash by omitting completion.
+# After leaseUntil plus backoff, a new claim recovers the work with a different token.
+# The plain Java demo and tests exercise this without waiting.
+POST {{base}}/deliveries/claim
+Content-Type: application/json
+
+{"workerId":"worker-recovery"}
+
+> {% if (response.status === 200) { client.global.set("leaseToken", response.body.leaseToken); } %}
+
+### Complete the latest valid claim successfully
+POST {{base}}/deliveries/{{deliveryId}}/attempts
+Content-Type: application/json
+
+{"leaseToken":"{{leaseToken}}","outcome":"SUCCEEDED"}
+
+### Current delivery and all attempts
+GET {{base}}/deliveries/{{deliveryId}}
+
+### All deliveries
+GET {{base}}/deliveries
+
+### Optional real delivery: register a reachable receiver and publish a new event first.
+# This command sends an actual HTTP POST to the next due delivery's destination.
+POST {{base}}/workers/run-once
+Content-Type: application/json
+
+{"workerId":"http-worker"}

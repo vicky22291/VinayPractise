@@ -1,14 +1,65 @@
-### IntelliJ HTTP client examples. Start the server first.
-GET http://localhost:8093/health
+@base = http://localhost:8093
 
-### Valid request
-POST http://localhost:8093/echo
+### Stage 1: create (re-run with the same key to replay)
+POST {{base}}/payments
 Content-Type: application/json
+Idempotency-Key: demo-create
 
-{"message": "Ready to practise"}
+{"amount":1000,"currency":"USD"}
 
-### Validation error: expected HTTP 400
-POST http://localhost:8093/echo
+> {% client.global.set("paymentId", response.body.id); %}
+
+### Stage 1: authorize
+POST {{base}}/payments/{{paymentId}}/authorize
+Idempotency-Key: demo-authorize
+
+### Stage 2: capture part; replay this request to verify idempotency
+POST {{base}}/payments/{{paymentId}}/captures
 Content-Type: application/json
+Idempotency-Key: demo-capture-1
 
-{"message": ""}
+{"amount":400}
+
+> {% client.global.set("captureId", response.body.id); %}
+
+### Stage 3: reconcile with the same processor ID
+# For UNKNOWN first, start the app with --processor.timeout-after-accept=true.
+POST {{base}}/payments/{{paymentId}}/captures/{{captureId}}/reconcile
+Idempotency-Key: demo-reconcile-1
+
+### Current snapshot (capturedAmount 400, reservedAmount 0)
+GET {{base}}/payments/{{paymentId}}
+
+### Capture all remaining authorization
+POST {{base}}/payments/{{paymentId}}/captures
+Content-Type: application/json
+Idempotency-Key: demo-capture-rest
+
+{}
+
+> {% client.global.set("remainingCaptureId", response.body.id); %}
+
+### Settle the remainder if the timeout simulator is enabled
+POST {{base}}/payments/{{paymentId}}/captures/{{remainingCaptureId}}/reconcile
+Idempotency-Key: demo-reconcile-rest
+
+### List capture history
+GET {{base}}/payments/{{paymentId}}/captures
+
+### Expected 409: cancellation after capture
+POST {{base}}/payments/{{paymentId}}/cancel
+Idempotency-Key: demo-cancel
+
+### Expected 409: same key, different request
+POST {{base}}/payments/{{paymentId}}/captures
+Content-Type: application/json
+Idempotency-Key: demo-capture-1
+
+{"amount":401}
+
+### Expected 400: invalid amount
+POST {{base}}/payments
+Content-Type: application/json
+Idempotency-Key: invalid-payment
+
+{"amount":0,"currency":"USD"}

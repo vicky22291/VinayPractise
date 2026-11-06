@@ -20,7 +20,7 @@ Sources: [Stripe engineering role listing](https://stripe.com/careers/listing/ba
 
 ## Java workspaces
 
-Each question has its own standalone Java project, following the `lld-practise/qa-bank/practice-version` layout. There is also a separate workspace for each question under `~/workspaces`. Each project has its own Maven configuration, code, tests, initial prompt, and interviewer follow-ups.
+Each question has its own standalone Java project, following the `lld-practise/qa-bank/practice-version` layout. **The four Staff object-design questions (payment lifecycle, ledger transfers, subscription proration and webhook delivery) now have complete implementations of all three stages**, including HTTP APIs, plain Java demos, business/API tests and design notes. Invoice matching and transaction rules remain starters. There is also a separate workspace for each question under `~/workspaces`. Each project has its own Maven configuration, code, tests, initial prompt, and interviewer follow-ups.
 
 | Question | Project in this repo | Workspace under `~/workspaces` | HTTP port |
 |---|---|---|---:|
@@ -40,7 +40,28 @@ mvn compile exec:java       # plain Java
 mvn spring-boot:run         # HTTP API, when the question needs one
 ```
 
-Read each project's `TASK.md` first. Later requirements are in `interviewer/FOLLOWUPS.md`, to be revealed one stage at a time. The repo projects and the workspaces under `~/workspaces` are separate copies. The original Python debugging and API integration kits remain separate exercises.
+Read each project's `TASK.md` first. Later requirements are in `interviewer/FOLLOWUPS.md`, to be revealed one stage at a time during a mock. For the four implemented questions, the project README maps each stage to its implementation, `requests.http` exercises the APIs, and `docs/design/Overview.md` explains assumptions and follow-ups. Run `mvn compile exec:java` in any of those four projects for its three-stage walkthrough. The repo projects and the workspaces under `~/workspaces` are separate copies; these implementations update only the repo projects. The original Python debugging and API integration kits remain separate exercises.
+
+### Integration tests for the four implemented projects
+
+`FullStackApiTest` and `ExerciseApiTest` use `@SpringBootTest` plus `@AutoConfigureMockMvc`. Requests pass through JSON deserialization, validation, controllers, services and the actual in-memory repositories. Tests read data back through GET endpoints to verify persisted state. There are no mocked application beans, services or repositories. Each full-stack test closes its application context afterward to keep data independent between tests.
+
+| Project | Application integration scenarios | What they verify |
+|---|---:|---|
+| Payment lifecycle | 8 | Lifecycle/cancellation, partial capture, original-result retries, rejection atomicity, concurrent captures, and accepted-timeout reconciliation with the actual configured processor simulator |
+| Ledger transfers | 8 | Transfers and balance audits, immutable balanced entries, funded/unfunded reversals, arithmetic overflow, retry conflicts, concurrent transfers and reversals |
+| Subscription proration | 6 | Upgrades/credits, signed rounding, quantities, adjacent intervals, exact fractions, discounts, chronology and validation |
+| Webhook delivery | 9 | Routing, event deduplication, real HTTP sender success/503/timeout, bounded retries, claim races, actual lease expiry and stale-token rejection |
+
+Run the complete test suite inside each project with `mvn test`. To run only the application integration scenarios:
+
+```bash
+mvn test '-Dtest=FullStackApiTest,ExerciseApiTest'
+# Payment lifecycle additionally includes the processor-uncertainty scenario:
+mvn test '-Dtest=FullStackApiTest,ExerciseApiTest,UncertainCaptureApiTest'
+```
+
+MockMvc exercises the full Spring request flow in-process. The webhook full-stack tests also start a local HTTP receiver and use the real `HttpWebhookSender`, asserting received JSON and stable identifiers. They wait for the real 10-second sender timeout and 30-second lease expiration, so that suite takes roughly a minute and needs loopback socket access. The faster unit tests use an injected clock to test retry timing without waiting.
 
 ## Practice order
 

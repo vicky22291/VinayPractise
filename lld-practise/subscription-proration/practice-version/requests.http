@@ -1,14 +1,56 @@
-### IntelliJ HTTP client examples. Start the server first.
-GET http://localhost:8095/health
+@base = http://localhost:8095
 
-### Valid request
-POST http://localhost:8095/echo
+### Stage 1: halfway upgrade => +500
+POST {{base}}/prorations
 Content-Type: application/json
 
-{"message": "Ready to practise"}
+{
+  "currency":"USD",
+  "start":"2026-01-01T00:00:00Z",
+  "end":"2026-01-31T00:00:00Z",
+  "initial":{"price":2000,"quantity":1},
+  "changes":[{"at":"2026-01-16T00:00:00Z","plan":{"price":3000,"quantity":1}}]
+}
 
-### Validation error: expected HTTP 400
-POST http://localhost:8095/echo
+### Stage 2: quantities and adjacent intervals => +1000
+POST {{base}}/prorations
 Content-Type: application/json
 
-{"message": ""}
+{
+  "currency":"USD",
+  "start":"2026-01-01T00:00:00Z",
+  "end":"2026-01-31T00:00:00Z",
+  "initial":{"price":2000,"quantity":1},
+  "changes":[
+    {"at":"2026-01-11T00:00:00Z","plan":{"price":3000,"quantity":2}},
+    {"at":"2026-01-21T00:00:00Z","plan":{"price":1000,"quantity":1}}
+  ]
+}
+
+### Stage 3: same intervals with 10% discount => +900
+POST {{base}}/prorations
+Content-Type: application/json
+
+{
+  "currency":"USD",
+  "start":"2026-01-01T00:00:00Z",
+  "end":"2026-01-31T00:00:00Z",
+  "initial":{"price":2000,"quantity":1},
+  "changes":[
+    {"at":"2026-01-11T00:00:00Z","plan":{"price":3000,"quantity":2}},
+    {"at":"2026-01-21T00:00:00Z","plan":{"price":1000,"quantity":1}}
+  ],
+  "discountBasisPoints":1000
+}
+
+### Expected 400: period end is exclusive
+POST {{base}}/prorations
+Content-Type: application/json
+
+{
+  "currency":"USD",
+  "start":"2026-01-01T00:00:00Z",
+  "end":"2026-01-31T00:00:00Z",
+  "initial":{"price":2000,"quantity":1},
+  "changes":[{"at":"2026-01-31T00:00:00Z","plan":{"price":3000,"quantity":1}}]
+}
