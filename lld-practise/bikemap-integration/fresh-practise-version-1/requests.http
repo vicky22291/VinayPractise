@@ -1,0 +1,5 @@
+### Echo request: returns 200 with the same JSON message
+POST http://localhost:8106/echo
+Content-Type: application/json
+
+{"message": "hello practice"}
