@@ -8,7 +8,7 @@
     <packaging>jar</packaging>
 
     <name>qa-backend</name>
-    <description>Q&A Backend MVP</description>
+    <description>Q&amp;A Backend MVP</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
